@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link aria-label="Favicon de la bandera de España" href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3EBandera%20de%20Espa%C3%B1a%3C%2Ftitle%3E%0A%3Cdesc%3EFavicon%20con%20tres%20franjas%20horizontales%20roja%2C%20amarilla%20y%20roja.%3C%2Fdesc%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%23AA151B%22%2F%3E%0A%3Crect%20y%3D%2216%22%20width%3D%2264%22%20height%3D%2232%22%20fill%3D%22%23F1BF00%22%2F%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2262.5%22%20height%3D%2262.5%22%20rx%3D%229.25%22%0A%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%237A1015%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E" id="favicon-drapeau-espagnol" rel="icon" type="image/svg+xml"/>
 <title>DNL Matemáticas en español | Itinerario de 90 horas</title>
 <meta content="Itinerario DNL de Matemáticas en español: 18 módulos de Bachillerato que combinan contenidos matemáticos, lengua, arte y cultura hispánica." name="description"/>
 <meta content="DNL Matemáticas en español, programación DNL bachillerato, matemáticas en español, Al-Ándalus geometría, Gaudí matemáticas, Fibonacci, probabilidades, cultura hispánica, Reims" name="keywords"/>
@@ -2211,32 +2211,162 @@ footer { padding-block: clamp(2rem, 5vw, 3.5rem); }
 .top-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.65rem}
 .correction-switch{color:var(--color-white);background:linear-gradient(135deg,#2f7d61,#256d85);border-color:rgb(255 255 255 / .3)}
 .correction-switch:hover{color:var(--color-primary-strong);background:var(--color-white);border-color:var(--color-white);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+
+/* Image performance optimization */
+.image-block{content-visibility:auto;contain-intrinsic-size:auto 620px;contain:layout paint style}
+.image-block img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;filter:none!important;opacity:1!important;mix-blend-mode:normal;background:var(--color-surface-alt,#f5f8fa);transform:translateZ(0);backface-visibility:hidden}
+@media (max-width:47.999rem){.image-block{contain-intrinsic-size:auto 420px}.image-block img{aspect-ratio:4/3}}
+@media (prefers-reduced-motion:reduce){.image-block img{transition:none!important;transform:none!important}}
+
+
+/* Navigation centered, 320px-safe, with active section state */
+.nav-inner{
+  justify-content:center!important;
+  justify-items:center!important;
+  align-content:center!important;
+}
+.nav-inner a{
+  justify-content:center!important;
+  text-align:center!important;
+  margin-inline:auto!important;
+}
+.nav-inner a[aria-current="location"],
+.nav-inner a.is-active{
+  background:#0b6f69!important;
+  color:#fff!important;
+  border-color:#0b6f69!important;
+  box-shadow:inset 0 -3px 0 #f6bf4a,0 4px 12px rgba(11,111,105,.22)!important;
+  text-decoration:none!important;
+}
+.nav-inner a[aria-current="location"]::before,
+.nav-inner a.is-active::before{
+  content:"";
+  width:.48rem;
+  height:.48rem;
+  flex:0 0 .48rem;
+  margin-right:.38rem;
+  border-radius:50%;
+  background:#f6bf4a;
+}
+@media (max-width:22rem){
+  .nav-inner{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    width:100%!important;
+    max-width:100%!important;
+    padding:.3rem!important;
+    gap:.24rem!important;
+  }
+  .nav-inner a{
+    width:100%!important;
+    min-width:0!important;
+    min-height:2.75rem!important;
+    margin:0!important;
+    padding:.42rem .22rem!important;
+    font-size:.69rem!important;
+    line-height:1.12!important;
+    overflow-wrap:anywhere!important;
+    word-break:normal!important;
+    hyphens:auto!important;
+  }
+  .nav-inner a[aria-current="location"]::before,
+  .nav-inner a.is-active::before{
+    width:.4rem;
+    height:.4rem;
+    flex-basis:.4rem;
+    margin-right:.25rem;
+  }
+}
+
+
+/* Correctif final : tous les liens de navigation restent visibles */
+#navigation-principale{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  overflow:visible!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+#navigation-principale .nav-inner{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  grid-auto-flow:row!important;
+  grid-auto-rows:auto!important;
+  place-items:stretch!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  margin:0!important;
+  padding:.4rem!important;
+  gap:.3rem!important;
+  overflow:visible!important;
+  overflow-x:visible!important;
+  overflow-y:visible!important;
+  white-space:normal!important;
+}
+#navigation-principale .nav-inner>a{
+  display:flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  min-width:0!important;
+  max-width:none!important;
+  min-height:2.75rem!important;
+  height:auto!important;
+  margin:0!important;
+  padding:.48rem .3rem!important;
+  color:#173f5f!important;
+  background:#f4f8f8!important;
+  border:1px solid #bdd0d2!important;
+  border-radius:.65rem!important;
+  font-size:clamp(.7rem,3.45vw,.8rem)!important;
+  font-weight:750!important;
+  line-height:1.15!important;
+  text-align:center!important;
+  text-decoration:none!important;
+  white-space:normal!important;
+  overflow:visible!important;
+  overflow-wrap:anywhere!important;
+  hyphens:auto!important;
+}
+#navigation-principale .nav-inner>a:hover,
+#navigation-principale .nav-inner>a:focus-visible{
+  color:#fff!important;
+  background:#173f5f!important;
+  border-color:#173f5f!important;
+}
+#navigation-principale .nav-inner>a[aria-current="location"],
+#navigation-principale .nav-inner>a.is-active{
+  color:#fff!important;
+  background:#0b6f69!important;
+  border-color:#0b6f69!important;
+}
+@media (min-width:30rem){
+  #navigation-principale .nav-inner{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media (min-width:48rem){
+  #navigation-principale .nav-inner{grid-template-columns:repeat(4,minmax(0,1fr))!important;width:min(100% - 1rem,90rem)!important;margin-inline:auto!important}
+  #navigation-principale .nav-inner>a{font-size:.8rem!important}
+}
+@media (min-width:75rem){
+  #navigation-principale .nav-inner{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:stretch!important}
+  #navigation-principale .nav-inner>a{flex:0 1 auto!important;width:auto!important;padding-inline:.62rem!important}
+}
 </style>
-<meta content="strict-origin-when-cross-origin" name="referrer"/><meta content="1200" property="og:image:width"/><meta content="800" property="og:image:height"/><link href="https://www.pensionnat-sacre-coeur.fr/" hreflang="fr-FR" rel="alternate"/><link href="https://www.pensionnat-sacre-coeur.fr/index-ES.html" hreflang="es-ES" rel="alternate"/><link href="https://www.pensionnat-sacre-coeur.fr/" hreflang="x-default" rel="alternate"/></head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/><meta content="1200" property="og:image:width"/><meta content="800" property="og:image:height"/><link href="https://www.pensionnat-sacre-coeur.fr/" hreflang="fr-FR" rel="alternate"/><link href="https://www.pensionnat-sacre-coeur.fr/index-ES.html" hreflang="es-ES" rel="alternate"/><link href="https://www.pensionnat-sacre-coeur.fr/" hreflang="x-default" rel="alternate"/><link crossorigin="anonymous" href="https://media.istockphoto.com" rel="preconnect"/><link href="//media.istockphoto.com" rel="dns-prefetch"/><link crossorigin="anonymous" href="https://www.dosde.com" rel="preconnect"/><link href="//www.dosde.com" rel="dns-prefetch"/><link crossorigin="anonymous" href="https://upload.wikimedia.org" rel="preconnect"/><link href="//upload.wikimedia.org" rel="dns-prefetch"/><link crossorigin="anonymous" href="https://www.galleriacontinua.com" rel="preconnect"/><link href="//www.galleriacontinua.com" rel="dns-prefetch"/></head>
 <body><a class="skip" href="#contenu-principal">Ir al contenido principal</a>
 <div class="container">
-<header aria-labelledby="titre-page"><div class="top-actions"><a aria-label="Abrir la versión francesa de la progresión" class="lang-switch" href="index.html" hreflang="fr" lang="fr"><span aria-hidden="true">🇫🇷</span> Versión francesa</a><a aria-label="Abrir las correcciones protegidas en una pestaña nueva" class="lang-switch correction-switch" href="index1.html" target="_blank" rel="noopener noreferrer" title="Abrir las correcciones"><span aria-hidden="true">🔐</span> Correcciones</a></div>
+<header aria-labelledby="titre-page"><div class="top-actions"><a aria-label="Abrir la versión francesa de la progresión" class="lang-switch" href="index.html" hreflang="fr" lang="fr"><span aria-hidden="true">🇫🇷</span> Versión francesa</a><a aria-label="Abrir las correcciones protegidas en una pestaña nueva" class="lang-switch correction-switch" href="index1.html" rel="noopener noreferrer" target="_blank" title="Abrir las correcciones"><span aria-hidden="true">🔐</span> Correcciones</a></div>
 <h1 id="titre-page">Progresión DNL Matemáticas en español — liceo</h1>
 <p>Un recorrido en espiral desde el nivel inicial hasta el nivel final de bachillerato: observar, modelizar, verificar, argumentar y comunicar en español.</p>
 </header>
-<nav aria-label="Navegación principal" class="nav" id="navigation-principale"><div class="nav-inner">
-<a href="#accueil">Inicio</a>
-<a href="#vision">Visión global</a>
-<a href="#resume-visuel">Resumen visual</a>
-<a href="#seconde">nivel inicial de bachillerato</a>
-<a href="#premiere">nivel intermedio de bachillerato</a>
-<a href="#terminale">nivel final de bachillerato</a>
-<a href="#coherence-didactique">Coherencia didáctica</a>
-<a href="#principes">Principios pedagógicos</a>
-<a href="#spiralaire">Progresión en espiral</a>
-<a href="#festividades">Fiestas y tradiciones</a>
-<a href="#musique">Música</a>
-<a href="#public-cible">Público</a>
-<a href="#modules-detail">Módulos</a>
-
-<a href="#faq">Preguntas frecuentes</a>
-<a href="#sur-moi">Sobre mí</a>
-</div></nav>
+<nav aria-label="Navegación principal" class="nav" id="navigation-principale"><div class="nav-inner"><a aria-current="location" class="is-active" href="#accueil">Inicio</a><a href="#vision">Visión global</a><a href="#alineacion-global">Alineación</a><a href="#resume-visuel">Resumen visual</a><a href="#seconde">Nivel inicial</a><a href="#premiere">Nivel intermedio</a><a href="#terminale">Nivel final</a><a href="#spiralaire">Progresión en espiral</a><a href="#festividades">Fiestas y tradiciones</a><a href="#musique">Música</a><a href="#public-cible">Público</a><a href="#faq">Preguntas frecuentes</a><a href="#sur-moi">Sobre mí</a></div></nav>
 <nav aria-label="Miga de pan" class="breadcrumb">
 <a href="/">Inicio</a> <span aria-hidden="true">›</span> <span aria-current="page">DNL Matemáticas en español</span>
 </nav>
@@ -2245,7 +2375,7 @@ footer { padding-block: clamp(2rem, 5vw, 3.5rem); }
 <div class="intro-section">
 <h2 id="section-accueil-titre">Introducción y contrato de lectura</h2>
 <p>Esta página presenta una progresión DNL Matemáticas en español organizada en tres años de liceo. No yuxtapone temas culturales y nociones matemáticas: cada módulo parte de un objeto, una fuente o una situación, construye una pregunta matemática, formaliza una herramienta y pide al alumnado comunicar un procedimiento en español.</p>
-<div class="highlight-box" role="note"><strong>Objetivo general:</strong> construir una progresión coherente que combine rigor matemático, español científico y cultura humanista. En cada etapa, el alumnado debe poder explicar qué observa, qué modelo utiliza, cómo verifica y cómo formula su conclusión en español.</div><div class="pedagogical-note" role="note"><strong>Contrato de coherencia:</strong> cada módulo sigue una misma cadena didáctica: <em>fuente cultural → pregunta matemática → modelo → verificación → verbalización en español → evidencia reutilizable</em>. Esta cadena explicita el vínculo entre cultura, matemáticas y lengua.</div><div class="highlight-box" role="note"><strong>Pregunta guía del recorrido:</strong> ¿cómo permiten las matemáticas leer, representar, verificar y comunicar fenómenos en contextos culturales hispánicos variados?</div>
+<div class="highlight-box" role="note"><strong>Objetivo general:</strong> construir una progresión coherente que combine rigor matemático, español científico y cultura humanista. En cada etapa, el alumnado debe poder explicar qué observa, qué modelo utiliza, cómo verifica y cómo formula su conclusión en español.</div><div class="pedagogical-note" role="note"><strong>Contrato de coherencia:</strong> cada módulo sigue una misma cadena didáctica: <em>fuente cultural → pregunta matemática → modelo → verificación → verbalización en español → producción reutilizable</em>. Esta cadena explicita el vínculo entre cultura, matemáticas y lengua.</div><div class="highlight-box" role="note"><strong>Pregunta guía del recorrido:</strong> ¿cómo permiten las matemáticas leer, representar, verificar y comunicar fenómenos en contextos culturales hispánicos variados?</div>
 <p>El hilo conductor es la representación de la información: representar un número, una forma, una variación, un dato, una probabilidad o un fenómeno. Los contextos hispánicos dan sentido a los modelos, permiten interrogar sus límites y desarrollan una mediación científica accesible.</p>
 <h3>Distribución horaria de las 90 horas</h3>
 <div class="distribution-grid" role="list">
@@ -2255,21 +2385,21 @@ footer { padding-block: clamp(2rem, 5vw, 3.5rem); }
 </div>
 <div class="pedagogical-note" role="note">
 <strong>Elección didáctica:</strong> cada año retoma gestos matemáticos ya encontrados — observar, representar, calcular, conjeturar, demostrar, modelizar — en contextos culturales cada vez más complejos. Esta organización facilita la memorización, la transferencia y la autonomía.</div>
-<h3>Riquezas artísticas, patrimoniales y literarias del mundo hispánico</h3>
+<h3>Referentes artísticos, patrimoniales y literarios del mundo hispánico</h3>
 <h4>Artes geométricas precolombinas</h4>
 <p>Las civilizaciones precolombinas ofrecen entradas pertinentes para abordar la numeración, las representaciones, las simetrías, los motivos y las estructuras. Los quipus, los textiles, las decoraciones cerámicas y ciertos dispositivos arquitectónicos permiten construir actividades históricas, matemáticas y lingüísticas, evitando reducir la diversidad de estas culturas a una única tradición visual.</p>
-<figure aria-labelledby="legende-image-1" class="image-block"><img alt="Motivos geométricos precolombinos con regularidades y simetrías" decoding="async" fetchpriority="high" height="600" src="https://media.istockphoto.com/id/469191627/fr/vectoriel/abstrait-maya-et-azt%C3%A8que-art-symboles.jpg?s=1024x1024&amp;w=is&amp;k=20&amp;c=Q_N5NNoBWtHtadINg0svAlQV52f0FrhBivJxZt9p0Pk=" width="600"/><figcaption id="legende-image-1">Motivos geométricos inspirados en las artes precolombinas: regularidades, simetrías y organización visual.</figcaption></figure>
+<figure aria-labelledby="legende-image-1" class="image-block"><img alt="Motivos geométricos precolombinos con regularidades y simetrías" decoding="async" fetchpriority="low" height="600" loading="lazy" referrerpolicy="no-referrer" sizes="(max-width: 48rem) calc(100vw - 2rem), (max-width: 75rem) 80vw, 896px" src="https://media.istockphoto.com/id/469191627/fr/vectoriel/abstrait-maya-et-azt%C3%A8que-art-symboles.jpg?s=1024x1024&amp;w=is&amp;k=20&amp;c=Q_N5NNoBWtHtadINg0svAlQV52f0FrhBivJxZt9p0Pk=" width="600"/><figcaption id="legende-image-1">Motivos geométricos inspirados en las artes precolombinas: regularidades, simetrías y organización visual.</figcaption></figure>
 <h4>Patrimonio hispano-musulmán y geometría</h4>
 <p>El patrimonio de Al‑Ándalus constituye un soporte adecuado para trabajar las transformaciones del plano, los teselados, las simetrías y las proporciones. La Alhambra de Granada, el Generalife y el Albaicín permiten observar regularidades geométricas variadas y relacionar el estudio de las figuras con una lectura histórica y artística.</p>
-<figure aria-labelledby="legende-image-2" class="image-block"><img alt="Mosaicos geométricos de la Alhambra con teselaciones y simetrías" decoding="async" height="400" loading="lazy" src="https://www.dosde.com/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/l/alicatados-de-mexuar-alhambra-libro-espa%C3%B1ol-dosde-publishing_978-84-9103-135-2_20-023-00_C02.jpg" width="600"/><figcaption id="legende-image-2">Mosaicos de la Alhambra de Granada: teselados, transformaciones y simetrías.</figcaption></figure>
+<figure aria-labelledby="legende-image-2" class="image-block"><img alt="Mosaicos geométricos de la Alhambra con teselaciones y simetrías" decoding="async" fetchpriority="low" height="400" loading="lazy" referrerpolicy="no-referrer" sizes="(max-width: 48rem) calc(100vw - 2rem), (max-width: 75rem) 80vw, 896px" src="https://www.dosde.com/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/l/alicatados-de-mexuar-alhambra-libro-espa%C3%B1ol-dosde-publishing_978-84-9103-135-2_20-023-00_C02.jpg" width="600"/><figcaption id="legende-image-2">Mosaicos de la Alhambra de Granada: teselados, transformaciones y simetrías.</figcaption></figure>
 <h4>Gaudí y la geometría del espacio</h4>
 <p>La obra de Antoni Gaudí constituye un contexto de trabajo para estudiar curvas, superficies, estructuras y modelización. Permite hacer dialogar geometría, funciones, observación de la naturaleza y lectura arquitectónica, sin reducir la arquitectura a una simple aplicación de fórmulas.</p>
-<figure aria-labelledby="legende-image-3" class="image-block"><img alt="Interior de la Sagrada Família mostrando las estructuras geométricas de Gaudí" decoding="async" height="400" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Sagrada_Familia_nave_roof_detail.jpg" width="600"/><figcaption id="legende-image-3">Interior de la Sagrada Família: formas, estructuras, luz y modelización.</figcaption></figure>
+<figure aria-labelledby="legende-image-3" class="image-block"><img alt="Interior de la Sagrada Família mostrando las estructuras geométricas de Gaudí" decoding="async" fetchpriority="low" height="400" loading="lazy" referrerpolicy="no-referrer" sizes="(max-width: 48rem) calc(100vw - 2rem), (max-width: 75rem) 80vw, 896px" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Sagrada_Familia_nave_roof_detail.jpg" width="600"/><figcaption id="legende-image-3">Interior de la Sagrada Família: formas, estructuras, luz y modelización.</figcaption></figure>
 <h4>Literatura, lógica y pensamiento de las formas</h4>
 <p>Los textos de Jorge Luis Borges y de Octavio Paz permiten relacionar literatura, lógica, combinatoria, laberinto, estructura y reflexión sobre el infinito. Constituyen soportes útiles para trabajar la argumentación, la distinción entre metáfora literaria y concepto matemático, así como la precisión del vocabulario.</p>
 <h4>Arte cinético latinoamericano</h4>
 <p>El arte cinético latinoamericano, especialmente con Jesús Rafael Soto y Carlos Cruz-Diez, abre perspectivas sobre el color, la percepción, las regularidades, los desplazamientos y los efectos visuales. Permite articular geometría, funciones, mirada crítica e historia del arte contemporáneo.</p>
-<figure aria-labelledby="legende-image-4" class="image-block"><img alt="Obra de arte cinético latinoamericano basada en color, regularidad y percepción" decoding="async" height="400" loading="lazy" src="https://www.galleriacontinua.com/assets/artists_images/BIG_CACR2016_03dd-1.jpg" width="600"/><figcaption id="legende-image-4">Arte cinético latinoamericano: percepción, color, regularidad y movimiento.</figcaption></figure>
+<figure aria-labelledby="legende-image-4" class="image-block"><img alt="Obra de arte cinético latinoamericano basada en color, regularidad y percepción" decoding="async" fetchpriority="low" height="400" loading="lazy" referrerpolicy="no-referrer" sizes="(max-width: 48rem) calc(100vw - 2rem), (max-width: 75rem) 80vw, 896px" src="https://www.galleriacontinua.com/assets/artists_images/BIG_CACR2016_03dd-1.jpg" width="600"/><figcaption id="legende-image-4">Arte cinético latinoamericano: percepción, color, regularidad y movimiento.</figcaption></figure>
 </div>
 </section>
 <section aria-labelledby="section-vision-titre" id="vision">
@@ -2285,10 +2415,11 @@ footer { padding-block: clamp(2rem, 5vw, 3.5rem); }
 </tbody>
 </table>
 <h3>Léxico DNL transversal</h3>
-<div aria-label="Léxico matemático francés-español" class="dnl-vocab" role="list">
-<span role="listitem">número → número</span><span role="listitem">proporción → proporción</span><span role="listitem">porcentaje → porcentaje</span><span role="listitem">simetría → simetría</span><span role="listitem">teselado → teselación</span><span role="listitem">función → función</span><span role="listitem">sucesión → sucesión</span><span role="listitem">probabilidad → probabilidad</span><span role="listitem">estadística → estadística</span><span role="listitem">modelo → modelo</span><span role="listitem">conjetura → conjetura</span><span role="listitem">demostración → demostración</span>
-</div>
-</section><section aria-labelledby="section-alineacion-global-titre" id="alineacion-global"><h2 id="section-alineacion-global-titre">Alineación pedagógica y didáctica del recorrido</h2><p>Esta matriz ofrece una lectura común de los tres años: relaciona el nivel, el gesto matemático dominante, el papel del español y la evidencia esperada. Permite verificar que cada módulo produce un aprendizaje observable y transferible.</p><table aria-labelledby="tableau-aide-2"><caption id="tableau-aide-2">Tabla: Alineación pedagógica y didáctica del recorrido</caption><thead><tr><th scope="col">Nivel</th><th scope="col">Intención pedagógica</th><th scope="col">Gesto matemático dominante</th><th scope="col">Papel del español DNL</th><th scope="col">Evidencia esperada</th></tr></thead><tbody><tr><th scope="row">nivel inicial de bachillerato</th><td>Entrar en la DNL mediante observación guiada y manipulación.</td><td>Observar, representar, calcular, describir.</td><td>Nombrar, describir, explicar un procedimiento simple.</td><td>Esquema, tabla, cálculo verificado, frase breve en español.</td></tr><tr><th scope="row">nivel intermedio de bachillerato</th><td>Formalizar y comparar modelos en situaciones más abstractas.</td><td>Conjeturar, generalizar, demostrar parcialmente, argumentar.</td><td>Justificar, comparar, responder a una objeción.</td><td>Argumentario, modelo comentado, producción visual u oral.</td></tr><tr><th scope="row">nivel final de bachillerato</th><td>Reinvertir aprendizajes en una producción autónoma y sintética.</td><td>Modelizar, interpretar, evaluar, comunicar.</td><td>Mediar, sintetizar, adaptar el discurso al público.</td><td>Dossier, exposición, mediación, síntesis crítica bilingüe.</td></tr></tbody></table><div class="pedagogical-note" role="note"><strong>Punto de atención didáctica:</strong> un contexto cultural no basta para construir el aprendizaje. La página explicita, para cada nivel, el modelo matemático trabajado, el tipo de verificación esperado y la verbalización en español.</div></section>
+<div aria-label="Léxico matemático francés-español" class="dnl-vocab" role="list"><span role="listitem">nombre → número</span><span role="listitem">proportion → proporción</span><span role="listitem">pourcentage → porcentaje</span><span role="listitem">symétrie → simetría</span><span role="listitem">pavage → teselación</span><span role="listitem">fonction → función</span><span role="listitem">suite → sucesión</span><span role="listitem">probabilité → probabilidad</span><span role="listitem">statistique → estadística</span><span role="listitem">modèle → modelo</span><span role="listitem">conjecture → conjetura</span><span role="listitem">démonstration → demostración</span></div>
+</section><section aria-labelledby="section-alineacion-global-titre" id="alineacion-global"><h2 id="section-alineacion-global-titre">Alineación de los aprendizajes a lo largo de los tres años</h2><p>Esta síntesis relaciona, para cada nivel, la actividad matemática dominante, la producción en español y la evidencia esperada. Permite leer rápidamente la progresión desde la observación guiada hasta la modelización autónoma.</p><table aria-labelledby="tableau-aide-2"><caption id="tableau-aide-2">Progresión de los aprendizajes, las producciones lingüísticas y las evidencias</caption><thead><tr><th scope="col">Nivel</th><th scope="col">Prioridad de aprendizaje</th><th scope="col">Actividad matemática dominante</th><th scope="col">Producción en español</th><th scope="col">Evidencia esperada</th></tr></thead><tbody>
+<tr><th scope="row">Nivel inicial de bachillerato</th><td>Construir los primeros referentes y explicitar un procedimiento.</td><td>Observar, representar, calcular y verificar.</td><td>Nombrar, describir y explicar un procedimiento sencillo.</td><td>Esquema anotado, tabla, cálculo verificado y frase estructurada.</td></tr>
+<tr><th scope="row">Nivel intermedio de bachillerato</th><td>Formalizar, comparar modelos y justificar elecciones.</td><td>Conjeturar, generalizar, argumentar y demostrar parcialmente.</td><td>Comparar, justificar y responder a una objeción.</td><td>Párrafo argumentado, modelo comentado o presentación breve.</td></tr>
+<tr><th scope="row">Nivel final de bachillerato</th><td>Modelizar una situación compleja y evaluar los límites del modelo.</td><td>Modelizar, interpretar, evaluar y sintetizar.</td><td>Mediar, reformular y adaptar el discurso al público.</td><td>Dossier, exposición o síntesis crítica bilingüe.</td></tr></tbody></table><div class="pedagogical-note" role="note"><strong>Lectura de la progresión:</strong> los contenidos cambian según los módulos, pero se mantienen tres exigencias: elegir un modelo adecuado, verificar el resultado y explicarlo en español con vocabulario preciso.</div></section>
 <section aria-labelledby="section-resume-visuel-titre" class="visual-summary-section" id="resume-visuel">
 <h2 id="section-resume-visuel-titre">Resumen visual de los módulos por colores</h2>
 <p class="visual-summary-intro">Esta síntesis ofrece una lectura rápida de la progresión: tres niveles, dieciocho módulos y un itinerario que va desde la observación guiada hasta la modelización autónoma.</p>
@@ -2333,47 +2464,22 @@ footer { padding-block: clamp(2rem, 5vw, 3.5rem); }
 <h2 id="section-premiere-titre">Nivel intermedio de bachillerato — Arquitectura 3D, arte cinético, sucesiones y probabilidades</h2><div class="pedagogical-note" role="note"><strong>Hilo de progresión en el nivel intermedio de bachillerato:</strong> formalizar los modelos, comparar estrategias y construir argumentos matemáticos más autónomos.</div>
 <p class="module-hours module-hours-premiere"><span aria-hidden="true" class="hourglass-icon">⏳</span><strong>Módulos 7 a 12 — 30 horas</strong></p>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">🧱</span><span>Módulo 7 — Superficies regladas en la arquitectura de Gaudí</span></h3><p>Profundizar en el estudio de las formas espaciales y de las superficies regladas a partir de ejemplos arquitectónicos.</p><a class="module-link" href="Premiere-Modulo7.html">Descubrir el módulo 7 — superficies regladas en la arquitectura de Gaudí</a>
-<h3 class="module-title"><span aria-hidden="true" class="module-icon">🎨</span><span>Módulo 8 — Funciones de segundo grado y arte cinético latinoamericano</span></h3><p>Relacionar funciones de segundo grado, trayectorias y efectos visuales en el arte cinético latinoamericano.</p><a class="module-link" href="Premiere-Modulo8.html">Descubrir el módulo 8 — funciones de segundo grado y arte cinético</a>
-<h3 class="module-title"><span aria-hidden="true" class="module-icon">🌀</span><span>Módulo 9 — Fibonacci y espirales en el arte</span></h3><p>Estudiar las sucesiones, el crecimiento y las espirales a través de obras artísticas y motivos naturales.</p><a class="module-link" href="Premiere-Modulo9.html">Descubrir el módulo 9 — sucesiones de Fibonacci y espirales en el arte</a>
+<h3 class="module-title"><span aria-hidden="true" class="module-icon">🎨</span><span>Módulo 8 — Funciones de segundo grado y arte cinético latinoamericano</span></h3><p>Modelizar trayectorias parabólicas mediante funciones de segundo grado y analizar, por separado, regularidades y efectos visuales en el arte cinético latinoamericano.</p><a class="module-link" href="Premiere-Modulo8.html">Descubrir el módulo 8 — funciones de segundo grado y arte cinético</a>
+<h3 class="module-title"><span aria-hidden="true" class="module-icon">🌀</span><span>Módulo 9 — Fibonacci y espirales en el arte</span></h3><p>Estudiar la sucesión de Fibonacci, sus modos de construcción y algunas representaciones en espiral, sin confundir la espiral de Fibonacci con las formas naturales observadas.</p><a class="module-link" href="Premiere-Modulo9.html">Descubrir el módulo 9 — sucesiones de Fibonacci y espirales en el arte</a>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">🎲</span><span>Módulo 10 — Probabilidades y juegos precolombinos</span></h3><p>Explorar las probabilidades a partir de situaciones lúdicas contextualizadas, inspiradas en prácticas culturales precolombinas claramente identificadas.</p><a class="module-link" href="Premiere-Modulo10.html">Descubrir el módulo 10 — probabilidades y juegos precolombinos</a>
-<h3 class="module-title"><span aria-hidden="true" class="module-icon">🧩</span><span>Módulo 11 — Geometría avanzada y arte fractal latinoamericano</span></h3><p>Aproximarse a formas complejas y lógicas iterativas a partir de ejemplos visuales o digitales situados en el espacio cultural latinoamericano.</p><a class="module-link" href="Premiere-Modulo11.html">Descubrir el módulo 11 — geometría avanzada y arte fractal latinoamericano</a>
+<h3 class="module-title"><span aria-hidden="true" class="module-icon">🧩</span><span>Módulo 11 — Geometría avanzada, iteraciones y creaciones fractales en contexto latinoamericano</span></h3><p>Estudiar formas complejas y procesos iterativos a partir de creaciones visuales o digitales claramente situadas en contextos latinoamericanos.</p><a class="module-link" href="Premiere-Modulo11.html">Descubrir el módulo 11 — geometría avanzada y arte fractal latinoamericano</a>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">✍️</span><span>Módulo 12 — Octavio Paz y poesía matemática</span></h3><p>Relacionar poesía, estructura y pensamiento matemático a partir de textos de Octavio Paz.</p><a class="module-link" href="Premiere-Modulo12.html">Descubrir el módulo 12 — Octavio Paz y poesía matemática</a>
 </section>
 <section aria-labelledby="section-terminale-titre" id="terminale">
 <h2 id="section-terminale-titre">Nivel final de bachillerato — Modelización, humanidades digitales y síntesis cultural</h2><div class="pedagogical-note" role="note"><strong>Hilo de progresión en el nivel final de bachillerato:</strong> modelizar situaciones complejas, interpretar resultados y producir una comunicación científica matizada.</div>
 <p class="module-hours module-hours-terminale"><span aria-hidden="true" class="hourglass-icon">⏳</span><strong>Módulos 13 a 18 — 30 horas</strong></p>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">🌆</span><span>Módulo 13 — Sucesiones avanzadas y urbanismo latinoamericano</span></h3><p>Estudiar fenómenos de evolución a partir de dinámicas urbanas latinoamericanas.</p><a class="module-link" href="Terminale-Modulo13.html">Descubrir el módulo 13 — sucesiones avanzadas y urbanismo latinoamericano</a>
-<h3 class="module-title"><span aria-hidden="true" class="module-icon">💻</span><span>Módulo 14 — Probabilidades avanzadas, estilometría y humanidades digitales</span></h3><p>Movilizar probabilidades, análisis de corpus y herramientas digitales desde una perspectiva de cultura científica, lingüística y bilingüe.</p><a class="module-link" href="Terminale-Modulo14.html">Descubrir el módulo 14 — probabilidades, estilometría y humanidades digitales</a>
+<h3 class="module-title"><span aria-hidden="true" class="module-icon">💻</span><span>Módulo 14 — Probabilidades avanzadas, estilometría y humanidades digitales</span></h3><p>Movilizar estadística descriptiva, probabilidades, análisis de corpus y herramientas digitales desde una perspectiva científica, lingüística y bilingüe.</p><a class="module-link" href="Terminale-Modulo14.html">Descubrir el módulo 14 — probabilidades, estilometría y humanidades digitales</a>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">📈</span><span>Módulo 15 — Estadística avanzada y arte digital hispánico</span></h3><p>Profundizar en el análisis estadístico y su interpretación a través de obras y dispositivos digitales.</p><a class="module-link" href="Terminale-Modulo15.html">Descubrir el módulo 15 — estadística avanzada y arte digital hispánico</a>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">🎼</span><span>Módulo 16 — Funciones y matemáticas musicales</span></h3><p>Relacionar funciones, modelización y fenómenos musicales en un enfoque interdisciplinario.</p><a class="module-link" href="Terminale-Modulo16.html">Descubrir el módulo 16 — funciones y matemáticas musicales</a>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">🧠</span><span>Módulo 17 — Síntesis geométrica y arte conceptual hispánico</span></h3><p>Sintetizar los aprendizajes geométricos del recorrido a través de propuestas de arte conceptual hispánico claramente contextualizadas.</p><a class="module-link" href="Terminale-Modulo17.html">Descubrir el módulo 17 — síntesis geométrica y arte conceptual hispánico</a>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">🌟</span><span>Módulo 18 — Cultura hispánica, realismo mágico y matemáticas</span></h3><p>Concluir el recorrido articulando cultura hispánica, imaginario literario y modelización matemática.</p><a class="module-link" href="Terminale-Modulo18.html">Descubrir el módulo 18 — realismo mágico, cultura hispánica y modelización</a>
 </section>
-<section aria-labelledby="section-competencias-transversales-titre" id="competencias-transversales"><h2 id="section-competencias-transversales-titre">Competencias transversales del recorrido</h2><p>Los módulos cambian de contexto, pero los gestos de aprendizaje permanecen estables. Esta estabilidad facilita la transferencia de un año a otro.</p><div class="card-grid"><article aria-labelledby="carte-titre-7" class="topic-card"><h3 id="carte-titre-7">Observar</h3><p>Identificar datos visibles, fuentes y restricciones antes de interpretar.</p></article><article aria-labelledby="carte-titre-8" class="topic-card"><h3 id="carte-titre-8">Modelizar</h3><p>Elegir una representación: número, fórmula, gráfico, figura, tabla, árbol o algoritmo.</p></article><article aria-labelledby="carte-titre-9" class="topic-card"><h3 id="carte-titre-9">Verificar</h3><p>Controlar un resultado mediante cálculo, medida, recomposición, simulación o demostración.</p></article><article aria-labelledby="carte-titre-10" class="topic-card"><h3 id="carte-titre-10">Formular en español</h3><p>Describir el procedimiento con conectores: <em>primero, luego, porque, por lo tanto, sin embargo</em>.</p></article><article aria-labelledby="carte-titre-11" class="topic-card"><h3 id="carte-titre-11">Argumentar</h3><p>Defender una elección matemática con un criterio explícito y reconocer un límite.</p></article><article aria-labelledby="carte-titre-12" class="topic-card"><h3 id="carte-titre-12">Mediar</h3><p>Transformar un resultado en una explicación accesible para un público no especialista.</p></article></div></section><section aria-labelledby="section-coherence-didactique-titre" id="coherence-didactique">
-<h2 id="section-coherence-didactique-titre">Coherencia didáctica y modalidades de evaluación</h2>
-<p>La coherencia didáctica se apoya en una alineación constante entre objetivos matemáticos, competencias lingüísticas en español, contexto cultural y evidencia evaluada. Cada módulo debe mostrar qué aprende el alumnado, qué produce, cómo verifica y cómo comunica.</p>
-<div class="pedagogical-note" role="note">
-<strong>Alineación pedagógica:</strong> conviene que cada sesión explicite sucesivamente la situación cultural, la pregunta matemática, las herramientas movilizadas, la verbalización en español y la huella escrita bilingüe. Esta cadena evita la yuxtaposición entre cultura y matemáticas y refuerza la coherencia DNL.</div>
-<div class="card-grid">
-<article aria-labelledby="carte-titre-13" class="topic-card"><h3 id="carte-titre-13">Competencias matemáticas</h3><p>Buscar, representar, modelizar, razonar, calcular y comunicar se movilizan de forma progresiva y coherente con los aprendizajes esperados en liceo.</p></article>
-<article aria-labelledby="carte-titre-14" class="topic-card"><h3 id="carte-titre-14">Competencias lingüísticas</h3><p>Los alumnos se apropian del léxico científico en español, reformulan procedimientos, justifican resultados y desarrollan una mediación clara entre documentos, cálculos y producciones.</p></article>
-<article aria-labelledby="carte-titre-15" class="topic-card"><h3 id="carte-titre-15">Evaluación formativa</h3><p>Las huellas escritas, las producciones intermedias, los debates, las exposiciones breves y las síntesis permiten observar los progresos matemáticos, lingüísticos y metodológicos.</p></article>
-<article aria-labelledby="carte-titre-16" class="topic-card"><h3 id="carte-titre-16">Diferenciación</h3><p>Las actividades combinan soportes visuales, manipulaciones, cálculos guiados y tareas de argumentación para acompañar perfiles variados de alumnos.</p></article>
-</div>
-<h3>Indicadores comunes de éxito</h3>
-<ul><li>Identificar el contexto cultural y formular una pregunta matemática pertinente.</li><li>Elegir una representación adecuada: tabla, gráfico, figura, esquema o modelo.</li><li>Justificar un procedimiento con vocabulario matemático preciso en español.</li><li>Distinguir observación, conjetura, cálculo, demostración e interpretación.</li><li>Comunicar un resultado de manera clara, verificable y culturalmente situada.</li></ul>
-<h3>Matriz de coherencia de una sesión</h3><table aria-labelledby="tableau-aide-3"><caption id="tableau-aide-3">Tabla: Matriz de coherencia de una sesión</caption><thead><tr><th scope="col">Etapa</th><th scope="col">Pregunta para el docente</th><th scope="col">Evidencia para el alumnado</th></tr></thead><tbody><tr><th scope="row">Situación</th><td>¿Qué documento, objeto o fenómeno genera la necesidad matemática?</td><td>Observación formulada en francés o en español.</td></tr><tr><th scope="row">Pregunta matemática</th><td>¿Qué noción se trabaja realmente?</td><td>Problema identificado y vocabulario focalizado.</td></tr><tr><th scope="row">Modelo</th><td>¿Qué representación hace tratable la situación?</td><td>Esquema, tabla, fórmula, figura o gráfico.</td></tr><tr><th scope="row">Verificación</th><td>¿Cómo sabe el alumnado que el resultado es coherente?</td><td>Cálculo, medida, comparación, prueba o simulación.</td></tr><tr><th scope="row">Mediación</th><td>¿Cómo explica el alumnado el resultado en español?</td><td>Frase estructurada con conector y precisión cultural.</td></tr></tbody></table></section>
-<section aria-labelledby="section-principes-titre" id="principes">
-<h2 id="section-principes-titre">Principios pedagógicos rectores</h2>
-<div class="card-grid">
-<article aria-labelledby="carte-titre-17" class="topic-card"><h3 id="carte-titre-17">Acompañamiento progresivo</h3><p>El docente explicita las etapas del razonamiento y acompaña progresivamente a los alumnos hacia la autonomía.</p></article>
-<article aria-labelledby="carte-titre-18" class="topic-card"><h3 id="carte-titre-18">Conexiones conceptuales</h3><p>Las nuevas nociones se relacionan con los conocimientos previos y con los contextos culturales estudiados.</p></article>
-<article aria-labelledby="carte-titre-19" class="topic-card"><h3 id="carte-titre-19">Fuentes identificadas</h3><p>Los documentos, obras y recursos utilizados se explicitan para desarrollar una cultura de la verificación.</p></article>
-<article aria-labelledby="carte-titre-20" class="topic-card"><h3 id="carte-titre-20">El proceso antes que el resultado</h3><p>La comprensión de los procedimientos, las justificaciones y las decisiones de modelización es central.</p></article>
-<article aria-labelledby="carte-titre-21" class="topic-card"><h3 id="carte-titre-21">Contextualización cultural</h3><p>Los módulos se apoyan en patrimonios, obras o corpus claramente situados en los mundos hispánicos.</p></article>
-<article aria-labelledby="carte-titre-22" class="topic-card"><h3 id="carte-titre-22">Diferenciación inclusiva</h3><p>Cada módulo prevé varios niveles de entrada, ayuda y profundización para apoyar el éxito de todos los alumnos.</p></article>
-</div>
-<h3>Obstáculos didácticos recurrentes</h3><div class="card-grid"><article aria-labelledby="carte-titre-23" class="topic-card"><h4 id="carte-titre-23">Confundir ilustración y aprendizaje</h4><p>Un documento cultural debe conducir a una pregunta matemática explícita, no solo decorar la sesión.</p></article><article aria-labelledby="carte-titre-24" class="topic-card"><h4 id="carte-titre-24">Responder sin verificar</h4><p>Cada módulo prevé una forma de control: recomposición, unidad, orden de magnitud, demostración, simulación o contraejemplo.</p></article><article aria-labelledby="carte-titre-25" class="topic-card"><h4 id="carte-titre-25">Traducir sin conceptualizar</h4><p>El léxico español acompaña un procedimiento matemático. No sustituye la comprensión de la noción.</p></article><article aria-labelledby="carte-titre-26" class="topic-card"><h4 id="carte-titre-26">Generalizar culturalmente</h4><p>El alumnado distingue fuente histórica, modelo escolar e interpretación matemática actual.</p></article></div></section>
 <section aria-labelledby="section-spiralaire-titre" id="spiralaire">
 <h2 id="section-spiralaire-titre">Progresión en espiral</h2>
 <p>La lógica del recorrido se basa en una continuidad explícita entre los tres niveles:</p>
@@ -2387,45 +2493,18 @@ footer { padding-block: clamp(2rem, 5vw, 3.5rem); }
 <section aria-labelledby="section-festividades-titre" id="festividades">
 <h2 class="module-title" id="section-festividades-titre"><span aria-hidden="true" class="module-icon">🎉</span><span>Módulo transversal — Fiestas y tradiciones hispánicas</span></h2>
 <p>Explorar las matemáticas presentes en las grandes celebraciones del mundo hispánico mediante un recorrido cultural que combina memoria, geometría, proporcionalidad, calendarios y modelización.</p>
-<div class="highlight-box" role="note"><strong>Recorrido completo:</strong> este módulo propone una progresión cultural y matemática en torno al Día de Muertos, la Navidad, los Reyes Magos, la Semana Santa y la Pascua.</div>
+<div class="highlight-box" role="note"><strong>Recorrido completo:</strong> este módulo propone una progresión cultural y matemática en torno al Día de Muertos, la Navidad, los Reyes Magos, la Semana Santa y la Pascua. Este recorrido transversal completa los 18 módulos numerados sin modificar el volumen principal de 90 horas.</div>
 <a aria-label="Descubrir el módulo transversal — fiestas y tradiciones hispánicas (Se abre en una pestaña nueva)" class="module-link" href="Modulo-Festividades.html" rel="noopener noreferrer" target="_blank" title="Abrir el archivo: Modulo-Festividades.html">Descubrir el módulo transversal — fiestas y tradiciones hispánicas</a>
 </section>
 <section aria-labelledby="section-musique-titre" id="musique">
 <h2 class="module-title" id="section-musique-titre"><span aria-hidden="true" class="module-icon">🎵</span><span>Módulo transversal — Música y matemáticas hispánicas</span></h2>
 <p>Explorar las matemáticas en la música hispánica mediante un recorrido progresivo que articula ritmo, proporciones, funciones, análisis de señales y creación sonora.</p>
-<div class="highlight-box" role="note"><strong>Recorrido completo:</strong> este módulo relaciona prácticas musicales, modelización matemática y patrimonio cultural hispánico desde nivel inicial de bachillerato hasta el nivel final de bachillerato.</div>
+<div class="highlight-box" role="note"><strong>Recorrido completo:</strong> este módulo relaciona prácticas musicales, modelización matemática y patrimonio cultural hispánico desde el nivel inicial hasta el nivel final de bachillerato. Este recorrido transversal completa los 18 módulos numerados sin modificar el volumen principal de 90 horas.</div>
 <a aria-label="Descubrir el módulo transversal — música y matemáticas hispánicas (Se abre en una pestaña nueva)" class="module-link" href="Modulo-Musica-Hispanica.html" rel="noopener noreferrer" target="_blank" title="Abrir el archivo: Modulo-Musica-Hispanica.html">Descubrir el módulo transversal — música y matemáticas hispánicas</a>
 </section>
 <section aria-labelledby="section-public-cible-titre" id="public-cible">
 <h2 id="section-public-cible-titre">¿A quién se dirige esta progresión DNL?</h2>
-<p>Esta página se dirige a el alumnado de los tres niveles de bachillerato que siguen una DNL Matemáticas en español, a las familias que desean comprender la organización del recorrido y a los docentes que buscan una progresión interdisciplinaria que asocie matemáticas, español científico y cultura hispánica.</p>
-</section>
-
-<section aria-labelledby="section-modules-detail-titre" id="modules-detail">
-<h2 id="section-modules-detail-titre">Todos los módulos de DNL Matemáticas en español</h2>
-<p>Esta lista facilita el acceso a las actividades detalladas de los módulos de nivel inicial de bachillerato, nivel intermedio de bachillerato, nivel final de bachillerato y de los recorridos transversales.</p>
-<ul>
-<li><a href="Seconde-Modulo1.html">Módulo 1 — Matemáticas de las civilizaciones precolombinas</a></li>
-<li><a href="Seconde-Modulo2.html">Módulo 2 — Geometría de Al‑Ándalus y arte hispano-musulmán</a></li>
-<li><a href="Seconde-Modulo3.html">Módulo 3 — Comercio hispanoamericano y proporcionalidad</a></li>
-<li><a href="Seconde-Modulo4.html">Módulo 4 — Estadística, demografía y muralismo mexicano</a></li>
-<li><a href="Seconde-Modulo5.html">Módulo 5 — Funciones, arquitectura de Gaudí y geometría aplicada</a></li>
-<li><a href="Seconde-Modulo6.html">Módulo 6 — Borges, lógica y combinatoria</a></li>
-<li><a href="Premiere-Modulo7.html">Módulo 7 — Superficies regladas en la arquitectura de Gaudí</a></li>
-<li><a href="Premiere-Modulo8.html">Módulo 8 — Funciones de segundo grado y arte cinético</a></li>
-<li><a href="Premiere-Modulo9.html">Módulo 9 — Sucesiones de Fibonacci y espirales en el arte</a></li>
-<li><a href="Premiere-Modulo10.html">Módulo 10 — Probabilidades y juegos precolombinos</a></li>
-<li><a href="Premiere-Modulo11.html">Módulo 11 — Geometría avanzada y arte fractal latinoamericano</a></li>
-<li><a href="Premiere-Modulo12.html">Módulo 12 — Octavio Paz y poesía matemática</a></li>
-<li><a href="Terminale-Modulo13.html">Módulo 13 — Sucesiones avanzadas y urbanismo latinoamericano</a></li>
-<li><a href="Terminale-Modulo14.html">Módulo 14 — Probabilidades, estilometría y humanidades digitales</a></li>
-<li><a href="Terminale-Modulo15.html">Módulo 15 — Estadística avanzada y arte digital hispánico</a></li>
-<li><a href="Terminale-Modulo16.html">Módulo 16 — Funciones y matemáticas musicales</a></li>
-<li><a href="Terminale-Modulo17.html">Módulo 17 — Síntesis geométrica y arte conceptual hispánico</a></li>
-<li><a href="Terminale-Modulo18.html">Módulo 18 — Realismo mágico, cultura hispánica y modelización</a></li>
-<li><a href="Modulo-Festividades.html">Módulo transversal — Fiestas y tradiciones hispánicas</a></li>
-<li><a href="Modulo-Musica-Hispanica.html">Módulo transversal — Música y matemáticas hispánicas</a></li>
-</ul>
+<p>Esta página se dirige al alumnado de los tres niveles de bachillerato que siguen una DNL Matemáticas en español, a las familias que desean comprender la organización del recorrido y a los docentes que buscan una progresión interdisciplinaria que asocie matemáticas, español científico y cultura hispánica.</p>
 </section>
 <section aria-labelledby="section-faq-titre" id="faq">
 <h2 id="section-faq-titre">Preguntas frecuentes sobre la DNL Matemáticas en español</h2>
@@ -2474,5 +2553,49 @@ footer { padding-block: clamp(2rem, 5vw, 3.5rem); }
 </main>
 <footer aria-label="Pie de página"><div class="footer-content"><p><strong>🌄 Ficha Curso DNL mathématiques en espagnol Lycée Pensionnat Sacré-Cœur, Reims © 2027 - CC-BY-NC-SA 4.0</strong></p></div></footer>
 </div>
-<script defer="" src="script.js"></script></body>
+<script defer="" src="script.js"></script><script data-nav-active="true">
+(() => {
+  const links = [...document.querySelectorAll('.nav-inner a[href^="#"]')];
+  if (!links.length) return;
+  const pairs = links.map(link => ({ link, section: document.querySelector(link.getAttribute('href')) })).filter(item => item.section);
+  const setActive = link => {
+    links.forEach(item => {
+      const active = item === link;
+      item.classList.toggle('is-active', active);
+      if (active) item.setAttribute('aria-current', 'location');
+      else item.removeAttribute('aria-current');
+    });
+  };
+  links.forEach(link => link.addEventListener('click', () => setActive(link), { passive: true }));
+  const updateFromPosition = () => {
+    const marker = Math.max(96, window.innerHeight * 0.24);
+    let current = pairs[0];
+    for (const pair of pairs) {
+      if (pair.section.getBoundingClientRect().top <= marker) current = pair;
+      else break;
+    }
+    if (current) setActive(current.link);
+  };
+  if ('IntersectionObserver' in window) {
+    const visible = new Map();
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => entry.isIntersecting ? visible.set(entry.target, entry) : visible.delete(entry.target));
+      const best = [...visible.values()].sort((a,b) => Math.abs(a.boundingClientRect.top - 96) - Math.abs(b.boundingClientRect.top - 96))[0];
+      if (best) {
+        const pair = pairs.find(item => item.section === best.target);
+        if (pair) setActive(pair.link);
+      } else updateFromPosition();
+    }, { rootMargin: '-12% 0px -68% 0px', threshold: [0, .1, .5] });
+    pairs.forEach(pair => observer.observe(pair.section));
+  }
+  window.addEventListener('hashchange', () => {
+    const link = links.find(item => item.getAttribute('href') === location.hash);
+    if (link) setActive(link);
+  }, { passive: true });
+  window.addEventListener('scroll', updateFromPosition, { passive: true });
+  const initial = links.find(item => item.getAttribute('href') === location.hash) || pairs[0]?.link;
+  if (initial) setActive(initial);
+  updateFromPosition();
+})();
+</script></body>
 </html>

@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link aria-label="Favicon de la bandera de España" href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3EBandera%20de%20Espa%C3%B1a%3C%2Ftitle%3E%0A%3Cdesc%3EFavicon%20con%20tres%20franjas%20horizontales%20roja%2C%20amarilla%20y%20roja.%3C%2Fdesc%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%23AA151B%22%2F%3E%0A%3Crect%20y%3D%2216%22%20width%3D%2264%22%20height%3D%2232%22%20fill%3D%22%23F1BF00%22%2F%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2262.5%22%20height%3D%2262.5%22%20rx%3D%229.25%22%0A%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%237A1015%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E" id="favicon-drapeau-espagnol" rel="icon" type="image/svg+xml"/>
 <title>DNL mathématiques en espagnol au lycée | Parcours 90 h</title>
 <meta content="Parcours DNL de mathématiques en espagnol au lycée : 18 modules de la Seconde à la Terminale, entre notions, langue et culture hispanique." name="description"/>
 <meta content="DNL mathématiques en espagnol, progression DNL lycée, maths espagnol lycée, Al-Ándalus géométrie, Gaudí mathématiques, Fibonacci, probabilités, culture hispanique, Seconde Première Terminale, Reims" name="keywords"/>
@@ -1897,8 +1898,155 @@ footer { padding-block: clamp(2rem, 5vw, 3.5rem); }
     display: none !important;
   }
 }
+
+/* Image performance optimization */
+.image-block{content-visibility:auto;contain-intrinsic-size:auto 620px;contain:layout paint style}
+.image-block img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;filter:none!important;opacity:1!important;mix-blend-mode:normal;background:var(--color-surface-alt,#f5f8fa);transform:translateZ(0);backface-visibility:hidden}
+@media (max-width:47.999rem){.image-block{contain-intrinsic-size:auto 420px}.image-block img{aspect-ratio:4/3}}
+@media (prefers-reduced-motion:reduce){.image-block img{transition:none!important;transform:none!important}}
+
+
+/* Navigation centered, 320px-safe, with active section state */
+.nav-inner{
+  justify-content:center!important;
+  justify-items:center!important;
+  align-content:center!important;
+}
+.nav-inner a{
+  justify-content:center!important;
+  text-align:center!important;
+  margin-inline:auto!important;
+}
+.nav-inner a[aria-current="location"],
+.nav-inner a.is-active{
+  background:#0b6f69!important;
+  color:#fff!important;
+  border-color:#0b6f69!important;
+  box-shadow:inset 0 -3px 0 #f6bf4a,0 4px 12px rgba(11,111,105,.22)!important;
+  text-decoration:none!important;
+}
+.nav-inner a[aria-current="location"]::before,
+.nav-inner a.is-active::before{
+  content:"";
+  width:.48rem;
+  height:.48rem;
+  flex:0 0 .48rem;
+  margin-right:.38rem;
+  border-radius:50%;
+  background:#f6bf4a;
+}
+@media (max-width:22rem){
+  .nav-inner{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    width:100%!important;
+    max-width:100%!important;
+    padding:.3rem!important;
+    gap:.24rem!important;
+  }
+  .nav-inner a{
+    width:100%!important;
+    min-width:0!important;
+    min-height:2.75rem!important;
+    margin:0!important;
+    padding:.42rem .22rem!important;
+    font-size:.69rem!important;
+    line-height:1.12!important;
+    overflow-wrap:anywhere!important;
+    word-break:normal!important;
+    hyphens:auto!important;
+  }
+  .nav-inner a[aria-current="location"]::before,
+  .nav-inner a.is-active::before{
+    width:.4rem;
+    height:.4rem;
+    flex-basis:.4rem;
+    margin-right:.25rem;
+  }
+}
+
+
+/* Correctif final : tous les liens de navigation restent visibles */
+#navigation-principale{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  overflow:visible!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+#navigation-principale .nav-inner{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  grid-auto-flow:row!important;
+  grid-auto-rows:auto!important;
+  place-items:stretch!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  margin:0!important;
+  padding:.4rem!important;
+  gap:.3rem!important;
+  overflow:visible!important;
+  overflow-x:visible!important;
+  overflow-y:visible!important;
+  white-space:normal!important;
+}
+#navigation-principale .nav-inner>a{
+  display:flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  min-width:0!important;
+  max-width:none!important;
+  min-height:2.75rem!important;
+  height:auto!important;
+  margin:0!important;
+  padding:.48rem .3rem!important;
+  color:#173f5f!important;
+  background:#f4f8f8!important;
+  border:1px solid #bdd0d2!important;
+  border-radius:.65rem!important;
+  font-size:clamp(.7rem,3.45vw,.8rem)!important;
+  font-weight:750!important;
+  line-height:1.15!important;
+  text-align:center!important;
+  text-decoration:none!important;
+  white-space:normal!important;
+  overflow:visible!important;
+  overflow-wrap:anywhere!important;
+  hyphens:auto!important;
+}
+#navigation-principale .nav-inner>a:hover,
+#navigation-principale .nav-inner>a:focus-visible{
+  color:#fff!important;
+  background:#173f5f!important;
+  border-color:#173f5f!important;
+}
+#navigation-principale .nav-inner>a[aria-current="location"],
+#navigation-principale .nav-inner>a.is-active{
+  color:#fff!important;
+  background:#0b6f69!important;
+  border-color:#0b6f69!important;
+}
+@media (min-width:30rem){
+  #navigation-principale .nav-inner{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media (min-width:48rem){
+  #navigation-principale .nav-inner{grid-template-columns:repeat(4,minmax(0,1fr))!important;width:min(100% - 1rem,90rem)!important;margin-inline:auto!important}
+  #navigation-principale .nav-inner>a{font-size:.8rem!important}
+}
+@media (min-width:75rem){
+  #navigation-principale .nav-inner{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:stretch!important}
+  #navigation-principale .nav-inner>a{flex:0 1 auto!important;width:auto!important;padding-inline:.62rem!important}
+}
 </style>
-<meta content="strict-origin-when-cross-origin" name="referrer"/><meta content="1200" property="og:image:width"/><meta content="800" property="og:image:height"/><link href="https://www.pensionnat-sacre-coeur.fr/" hreflang="fr-FR" rel="alternate"/><link href="https://www.pensionnat-sacre-coeur.fr/index-ES.html" hreflang="es-ES" rel="alternate"/><link href="https://www.pensionnat-sacre-coeur.fr/" hreflang="x-default" rel="alternate"/></head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/><meta content="1200" property="og:image:width"/><meta content="800" property="og:image:height"/><link href="https://www.pensionnat-sacre-coeur.fr/" hreflang="fr-FR" rel="alternate"/><link href="https://www.pensionnat-sacre-coeur.fr/index-ES.html" hreflang="es-ES" rel="alternate"/><link href="https://www.pensionnat-sacre-coeur.fr/" hreflang="x-default" rel="alternate"/><link crossorigin="anonymous" href="https://media.istockphoto.com" rel="preconnect"/><link href="//media.istockphoto.com" rel="dns-prefetch"/><link crossorigin="anonymous" href="https://www.dosde.com" rel="preconnect"/><link href="//www.dosde.com" rel="dns-prefetch"/><link crossorigin="anonymous" href="https://upload.wikimedia.org" rel="preconnect"/><link href="//upload.wikimedia.org" rel="dns-prefetch"/><link crossorigin="anonymous" href="https://www.galleriacontinua.com" rel="preconnect"/><link href="//www.galleriacontinua.com" rel="dns-prefetch"/></head>
 <body><a class="skip" href="#contenu-principal">Aller au contenu principal</a>
 <div class="container">
 <header aria-labelledby="titre-page"><div class="top-actions"><a aria-label="Ouvrir la version espagnole de la progression" class="lang-switch" href="index-ES.html" hreflang="es" lang="es"><span aria-hidden="true">🇪🇸</span> Version espagnole</a><a aria-label="Ouvrir les corrections protégées dans un nouvel onglet" class="lang-switch correction-switch" href="index1.html" rel="noopener noreferrer" target="_blank"><span aria-hidden="true">🔐</span> Corrections</a></div>
@@ -1906,7 +2054,7 @@ footer { padding-block: clamp(2rem, 5vw, 3.5rem); }
 <p>Un parcours spiralaire de la Seconde à la Terminale : observer, modéliser, vérifier, argumenter et communiquer en espagnol.</p>
 </header>
 <nav aria-label="Navigation principale" class="nav" id="navigation-principale"><div class="nav-inner">
-<a href="#accueil">Accueil</a>
+<a aria-current="location" class="is-active" href="#accueil">Accueil</a>
 <a href="#vision">Vision globale</a><a href="#alignement-global">Alignement</a>
 <a href="#resume-visuel">Résumé visuel</a>
 <a href="#seconde">Seconde</a>
@@ -1941,18 +2089,18 @@ footer { padding-block: clamp(2rem, 5vw, 3.5rem); }
 <h3>Repères artistiques, patrimoniaux et littéraires du monde hispanique</h3>
 <h4>Arts géométriques précolombiens</h4>
 <p>Les civilisations précolombiennes offrent des entrées pertinentes pour aborder la numération, les représentations, les symétries, les motifs et les structures. Les quipus, les textiles, les décors céramiques et certains dispositifs architecturaux permettent de construire des activités historiques, mathématiques et linguistiques, tout en évitant de réduire la diversité de ces cultures à une tradition visuelle unique.</p>
-<figure aria-labelledby="legende-image-1" class="image-block"><img alt="Motifs géométriques précolombiens présentant des régularités et des symétries" decoding="async" fetchpriority="high" height="600" src="https://media.istockphoto.com/id/469191627/fr/vectoriel/abstrait-maya-et-azt%C3%A8que-art-symboles.jpg?s=1024x1024&amp;w=is&amp;k=20&amp;c=Q_N5NNoBWtHtadINg0svAlQV52f0FrhBivJxZt9p0Pk=" width="600"/><figcaption id="legende-image-1">Motifs géométriques inspirés des arts précolombiens : régularités, symétries et organisation visuelle.</figcaption></figure>
+<figure aria-labelledby="legende-image-1" class="image-block"><img alt="Motifs géométriques précolombiens présentant des régularités et des symétries" decoding="async" fetchpriority="low" height="600" loading="lazy" referrerpolicy="no-referrer" sizes="(max-width: 48rem) calc(100vw - 2rem), (max-width: 75rem) 80vw, 896px" src="https://media.istockphoto.com/id/469191627/fr/vectoriel/abstrait-maya-et-azt%C3%A8que-art-symboles.jpg?s=1024x1024&amp;w=is&amp;k=20&amp;c=Q_N5NNoBWtHtadINg0svAlQV52f0FrhBivJxZt9p0Pk=" width="600"/><figcaption id="legende-image-1">Motifs géométriques inspirés des arts précolombiens : régularités, symétries et organisation visuelle.</figcaption></figure>
 <h4>Patrimoine hispano-musulman et géométrie</h4>
 <p>Le patrimoine d’Al‑Ándalus constitue un support privilégié pour étudier les transformations du plan, les pavages, les symétries et les proportions. L’Alhambra de Grenade, le Generalife et l’Albaicín permettent d’observer des régularités géométriques variées et de relier l’étude des figures à une lecture historique et artistique.</p>
-<figure aria-labelledby="legende-image-2" class="image-block"><img alt="Mosaïques géométriques de l’Alhambra présentant des pavages et des symétries" decoding="async" height="400" loading="lazy" src="https://www.dosde.com/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/l/alicatados-de-mexuar-alhambra-libro-espa%C3%B1ol-dosde-publishing_978-84-9103-135-2_20-023-00_C02.jpg" width="600"/><figcaption id="legende-image-2">Mosaïques de l’Alhambra de Grenade : pavages, transformations et symétries.</figcaption></figure>
+<figure aria-labelledby="legende-image-2" class="image-block"><img alt="Mosaïques géométriques de l’Alhambra présentant des pavages et des symétries" decoding="async" fetchpriority="low" height="400" loading="lazy" referrerpolicy="no-referrer" sizes="(max-width: 48rem) calc(100vw - 2rem), (max-width: 75rem) 80vw, 896px" src="https://www.dosde.com/media/catalog/product/cache/3/image/9df78eab33525d08d6e5fb8d27136e95/a/l/alicatados-de-mexuar-alhambra-libro-espa%C3%B1ol-dosde-publishing_978-84-9103-135-2_20-023-00_C02.jpg" width="600"/><figcaption id="legende-image-2">Mosaïques de l’Alhambra de Grenade : pavages, transformations et symétries.</figcaption></figure>
 <h4>Gaudí et la géométrie de l’espace</h4>
 <p>L’œuvre d’Antoni Gaudí constitue un contexte adapté pour étudier les courbes, les surfaces, les structures et la modélisation. Elle permet de faire dialoguer géométrie, fonctions, observation de la nature et lecture architecturale, sans réduire l’architecture à une simple application de formules.</p>
-<figure aria-labelledby="legende-image-3" class="image-block"><img alt="Intérieur de la Sagrada Família montrant les structures géométriques conçues par Gaudí" decoding="async" height="400" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Sagrada_Familia_nave_roof_detail.jpg" width="600"/><figcaption id="legende-image-3">Intérieur de la Sagrada Família : formes, structures, lumière et modélisation.</figcaption></figure>
+<figure aria-labelledby="legende-image-3" class="image-block"><img alt="Intérieur de la Sagrada Família montrant les structures géométriques conçues par Gaudí" decoding="async" fetchpriority="low" height="400" loading="lazy" referrerpolicy="no-referrer" sizes="(max-width: 48rem) calc(100vw - 2rem), (max-width: 75rem) 80vw, 896px" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Sagrada_Familia_nave_roof_detail.jpg" width="600"/><figcaption id="legende-image-3">Intérieur de la Sagrada Família : formes, structures, lumière et modélisation.</figcaption></figure>
 <h4>Littérature, logique et pensée des formes</h4>
 <p>Les textes de Jorge Luis Borges et d’Octavio Paz permettent de relier littérature, logique, combinatoire, labyrinthe, structure et réflexion sur l’infini. Ils constituent des supports de travail pour travailler l’argumentation, la distinction entre métaphore littéraire et concept mathématique, ainsi que la précision du vocabulaire.</p>
 <h4>Art cinétique latino-américain</h4>
 <p>L’art cinétique latino-américain, notamment avec Jesús Rafael Soto et Carlos Cruz-Diez, ouvre des perspectives sur la couleur, la perception, les régularités, les déplacements et les effets visuels. Il permet d’articuler géométrie, fonctions, regard critique et histoire de l’art contemporain.</p>
-<figure aria-labelledby="legende-image-4" class="image-block"><img alt="Œuvre d’art cinétique latino-américain fondée sur la couleur, la régularité et la perception" decoding="async" height="400" loading="lazy" src="https://www.galleriacontinua.com/assets/artists_images/BIG_CACR2016_03dd-1.jpg" width="600"/><figcaption id="legende-image-4">Art cinétique latino-américain : perception, couleur, régularité et mouvement.</figcaption></figure>
+<figure aria-labelledby="legende-image-4" class="image-block"><img alt="Œuvre d’art cinétique latino-américain fondée sur la couleur, la régularité et la perception" decoding="async" fetchpriority="low" height="400" loading="lazy" referrerpolicy="no-referrer" sizes="(max-width: 48rem) calc(100vw - 2rem), (max-width: 75rem) 80vw, 896px" src="https://www.galleriacontinua.com/assets/artists_images/BIG_CACR2016_03dd-1.jpg" width="600"/><figcaption id="legende-image-4">Art cinétique latino-américain : perception, couleur, régularité et mouvement.</figcaption></figure>
 </div>
 </section>
 <section aria-labelledby="section-vision-titre" id="vision">
@@ -2016,8 +2164,8 @@ footer { padding-block: clamp(2rem, 5vw, 3.5rem); }
 <h2 id="section-premiere-titre">Première — Architecture 3D, art cinétique, suites et probabilités</h2><div class="pedagogical-note" role="note"><strong>Fil de progression en Première :</strong> formaliser les modèles, comparer des stratégies et construire des arguments mathématiques plus autonomes.</div>
 <p class="module-hours module-hours-premiere"><span aria-hidden="true" class="hourglass-icon">⏳</span><strong>Modules 7 à 12 — 30 heures</strong></p>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">🧱</span><span>Module 7 — Surfaces réglées dans l’architecture de Gaudí</span></h3><p>Approfondir l’étude des formes spatiales et des surfaces réglées à partir d’exemples architecturaux.</p><a class="module-link" href="Premiere-Modulo7.html">Découvrir le module 7 — surfaces réglées dans l’architecture de Gaudí</a>
-<h3 class="module-title"><span aria-hidden="true" class="module-icon">🎨</span><span>Module 8 — Fonctions du second degré et art cinétique latino-américain</span></h3><p>Relier fonctions du second degré, trajectoires et effets visuels dans l’art cinétique latino-américain.</p><a class="module-link" href="Premiere-Modulo8.html">Découvrir le module 8 — fonctions du second degré et art cinétique</a>
-<h3 class="module-title"><span aria-hidden="true" class="module-icon">🌀</span><span>Module 9 — Fibonacci et spirales dans l’art</span></h3><p>Étudier les suites, la croissance et les spirales à travers des œuvres artistiques et des motifs naturels.</p><a class="module-link" href="Premiere-Modulo9.html">Découvrir le module 9 — suites de Fibonacci et spirales dans l’art</a>
+<h3 class="module-title"><span aria-hidden="true" class="module-icon">🎨</span><span>Module 8 — Fonctions du second degré et art cinétique latino-américain</span></h3><p>Modéliser des trajectoires paraboliques à l’aide de fonctions du second degré, puis analyser séparément des régularités et des effets visuels dans l’art cinétique latino-américain.</p><a class="module-link" href="Premiere-Modulo8.html">Découvrir le module 8 — fonctions du second degré et art cinétique</a>
+<h3 class="module-title"><span aria-hidden="true" class="module-icon">🌀</span><span>Module 9 — Fibonacci et spirales dans l’art</span></h3><p>Étudier la suite de Fibonacci, ses modes de construction et certaines représentations en spirale, sans confondre la spirale de Fibonacci avec les formes naturelles observées.</p><a class="module-link" href="Premiere-Modulo9.html">Découvrir le module 9 — suites de Fibonacci et spirales dans l’art</a>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">🎲</span><span>Module 10 — Probabilités et jeux précolombiens</span></h3><p>Explorer les probabilités à partir de situations ludiques contextualisées, inspirées de pratiques culturelles précolombiennes clairement identifiées.</p><a class="module-link" href="Premiere-Modulo10.html">Découvrir le module 10 — probabilités et jeux précolombiens</a>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">🧩</span><span>Module 11 — Géométrie avancée, itérations et créations fractales en contexte latino-américain</span></h3><p>Étudier des formes complexes et des processus itératifs à partir de créations visuelles ou numériques clairement situées dans des contextes latino-américains.</p><a class="module-link" href="Premiere-Modulo11.html">Découvrir le module 11 — géométrie avancée et art fractal latino-américain</a>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">✍️</span><span>Module 12 — Octavio Paz et poésie mathématique</span></h3><p>Mettre en relation poésie, structure et pensée mathématique à partir de textes d’Octavio Paz.</p><a class="module-link" href="Premiere-Modulo12.html">Découvrir le module 12 — Octavio Paz et poésie mathématique</a>
@@ -2026,7 +2174,7 @@ footer { padding-block: clamp(2rem, 5vw, 3.5rem); }
 <h2 id="section-terminale-titre">Terminale — Modélisation, humanités numériques et synthèse culturelle</h2><div class="pedagogical-note" role="note"><strong>Fil de progression en Terminale :</strong> modéliser des situations complexes, interpréter des résultats et produire une communication scientifique nuancée.</div>
 <p class="module-hours module-hours-terminale"><span aria-hidden="true" class="hourglass-icon">⏳</span><strong>Modules 13 à 18 — 30 heures</strong></p>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">🌆</span><span>Module 13 — Suites avancées et urbanisme latino-américain</span></h3><p>Étudier des phénomènes d’évolution à partir de dynamiques urbaines latino-américaines.</p><a class="module-link" href="Terminale-Modulo13.html">Découvrir le module 13 — suites avancées et urbanisme latino-américain</a>
-<h3 class="module-title"><span aria-hidden="true" class="module-icon">💻</span><span>Module 14 — Probabilités avancées, stylométrie et humanités numériques</span></h3><p>Mobiliser probabilités, analyse de corpus et outils numériques dans une perspective de culture scientifique, linguistique et bilingue.</p><a class="module-link" href="Terminale-Modulo14.html">Découvrir le module 14 — probabilités, stylométrie et humanités numériques</a>
+<h3 class="module-title"><span aria-hidden="true" class="module-icon">💻</span><span>Module 14 — Probabilités avancées, stylométrie et humanités numériques</span></h3><p>Mobiliser statistique descriptive, probabilités, analyse de corpus et outils numériques dans une perspective scientifique, linguistique et bilingue.</p><a class="module-link" href="Terminale-Modulo14.html">Découvrir le module 14 — probabilités, stylométrie et humanités numériques</a>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">📈</span><span>Module 15 — Statistiques avancées et art numérique hispanique</span></h3><p>Approfondir l’analyse statistique et son interprétation à travers des œuvres et dispositifs numériques.</p><a class="module-link" href="Terminale-Modulo15.html">Découvrir le module 15 — statistiques avancées et art numérique hispanique</a>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">🎼</span><span>Module 16 — Fonctions et mathématiques musicales</span></h3><p>Relier fonctions, modélisation et phénomènes musicaux dans une approche interdisciplinaire.</p><a class="module-link" href="Terminale-Modulo16.html">Découvrir le module 16 — fonctions et mathématiques musicales</a>
 <h3 class="module-title"><span aria-hidden="true" class="module-icon">🧠</span><span>Module 17 — Synthèse géométrique et art conceptuel hispanique</span></h3><p>Synthétiser les apprentissages géométriques du parcours à travers des propositions d’art conceptuel hispanique clairement contextualisées.</p><a class="module-link" href="Terminale-Modulo17.html">Découvrir le module 17 — synthèse géométrique et art conceptuel hispanique</a>
@@ -2105,5 +2253,49 @@ footer { padding-block: clamp(2rem, 5vw, 3.5rem); }
 </main>
 <footer aria-label="Pied de page"><div class="footer-content"><p><strong>🌄 Parcours DNL de mathématiques en espagnol · Lycée Pensionnat Sacré-Cœur, Reims · © 2027 · CC BY-NC-SA 4.0</strong></p></div></footer>
 </div>
-<script defer="" src="script.js"></script></body>
+<script defer="" src="script.js"></script><script data-nav-active="true">
+(() => {
+  const links = [...document.querySelectorAll('.nav-inner a[href^="#"]')];
+  if (!links.length) return;
+  const pairs = links.map(link => ({ link, section: document.querySelector(link.getAttribute('href')) })).filter(item => item.section);
+  const setActive = link => {
+    links.forEach(item => {
+      const active = item === link;
+      item.classList.toggle('is-active', active);
+      if (active) item.setAttribute('aria-current', 'location');
+      else item.removeAttribute('aria-current');
+    });
+  };
+  links.forEach(link => link.addEventListener('click', () => setActive(link), { passive: true }));
+  const updateFromPosition = () => {
+    const marker = Math.max(96, window.innerHeight * 0.24);
+    let current = pairs[0];
+    for (const pair of pairs) {
+      if (pair.section.getBoundingClientRect().top <= marker) current = pair;
+      else break;
+    }
+    if (current) setActive(current.link);
+  };
+  if ('IntersectionObserver' in window) {
+    const visible = new Map();
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => entry.isIntersecting ? visible.set(entry.target, entry) : visible.delete(entry.target));
+      const best = [...visible.values()].sort((a,b) => Math.abs(a.boundingClientRect.top - 96) - Math.abs(b.boundingClientRect.top - 96))[0];
+      if (best) {
+        const pair = pairs.find(item => item.section === best.target);
+        if (pair) setActive(pair.link);
+      } else updateFromPosition();
+    }, { rootMargin: '-12% 0px -68% 0px', threshold: [0, .1, .5] });
+    pairs.forEach(pair => observer.observe(pair.section));
+  }
+  window.addEventListener('hashchange', () => {
+    const link = links.find(item => item.getAttribute('href') === location.hash);
+    if (link) setActive(link);
+  }, { passive: true });
+  window.addEventListener('scroll', updateFromPosition, { passive: true });
+  const initial = links.find(item => item.getAttribute('href') === location.hash) || pairs[0]?.link;
+  if (initial) setActive(initial);
+  updateFromPosition();
+})();
+</script></body>
 </html>

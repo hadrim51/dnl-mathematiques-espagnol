@@ -1,171 +1,273 @@
 <!doctype html>
+
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/><meta content="noindex, nofollow, noarchive, nosnippet" name="robots"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3EBandera%20de%20Espa%C3%B1a%3C%2Ftitle%3E%0A%3Cdesc%3EFavicon%20con%20tres%20franjas%20horizontales%20roja%2C%20amarilla%20y%20roja.%3C%2Fdesc%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%23AA151B%22%2F%3E%0A%3Crect%20y%3D%2216%22%20width%3D%2264%22%20height%3D%2232%22%20fill%3D%22%23F1BF00%22%2F%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2262.5%22%20height%3D%2262.5%22%20rx%3D%229.25%22%0A%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%237A1015%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E" id="favicon-drapeau-espagnol" rel="icon" type="image/svg+xml"/>
 <title>Corrections des fiches de travail | DNL mathématiques en espagnol</title>
-<meta name="description" content="Accès centralisé aux corrections des fiches de travail du parcours DNL mathématiques en espagnol.">
-<style>
-:root{--primary:#173f5f;--primary2:#0d2f4a;--accent:#c84b31;--gold:#e9a23b;--bg:#edf3f6;--surface:#fff;--text:#1f2933;--muted:#5d6975;--border:#d7e1e7;--radius:18px;--shadow:0 12px 30px rgb(15 47 70/.12)}
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:linear-gradient(180deg,#f8fbfc,var(--bg));color:var(--text);font:1rem/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif} a{color:inherit} .skip{position:absolute;left:-9999px} .skip:focus{left:1rem;top:1rem;background:#fff;padding:.8rem;z-index:10} header{color:white;background:linear-gradient(125deg,var(--primary2),var(--primary) 60%,#256d85);padding:clamp(3rem,8vw,6rem) 1.25rem} .wrap{width:min(1160px,calc(100% - 2rem));margin:auto} h1{font-family:Georgia,serif;font-size:clamp(2.2rem,6vw,4.2rem);line-height:1.05;max-width:18ch;margin:0 0 1rem} header p{max-width:65ch;font-size:1.15rem} nav{position:sticky;top:0;z-index:5;background:rgb(255 255 255/.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)} nav .wrap{display:flex;gap:.5rem;overflow:auto;padding:.75rem 0} nav a{flex:none;text-decoration:none;color:var(--primary);font-weight:750;padding:.55rem .8rem;border-radius:999px} nav a:hover,nav a:focus-visible{background:var(--primary);color:white} main{padding:2rem 0 5rem} .tools{display:grid;grid-template-columns:1fr auto;gap:.75rem;margin:0 0 2rem} input{width:100%;padding:.9rem 1rem;border:1px solid var(--border);border-radius:12px;font:inherit} .home{display:inline-flex;align-items:center;text-decoration:none;background:var(--accent);color:#fff;font-weight:800;padding:.8rem 1rem;border-radius:12px} section{padding:1.75rem 0} h2{color:var(--primary2);font-size:clamp(1.6rem,4vw,2.25rem);margin:0 0 1rem} .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem} .card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow)} .card-top{display:flex;justify-content:space-between;gap:1rem} .badge{font-size:.85rem;font-weight:800;color:var(--primary);background:#e9f2f8;border-radius:999px;padding:.3rem .65rem} h3{color:var(--primary2);line-height:1.25;margin:1rem 0 .5rem} .card p{color:var(--muted);margin:.25rem 0 1.25rem} .correction-link{margin-top:auto;display:inline-flex;justify-content:center;gap:.5rem;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--primary),#27678b);font-weight:800;padding:.75rem 1rem;border-radius:999px} .correction-link:hover,.correction-link:focus-visible{background:linear-gradient(135deg,#9f3522,var(--accent));transform:translateY(-2px)} .note{background:#fff4dc;border:1px solid #f0cf8d;border-left:6px solid var(--gold);padding:1rem 1.2rem;border-radius:12px;margin-bottom:2rem} footer{background:var(--primary2);color:#fff;padding:2rem;text-align:center} [hidden]{display:none!important} @media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}} @media(max-width:560px){.grid{grid-template-columns:1fr}.tools{grid-template-columns:1fr}}
-</style>
-
-<style id="correction-gate-style">
-html.correction-locked body>*:not(#correction-gate){visibility:hidden}
-#correction-gate{position:fixed;z-index:99999;inset:0;display:grid;place-items:center;padding:1rem;background:linear-gradient(135deg,#0d2f4a,#173f5f 60%,#256d85);font:1rem/1.5 Inter,system-ui,sans-serif}
-#correction-gate[hidden]{display:none}
-.gate-card{width:min(28rem,100%);padding:2rem;color:#1f2933;background:#fff;border-radius:1.2rem;box-shadow:0 24px 70px rgb(0 0 0/.35)}
-.gate-card h1{margin:0 0 .6rem;color:#0d2f4a;font:700 2rem/1.15 Georgia,serif}.gate-card p{margin:.5rem 0 1rem}.gate-card label{display:block;font-weight:800}.gate-card input{width:100%;margin:.45rem 0 1rem;padding:.8rem;border:1px solid #b8c8d2;border-radius:.65rem}.gate-card button{width:100%;padding:.8rem 1rem;color:#fff;background:#173f5f;border:0;border-radius:999px;font-weight:800;cursor:pointer}.gate-card button:hover{background:#c84b31}.gate-error{min-height:1.5em;color:#a12b1b;font-weight:700}.gate-back{display:block;margin-top:1rem;text-align:center;color:#173f5f}
-</style>
-<script>document.documentElement.classList.add("correction-locked");</script>
-</head>
-<body>
-<div id="correction-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
-  <form class="gate-card" id="gate-form">
-    <h1 id="gate-title">Accès aux corrections</h1>
-    <p>Cette ressource est protégée. Saisissez le mot de passe pour continuer.</p>
-    <label for="gate-password">Mot de passe</label>
-    <input id="gate-password" type="password" autocomplete="current-password" required autofocus>
-    <button type="submit">Ouvrir les corrections</button>
-    <p class="gate-error" id="gate-error" role="alert" aria-live="polite"></p>
-    <a class="gate-back" href="index.html">← Retour à la progression</a>
-  </form>
-</div>
-
+<meta content="Accès centralisé aux corrections des fiches de travail du parcours DNL mathématiques en espagnol." name="description"/>
+<style id="styles-site">:root{color-scheme:light;--primary:#173f5f;--primary-strong:#0d2f4a;--primary-soft:#e9f2f8;--secondary:#a63c27;--secondary-strong:#7f291b;--accent:#d88a17;--accent-soft:#fff4dc;--page:#edf3f6;--surface:#fff;--surface-alt:#f5f8fa;--text:#1f2933;--muted:#53616d;--border:#b8c8d2;--focus:#f7b733;--radius:.85rem;--radius-lg:1.15rem;--shadow:0 .5rem 1.75rem rgb(15 47 70/.12);--content:72.5rem;--tap:2.75rem;--fast:160ms ease;--base:240ms ease}*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:1rem;-webkit-text-size-adjust:100%}body{margin:0;color:var(--text);background:linear-gradient(180deg,#f8fbfc,var(--page));font:clamp(1rem,.97rem + .15vw,1.075rem)/1.65 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-wrap:break-word}a{color:var(--primary);text-underline-offset:.2em;transition:color var(--fast),background-color var(--fast),border-color var(--fast),box-shadow var(--base),transform var(--fast)}a:hover{color:var(--secondary-strong)}a:active,button:active{transform:translateY(.08rem)}:is(a,button,input,[tabindex]):focus-visible{outline:.2rem solid var(--focus);outline-offset:.2rem;border-radius:.2rem}.skip{position:fixed;z-index:1000;inset:.75rem auto auto .75rem;padding:.75rem 1rem;color:#fff;background:var(--primary-strong);border-radius:.55rem;font-weight:750;text-decoration:none;transform:translateY(-180%)}.skip:focus{transform:none}.wrap{width:min(calc(100% - 2rem),var(--content));margin-inline:auto}header{padding:clamp(3rem,8vw,6rem) 0;color:#fff;background:linear-gradient(125deg,var(--primary-strong),var(--primary) 60%,#256d85)}h1{max-width:18ch;margin:0 0 1rem;color:#fff;font:700 clamp(2.15rem,6vw,4.2rem)/1.05 Georgia,"Times New Roman",serif;letter-spacing:-.03em}header p{max-width:65ch;margin:0;color:#fff;font-size:clamp(1.05rem,1rem + .4vw,1.2rem)}nav{position:static;background:#fff;border-bottom:1px solid var(--border)}nav .wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.4rem;padding:.6rem 0}nav a{display:flex;min-width:0;min-height:var(--tap);align-items:center;justify-content:center;padding:.55rem .5rem;color:var(--primary);background:var(--surface-alt);border:1px solid var(--border);border-radius:.65rem;font-size:.9rem;font-weight:750;line-height:1.2;text-align:center;text-decoration:none}nav a:hover,nav a:focus-visible{color:#fff;background:var(--primary);border-color:var(--primary)}main{padding-block:2rem 5rem}.tools{display:grid;grid-template-columns:minmax(0,1fr);gap:.75rem;margin-bottom:2rem}.tools label{min-width:0}.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}input{width:100%;min-height:var(--tap);padding:.85rem 1rem;color:var(--text);background:#fff;border:2px solid #8799a5;border-radius:.75rem;font:inherit}.home,.correction-link{display:inline-flex;min-height:var(--tap);align-items:center;justify-content:center;padding:.75rem 1rem;color:#fff;border:1px solid transparent;font-weight:800;text-align:center;text-decoration:none}.home{background:var(--secondary);border-radius:.75rem}.home:hover,.home:focus-visible{color:#fff;background:var(--secondary-strong)}section{padding:1.75rem 0;scroll-margin-top:1rem}h2{margin:0 0 1rem;color:var(--primary-strong);font-size:clamp(1.6rem,4vw,2.25rem);line-height:1.2;text-wrap:balance}.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem}.card{display:flex;min-width:0;flex-direction:column;padding:1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow)}.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}.badge{padding:.3rem .65rem;color:var(--primary);background:var(--primary-soft);border:1px solid #aacbdc;border-radius:999px;font-size:.85rem;font-weight:800}h3{margin:1rem 0 .5rem;color:var(--primary-strong);font-size:1.2rem;line-height:1.25;text-wrap:balance}.card p{margin:.25rem 0 1.25rem;color:var(--muted)}.correction-link{margin-top:auto;background:linear-gradient(135deg,var(--primary),#27678b);border-radius:999px}.correction-link:hover,.correction-link:focus-visible{color:#fff;background:linear-gradient(135deg,var(--secondary-strong),var(--secondary))}[hidden]{display:none!important}#empty{padding:1rem;color:var(--secondary-strong);background:var(--accent-soft);border:1px solid #d3aa51;border-radius:var(--radius);font-weight:750}footer{padding:2rem 1rem;color:#fff;background:var(--primary-strong);text-align:center}@media(min-width:35rem){nav .wrap{grid-template-columns:repeat(4,minmax(0,1fr))}.tools{grid-template-columns:minmax(0,1fr) auto}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(min-width:64rem){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(hover:hover) and (pointer:fine){.card:hover{box-shadow:0 .8rem 2rem rgb(15 47 70/.16)}.correction-link:hover,.home:hover{transform:translateY(-.12rem)}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}@media(prefers-contrast:more){:root{--border:#4f6876}.card{border-width:2px}}@media print{@page{margin:1.4cm}body{color:#111;background:#fff;font-size:10pt}.skip,nav,.tools,.correction-link{display:none!important}.wrap{width:100%}header{padding:1cm 0;color:#111;background:#fff;border-bottom:2px solid var(--primary)}h1,header p{color:#111}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card{box-shadow:none;break-inside:avoid}footer{color:#111;background:#fff;border-top:1px solid #999}}</style><style id="correction-gate-style">
+html.correction-locked body > :not(#correction-gate) { visibility: hidden; }
+#correction-gate {
+  position: fixed;
+  z-index: 99999;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow-y: auto;
+  padding: 1rem;
+  color: #1f2933;
+  background: linear-gradient(135deg, #0d2f4a, #173f5f 60%, #256d85);
+}
+#correction-gate[hidden] { display: none; }
+.gate-card {
+  width: min(100%, 28rem);
+  padding: clamp(1.25rem, 5vw, 2rem);
+  background: #fff;
+  border: 1px solid #b8c8d2;
+  border-radius: 1.15rem;
+  box-shadow: 0 1.5rem 4rem rgb(0 0 0 / .35);
+}
+.gate-card h2 {
+  margin: 0 0 .75rem;
+  color: #0d2f4a;
+  font: 700 clamp(1.75rem, 6vw, 2.25rem) / 1.15 Georgia, "Times New Roman", serif;
+}
+.gate-card p { margin: .5rem 0 1rem; }
+.gate-card label { display: block; font-weight: 800; }
+.gate-card input {
+  width: 100%;
+  min-height: 2.75rem;
+  margin: .45rem 0 1rem;
+  padding: .8rem;
+  color: #1f2933;
+  background: #fff;
+  border: 2px solid #8799a5;
+  border-radius: .65rem;
+  font: inherit;
+}
+.gate-card button {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: .8rem 1rem;
+  color: #fff;
+  background: #173f5f;
+  border: 0;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+.gate-card button:hover,
+.gate-card button:focus-visible { background: #a63c27; }
+.gate-card button:active { transform: translateY(.08rem); }
+.gate-card :is(input, button, a):focus-visible {
+  outline: .2rem solid #f7b733;
+  outline-offset: .2rem;
+}
+.gate-error { min-height: 1.5em; color: #8f2020; font-weight: 750; }
+.gate-back {
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: .5rem;
+  padding: .65rem;
+  color: #173f5f;
+  text-align: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .gate-card button { transition-duration: .01ms; }
+}
+@media print { #correction-gate { display: none !important; } }
+</style><script id="correction-lock-bootstrap">document.documentElement.classList.add("correction-locked");</script></head>
+<body><div aria-describedby="gate-description" aria-labelledby="gate-title" aria-modal="true" id="correction-gate" role="dialog"><form class="gate-card" id="gate-form"><h2 id="gate-title">Accès enseignant</h2><p id="gate-description">Cette ressource est réservée aux enseignants. Saisissez le code d’accès pour continuer.</p><label for="gate-password">Code d’accès</label><input aria-describedby="gate-error" autocomplete="current-password" autofocus="" id="gate-password" required="" type="password"/><button type="submit">Ouvrir les corrections</button><p aria-live="assertive" class="gate-error" id="gate-error" role="alert"></p><a class="gate-back" href="index.html">← Retour à la progression</a></form></div>
 <a class="skip" href="#contenu">Aller au contenu</a>
 <header><div class="wrap"><h1>Corrections des fiches de travail</h1><p>Retrouvez toutes les corrections du parcours DNL mathématiques en espagnol, classées par niveau et par module.</p></div></header>
 <nav aria-label="Navigation des corrections"><div class="wrap"><a href="#seconde">Seconde</a><a href="#premiere">Première</a><a href="#terminale">Terminale</a><a href="#transversal">Transversaux</a></div></nav>
-<main id="contenu" class="wrap">
-<div class="tools"><label><span class="skip">Rechercher une correction</span><input id="search" type="search" placeholder="Rechercher un module ou un thème…"></label><a class="home" href="index1.html">← Retour à l’accueil</a></div>
-<div class="note"><strong>Organisation des fichiers :</strong> les liens utilisent le dossier <code>corrections/</code>. Vous pouvez modifier chaque attribut <code>href</code> pour qu’il corresponde au nom réel de votre fichier de correction.</div>
-<section id="seconde" aria-labelledby="titre-seconde">
-      <h2 id="titre-seconde">🟡 Seconde</h2>
-      <div class="grid"><article class="card" data-search="module 1 mathématiques des civilisations précolombiennes">
-          <div class="card-top"><span class="badge">Module 1</span><span aria-hidden="true">🟡</span></div>
-          <h3>Mathématiques des civilisations précolombiennes</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="module-01.html" title="Ouvrir la correction : Mathématiques des civilisations précolombiennes">Voir les corrections <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 2 géométrie d’al-ándalus et art hispano-musulman">
-          <div class="card-top"><span class="badge">Module 2</span><span aria-hidden="true">🟡</span></div>
-          <h3>Géométrie d’Al-Ándalus et art hispano-musulman</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="module-02.html" title="Ouvrir les cinq corrections du module 2 : Géométrie d’Al-Ándalus et art hispano-musulman">Voir les 5 corrections <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 3 commerce hispano-américain et proportionnalité">
-          <div class="card-top"><span class="badge">Module 3</span><span aria-hidden="true">🟡</span></div>
-          <h3>Commerce hispano-américain et proportionnalité</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="module-03.html" title="Ouvrir les cinq corrections du module 3 : Commerce hispano-américain et proportionnalité">Voir les 5 corrections <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 4 statistiques, démographie et muralisme mexicain">
-          <div class="card-top"><span class="badge">Module 4</span><span aria-hidden="true">🟡</span></div>
-          <h3>Statistiques, démographie et muralisme mexicain</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="module-04.html" title="Ouvrir les six corrections du module 4 : Statistiques, démographie et muralisme mexicain">Voir les 6 corrections <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 5 fonctions, architecture de gaudí et géométrie appliquée">
-          <div class="card-top"><span class="badge">Module 5</span><span aria-hidden="true">🟡</span></div>
-          <h3>Fonctions, architecture de Gaudí et géométrie appliquée</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/seconde/module-05/correction-fiche-01.html" title="Ouvrir la correction : Fonctions, architecture de Gaudí et géométrie appliquée">Voir la correction <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 6 borges, logique et combinatoire">
-          <div class="card-top"><span class="badge">Module 6</span><span aria-hidden="true">🟡</span></div>
-          <h3>Borges, logique et combinatoire</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/seconde/module-06/correction-fiche-01.html" title="Ouvrir la correction : Borges, logique et combinatoire">Voir la correction <span aria-hidden="true">→</span></a>
-        </article></div>
-    </section><section id="premiere" aria-labelledby="titre-premiere">
-      <h2 id="titre-premiere">🟠 Première</h2>
-      <div class="grid"><article class="card" data-search="module 7 surfaces réglées dans l’architecture de gaudí">
-          <div class="card-top"><span class="badge">Module 7</span><span aria-hidden="true">🟠</span></div>
-          <h3>Surfaces réglées dans l’architecture de Gaudí</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/premiere/module-07/correction-fiche-01.html" title="Ouvrir la correction : Surfaces réglées dans l’architecture de Gaudí">Voir la correction <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 8 fonctions du second degré et art cinétique">
-          <div class="card-top"><span class="badge">Module 8</span><span aria-hidden="true">🟠</span></div>
-          <h3>Fonctions du second degré et art cinétique</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/premiere/module-08/correction-fiche-01.html" title="Ouvrir la correction : Fonctions du second degré et art cinétique">Voir la correction <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 9 suites de fibonacci et spirales dans l’art">
-          <div class="card-top"><span class="badge">Module 9</span><span aria-hidden="true">🟠</span></div>
-          <h3>Suites de Fibonacci et spirales dans l’art</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/premiere/module-09/correction-fiche-01.html" title="Ouvrir la correction : Suites de Fibonacci et spirales dans l’art">Voir la correction <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 10 probabilités et jeux précolombiens">
-          <div class="card-top"><span class="badge">Module 10</span><span aria-hidden="true">🟠</span></div>
-          <h3>Probabilités et jeux précolombiens</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/premiere/module-10/correction-fiche-01.html" title="Ouvrir la correction : Probabilités et jeux précolombiens">Voir la correction <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 11 géométrie avancée et art fractal latino-américain">
-          <div class="card-top"><span class="badge">Module 11</span><span aria-hidden="true">🟠</span></div>
-          <h3>Géométrie avancée et art fractal latino-américain</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/premiere/module-11/correction-fiche-01.html" title="Ouvrir la correction : Géométrie avancée et art fractal latino-américain">Voir la correction <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 12 octavio paz et poésie mathématique">
-          <div class="card-top"><span class="badge">Module 12</span><span aria-hidden="true">🟠</span></div>
-          <h3>Octavio Paz et poésie mathématique</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/premiere/module-12/correction-fiche-01.html" title="Ouvrir la correction : Octavio Paz et poésie mathématique">Voir la correction <span aria-hidden="true">→</span></a>
-        </article></div>
-    </section><section id="terminale" aria-labelledby="titre-terminale">
-      <h2 id="titre-terminale">🔴 Terminale</h2>
-      <div class="grid"><article class="card" data-search="module 13 suites avancées et urbanisme latino-américain">
-          <div class="card-top"><span class="badge">Module 13</span><span aria-hidden="true">🔴</span></div>
-          <h3>Suites avancées et urbanisme latino-américain</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/terminale/module-13/correction-fiche-01.html" title="Ouvrir la correction : Suites avancées et urbanisme latino-américain">Voir la correction <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 14 probabilités, stylométrie et humanités numériques">
-          <div class="card-top"><span class="badge">Module 14</span><span aria-hidden="true">🔴</span></div>
-          <h3>Probabilités, stylométrie et humanités numériques</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/terminale/module-14/correction-fiche-01.html" title="Ouvrir la correction : Probabilités, stylométrie et humanités numériques">Voir la correction <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 15 statistiques avancées et art numérique hispanique">
-          <div class="card-top"><span class="badge">Module 15</span><span aria-hidden="true">🔴</span></div>
-          <h3>Statistiques avancées et art numérique hispanique</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/terminale/module-15/correction-fiche-01.html" title="Ouvrir la correction : Statistiques avancées et art numérique hispanique">Voir la correction <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 16 fonctions et mathématiques musicales">
-          <div class="card-top"><span class="badge">Module 16</span><span aria-hidden="true">🔴</span></div>
-          <h3>Fonctions et mathématiques musicales</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/terminale/module-16/correction-fiche-01.html" title="Ouvrir la correction : Fonctions et mathématiques musicales">Voir la correction <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 17 synthèse géométrique et art conceptuel hispanique">
-          <div class="card-top"><span class="badge">Module 17</span><span aria-hidden="true">🔴</span></div>
-          <h3>Synthèse géométrique et art conceptuel hispanique</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/terminale/module-17/correction-fiche-01.html" title="Ouvrir la correction : Synthèse géométrique et art conceptuel hispanique">Voir la correction <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module 18 réalisme magique, culture hispanique et modélisation">
-          <div class="card-top"><span class="badge">Module 18</span><span aria-hidden="true">🔴</span></div>
-          <h3>Réalisme magique, culture hispanique et modélisation</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/terminale/module-18/correction-fiche-01.html" title="Ouvrir la correction : Réalisme magique, culture hispanique et modélisation">Voir la correction <span aria-hidden="true">→</span></a>
-        </article></div>
-    </section><section id="transversal" aria-labelledby="titre-transversal">
-      <h2 id="titre-transversal">🔵 Modules transversaux</h2>
-      <div class="grid"><article class="card" data-search="module transversal fêtes et traditions hispaniques">
-          <div class="card-top"><span class="badge">Module transversal</span><span aria-hidden="true">🔵</span></div>
-          <h3>Fêtes et traditions hispaniques</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/transversaux/festividades/correction-fiche-01.html" title="Ouvrir la correction : Fêtes et traditions hispaniques">Voir la correction <span aria-hidden="true">→</span></a>
-        </article><article class="card" data-search="module transversal musique et mathématiques hispaniques">
-          <div class="card-top"><span class="badge">Module transversal</span><span aria-hidden="true">🔵</span></div>
-          <h3>Musique et mathématiques hispaniques</h3>
-          <p>Accéder à la correction de la fiche de travail.</p>
-          <a class="correction-link" href="corrections/transversaux/musique/correction-fiche-01.html" title="Ouvrir la correction : Musique et mathématiques hispaniques">Voir la correction <span aria-hidden="true">→</span></a>
-        </article></div>
-    </section>
-<p id="empty" hidden>Aucune correction ne correspond à cette recherche.</p>
+<main class="wrap" id="contenu" tabindex="-1">
+<div class="tools"><label><span class="skip">Rechercher une correction</span><input aria-label="Rechercher une correction" autocomplete="off" id="search" placeholder="Rechercher un module ou un thème…" spellcheck="false" type="search"/></label><a class="home" href="index.html">← Retour à la progression</a></div>
+<section aria-labelledby="titre-seconde" id="seconde">
+<h2 id="titre-seconde">🟡 Seconde</h2>
+<div class="grid"><article class="card" data-search="module 1 mathématiques des civilisations précolombiennes">
+<div class="card-top"><span class="badge">Module 1</span><span aria-hidden="true">🟡</span></div>
+<h3>Mathématiques des civilisations précolombiennes</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="module-01.html" title="Ouvrir la correction : Mathématiques des civilisations précolombiennes">Voir les corrections <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 2 géométrie d’al-ándalus et art hispano-musulman">
+<div class="card-top"><span class="badge">Module 2</span><span aria-hidden="true">🟡</span></div>
+<h3>Géométrie d’Al-Ándalus et art hispano-musulman</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="module-02.html" title="Ouvrir les cinq corrections du module 2 : Géométrie d’Al-Ándalus et art hispano-musulman">Voir les 5 corrections <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 3 commerce hispano-américain et proportionnalité">
+<div class="card-top"><span class="badge">Module 3</span><span aria-hidden="true">🟡</span></div>
+<h3>Commerce hispano-américain et proportionnalité</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="module-03.html" title="Ouvrir les cinq corrections du module 3 : Commerce hispano-américain et proportionnalité">Voir les 5 corrections <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 4 statistiques, démographie et muralisme mexicain">
+<div class="card-top"><span class="badge">Module 4</span><span aria-hidden="true">🟡</span></div>
+<h3>Statistiques, démographie et muralisme mexicain</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="module-04.html" title="Ouvrir les six corrections du module 4 : Statistiques, démographie et muralisme mexicain">Voir les 6 corrections <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 5 fonctions, architecture de gaudí et géométrie appliquée">
+<div class="card-top"><span class="badge">Module 5</span><span aria-hidden="true">🟡</span></div>
+<h3>Fonctions, architecture de Gaudí et géométrie appliquée</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/seconde/module-05/correction-fiche-01.html" title="Ouvrir la correction : Fonctions, architecture de Gaudí et géométrie appliquée">Voir la correction <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 6 borges, logique et combinatoire">
+<div class="card-top"><span class="badge">Module 6</span><span aria-hidden="true">🟡</span></div>
+<h3>Borges, logique et combinatoire</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/seconde/module-06/correction-fiche-01.html" title="Ouvrir la correction : Borges, logique et combinatoire">Voir la correction <span aria-hidden="true">→</span></a>
+</article></div>
+</section><section aria-labelledby="titre-premiere" id="premiere">
+<h2 id="titre-premiere">🟠 Première</h2>
+<div class="grid"><article class="card" data-search="module 7 surfaces réglées dans l’architecture de gaudí">
+<div class="card-top"><span class="badge">Module 7</span><span aria-hidden="true">🟠</span></div>
+<h3>Surfaces réglées dans l’architecture de Gaudí</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/premiere/module-07/correction-fiche-01.html" title="Ouvrir la correction : Surfaces réglées dans l’architecture de Gaudí">Voir la correction <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 8 fonctions du second degré et art cinétique">
+<div class="card-top"><span class="badge">Module 8</span><span aria-hidden="true">🟠</span></div>
+<h3>Fonctions du second degré et art cinétique</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/premiere/module-08/correction-fiche-01.html" title="Ouvrir la correction : Fonctions du second degré et art cinétique">Voir la correction <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 9 suites de fibonacci et spirales dans l’art">
+<div class="card-top"><span class="badge">Module 9</span><span aria-hidden="true">🟠</span></div>
+<h3>Suites de Fibonacci et spirales dans l’art</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/premiere/module-09/correction-fiche-01.html" title="Ouvrir la correction : Suites de Fibonacci et spirales dans l’art">Voir la correction <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 10 probabilités et jeux précolombiens">
+<div class="card-top"><span class="badge">Module 10</span><span aria-hidden="true">🟠</span></div>
+<h3>Probabilités et jeux précolombiens</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/premiere/module-10/correction-fiche-01.html" title="Ouvrir la correction : Probabilités et jeux précolombiens">Voir la correction <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 11 géométrie avancée et art fractal latino-américain">
+<div class="card-top"><span class="badge">Module 11</span><span aria-hidden="true">🟠</span></div>
+<h3>Géométrie avancée et art fractal latino-américain</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/premiere/module-11/correction-fiche-01.html" title="Ouvrir la correction : Géométrie avancée et art fractal latino-américain">Voir la correction <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 12 octavio paz et poésie mathématique">
+<div class="card-top"><span class="badge">Module 12</span><span aria-hidden="true">🟠</span></div>
+<h3>Octavio Paz et poésie mathématique</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/premiere/module-12/correction-fiche-01.html" title="Ouvrir la correction : Octavio Paz et poésie mathématique">Voir la correction <span aria-hidden="true">→</span></a>
+</article></div>
+</section><section aria-labelledby="titre-terminale" id="terminale">
+<h2 id="titre-terminale">🔴 Terminale</h2>
+<div class="grid"><article class="card" data-search="module 13 suites avancées et urbanisme latino-américain">
+<div class="card-top"><span class="badge">Module 13</span><span aria-hidden="true">🔴</span></div>
+<h3>Suites avancées et urbanisme latino-américain</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/terminale/module-13/correction-fiche-01.html" title="Ouvrir la correction : Suites avancées et urbanisme latino-américain">Voir la correction <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 14 probabilités, stylométrie et humanités numériques">
+<div class="card-top"><span class="badge">Module 14</span><span aria-hidden="true">🔴</span></div>
+<h3>Probabilités, stylométrie et humanités numériques</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/terminale/module-14/correction-fiche-01.html" title="Ouvrir la correction : Probabilités, stylométrie et humanités numériques">Voir la correction <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 15 statistiques avancées et art numérique hispanique">
+<div class="card-top"><span class="badge">Module 15</span><span aria-hidden="true">🔴</span></div>
+<h3>Statistiques avancées et art numérique hispanique</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/terminale/module-15/correction-fiche-01.html" title="Ouvrir la correction : Statistiques avancées et art numérique hispanique">Voir la correction <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 16 fonctions et mathématiques musicales">
+<div class="card-top"><span class="badge">Module 16</span><span aria-hidden="true">🔴</span></div>
+<h3>Fonctions et mathématiques musicales</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/terminale/module-16/correction-fiche-01.html" title="Ouvrir la correction : Fonctions et mathématiques musicales">Voir la correction <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 17 synthèse géométrique et art conceptuel hispanique">
+<div class="card-top"><span class="badge">Module 17</span><span aria-hidden="true">🔴</span></div>
+<h3>Synthèse géométrique et art conceptuel hispanique</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/terminale/module-17/correction-fiche-01.html" title="Ouvrir la correction : Synthèse géométrique et art conceptuel hispanique">Voir la correction <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module 18 réalisme magique, culture hispanique et modélisation">
+<div class="card-top"><span class="badge">Module 18</span><span aria-hidden="true">🔴</span></div>
+<h3>Réalisme magique, culture hispanique et modélisation</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/terminale/module-18/correction-fiche-01.html" title="Ouvrir la correction : Réalisme magique, culture hispanique et modélisation">Voir la correction <span aria-hidden="true">→</span></a>
+</article></div>
+</section><section aria-labelledby="titre-transversal" id="transversal">
+<h2 id="titre-transversal">🔵 Modules transversaux</h2>
+<div class="grid"><article class="card" data-search="module transversal fêtes et traditions hispaniques">
+<div class="card-top"><span class="badge">Module transversal</span><span aria-hidden="true">🔵</span></div>
+<h3>Fêtes et traditions hispaniques</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/transversaux/festividades/correction-fiche-01.html" title="Ouvrir la correction : Fêtes et traditions hispaniques">Voir la correction <span aria-hidden="true">→</span></a>
+</article><article class="card" data-search="module transversal musique et mathématiques hispaniques">
+<div class="card-top"><span class="badge">Module transversal</span><span aria-hidden="true">🔵</span></div>
+<h3>Musique et mathématiques hispaniques</h3>
+<p>Accéder à la correction de la fiche de travail.</p>
+<a aria-disabled="true" class="correction-link" href="corrections/transversaux/musique/correction-fiche-01.html" title="Ouvrir la correction : Musique et mathématiques hispaniques">Voir la correction <span aria-hidden="true">→</span></a>
+</article></div>
+</section>
+<p aria-live="polite" hidden="" id="empty" role="status">Aucune correction ne correspond à cette recherche.</p>
 </main>
 <footer>HADRI Mohammed | DNL mathématiques en espagnol</footer>
-<script>
-const input=document.querySelector('#search');const cards=[...document.querySelectorAll('.card')];const empty=document.querySelector('#empty');
-input.addEventListener('input',()=>{const q=input.value.trim().toLowerCase();let visible=0;cards.forEach(card=>{const ok=card.dataset.search.includes(q);card.hidden=!ok;if(ok)visible++});document.querySelectorAll('section').forEach(s=>s.hidden=![...s.querySelectorAll('.card')].some(c=>!c.hidden));empty.hidden=visible!==0;});
-</script>
+<script id="script-recherche">(() => {
+  "use strict";
+  const input = document.querySelector("#search");
+  const cards = [...document.querySelectorAll(".card")];
+  const sections = [...document.querySelectorAll("main section")];
+  const empty = document.querySelector("#empty");
+  const normalize = value => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+  input?.addEventListener("input", () => {
+    const query = normalize(input.value);
+    let visible = 0;
+    cards.forEach(card => {
+      const matches = normalize(card.dataset.search || card.textContent).includes(query);
+      card.hidden = !matches;
+      if (matches) visible += 1;
+    });
+    sections.forEach(section => {
+      section.hidden = ![...section.querySelectorAll(".card")].some(card => !card.hidden);
+    });
+    if (empty) empty.hidden = visible !== 0;
+  });
+})();</script><script id="correction-gate-script">
+(() => {
+  "use strict";
+  const expected = "3e9529979f4319e30dd4ca30c32f075e222c2595ddf478699dd9c53291a8029b";
+  const gate = document.querySelector("#correction-gate");
+  const form = document.querySelector("#gate-form");
+  const input = document.querySelector("#gate-password");
+  const error = document.querySelector("#gate-error");
 
-<script id="correction-gate-script">
-(()=>{
- const expected="3e9529979f4319e30dd4ca30c32f075e222c2595ddf478699dd9c53291a8029b", gate=document.getElementById("correction-gate"), form=document.getElementById("gate-form"), input=document.getElementById("gate-password"), error=document.getElementById("gate-error");
- const unlock=()=>{document.documentElement.classList.remove("correction-locked");gate.hidden=true;sessionStorage.setItem("dnlCorrectionsUnlocked","1");};
- if(sessionStorage.getItem("dnlCorrectionsUnlocked")==="1"){unlock();return;}
- const digest=async value=>{const data=new TextEncoder().encode(value);const hash=await crypto.subtle.digest("SHA-256",data);return [...new Uint8Array(hash)].map(b=>b.toString(16).padStart(2,"0")).join("");};
- form.addEventListener("submit",async event=>{event.preventDefault();error.textContent="";if(await digest(input.value)===expected){unlock();}else{error.textContent="Mot de passe incorrect.";input.value="";input.focus();}});
+  const unlock = () => {
+    document.documentElement.classList.remove("correction-locked");
+    gate.hidden = true;
+    sessionStorage.setItem("dnlCorrectionsUnlocked", "1");
+    document.querySelector("#contenu")?.focus({ preventScroll: true });
+  };
+
+  if (sessionStorage.getItem("dnlCorrectionsUnlocked") === "1") {
+    unlock();
+    return;
+  }
+
+  const digest = async value => {
+    const data = new TextEncoder().encode(value);
+    const hash = await crypto.subtle.digest("SHA-256", data);
+    return [...new Uint8Array(hash)]
+      .map(byte => byte.toString(16).padStart(2, "0"))
+      .join("");
+  };
+
+  form.addEventListener("submit", async event => {
+    event.preventDefault();
+    error.textContent = "";
+    try {
+      if (await digest(input.value) === expected) {
+        unlock();
+      } else {
+        error.textContent = "Code incorrect.";
+        input.value = "";
+        input.focus();
+      }
+    } catch {
+      error.textContent = "La vérification du code n’est pas disponible dans ce navigateur.";
+    }
+  });
 })();
-</script>
-</body></html>
+</script></body></html>

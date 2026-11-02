@@ -19,10 +19,14 @@ main,.container{width:min(calc(100% - 1rem),var(--max));margin-inline:auto;paddi
 @media(max-width:35.99rem){.print-actions button{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
 @media print{thead{display:table-header-group}tfoot{display:table-footer-group}body{color:#111;background:#fff;font-size:10pt}.nav,.no-print,button,.actions,.video-grid,.video,.print-actions{display:none!important}.hero{min-height:0;padding:1cm;color:#111;background:#fff;border-bottom:2px solid #333}.hero-bg,.hero::after{display:none}.hero h1,.hero p{color:#111;text-shadow:none}main,.container{width:100%;padding:0}.card,.exercise,.quiz,.rubric,.note,.competences,.align-panel,details{margin:.45cm 0;padding:.35cm;background:#fff;box-shadow:none;break-inside:auto;page-break-inside:auto}h2,h3,h4,.title,.formula,aside,table,figure,.support-diagram{break-inside:avoid;page-break-inside:avoid}.table-wrap{overflow:visible}table{font-size:8pt}}
+
+.media-credit{margin:.55rem 0 0;padding:.65rem .8rem;color:var(--muted);background:#fff;border-top:1px solid var(--line);font-size:.88rem}.media-credit a{font-weight:750}.extension-media{margin:1rem 0}.extension-media img{width:100%;max-height:28rem;object-fit:cover}.video-note{margin:.7rem 0;color:var(--muted);font-size:.92rem}@media print{.extension-media img{max-height:10cm}.video-fallback{display:block!important}.video{display:none!important}}
+
+.extension-photo-gallery{grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));margin:1rem 0}.extension-photo-gallery .gallery-item{display:flex;flex-direction:column}.extension-photo-gallery img{height:13rem;object-fit:cover}.photo-richness{margin:1rem 0}.extension-photo-gallery figcaption{flex:1}@media print{.extension-photo-gallery{grid-template-columns:repeat(2,1fr)}.extension-photo-gallery img{height:6cm}}
 </style>
 </head>
 <body><a class="skip" href="#transformaciones">Ir al contenido principal</a>
-<header class="hero" id="top"><div class="hero-bg" aria-hidden="true"><img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Alhambra-p3-closeup.jpg" alt="" loading="eager" decoding="async" referrerpolicy="no-referrer" data-offline-message="La fotografía de portada no está disponible sin conexión."/></div><span class="tag">Matemáticas en español</span><span class="tag">Transformaciones del plano</span><span class="tag">Seconde · sesión 2</span><h1>Sesión 2 — Comprobar una transformación en un motivo periódico</h1><p>De una transformación observada a una tarjeta de análisis verificable. Evidencia: Tarjeta de análisis: transformación, elemento característico y comprobación.</p></header><div aria-label="Impresión de la ficha de curso" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimir</button></div>
+<header class="hero" id="top"><div aria-hidden="true" class="hero-bg"><img alt="" data-offline-message="La fotografía de portada no está disponible sin conexión." decoding="async" loading="eager" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/1/12/Alhambra-p3-closeup.jpg"/></div><span class="tag">Matemáticas en español</span><span class="tag">Transformaciones del plano</span><span class="tag">Seconde · sesión 2</span><h1>Sesión 2 — Comprobar una transformación en un motivo periódico</h1><p>De una transformación observada a una tarjeta de análisis verificable. Evidencia: Tarjeta de análisis: transformación, elemento característico y comprobación.</p></header><div aria-label="Impresión de la ficha de curso" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimir</button></div>
 <nav aria-label="Navegación de la ficha" class="nav"><div class="nav-inner"><strong>📍 Navegación:</strong><a href="#transformaciones">1. Transformaciones</a><a href="#redes">2. Motivo y repetición</a><a href="#rotaciones">3. Rotaciones (giros) y centros</a><a href="#herramientas-segundo">4. Comprobar una hipótesis</a><a href="#banco-metodos">5. Procedimientos</a><a href="#clasificacion">6. Árbol de decisión</a><a href="#plantillas">7. Explicar</a><a href="#entrenamiento-matematico">8. Sintetizar</a><a href="#videos-matematicos">9. Vídeos</a><a href="#extensiones">10. Ampliaciones</a><a href="#familias">11. Ampliación opcional: 17 grupos</a></div></nav>
 <main id="contenido" tabindex="-1"><section class="card" id="transformaciones">
 <h2>1. Transformaciones</h2>
@@ -91,14 +95,14 @@ main,.container{width:min(calc(100% - 1rem),var(--max));margin-inline:auto;paddi
 </section><section class="card" id="videos-matematicos">
 <h2>9. Vídeos</h2>
 <p>Los vídeos se usan como apoyo breve después de la metodología de comprobación: no sustituyen la tarjeta de análisis.</p>
-</section><section class="note" id="extensiones"><strong>10. Ampliaciones: </strong> patrimonio, técnicas y percepción, siempre después de la comprobación geométrica.</section>
-<details class="extension"><summary>10.1. Alhambra, patrones y patrimonio</summary><section class="card"><h2>10.1. Alhambra, patrones y patrimonio</h2><p>La Alhambra y el Generalife forman un conjunto palatino nazarí, defensivo y paisajístico en Granada. Sus zócalos, yeserías y techumbres ofrecen numerosos ejemplos de motivos repetidos.</p><div class="ext-explain">La Alhambra ofrece motivos periódicos que pueden describirse con herramientas geométricas actuales.<br/>Actividad DNL: Busca una celda, dos traslaciones y un posible eje.</div><div class="gallery"></div><figure class="support-diagram"><svg aria-labelledby="pat-title pat-desc" role="img" viewbox="0 0 720 360"><title id="pat-title">Esquema de un patrón periódico</title><desc id="pat-desc">Composición geométrica esquemática repetida en una red cuadrada, creada para el trabajo matemático y no como reproducción de una obra.</desc><defs><pattern height="120" id="gridpat" patternunits="userSpaceOnUse" width="120"><rect fill="#fffaf0" height="120" width="120"></rect><path d="M60 8 L74 46 L112 60 L74 74 L60 112 L46 74 L8 60 L46 46 Z" fill="#e4b84b" stroke="#162c3a" stroke-width="3"></path><circle cx="60" cy="60" fill="#dbeafe" r="18" stroke="#0f766e" stroke-width="3"></circle></pattern></defs><rect fill="url(#gridpat)" height="360" width="720" x="0" y="0"></rect></svg><figcaption>Esquema pedagógico original: busca dos vectores de traslación, centros de giro y posibles ejes. No reproduce una obra patrimonial.</figcaption></figure></section></details>
-<details class="extension"><summary>10.2. Zellige, azulejos y yeserías</summary><section class="card"><h2>10.2. Zellige, azulejos y yeserías</h2><p>El zellige y los azulejos usan piezas repetidas, colores y módulos. Las yeserías multiplican patrones de forma más fina, combinando geometría, caligrafía y motivos vegetales.</p><div class="ext-explain">Azulejos, zellige y yeserías permiten distinguir pieza, motivo, color y repetición.<br/>Actividad DNL: Distingue forma, color, módulo y transformación.</div><div class="gallery"></div></section></details>
-<details class="extension"><summary>10.3. Arte mudéjar y transferencias</summary><section class="card"><h2>10.3. Arte mudéjar y transferencias</h2><p>El arte mudéjar reutiliza técnicas de tradición islámica en contextos cristianos. Ladrillo, cerámica vidriada, lazos y estrellas producen ritmos geométricos visibles en torres y palacios.</p><div class="ext-explain">El arte mudéjar permite comparar contextos y circulaciones de técnicas sin confundir los periodos.<br/>Actividad DNL: Compara dos motivos con el mismo criterio de simetría.</div><div class="gallery"></div></section></details>
-<details class="extension"><summary>10.4. Color y percepción</summary><section class="card"><h2>10.4. Color y percepción</h2><p>Un mismo diseño puede tener más simetrías si ignoramos los colores que si los consideramos. En un patrón coloreado, la transformación debe conservar forma y color.</p><div class="ext-explain">El color puede modificar el conjunto de simetrías que conserva un motivo.<br/>Actividad DNL: Analiza primero la forma y después el patrón coloreado.</div><div class="grid"><div class="box"><h3>Forma</h3><p>Puede conservarse aunque cambie el color.</p></div><div class="box"><h3>Color</h3><p>Si el color cambia, la simetría puede no ser válida para el patrón coloreado.</p></div></div><div class="gallery"></div></section></details>
+<div class="video-grid video-added"><article class="card"><h3>Vídeo en español: simetría, geometría y arte digital</h3><div class="video"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/U59I7d8VzUg" title="Arte Digital explorando Simetría, Geometría y Fractales, Instituto de Matemáticas de la UNAM"></iframe></div><p class="video-note">Nicolás Belmonte, Instituto de Matemáticas de la UNAM, 22 de octubre de 2024. Visionado recomendado: seleccionar un fragmento breve y pertinente para la noción estudiada.</p><p class="video-fallback"><a href="https://matematicasycultura.matem.unam.mx/conferencias/segundo-semestre-2024/arte-digital-explorando-simetria-geometria-y-fractales" rel="noopener noreferrer" target="_blank">Abrir la página institucional del vídeo</a>. Si el vídeo no está disponible, la actividad puede realizarse con las fotografías y los esquemas.</p></article></div></section><section class="note" id="extensiones"><strong>10. Ampliaciones: </strong> patrimonio, técnicas y percepción, siempre después de la comprobación geométrica.</section>
+<details class="extension" id="extension-1"><summary>10.1. Alhambra, patrones y patrimonio</summary><section class="card"><h2>10.1. Alhambra, patrones y patrimonio</h2><p>La Alhambra y el Generalife forman un conjunto palatino nazarí, defensivo y paisajístico en Granada. Sus zócalos, yeserías y techumbres ofrecen numerosos ejemplos de motivos repetidos.</p><div class="ext-explain">La Alhambra ofrece motivos periódicos que pueden describirse con herramientas geométricas actuales.<br/>Actividad DNL: Busca una celda, dos traslaciones y un posible eje.</div><figure class="gallery-item extension-media extension-media-added"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Alhambra_wall_detail.jpg" rel="noopener noreferrer" target="_blank"><img alt="Detalle de un muro ornamental de los palacios nazaríes de la Alhambra." data-offline-message="La fotografía no está disponible sin conexión. El contenido textual y la actividad permanecen accesibles." decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Alhambra_wall_detail.jpg"/></a><figcaption class="media-credit">Detalle de un muro ornamental de los palacios nazaríes de la Alhambra. <strong>Alexandre Buisse · 19 de diciembre de 2007 · CC BY-SA 4.0</strong>. <a href="https://commons.wikimedia.org/wiki/File:Alhambra_wall_detail.jpg" rel="noopener noreferrer" target="_blank">Fuente precisa</a>.</figcaption></figure><div class="gallery"></div></section></details>
+<details class="extension" id="extension-2"><summary>10.2. Zellige, azulejos y yeserías</summary><section class="card"><h2>10.2. Zellige, azulejos y yeserías</h2><p>El zellige y los azulejos usan piezas repetidas, colores y módulos. Las yeserías multiplican patrones de forma más fina, combinando geometría, caligrafía y motivos vegetales.</p><div class="ext-explain">Azulejos, zellige y yeserías permiten distinguir pieza, motivo, color y repetición.<br/>Actividad DNL: Distingue forma, color, módulo y transformación.</div><figure class="gallery-item extension-media extension-media-added"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Alicatados_de_la_Sala_del_Mexuar,_la_Alhambra.jpg" rel="noopener noreferrer" target="_blank"><img alt="Panel de alicatado de la Sala del Mexuar con estrellas de ocho y dieciséis puntas." data-offline-message="La fotografía no está disponible sin conexión. El contenido textual y la actividad permanecen accesibles." decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/0/03/Alicatados_de_la_Sala_del_Mexuar%2C_la_Alhambra.jpg"/></a><figcaption class="media-credit">Panel de alicatado de la Sala del Mexuar con estrellas de ocho y dieciséis puntas. <strong>Jl FilpoC · 8 de septiembre de 2008 · CC BY-SA 4.0</strong>. <a href="https://commons.wikimedia.org/wiki/File:Alicatados_de_la_Sala_del_Mexuar,_la_Alhambra.jpg" rel="noopener noreferrer" target="_blank">Fuente precisa</a>.</figcaption></figure><div class="gallery"></div></section></details>
+<details class="extension" id="extension-3"><summary>10.3. Arte mudéjar y transferencias</summary><section class="card"><h2>10.3. Arte mudéjar y transferencias</h2><p>El arte mudéjar reutiliza técnicas de tradición islámica en contextos cristianos. Ladrillo, cerámica vidriada, lazos y estrellas producen ritmos geométricos visibles en torres y palacios.</p><div class="ext-explain">El arte mudéjar permite comparar contextos y circulaciones de técnicas sin confundir los periodos.<br/>Actividad DNL: Compara dos motivos con el mismo criterio de simetría.</div><figure class="gallery-item extension-media extension-media-added"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Mexuar_tiles_DSCF7745_crop.jpg" rel="noopener noreferrer" target="_blank"><img alt="Azulejos de la Sala del Mexuar con repetición geométrica y emblema nazarí." data-offline-message="La fotografía no está disponible sin conexión. El contenido textual y la actividad permanecen accesibles." decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Mexuar_tiles_DSCF7745_crop.jpg"/></a><figcaption class="media-credit">Azulejos de la Sala del Mexuar con repetición geométrica y emblema nazarí. <strong>R Prazeres · 26 de marzo de 2015 · CC BY-SA 4.0</strong>. <a href="https://commons.wikimedia.org/wiki/File:Mexuar_tiles_DSCF7745_crop.jpg" rel="noopener noreferrer" target="_blank">Fuente precisa</a>.</figcaption></figure><div class="gallery"></div></section></details>
+<details class="extension" id="extension-4"><summary>10.4. Color y percepción</summary><section class="card"><h2>10.4. Color y percepción</h2><p>Un mismo diseño puede tener más simetrías si ignoramos los colores que si los consideramos. En un patrón coloreado, la transformación debe conservar forma y color.</p><div class="ext-explain">El color puede modificar el conjunto de simetrías que conserva un motivo.<br/>Actividad DNL: Analiza primero la forma y después el patrón coloreado.</div><figure class="gallery-item extension-media extension-media-added"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Alhambra-p3-closeup.jpg" rel="noopener noreferrer" target="_blank"><img alt="Alicatado coloreado de la Alhambra que permite comparar simetrías de forma y de color." data-offline-message="La fotografía no está disponible sin conexión. El contenido textual y la actividad permanecen accesibles." decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/1/12/Alhambra-p3-closeup.jpg"/></a><figcaption class="media-credit">Alicatado coloreado de la Alhambra que permite comparar simetrías de forma y de color. <strong>Dmharvey · 1 de abril de 2007 · CC BY-SA 3.0</strong>. <a href="https://commons.wikimedia.org/wiki/File:Alhambra-p3-closeup.jpg" rel="noopener noreferrer" target="_blank">Fuente precisa</a>.</figcaption></figure><div class="grid"><div class="box"><h3>Forma</h3><p>Puede conservarse aunque cambie el color.</p></div><div class="box"><h3>Color</h3><p>Si el color cambia, la simetría puede no ser válida para el patrón coloreado.</p></div></div><div class="gallery"></div></section></details>
 <details class="extension" id="familias"><summary>11. Ampliación opcional: 17 grupos</summary><section class="card">
 <h2>11. Ampliación opcional: 17 grupos</h2>
-<p>Las 17 notaciones sirven para nombrar familias de patrones en profundización. En la sesión 2, no se memorizan: se usan como referencia para comparar indicios.</p>
+<p>Las 17 notaciones sirven para nombrar familias de patrones en profundización. En la sesión 2, no se memorizan: se usan como referencia para comparar indicios.</p><div aria-label="Galería fotográfica de motivos geométricos" class="gallery extension-photo-gallery extension-media-added"><figure class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Alhambra_wall_detail.jpg" rel="noopener noreferrer" target="_blank"><img alt="Detalle ornamental de los palacios nazaríes." data-offline-message="La fotografía no está disponible sin conexión." decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Alhambra_wall_detail.jpg"/></a><figcaption>Detalle ornamental de los palacios nazaríes. Foto: Alexandre Buisse.</figcaption></figure><figure class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Alicatados_de_la_Sala_del_Mexuar,_la_Alhambra.jpg" rel="noopener noreferrer" target="_blank"><img alt="Alicatado del Mexuar con ruedas de estrellas." data-offline-message="La fotografía no está disponible sin conexión." decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/0/03/Alicatados_de_la_Sala_del_Mexuar%2C_la_Alhambra.jpg"/></a><figcaption>Alicatado del Mexuar con ruedas de estrellas. Foto: Jl FilpoC.</figcaption></figure><figure class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Mexuar_tiles_DSCF7745_crop.jpg" rel="noopener noreferrer" target="_blank"><img alt="Azulejos de la Sala del Mexuar." data-offline-message="La fotografía no está disponible sin conexión." decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Mexuar_tiles_DSCF7745_crop.jpg"/></a><figcaption>Azulejos de la Sala del Mexuar. Foto: R Prazeres.</figcaption></figure><figure class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Alhambra-p3-closeup.jpg" rel="noopener noreferrer" target="_blank"><img alt="Motivo coloreado asociado al grupo p3." data-offline-message="La fotografía no está disponible sin conexión." decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/1/12/Alhambra-p3-closeup.jpg"/></a><figcaption>Motivo coloreado asociado al grupo p3. Foto: Dmharvey.</figcaption></figure></div><aside aria-label="Riqueza visual del tema" class="note photo-richness"><strong>Un patrimonio visual muy rico:</strong> estas fotografías muestran que un mismo lugar reúne alicatados, estrellas, lazos, redes, colores, inscripciones y centros de giro. No existe un único «motivo de la Alhambra»: cada fragmento debe observarse, comprobarse y compararse antes de proponer un grupo de simetría.</aside>
 <div aria-label="Tabla desplazable horizontalmente" class="table-wrap" tabindex="0"><table><thead><tr><th scope="col">Familia visual</th><th scope="col">Qué busco</th><th scope="col">Notaciones de referencia</th></tr></thead><tbody>
 <tr><td>Sin reflexiones ni reflexiones deslizantes</td><td>Red de traslaciones; puede haber giros, pero no reflexiones ni reflexiones deslizantes.</td><td><code>p1</code>, <code>p2</code>, <code>p3</code>, <code>p4</code>, <code>p6</code></td></tr>
 <tr><td>Con ejes o deslizamientos</td><td>Reflexiones, reflexiones deslizantes o ejes paralelos.</td><td><code>pm</code>, <code>pg</code>, <code>cm</code></td></tr>
@@ -108,7 +112,7 @@ main,.container{width:min(calc(100% - 1rem),var(--max));margin-inline:auto;paddi
 <tr><td>Red triangular · orden 6</td><td>Giros de 60°.</td><td><code>p6</code>, <code>p6m</code></td></tr>
 </tbody></table></div>
 <div class="note"><strong>Prudencia:</strong> una fotografía parcial permite proponer una hipótesis, no certificar toda la clasificación.</div>
-</section></details></main>
+</section></details><details class="extension-block" id="fuentes-medias-ajoutées"><summary>12. Fuentes de las fotografías y del vídeo</summary><section class="card"><h2>12. Fuentes de las fotografías y del vídeo</h2><ul><li>Alexandre Buisse, <cite>Alhambra wall detail.jpg</cite>, 19 de diciembre de 2007, Wikimedia Commons, CC BY-SA 4.0.</li><li>Jl FilpoC, <cite>Alicatados de la Sala del Mexuar, la Alhambra.jpg</cite>, 8 de septiembre de 2008, Wikimedia Commons, CC BY-SA 4.0.</li><li>R Prazeres, <cite>Mexuar tiles DSCF7745 crop.jpg</cite>, 26 de marzo de 2015, Wikimedia Commons, CC BY-SA 4.0.</li><li>Dmharvey, <cite>Alhambra-p3-closeup.jpg</cite>, 1 de abril de 2007, Wikimedia Commons, CC BY-SA 3.0.</li></ul><p>Las fotografías y el vídeo son apoyos complementarios. Ninguna respuesta ni evaluación depende de su disponibilidad.</p></section></details></main>
 <footer><p>🌄 Ficha de curso DNL · Matemáticas en español · Los 17 grupos de simetría del plano · Lycée-Pensionnat Sacré-Cœur, Reims · © 2026-2027 · CC BY-NC-SA 4.0.</p></footer>
 <script id="script-autonome-simetria-cours">(() => {
   "use strict";
@@ -118,14 +122,104 @@ main,.container{width:min(calc(100% - 1rem),var(--max));margin-inline:auto;paddi
     rel.add("noreferrer");
     link.setAttribute("rel", [...rel].join(" "));
   });
-})();</script><script id="script-media-fallback-autonomo">(()=>{"use strict";document.querySelectorAll("img[data-offline-message]").forEach(image=>image.addEventListener("error",()=>{image.hidden=true;const host=image.closest("figure,.gallery-item,.card")||image.parentElement;if(!host||host.querySelector(".offline-message"))return;const p=document.createElement("p");p.className="offline-message";p.textContent=image.dataset.offlineMessage;(host.querySelector("figcaption,.caption")||host).prepend(p)},{once:true}));})();</script><script id="script-impression-autonome">(()=>{"use strict";document.querySelector('[data-action="print"]')?.addEventListener("click",()=>window.print());})();</script><script id="script-extensiones-replegadas">(() => {
+})();</script><script id="script-media-fallback-autonomo">(()=>{"use strict";document.querySelectorAll("img[data-offline-message]").forEach(image=>image.addEventListener("error",()=>{image.hidden=true;const host=image.closest("figure,.gallery-item,.card")||image.parentElement;if(!host||host.querySelector(".offline-message"))return;const p=document.createElement("p");p.className="offline-message";p.textContent=image.dataset.offlineMessage;(host.querySelector("figcaption,.caption")||host).prepend(p)},{once:true}));})();</script><script id="script-impression-autonome">(()=>{"use strict";document.querySelector('[data-action="print"]')?.addEventListener("click",()=>window.print());})();</script>
+<!-- navigation-defilante-par-script-v2 -->
+<style id="navigation-defilante-par-script-v2-style">
+/* Candidats évidents, même si JavaScript est désactivé. */
+nav,
+[role="navigation"],
+.nav, .navbar, .navigation, .nav-bar, .menu-bar,
+.topnav, .top-nav, .main-nav, .site-nav, .sticky-nav,
+.toc, .sommaire, .table-of-contents,
+[data-scroll-navigation="true"] {
+  position: static !important;
+  top: auto !important;
+  bottom: auto !important;
+  inset-block-start: auto !important;
+  inset-block-end: auto !important;
+  transform: none !important;
+}
+</style>
+<script id="navigation-defilante-par-script-v2-script">
+(() => {
   "use strict";
-  const closeExtensions = () => document.querySelectorAll("details.extension, details.extension-block").forEach(panel => {
-    panel.open = false;
-    panel.removeAttribute("open");
-  });
-  closeExtensions();
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", closeExtensions, { once: true });
-  window.addEventListener("pageshow", closeExtensions);
-})();</script></body>
+
+  const TOKEN_RE = /(^|[-_\s])(nav|navbar|navigation|menu|menubar|topnav|topbar|headernav|mainnav|sitenav|stickynav|toc|sommaire|tableofcontents)([-_\s]|$)/i;
+  const LABEL_RE = /(navigation|navegaci[oó]n|menu|men[uú]|sommaire|table des mati[eè]res|table of contents|indice)/i;
+  const EXCLUDE_RE = /(footer|pied[-_\s]?de[-_\s]?page|breadcrumb|fil[-_\s]?d['’]?ariane|pagination|pager|social|share)/i;
+
+  function textSignature(el) {
+    return [
+      el.id || "",
+      typeof el.className === "string" ? el.className : "",
+      el.getAttribute("aria-label") || "",
+      el.getAttribute("name") || ""
+    ].join(" ").replace(/([a-z])([A-Z])/g, "$1 $2");
+  }
+
+  function score(el) {
+    const sig = textSignature(el);
+    const style = getComputedStyle(el);
+    const links = el.querySelectorAll("a[href], button").length;
+    const rect = el.getBoundingClientRect();
+    let points = 0;
+
+    if (el.tagName === "NAV") points += 6;
+    if ((el.getAttribute("role") || "").toLowerCase() === "navigation") points += 6;
+    if (TOKEN_RE.test(sig)) points += 4;
+    if (LABEL_RE.test(sig)) points += 3;
+    if (style.position === "fixed" || style.position === "sticky") points += 5;
+    if (links >= 2) points += 2;
+    if (links >= 4) points += 1;
+    if (rect.width >= innerWidth * 0.45) points += 1;
+    if (EXCLUDE_RE.test(sig)) points -= 7;
+    if (el.closest("footer")) points -= 5;
+    return points;
+  }
+
+  function makeScrollable(el) {
+    if (score(el) < 5) return false;
+    el.dataset.scrollNavigation = "true";
+    for (const property of ["position", "top", "bottom", "inset-block-start", "inset-block-end", "transform"]) {
+      el.style.setProperty(property, property === "position" ? "static" : property === "transform" ? "none" : "auto", "important");
+    }
+    return true;
+  }
+
+  function detect() {
+    const selectors = [
+      "nav", '[role="navigation"]',
+      '[class*="nav" i]', '[id*="nav" i]',
+      '[class*="menu" i]', '[id*="menu" i]',
+      '[class*="topbar" i]', '[id*="topbar" i]',
+      '[class*="toc" i]', '[id*="toc" i]',
+      '[class*="sommaire" i]', '[id*="sommaire" i]',
+      '[aria-label*="navigation" i]', '[aria-label*="navegación" i]',
+      '[aria-label*="menu" i]', '[aria-label*="sommaire" i]'
+    ];
+
+    const candidates = new Set(document.querySelectorAll(selectors.join(",")));
+
+    /* Complément : éléments réellement fixes/sticky contenant plusieurs liens. */
+    for (const el of document.querySelectorAll("header, aside, div, section, ul")) {
+      const pos = getComputedStyle(el).position;
+      if ((pos === "fixed" || pos === "sticky") && el.querySelectorAll("a[href], button").length >= 2) {
+        candidates.add(el);
+      }
+    }
+
+    let changed = 0;
+    for (const el of candidates) changed += makeScrollable(el) ? 1 : 0;
+    document.documentElement.dataset.scrollNavigationCount = String(changed);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", detect, { once: true });
+  } else {
+    detect();
+  }
+  window.addEventListener("pageshow", detect);
+})();
+</script>
+<script id="script-extensions-medias">(()=>{"use strict";const FILE="dnl-symmetry17-course-media-v2",panels=[...document.querySelectorAll("details.extension,details.extension-block")],key=p=>`${FILE}:${p.id}`,close=()=>panels.forEach(p=>{p.open=false;try{localStorage.setItem(key(p),"closed")}catch(_){}});close();panels.forEach(p=>p.addEventListener("toggle",()=>{try{localStorage.setItem(key(p),p.open?"session-open":"closed")}catch(_){}}));addEventListener("pageshow",close);addEventListener("beforeunload",close);document.addEventListener("dnl:reset",close)})();</script></body>
 </html>

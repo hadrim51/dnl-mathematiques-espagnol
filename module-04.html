@@ -1,8 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link id="favicon-drapeau-espagnol" rel="icon" type="image/svg+xml" aria-label="Favicon de la bandera de España" href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3EBandera%20de%20Espa%C3%B1a%3C%2Ftitle%3E%0A%3Cdesc%3EFavicon%20con%20tres%20franjas%20horizontales%20roja%2C%20amarilla%20y%20roja.%3C%2Fdesc%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%23AA151B%22%2F%3E%0A%3Crect%20y%3D%2216%22%20width%3D%2264%22%20height%3D%2232%22%20fill%3D%22%23F1BF00%22%2F%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2262.5%22%20height%3D%2262.5%22%20rx%3D%229.25%22%0A%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%237A1015%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E">
 <title>Module 04 | Corrections des fiches de travail</title>
 <meta name="description" content="Corrections du module 04 sur les statistiques, la démographie et le muralisme mexicain.">
 <style>
@@ -21,4 +22,103 @@
 <article class="card"><div class="top"><span class="number">Fiche 19</span><span class="status available">Disponible</span></div><h2>Mural statistique et muralisme mexicain</h2><p>Proportions, aires, échelles, pictogrammes, composition et audit de la représentation visuelle.</p><a class="button" href="19-Fichas-Trabajo-Muralismo-Mexicano.html" title="Ouvrir la correction sur le mural statistique et le muralisme mexicain">Ouvrir la correction <span aria-hidden="true">→</span></a></article>
 <article class="card"><div class="top"><span class="number">Fiche 20</span><span class="status available">Disponible</span></div><h2>Présentation publique d’un rapport</h2><p>Structure, données, calculs, visualisation, argumentation et adaptation au public.</p><a class="button" href="20A-Fichas-Trabajo-Presentacion-Publica-correction.html" title="Ouvrir la correction sur la présentation publique d’un rapport">Ouvrir la correction <span aria-hidden="true">→</span></a></article>
 <article class="card"><div class="top"><span class="number">Fiche 21</span><span class="status available">Disponible</span></div><h2>Présentation orale d’un mural statistique</h2><p>Donnée, proportion, support visuel, gestion du temps, argumentation et réponse aux questions.</p><a class="button" href="20B-Fichas-Trabajo-Presentacion-Publica-correction.html" title="Ouvrir la correction de la présentation orale d’un mural statistique">Ouvrir la correction <span aria-hidden="true">→</span></a></article>
-</div></section></main><footer>HADRI Mohammed | DNL mathématiques en espagnol</footer></body></html>
+</div></section></main><footer>HADRI Mohammed | DNL mathématiques en espagnol</footer>
+<!-- navigation-defilante-par-script-v2 -->
+<style id="navigation-defilante-par-script-v2-style">
+/* Candidats évidents, même si JavaScript est désactivé. */
+nav,
+[role="navigation"],
+.nav, .navbar, .navigation, .nav-bar, .menu-bar,
+.topnav, .top-nav, .main-nav, .site-nav, .sticky-nav,
+.toc, .sommaire, .table-of-contents,
+[data-scroll-navigation="true"] {
+  position: static !important;
+  top: auto !important;
+  bottom: auto !important;
+  inset-block-start: auto !important;
+  inset-block-end: auto !important;
+  transform: none !important;
+}
+</style>
+<script id="navigation-defilante-par-script-v2-script">
+(() => {
+  "use strict";
+
+  const TOKEN_RE = /(^|[-_\s])(nav|navbar|navigation|menu|menubar|topnav|topbar|headernav|mainnav|sitenav|stickynav|toc|sommaire|tableofcontents)([-_\s]|$)/i;
+  const LABEL_RE = /(navigation|navegaci[oó]n|menu|men[uú]|sommaire|table des mati[eè]res|table of contents|indice)/i;
+  const EXCLUDE_RE = /(footer|pied[-_\s]?de[-_\s]?page|breadcrumb|fil[-_\s]?d['’]?ariane|pagination|pager|social|share)/i;
+
+  function textSignature(el) {
+    return [
+      el.id || "",
+      typeof el.className === "string" ? el.className : "",
+      el.getAttribute("aria-label") || "",
+      el.getAttribute("name") || ""
+    ].join(" ").replace(/([a-z])([A-Z])/g, "$1 $2");
+  }
+
+  function score(el) {
+    const sig = textSignature(el);
+    const style = getComputedStyle(el);
+    const links = el.querySelectorAll("a[href], button").length;
+    const rect = el.getBoundingClientRect();
+    let points = 0;
+
+    if (el.tagName === "NAV") points += 6;
+    if ((el.getAttribute("role") || "").toLowerCase() === "navigation") points += 6;
+    if (TOKEN_RE.test(sig)) points += 4;
+    if (LABEL_RE.test(sig)) points += 3;
+    if (style.position === "fixed" || style.position === "sticky") points += 5;
+    if (links >= 2) points += 2;
+    if (links >= 4) points += 1;
+    if (rect.width >= innerWidth * 0.45) points += 1;
+    if (EXCLUDE_RE.test(sig)) points -= 7;
+    if (el.closest("footer")) points -= 5;
+    return points;
+  }
+
+  function makeScrollable(el) {
+    if (score(el) < 5) return false;
+    el.dataset.scrollNavigation = "true";
+    for (const property of ["position", "top", "bottom", "inset-block-start", "inset-block-end", "transform"]) {
+      el.style.setProperty(property, property === "position" ? "static" : property === "transform" ? "none" : "auto", "important");
+    }
+    return true;
+  }
+
+  function detect() {
+    const selectors = [
+      "nav", '[role="navigation"]',
+      '[class*="nav" i]', '[id*="nav" i]',
+      '[class*="menu" i]', '[id*="menu" i]',
+      '[class*="topbar" i]', '[id*="topbar" i]',
+      '[class*="toc" i]', '[id*="toc" i]',
+      '[class*="sommaire" i]', '[id*="sommaire" i]',
+      '[aria-label*="navigation" i]', '[aria-label*="navegación" i]',
+      '[aria-label*="menu" i]', '[aria-label*="sommaire" i]'
+    ];
+
+    const candidates = new Set(document.querySelectorAll(selectors.join(",")));
+
+    /* Complément : éléments réellement fixes/sticky contenant plusieurs liens. */
+    for (const el of document.querySelectorAll("header, aside, div, section, ul")) {
+      const pos = getComputedStyle(el).position;
+      if ((pos === "fixed" || pos === "sticky") && el.querySelectorAll("a[href], button").length >= 2) {
+        candidates.add(el);
+      }
+    }
+
+    let changed = 0;
+    for (const el of candidates) changed += makeScrollable(el) ? 1 : 0;
+    document.documentElement.dataset.scrollNavigationCount = String(changed);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", detect, { once: true });
+  } else {
+    detect();
+  }
+  window.addEventListener("pageshow", detect);
+})();
+</script>
+</body></html>

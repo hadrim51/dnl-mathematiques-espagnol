@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="es">
 <head>
@@ -132,5 +132,104 @@ header .intro-seo{
 <div class="mini-card"><img alt="Luna llena para estudiar el carácter móvil de la fecha de Pascua y los ciclos del calendario" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Full%20Moon%20Luc%20Viatour.jpg?width=1200"/><div class="cap"><strong>Ciclo lunar</strong><br/><em>Idea matemática:</em> fecha móvil, calendario y límites de una regla simplificada.</div></div>
 <div class="mini-card"><img alt="Procesión de Semana Santa en Granada para modelizar un recorrido, una distancia y una duración" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Semana%20Santa%20procession%20in%20Granada%2C%20Spain%20%286925801312%29.jpg?width=1200"/><div class="cap"><strong>Procesión</strong><br/><em>Idea matemática:</em> recorrido a escala, velocidad media, paradas y estimación de duración.</div></div>
 <div class="mini-card"><img alt="Torrijas para estudiar cantidades proporcionales y un modelo afín de coste" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Torrijas%20%28Malloquina%29.jpg?width=1200"/><div class="cap"><strong>Torrijas</strong><br/><em>Idea matemática:</em> proporcionalidad y función afín de coste con unidades declaradas.</div></div>
-</div><figure class="video-card"><div class="video-frame"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/JSJbOhsF-VU" title="Cálculo de la fecha de Pascua según el calendario lunar"></iframe></div><figcaption>Vídeo original en español: explica por qué la fecha de Pascua es móvil y cómo interviene el calendario lunar. Distingue la regla calendárica simplificada del cálculo astronómico exacto.</figcaption><p class="video-fallback"><a href="https://www.youtube.com/watch?v=JSJbOhsF-VU" rel="noopener noreferrer" target="_blank">Ver el vídeo en YouTube</a></p></figure></section><div class="worksheet-actions"><a aria-label="📄 Abrir ficha de trabajo (se abre en una nueva pestaña)" class="btn-worksheet" href="Fichas-Trabajo-Pascua.html" rel="noopener noreferrer" target="_blank">📄 Abrir ficha de trabajo</a><a aria-label="📘 Abrir ficha de curso (se abre en una nueva pestaña)" class="btn-curso" href="Ficha-Curso-Pascua.html" rel="noopener noreferrer" target="_blank">📘 Abrir ficha de curso</a></div></section></main><footer class="footer" role="contentinfo"><div class="footer-content"><p><strong>🌄 Módulo Festividades · DNL Matemáticas en español · Lycée-Pensionnat Sacré-Cœur, Reims · © 2026-2027 · CC BY-NC-SA 4.0.</strong></p></div></footer></body>
+</div><figure class="video-card"><div class="video-frame"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/JSJbOhsF-VU" title="Cálculo de la fecha de Pascua según el calendario lunar"></iframe></div><figcaption>Vídeo original en español: explica por qué la fecha de Pascua es móvil y cómo interviene el calendario lunar. Distingue la regla calendárica simplificada del cálculo astronómico exacto.</figcaption><p class="video-fallback"><a href="https://www.youtube.com/watch?v=JSJbOhsF-VU" rel="noopener noreferrer" target="_blank">Ver el vídeo en YouTube</a></p></figure></section><div class="worksheet-actions"><a aria-label="📄 Abrir ficha de trabajo (se abre en una nueva pestaña)" class="btn-worksheet" href="Fichas-Trabajo-Pascua.html" rel="noopener noreferrer" target="_blank">📄 Abrir ficha de trabajo</a><a aria-label="📘 Abrir ficha de curso (se abre en una nueva pestaña)" class="btn-curso" href="Ficha-Curso-Pascua.html" rel="noopener noreferrer" target="_blank">📘 Abrir ficha de curso</a></div></section></main><footer class="footer" role="contentinfo"><div class="footer-content"><p><strong>🌄 Módulo Festividades · DNL Matemáticas en español · Lycée-Pensionnat Sacré-Cœur, Reims · © 2026-2027 · CC BY-NC-SA 4.0.</strong></p></div></footer>
+<!-- navigation-defilante-par-script-v2 -->
+<style id="navigation-defilante-par-script-v2-style">
+/* Candidats évidents, même si JavaScript est désactivé. */
+nav,
+[role="navigation"],
+.nav, .navbar, .navigation, .nav-bar, .menu-bar,
+.topnav, .top-nav, .main-nav, .site-nav, .sticky-nav,
+.toc, .sommaire, .table-of-contents,
+[data-scroll-navigation="true"] {
+  position: static !important;
+  top: auto !important;
+  bottom: auto !important;
+  inset-block-start: auto !important;
+  inset-block-end: auto !important;
+  transform: none !important;
+}
+</style>
+<script id="navigation-defilante-par-script-v2-script">
+(() => {
+  "use strict";
+
+  const TOKEN_RE = /(^|[-_\s])(nav|navbar|navigation|menu|menubar|topnav|topbar|headernav|mainnav|sitenav|stickynav|toc|sommaire|tableofcontents)([-_\s]|$)/i;
+  const LABEL_RE = /(navigation|navegaci[oó]n|menu|men[uú]|sommaire|table des mati[eè]res|table of contents|indice)/i;
+  const EXCLUDE_RE = /(footer|pied[-_\s]?de[-_\s]?page|breadcrumb|fil[-_\s]?d['’]?ariane|pagination|pager|social|share)/i;
+
+  function textSignature(el) {
+    return [
+      el.id || "",
+      typeof el.className === "string" ? el.className : "",
+      el.getAttribute("aria-label") || "",
+      el.getAttribute("name") || ""
+    ].join(" ").replace(/([a-z])([A-Z])/g, "$1 $2");
+  }
+
+  function score(el) {
+    const sig = textSignature(el);
+    const style = getComputedStyle(el);
+    const links = el.querySelectorAll("a[href], button").length;
+    const rect = el.getBoundingClientRect();
+    let points = 0;
+
+    if (el.tagName === "NAV") points += 6;
+    if ((el.getAttribute("role") || "").toLowerCase() === "navigation") points += 6;
+    if (TOKEN_RE.test(sig)) points += 4;
+    if (LABEL_RE.test(sig)) points += 3;
+    if (style.position === "fixed" || style.position === "sticky") points += 5;
+    if (links >= 2) points += 2;
+    if (links >= 4) points += 1;
+    if (rect.width >= innerWidth * 0.45) points += 1;
+    if (EXCLUDE_RE.test(sig)) points -= 7;
+    if (el.closest("footer")) points -= 5;
+    return points;
+  }
+
+  function makeScrollable(el) {
+    if (score(el) < 5) return false;
+    el.dataset.scrollNavigation = "true";
+    for (const property of ["position", "top", "bottom", "inset-block-start", "inset-block-end", "transform"]) {
+      el.style.setProperty(property, property === "position" ? "static" : property === "transform" ? "none" : "auto", "important");
+    }
+    return true;
+  }
+
+  function detect() {
+    const selectors = [
+      "nav", '[role="navigation"]',
+      '[class*="nav" i]', '[id*="nav" i]',
+      '[class*="menu" i]', '[id*="menu" i]',
+      '[class*="topbar" i]', '[id*="topbar" i]',
+      '[class*="toc" i]', '[id*="toc" i]',
+      '[class*="sommaire" i]', '[id*="sommaire" i]',
+      '[aria-label*="navigation" i]', '[aria-label*="navegación" i]',
+      '[aria-label*="menu" i]', '[aria-label*="sommaire" i]'
+    ];
+
+    const candidates = new Set(document.querySelectorAll(selectors.join(",")));
+
+    /* Complément : éléments réellement fixes/sticky contenant plusieurs liens. */
+    for (const el of document.querySelectorAll("header, aside, div, section, ul")) {
+      const pos = getComputedStyle(el).position;
+      if ((pos === "fixed" || pos === "sticky") && el.querySelectorAll("a[href], button").length >= 2) {
+        candidates.add(el);
+      }
+    }
+
+    let changed = 0;
+    for (const el of candidates) changed += makeScrollable(el) ? 1 : 0;
+    document.documentElement.dataset.scrollNavigationCount = String(changed);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", detect, { once: true });
+  } else {
+    detect();
+  }
+  window.addEventListener("pageshow", detect);
+})();
+</script>
+</body>
 </html>

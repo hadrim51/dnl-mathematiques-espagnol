@@ -1,8 +1,7 @@
 <!doctype html>
-
 <html lang="fr">
 <head>
-<meta charset="utf-8"/><meta content="noindex, nofollow, noarchive, nosnippet" name="robots"/>
+<meta charset="utf-8"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="robots"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3EBandera%20de%20Espa%C3%B1a%3C%2Ftitle%3E%0A%3Cdesc%3EFavicon%20con%20tres%20franjas%20horizontales%20roja%2C%20amarilla%20y%20roja.%3C%2Fdesc%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%23AA151B%22%2F%3E%0A%3Crect%20y%3D%2216%22%20width%3D%2264%22%20height%3D%2232%22%20fill%3D%22%23F1BF00%22%2F%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2262.5%22%20height%3D%2262.5%22%20rx%3D%229.25%22%0A%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%237A1015%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E" id="favicon-drapeau-espagnol" rel="icon" type="image/svg+xml"/>
 <title>Corrections des fiches de travail | DNL mathématiques en espagnol</title>
@@ -82,7 +81,43 @@ html.correction-locked body > :not(#correction-gate) { visibility: hidden; }
   .gate-card button { transition-duration: .01ms; }
 }
 @media print { #correction-gate { display: none !important; } }
-</style><script id="correction-lock-bootstrap">document.documentElement.classList.add("correction-locked");</script></head>
+</style><script id="correction-lock-bootstrap">document.documentElement.classList.add("correction-locked");</script><style id="audit-wcag-final">
+/* Responsive, accessibilite et impression */
+:root{--audit-focus:#ffbf47;--audit-tap:2.75rem;--audit-reading:75ch}
+html{overflow-x:clip;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{min-width:0!important;max-width:100%;overflow-x:clip;overflow-wrap:break-word}
+*,*::before,*::after{box-sizing:border-box}
+:where(header,main,footer,nav,section,article,aside,div,figure){min-width:0}
+:where(img,picture,svg,video,iframe){max-width:100%}
+img{display:block;width:auto;max-width:100%;height:auto;object-fit:contain;object-position:center;filter:none!important;opacity:1!important}
+iframe,video{display:block;width:100%;border:0}
+:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:.2rem solid var(--audit-focus)!important;outline-offset:.2rem!important;box-shadow:0 0 0 .2rem #fff,0 0 0 .4rem var(--audit-focus)!important}
+:where(a,button,summary){touch-action:manipulation}
+:where(button,.btn,.btn-ficha,.btn-complete,.btn-worksheet,.btn-curso,.lang-switch,.module-link,.contact-button,.nav a,.nav-toggle){min-height:var(--audit-tap)}
+:where(a,button,.btn,.btn-ficha,.btn-complete,.btn-worksheet,.btn-curso,.lang-switch,.module-link,.contact-button){transition:color 160ms ease,background-color 160ms ease,border-color 160ms ease,box-shadow 160ms ease,transform 160ms ease}
+:where(a,button,.btn,.btn-ficha,.btn-complete,.btn-worksheet,.btn-curso,.lang-switch,.module-link,.contact-button):active{transform:translateY(1px)}
+:where(p,li,figcaption){max-width:var(--audit-reading)}
+.nav{position:static!important;max-width:100%}
+.nav-inner{overflow:visible!important;scroll-snap-type:none!important}
+footer,.footer{display:flex!important;width:100%!important;min-width:0!important;align-items:center!important;justify-content:center!important;text-align:center!important}
+footer>*,.footer>*,footer .footer-content,.footer .footer-content{max-width:100%!important;margin-inline:auto!important;text-align:center!important}
+footer p,.footer p{margin-inline:auto!important;text-align:center!important}
+@media(max-width:35.999rem){
+ .nav-inner{display:grid!important;grid-template-columns:1fr!important;gap:.4rem!important;padding:.5rem!important}
+ .nav-inner a{width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere}
+ .top-actions{left:.75rem!important;right:.75rem!important;max-width:calc(100% - 1.5rem)}
+ .top-actions>*{width:100%}
+ .session-head{grid-template-columns:1fr!important}
+ :where(.resources,.media-panel,.session-media,.media-grid,.mini-gallery,.worksheet-actions,.card-grid,.distribution-grid,.visual-summary-grid,.about-me-highlights){grid-template-columns:1fr!important}
+ footer,.footer{padding-inline:.75rem!important;overflow-wrap:anywhere!important}
+ footer>*,.footer>*{width:100%!important;padding-inline:0!important}
+}
+@media(min-width:36rem) and (max-width:63.999rem){.nav-inner{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(min-width:64rem){.nav-inner{display:flex!important;flex-wrap:wrap!important;justify-content:center!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(forced-colors:active){*{box-shadow:none!important}:where(a,button,input,select,textarea,summary){forced-color-adjust:auto}}
+@media print{@page{margin:1.4cm}body{overflow:visible!important;color:#111!important;background:#fff!important;font-size:10.5pt}.skip,.skip-link,.nav,.top-actions,.nav-toggle,.btn-complete,.status-message{display:none!important}header,.header,footer,.footer{color:#111!important;background:#fff!important;box-shadow:none!important}header *,.header *,footer *,.footer *{color:#111!important;text-shadow:none!important}:where(.overview,.session,.media-card,.mini-card,.video-card,.figure,.photo-card){box-shadow:none!important}:where(h1,h2,h3,h4,figure,.media-card,.mini-card,.session-detail,.expected-output){break-inside:avoid}img{max-height:11cm!important;object-fit:contain!important}a{color:#111!important;text-decoration:underline}}
+</style><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="googlebot"/><meta content="no-referrer" name="referrer"/></head>
 <body><div aria-describedby="gate-description" aria-labelledby="gate-title" aria-modal="true" id="correction-gate" role="dialog"><form class="gate-card" id="gate-form"><h2 id="gate-title">Accès enseignant</h2><p id="gate-description">Cette ressource est réservée aux enseignants. Saisissez le code d’accès pour continuer.</p><label for="gate-password">Code d’accès</label><input aria-describedby="gate-error" autocomplete="current-password" autofocus="" id="gate-password" required="" type="password"/><button type="submit">Ouvrir les corrections</button><p aria-live="assertive" class="gate-error" id="gate-error" role="alert"></p><a class="gate-back" href="index.html">← Retour à la progression</a></form></div>
 <a class="skip" href="#contenu">Aller au contenu</a>
 <header><div class="wrap"><h1>Corrections des fiches de travail</h1><p>Retrouvez toutes les corrections du parcours DNL mathématiques en espagnol, classées par niveau et par module.</p></div></header>

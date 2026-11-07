@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -24,9 +24,61 @@ main,.container{width:min(calc(100% - 1rem),var(--max));margin-inline:auto;paddi
 
 .extension-photo-gallery{grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));margin:1rem 0}.extension-photo-gallery .gallery-item{display:flex;flex-direction:column}.extension-photo-gallery img{height:13rem;object-fit:cover}.photo-richness{margin:1rem 0}.extension-photo-gallery figcaption{flex:1}@media print{.extension-photo-gallery{grid-template-columns:repeat(2,1fr)}.extension-photo-gallery img{height:6cm}}
 </style>
-</head>
+<style id="styles-responsive-accessibilite-wcag22">
+/* Responsive and accessibility consolidation */
+:root{--space-1:.5rem;--space-2:.75rem;--space-3:1rem;--space-4:1.5rem;--space-5:2rem;--tap:2.75rem;--content:76rem;--ease:160ms ease}
+html{overflow-x:hidden;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{min-width:0;overflow-x:hidden}
+:where(img,svg,video,canvas,iframe){display:block;max-width:100%;height:auto}
+:where(p,li,td,th,figcaption,summary,a,button,label,textarea){overflow-wrap:anywhere;word-break:normal}
+:where(a,button,input,textarea,select,summary){touch-action:manipulation}
+:where(a,button,summary){transition:color var(--ease),background-color var(--ease),border-color var(--ease),box-shadow var(--ease),transform var(--ease)}
+:where(a,button,summary):active{transform:translateY(1px)}
+:where(a,button,input,textarea,select,summary):focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+button,.nav a,nav a,summary{min-height:var(--tap)}
+button{max-width:100%}
+main:focus{outline:none}
+.table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-gutter:stable}
+.table-wrap:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+table{max-width:100%}
+figure{max-width:100%}
+figcaption{line-height:1.5}
+.hero-bg img,.extension-media img,.extension-photo-gallery img,.gallery-item img{filter:none!important;opacity:1!important;object-position:center}
+.hero::after{background:linear-gradient(90deg,rgba(8,18,20,.28),rgba(8,18,20,.12) 48%,rgba(8,18,20,.25))}
+.nav-inner,nav{scrollbar-width:thin}
+@media (hover:hover){:where(a,button,summary):hover{transform:translateY(-1px)}}
+@media (min-width:48rem){main,.container{padding-block:1.5rem 3.5rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}:where(*,::before,::after){animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media print{html,body{overflow:visible!important}a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;word-break:break-all}footer{break-inside:avoid}.table-wrap{overflow:visible!important}button,.no-print,.nav,nav{display:none!important}}
+
+body{font-size:clamp(1rem,.96rem + .18vw,1.08rem)}
+.hero{min-height:auto;padding:clamp(2.75rem,9vw,5.5rem) 1rem clamp(2.25rem,7vw,4rem)}
+.hero h1{font-size:clamp(1.9rem,8vw,4.1rem)}
+.nav{position:static;padding:.65rem .5rem}
+.nav-inner{flex-wrap:wrap;overflow:visible;justify-content:center}
+.nav-title,.nav-inner>strong{flex-basis:100%;white-space:normal;text-align:center}
+.nav-inner>a{min-height:var(--tap)}
+main,.container{width:min(calc(100% - 1rem),var(--max))}
+.card,.exercise,.quiz,.rubric,.competences,.align-panel{padding:clamp(.9rem,3vw,1.55rem)}
+.meta{display:flex;flex-wrap:wrap;gap:.25rem}
+.actions{display:grid;grid-template-columns:1fr;gap:.75rem}
+.actions>*{width:100%;min-width:0}
+textarea{min-height:8rem;font-size:1rem}
+.support-diagram{overflow:hidden}.support-diagram svg{width:100%;height:auto;max-height:none}
+.drawing-grid{width:100%;max-width:40rem}
+th,td{min-width:9rem}
+details>summary{display:flex;align-items:center;padding:1rem;list-style-position:inside}
+details>section.card,details>.grid,details>.video{margin:1rem .75rem}
+@media(min-width:36rem){main,.container{width:min(calc(100% - 2rem),var(--max))}.actions{display:flex}.actions>*{width:auto}}
+
+.hero-bg img{object-fit:cover;object-position:center 45%}
+.extension-media img{width:100%;height:auto;max-height:32rem;object-fit:contain;background:#fff}
+.extension-photo-gallery img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.imglink:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.video iframe{height:100%}
+</style></head>
 <body><a class="skip" href="#transformaciones">Ir al contenido principal</a>
-<header class="hero" id="top"><div aria-hidden="true" class="hero-bg"><img alt="" data-offline-message="La fotografía de portada no está disponible sin conexión." decoding="async" loading="eager" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/1/12/Alhambra-p3-closeup.jpg"/></div><span class="tag">Matemáticas en español</span><span class="tag">Transformaciones del plano</span><span class="tag">Seconde · sesión 2</span><h1>Sesión 2 — Comprobar una transformación en un motivo periódico</h1><p>De una transformación observada a una tarjeta de análisis verificable. Evidencia: Tarjeta de análisis: transformación, elemento característico y comprobación.</p></header><div aria-label="Impresión de la ficha de curso" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimir</button></div>
+<header class="hero" id="top"><div aria-hidden="true" class="hero-bg"><img alt="" data-offline-message="La fotografía de portada no está disponible sin conexión." decoding="async" fetchpriority="high" loading="eager" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/1/12/Alhambra-p3-closeup.jpg"/></div><span class="tag">Matemáticas en español</span><span class="tag">Transformaciones del plano</span><span class="tag">Seconde · sesión 2</span><h1>Sesión 2 — Comprobar una transformación en un motivo periódico</h1><p>De una transformación observada a una tarjeta de análisis verificable. Evidencia: Tarjeta de análisis: transformación, elemento característico y comprobación.</p></header><div aria-label="Impresión de la ficha de curso" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimir</button></div>
 <nav aria-label="Navegación de la ficha" class="nav"><div class="nav-inner"><strong>📍 Navegación:</strong><a href="#transformaciones">1. Transformaciones</a><a href="#redes">2. Motivo y repetición</a><a href="#rotaciones">3. Rotaciones (giros) y centros</a><a href="#herramientas-segundo">4. Comprobar una hipótesis</a><a href="#banco-metodos">5. Procedimientos</a><a href="#clasificacion">6. Árbol de decisión</a><a href="#plantillas">7. Explicar</a><a href="#entrenamiento-matematico">8. Sintetizar</a><a href="#videos-matematicos">9. Vídeos</a><a href="#extensiones">10. Ampliaciones</a><a href="#familias">11. Ampliación opcional: 17 grupos</a></div></nav>
 <main id="contenido" tabindex="-1"><section class="card" id="transformaciones">
 <h2>1. Transformaciones</h2>
@@ -123,103 +175,8 @@ main,.container{width:min(calc(100% - 1rem),var(--max));margin-inline:auto;paddi
     link.setAttribute("rel", [...rel].join(" "));
   });
 })();</script><script id="script-media-fallback-autonomo">(()=>{"use strict";document.querySelectorAll("img[data-offline-message]").forEach(image=>image.addEventListener("error",()=>{image.hidden=true;const host=image.closest("figure,.gallery-item,.card")||image.parentElement;if(!host||host.querySelector(".offline-message"))return;const p=document.createElement("p");p.className="offline-message";p.textContent=image.dataset.offlineMessage;(host.querySelector("figcaption,.caption")||host).prepend(p)},{once:true}));})();</script><script id="script-impression-autonome">(()=>{"use strict";document.querySelector('[data-action="print"]')?.addEventListener("click",()=>window.print());})();</script>
-<!-- navigation-defilante-par-script-v2 -->
-<style id="navigation-defilante-par-script-v2-style">
-/* Candidats évidents, même si JavaScript est désactivé. */
-nav,
-[role="navigation"],
-.nav, .navbar, .navigation, .nav-bar, .menu-bar,
-.topnav, .top-nav, .main-nav, .site-nav, .sticky-nav,
-.toc, .sommaire, .table-of-contents,
-[data-scroll-navigation="true"] {
-  position: static !important;
-  top: auto !important;
-  bottom: auto !important;
-  inset-block-start: auto !important;
-  inset-block-end: auto !important;
-  transform: none !important;
-}
-</style>
-<script id="navigation-defilante-par-script-v2-script">
-(() => {
-  "use strict";
 
-  const TOKEN_RE = /(^|[-_\s])(nav|navbar|navigation|menu|menubar|topnav|topbar|headernav|mainnav|sitenav|stickynav|toc|sommaire|tableofcontents)([-_\s]|$)/i;
-  const LABEL_RE = /(navigation|navegaci[oó]n|menu|men[uú]|sommaire|table des mati[eè]res|table of contents|indice)/i;
-  const EXCLUDE_RE = /(footer|pied[-_\s]?de[-_\s]?page|breadcrumb|fil[-_\s]?d['’]?ariane|pagination|pager|social|share)/i;
 
-  function textSignature(el) {
-    return [
-      el.id || "",
-      typeof el.className === "string" ? el.className : "",
-      el.getAttribute("aria-label") || "",
-      el.getAttribute("name") || ""
-    ].join(" ").replace(/([a-z])([A-Z])/g, "$1 $2");
-  }
 
-  function score(el) {
-    const sig = textSignature(el);
-    const style = getComputedStyle(el);
-    const links = el.querySelectorAll("a[href], button").length;
-    const rect = el.getBoundingClientRect();
-    let points = 0;
-
-    if (el.tagName === "NAV") points += 6;
-    if ((el.getAttribute("role") || "").toLowerCase() === "navigation") points += 6;
-    if (TOKEN_RE.test(sig)) points += 4;
-    if (LABEL_RE.test(sig)) points += 3;
-    if (style.position === "fixed" || style.position === "sticky") points += 5;
-    if (links >= 2) points += 2;
-    if (links >= 4) points += 1;
-    if (rect.width >= innerWidth * 0.45) points += 1;
-    if (EXCLUDE_RE.test(sig)) points -= 7;
-    if (el.closest("footer")) points -= 5;
-    return points;
-  }
-
-  function makeScrollable(el) {
-    if (score(el) < 5) return false;
-    el.dataset.scrollNavigation = "true";
-    for (const property of ["position", "top", "bottom", "inset-block-start", "inset-block-end", "transform"]) {
-      el.style.setProperty(property, property === "position" ? "static" : property === "transform" ? "none" : "auto", "important");
-    }
-    return true;
-  }
-
-  function detect() {
-    const selectors = [
-      "nav", '[role="navigation"]',
-      '[class*="nav" i]', '[id*="nav" i]',
-      '[class*="menu" i]', '[id*="menu" i]',
-      '[class*="topbar" i]', '[id*="topbar" i]',
-      '[class*="toc" i]', '[id*="toc" i]',
-      '[class*="sommaire" i]', '[id*="sommaire" i]',
-      '[aria-label*="navigation" i]', '[aria-label*="navegación" i]',
-      '[aria-label*="menu" i]', '[aria-label*="sommaire" i]'
-    ];
-
-    const candidates = new Set(document.querySelectorAll(selectors.join(",")));
-
-    /* Complément : éléments réellement fixes/sticky contenant plusieurs liens. */
-    for (const el of document.querySelectorAll("header, aside, div, section, ul")) {
-      const pos = getComputedStyle(el).position;
-      if ((pos === "fixed" || pos === "sticky") && el.querySelectorAll("a[href], button").length >= 2) {
-        candidates.add(el);
-      }
-    }
-
-    let changed = 0;
-    for (const el of candidates) changed += makeScrollable(el) ? 1 : 0;
-    document.documentElement.dataset.scrollNavigationCount = String(changed);
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", detect, { once: true });
-  } else {
-    detect();
-  }
-  window.addEventListener("pageshow", detect);
-})();
-</script>
 <script id="script-extensions-medias">(()=>{"use strict";const FILE="dnl-symmetry17-course-media-v2",panels=[...document.querySelectorAll("details.extension,details.extension-block")],key=p=>`${FILE}:${p.id}`,close=()=>panels.forEach(p=>{p.open=false;try{localStorage.setItem(key(p),"closed")}catch(_){}});close();panels.forEach(p=>p.addEventListener("toggle",()=>{try{localStorage.setItem(key(p),p.open?"session-open":"closed")}catch(_){}}));addEventListener("pageshow",close);addEventListener("beforeunload",close);document.addEventListener("dnl:reset",close)})();</script></body>
 </html>

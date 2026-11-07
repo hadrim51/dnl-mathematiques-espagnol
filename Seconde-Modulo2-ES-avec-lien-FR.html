@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -128,55 +128,42 @@ a:active,.nav a:active,.lang-switch:active,.btn-ficha:active{transform:translate
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.skip-link,.nav,.top-actions{display:none!important}.header-content{min-height:0;padding:0}.media-card img,.media img{max-height:12cm;object-fit:contain}.footer{position:static}.session{break-inside:auto}.session-detail,.media-card,.summary{break-inside:avoid}}
 
-</style><meta content="strict-origin-when-cross-origin" name="referrer"/><link crossorigin="anonymous" href="https://www.youtube-nocookie.com" rel="preconnect"/><link crossorigin="anonymous" href="https://www.youtube.com" rel="preconnect"/><style id="footer-center-320">
-/* Centrage du pied de page, y compris a 320 px */
-footer,
-.footer {
-  display: flex !important;
-  width: 100% !important;
-  min-width: 0 !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
+</style><meta content="strict-origin-when-cross-origin" name="referrer"/><link crossorigin="anonymous" href="https://www.youtube-nocookie.com" rel="preconnect"/><link crossorigin="anonymous" href="https://www.youtube.com" rel="preconnect"/><style id="audit-wcag-final">
+/* Responsive, accessibilite et impression */
+:root{--audit-focus:#ffbf47;--audit-tap:2.75rem;--audit-reading:75ch}
+html{overflow-x:clip;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{min-width:0!important;max-width:100%;overflow-x:clip;overflow-wrap:break-word}
+*,*::before,*::after{box-sizing:border-box}
+:where(header,main,footer,nav,section,article,aside,div,figure){min-width:0}
+:where(img,picture,svg,video,iframe){max-width:100%}
+img{display:block;width:auto;max-width:100%;height:auto;object-fit:contain;object-position:center;filter:none!important;opacity:1!important}
+iframe,video{display:block;width:100%;border:0}
+:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:.2rem solid var(--audit-focus)!important;outline-offset:.2rem!important;box-shadow:0 0 0 .2rem #fff,0 0 0 .4rem var(--audit-focus)!important}
+:where(a,button,summary){touch-action:manipulation}
+:where(button,.btn,.btn-ficha,.btn-complete,.btn-worksheet,.btn-curso,.lang-switch,.module-link,.contact-button,.nav a,.nav-toggle){min-height:var(--audit-tap)}
+:where(a,button,.btn,.btn-ficha,.btn-complete,.btn-worksheet,.btn-curso,.lang-switch,.module-link,.contact-button){transition:color 160ms ease,background-color 160ms ease,border-color 160ms ease,box-shadow 160ms ease,transform 160ms ease}
+:where(a,button,.btn,.btn-ficha,.btn-complete,.btn-worksheet,.btn-curso,.lang-switch,.module-link,.contact-button):active{transform:translateY(1px)}
+:where(p,li,figcaption){max-width:var(--audit-reading)}
+.nav{position:static!important;max-width:100%}
+.nav-inner{overflow:visible!important;scroll-snap-type:none!important}
+footer,.footer{display:flex!important;width:100%!important;min-width:0!important;align-items:center!important;justify-content:center!important;text-align:center!important}
+footer>*,.footer>*,footer .footer-content,.footer .footer-content{max-width:100%!important;margin-inline:auto!important;text-align:center!important}
+footer p,.footer p{margin-inline:auto!important;text-align:center!important}
+@media(max-width:35.999rem){
+ .nav-inner{display:grid!important;grid-template-columns:1fr!important;gap:.4rem!important;padding:.5rem!important}
+ .nav-inner a{width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere}
+ .top-actions{left:.75rem!important;right:.75rem!important;max-width:calc(100% - 1.5rem)}
+ .top-actions>*{width:100%}
+ .session-head{grid-template-columns:1fr!important}
+ :where(.resources,.media-panel,.session-media,.media-grid,.mini-gallery,.worksheet-actions,.card-grid,.distribution-grid,.visual-summary-grid,.about-me-highlights){grid-template-columns:1fr!important}
+ footer,.footer{padding-inline:.75rem!important;overflow-wrap:anywhere!important}
+ footer>*,.footer>*{width:100%!important;padding-inline:0!important}
 }
-footer > *,
-.footer > *,
-footer .footer-content,
-.footer .footer-content {
-  width: min(100%, var(--content, 74rem)) !important;
-  max-width: 100% !important;
-  margin-inline: auto !important;
-  padding-inline: .75rem !important;
-  text-align: center !important;
-}
-footer p,
-.footer p,
-footer a,
-.footer a {
-  margin-inline: auto !important;
-  text-align: center !important;
-}
-@media (max-width: 20rem) {
-  footer,
-  .footer {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    padding-inline: .75rem !important;
-    overflow-wrap: anywhere !important;
-    text-align: center !important;
-  }
-  footer > *,
-  .footer > *,
-  footer .footer-content,
-  .footer .footer-content {
-    width: 100% !important;
-    margin-inline: auto !important;
-    padding-inline: 0 !important;
-    text-align: center !important;
-  }
-}
+@media(min-width:36rem) and (max-width:63.999rem){.nav-inner{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(min-width:64rem){.nav-inner{display:flex!important;flex-wrap:wrap!important;justify-content:center!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(forced-colors:active){*{box-shadow:none!important}:where(a,button,input,select,textarea,summary){forced-color-adjust:auto}}
+@media print{@page{margin:1.4cm}body{overflow:visible!important;color:#111!important;background:#fff!important;font-size:10.5pt}.skip,.skip-link,.nav,.top-actions,.nav-toggle,.btn-complete,.status-message{display:none!important}header,.header,footer,.footer{color:#111!important;background:#fff!important;box-shadow:none!important}header *,.header *,footer *,.footer *{color:#111!important;text-shadow:none!important}:where(.overview,.session,.media-card,.mini-card,.video-card,.figure,.photo-card){box-shadow:none!important}:where(h1,h2,h3,h4,figure,.media-card,.mini-card,.session-detail,.expected-output){break-inside:avoid}img{max-height:11cm!important;object-fit:contain!important}a{color:#111!important;text-decoration:underline}}
 </style></head>
 <body><a class="skip-link" href="#contenu-principal">Ir al contenido principal</a><div class="header" id="top">
 <div class="header-content"><div class="top-actions"><a aria-label="Abrir la versión francesa del módulo" class="lang-switch" href="Seconde-Modulo2.html">🇫🇷 Versión francesa</a></div>
@@ -190,7 +177,7 @@ footer a,
  Mosaicos y geometría de la Alhambra de Granada
  </a>
  (18 minutos: introducción a las familias de simetría del plano)
- <p class="small-note">Uso recomendado: fragmento preparado de 3 a 5 minutos como máximo en clase; vídeo completo como ampliación. La duración del vídeo no se añade a la temporalización de 60 minutos.</p></div><details class="details">
+ <p class="small-note">Uso recomendado: fragmento preparado de 3 a 5 minutos como máximo en clase; vídeo completo como ampliación. La duración del vídeo no se añade a la temporalización de 60 minutos.</p></div><details class="details" id="extension-1">
 <summary>🔎 Apoyos visuales (Andalucía / Alhambra) + vocabulario</summary>
 <div class="panel">
 <p class="support-note">Dos imágenes y un breve repertorio léxico para describir la Alhambra en español.</p>
@@ -218,7 +205,7 @@ footer a,
  Teruel, arte mudéjar
  </a>
  (24 minutos: visita al conjunto mudéjar y a sus principales monumentos)
- <p class="small-note">Uso recomendado: fragmento preparado de 3 a 5 minutos como máximo en clase; vídeo completo como ampliación. La duración del vídeo no se añade a la temporalización de 60 minutos.</p></div><details class="details">
+ <p class="small-note">Uso recomendado: fragmento preparado de 3 a 5 minutos como máximo en clase; vídeo completo como ampliación. La duración del vídeo no se añade a la temporalización de 60 minutos.</p></div><details class="details" id="extension-2">
 <summary>🧱 Teruel mudéjar: galería, vídeo integrado y glosario</summary>
 <div class="panel">
 <p class="support-note">Apoyos sobre pavimentos, glosario y vídeo para contextualizar la sesión.</p>
@@ -229,5 +216,5 @@ footer a,
 </div>
 </details><div class="summary"><p><strong>Criterio observable:</strong> Reconstruyo una unidad de repetición, realizo una duplicación exacta y distingo reconstrucción y variación.</p><p><strong>Evidencia para la producción final:</strong> Captura digital con leyenda, medidas, transformación y comparación.</p></div><section aria-label="Desarrollo detallado" class="session-detail"><h4>Desarrollo detallado</h4><ol><li>Importar o reproducir un soporte de referencia y fijar una unidad de repetición simplificada.</li><li>Construir los puntos, segmentos y polígonos necesarios con restricciones geométricas.</li><li>Aplicar en GeoGebra o Inkscape las transformaciones elegidas.</li><li>Comparar el modelo digital con el soporte, registrar las desviaciones y corregir la construcción.</li><li>Exportar una imagen rotulada e indicar las decisiones de modelización y sus límites.</li></ol><p class="expected-output"><strong>Producción esperada:</strong> Una reconstrucción digital simplificada con comparación, desviaciones y límites explícitos.</p></section><section aria-label="Recursos audiovisuales en español" class="media-panel"><figure class="media-card"><img alt="Puesto informático con una reconstrucción geométrica digital de un mosaico y sus transformaciones" decoding="async" fetchpriority="low" height="1024" loading="lazy" src="media-modelizacion-digital.png" width="1536"/><figcaption>Recurso visual en español: reconstruye una unidad de repetición y señala qué elementos proceden del modelo y cuáles del soporte histórico.</figcaption></figure><figure class="media-card"><div class="video-frame"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/5JK_3egy9o4" title="Vídeo en español: Mosaicos de la Alhambra en GeoGebra"></iframe></div><figcaption>Vídeo en español: Mosaicos de la Alhambra en GeoGebra</figcaption><p class="media-source"><a href="https://www.youtube.com/watch?v=5JK_3egy9o4" rel="noopener noreferrer" target="_blank">Ver el vídeo en YouTube</a></p></figure></section><div class="resources"><a class="btn-ficha" href="09-Fichas-Trabajo-Teruel-Mudejar.html" rel="noopener noreferrer" target="_blank">📄 Ficha Trabajo: Teruel</a><a class="btn-ficha" href="09-Fichas-Curso-Teruel%20Mudéjar.html" rel="noopener noreferrer" target="_blank">🧱 Ficha Curso: pavimentos mudéjares de Teruel</a></div></article><article class="session" data-session="5" id="sesion5"><div class="session-head"><div class="session-number">5</div><div><h3 id="titre-sesion5">Sesión 5 — Presentar una mediación matemática en español</h3><p class="session-duration">⏱ 60 minutos</p></div></div><p class="small-note"><strong>Objetivo lingüístico:</strong> Reformular, responder a una pregunta y adaptar el léxico al público.</p><p class="session-description"><strong>Síntesis final:</strong> producción colectiva de una mediación breve en español. El alumnado relaciona patrimonio, lengua y geometría, y distingue los hechos históricos documentados, las observaciones visibles y el análisis matemático actual.</p><p class="session-description"><strong>Estructura de la mediación:</strong> situar la obra o el monumento; delimitar una unidad de repetición; nombrar una transformación y sus elementos característicos; mostrar una comprobación; precisar un límite del análisis; terminar con una pregunta dirigida al público.</p><div class="summary"><p><strong>Criterio observable:</strong> Muestro, nombro y justifico una transformación, y respondo a una pregunta sencilla.</p><p><strong>Evidencia para la producción final:</strong> Guion oral y soporte visual con patrimonio, simetrías y comprobación.</p></div><section aria-label="Desarrollo detallado" class="session-detail"><h4>Desarrollo detallado</h4><ol><li>Seleccionar una producción validada y una imagen patrimonial identificada con precisión.</li><li>Preparar un discurso breve: contexto, motivo, transformación, elementos característicos y comprobación.</li><li>Añadir un límite para no confundir la lectura matemática actual con una intención histórica.</li><li>Ensayar la mediación con una reformulación accesible al público.</li><li>Presentar, responder a una pregunta y recoger un indicador de comprensión.</li></ol><p class="expected-output"><strong>Producción esperada:</strong> Una mediación oral breve en español apoyada en una prueba geométrica y una fuente patrimonial.</p></section><section aria-label="Recursos audiovisuales en español" class="media-panel"><figure class="media-card"><img alt="Exposición escolar sobre la geometría de la Alhambra con mosaicos, calcos y modelos digitales" decoding="async" fetchpriority="low" height="1024" loading="lazy" src="media-exposicion-alhambra.png" width="1536"/><figcaption>Recurso visual en español: organiza una mediación con contexto, transformación, comprobación y límite de interpretación.</figcaption></figure><figure class="media-card"><div class="video-frame"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/oWMCGO6dEow" title="Vídeo en español: Exposición oral en Matemáticas"></iframe></div><figcaption>Vídeo en español: Exposición oral en Matemáticas</figcaption><p class="media-source"><a href="https://www.youtube.com/watch?v=oWMCGO6dEow" rel="noopener noreferrer" target="_blank">Ver el vídeo en YouTube</a></p></figure></section><div class="resources"><a class="btn-ficha" href="10-Ficha-Trabajo-Teatro%20Matematico.html" rel="noopener noreferrer" target="_blank">📄 Ficha Trabajo: mediación matemática</a><a class="btn-ficha" href="10-Ficha-Curso-Teatro-Matematico.html" rel="noopener noreferrer" target="_blank">🎙️ Ficha Curso: mediación oral matemática</a></div></article></main><footer class="footer" role="contentinfo"><div class="footer-content"><p><strong>🌄 Módulo 2 — DNL Matemáticas en español — Lycée-Pensionnat Sacré-Cœur, Reims © 2027 — CC BY-NC-SA 4.0</strong></p></div></footer>
 <!-- navigation-defilante-par-script-v2 -->
-</body>
+<script id="extensions-reset-final">(()=>{"use strict";const prefix="dnl:seconde-modulo2-es-avec-lien-fr-html:extension:";const items=[...document.querySelectorAll("details")];const closeAll=()=>items.forEach(item=>{item.open=false;try{localStorage.setItem(prefix+item.id,"closed");}catch(error){}});closeAll();window.addEventListener("pageshow",closeAll);items.forEach(item=>item.addEventListener("toggle",()=>{try{localStorage.setItem(prefix+item.id,item.open?"open":"closed");}catch(error){}}));document.querySelectorAll('[data-action="clear"],[data-action="reset"],[data-action="reset-extensions"]').forEach(button=>button.addEventListener("click",closeAll));})();</script></body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8"/>
@@ -68,55 +68,42 @@ body{min-width:0;overflow-x:clip;overflow-wrap:break-word}.header,.header-conten
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.skip,.top-actions,.nav,.video-card{display:none!important}.header-content{min-height:0;padding:0}.overview,.session{break-inside:auto}.method,.figure,.mini,.photo-card,.expected{break-inside:avoid}.figure img,.mini img,.photo-card img{max-height:11cm;object-fit:contain}.footer{position:static}.header .mini{color:#000;text-shadow:none}}
 
-</style><link crossorigin="anonymous" href="https://commons.wikimedia.org" rel="preconnect"/><link crossorigin="anonymous" href="https://i.ytimg.com" rel="preconnect"/><link crossorigin="anonymous" href="https://www.youtube-nocookie.com" rel="preconnect"/><meta content="strict-origin-when-cross-origin" name="referrer"/><style id="footer-center-320">
-/* Centrage du pied de page, y compris a 320 px */
-footer,
-.footer {
-  display: flex !important;
-  width: 100% !important;
-  min-width: 0 !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
+</style><link crossorigin="anonymous" href="https://commons.wikimedia.org" rel="preconnect"/><link crossorigin="anonymous" href="https://i.ytimg.com" rel="preconnect"/><link crossorigin="anonymous" href="https://www.youtube-nocookie.com" rel="preconnect"/><meta content="strict-origin-when-cross-origin" name="referrer"/><style id="audit-wcag-final">
+/* Responsive, accessibilite et impression */
+:root{--audit-focus:#ffbf47;--audit-tap:2.75rem;--audit-reading:75ch}
+html{overflow-x:clip;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{min-width:0!important;max-width:100%;overflow-x:clip;overflow-wrap:break-word}
+*,*::before,*::after{box-sizing:border-box}
+:where(header,main,footer,nav,section,article,aside,div,figure){min-width:0}
+:where(img,picture,svg,video,iframe){max-width:100%}
+img{display:block;width:auto;max-width:100%;height:auto;object-fit:contain;object-position:center;filter:none!important;opacity:1!important}
+iframe,video{display:block;width:100%;border:0}
+:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:.2rem solid var(--audit-focus)!important;outline-offset:.2rem!important;box-shadow:0 0 0 .2rem #fff,0 0 0 .4rem var(--audit-focus)!important}
+:where(a,button,summary){touch-action:manipulation}
+:where(button,.btn,.btn-ficha,.btn-complete,.btn-worksheet,.btn-curso,.lang-switch,.module-link,.contact-button,.nav a,.nav-toggle){min-height:var(--audit-tap)}
+:where(a,button,.btn,.btn-ficha,.btn-complete,.btn-worksheet,.btn-curso,.lang-switch,.module-link,.contact-button){transition:color 160ms ease,background-color 160ms ease,border-color 160ms ease,box-shadow 160ms ease,transform 160ms ease}
+:where(a,button,.btn,.btn-ficha,.btn-complete,.btn-worksheet,.btn-curso,.lang-switch,.module-link,.contact-button):active{transform:translateY(1px)}
+:where(p,li,figcaption){max-width:var(--audit-reading)}
+.nav{position:static!important;max-width:100%}
+.nav-inner{overflow:visible!important;scroll-snap-type:none!important}
+footer,.footer{display:flex!important;width:100%!important;min-width:0!important;align-items:center!important;justify-content:center!important;text-align:center!important}
+footer>*,.footer>*,footer .footer-content,.footer .footer-content{max-width:100%!important;margin-inline:auto!important;text-align:center!important}
+footer p,.footer p{margin-inline:auto!important;text-align:center!important}
+@media(max-width:35.999rem){
+ .nav-inner{display:grid!important;grid-template-columns:1fr!important;gap:.4rem!important;padding:.5rem!important}
+ .nav-inner a{width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere}
+ .top-actions{left:.75rem!important;right:.75rem!important;max-width:calc(100% - 1.5rem)}
+ .top-actions>*{width:100%}
+ .session-head{grid-template-columns:1fr!important}
+ :where(.resources,.media-panel,.session-media,.media-grid,.mini-gallery,.worksheet-actions,.card-grid,.distribution-grid,.visual-summary-grid,.about-me-highlights){grid-template-columns:1fr!important}
+ footer,.footer{padding-inline:.75rem!important;overflow-wrap:anywhere!important}
+ footer>*,.footer>*{width:100%!important;padding-inline:0!important}
 }
-footer > *,
-.footer > *,
-footer .footer-content,
-.footer .footer-content {
-  width: min(100%, var(--content, 74rem)) !important;
-  max-width: 100% !important;
-  margin-inline: auto !important;
-  padding-inline: .75rem !important;
-  text-align: center !important;
-}
-footer p,
-.footer p,
-footer a,
-.footer a {
-  margin-inline: auto !important;
-  text-align: center !important;
-}
-@media (max-width: 20rem) {
-  footer,
-  .footer {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 100% !important;
-    padding-inline: .75rem !important;
-    overflow-wrap: anywhere !important;
-    text-align: center !important;
-  }
-  footer > *,
-  .footer > *,
-  footer .footer-content,
-  .footer .footer-content {
-    width: 100% !important;
-    margin-inline: auto !important;
-    padding-inline: 0 !important;
-    text-align: center !important;
-  }
-}
+@media(min-width:36rem) and (max-width:63.999rem){.nav-inner{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(min-width:64rem){.nav-inner{display:flex!important;flex-wrap:wrap!important;justify-content:center!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(forced-colors:active){*{box-shadow:none!important}:where(a,button,input,select,textarea,summary){forced-color-adjust:auto}}
+@media print{@page{margin:1.4cm}body{overflow:visible!important;color:#111!important;background:#fff!important;font-size:10.5pt}.skip,.skip-link,.nav,.top-actions,.nav-toggle,.btn-complete,.status-message{display:none!important}header,.header,footer,.footer{color:#111!important;background:#fff!important;box-shadow:none!important}header *,.header *,footer *,.footer *{color:#111!important;text-shadow:none!important}:where(.overview,.session,.media-card,.mini-card,.video-card,.figure,.photo-card){box-shadow:none!important}:where(h1,h2,h3,h4,figure,.media-card,.mini-card,.session-detail,.expected-output){break-inside:avoid}img{max-height:11cm!important;object-fit:contain!important}a{color:#111!important;text-decoration:underline}}
 </style></head>
 <body><a class="skip" href="#contenu-principal">Aller au contenu principal</a><header class="header" id="debut"><div class="top-actions"><a aria-label="Ouvrir la version espagnole du module" class="lang-switch" href="Modulo-Musica-Hispanica-ES-avec-lien-FR.html" rel="noopener"><span aria-hidden="true">🇪🇸 </span>Version espagnole</a></div>
 <h1 id="titre-page">Module — Musique hispanique et création sonore</h1>

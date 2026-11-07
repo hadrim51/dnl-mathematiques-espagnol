@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -79,9 +79,79 @@ footer{display:flex;justify-content:center;padding:1.8rem 1rem;color:#fff;text-a
 .hero-tags .tag{min-height:1.55rem;margin:0;padding:.18rem .5rem;font-size:clamp(.68rem,.64rem + .16vw,.78rem);font-weight:750;line-height:1.2;box-shadow:0 1px 5px rgba(16,54,54,.08);}
 @media(max-width:35.99rem){.hero-tags{gap:.28rem;max-width:19rem}.hero-tags .tag{padding:.16rem .42rem;font-size:.68rem}}
 </style>
-</head>
+<style id="styles-wcag22-final">
+/* WCAG 2.2 AA responsive consolidation */
+:root{
+  --tap-target:2.75rem;
+  --content-inline:clamp(.75rem,3vw,1.5rem);
+  --content-max:76rem;
+  --transition-ui:160ms ease;
+}
+html{overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{min-width:0;overflow-x:hidden}
+:where(header,nav,main,section,article,aside,footer,div,figure,details){min-width:0}
+:where(img,svg,video,canvas,iframe){display:block;max-width:100%;height:auto}
+:where(p,li,td,th,figcaption,summary,a,button,label,textarea){overflow-wrap:anywhere;word-break:normal}
+:where(a,button,input,textarea,select,summary,[tabindex]){touch-action:manipulation}
+:where(a,button,summary){transition:color var(--transition-ui),background-color var(--transition-ui),border-color var(--transition-ui),box-shadow var(--transition-ui),transform var(--transition-ui)}
+:where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+:where(button,.nav a,body>nav a,summary){min-height:var(--tap-target)}
+:where(a,button,summary):active{transform:translateY(1px)}
+main:focus{outline:none}
+.nav,.nav-inner,body>nav{max-width:100%}
+.nav-inner,body>nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;overflow:visible}
+.nav-title,.nav-inner>strong,body>nav>strong{flex-basis:100%;white-space:normal;text-align:center}
+.nav-inner>a,body>nav>a{display:inline-flex;align-items:center;justify-content:center;flex:0 1 auto;min-width:var(--tap-target);padding:.55rem .75rem}
+main,.container{width:min(calc(100% - 1rem),var(--content-max))}
+.actions,.print-actions{display:grid;grid-template-columns:1fr;gap:.75rem}
+.actions>*,.print-actions>*{width:100%;min-width:0}
+.table-wrap{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-gutter:stable;border:1px solid var(--line)}
+.table-wrap:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+table{max-width:100%}
+figure{max-width:100%}
+.support-diagram svg{width:100%;height:auto;max-height:none}
+.template-square,.template-test-2x2,.motivo-comun{max-width:100%}
+.hero-bg img{object-fit:cover;object-position:center 45%;filter:none!important;opacity:1!important}
+.gallery-item img,.card img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center;filter:none!important;opacity:1!important}
+.gallery-item:hover img,.card a.imglink:hover img{filter:none!important}
+.hero::after,header#top::after{background:linear-gradient(180deg,rgba(8,28,29,.15),rgba(8,28,29,.42))}
+.imglink:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.video iframe{width:100%;height:100%}
+details>summary{display:flex;align-items:center;padding:1rem;cursor:pointer}
+details>section.card,details>.grid,details>.note,details>.video{margin:clamp(.5rem,2vw,1rem)}
+textarea{font-size:1rem;min-height:9rem}
+footer{padding-inline:var(--content-inline)}
+@media (hover:hover) and (pointer:fine){:where(a,button,summary):hover{transform:translateY(-1px)}}
+@media (min-width:36rem){
+  main,.container{width:min(calc(100% - 2rem),var(--content-max))}
+  .actions,.print-actions{display:flex;flex-wrap:wrap;justify-content:center}
+  .actions>*,.print-actions>*{width:auto}
+}
+@media (min-width:48rem){.grid,.align-grid,.gallery,.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:64rem){.grid,.align-grid,.gallery,.video-grid{grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+@media print{
+  html,body{overflow:visible!important}
+  .table-wrap{overflow:visible!important;border:0}
+  table{min-width:0!important;width:100%!important}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;word-break:break-all}
+  footer{break-inside:avoid}
+}
+
+.hero,header#top{min-height:auto;padding:clamp(2.75rem,9vw,5.5rem) var(--content-inline) clamp(2.25rem,7vw,4rem)}
+.hero h1,header#top h1{font-size:clamp(1.8rem,8vw,4.1rem)}
+.nav{position:static;padding:.65rem var(--content-inline)}
+.card,.exercise,.rubric,.competences,.align-panel{padding:clamp(.9rem,3vw,1.55rem)}
+.meta{display:flex;flex-wrap:wrap;gap:.35rem}
+
+.extension .gallery-item img,.extension-block .gallery-item img{aspect-ratio:4/3}
+.hero-tags{max-width:100%}
+</style></head>
 <body><a class="skip" href="#contenido">Ir al contenido principal</a>
-<header class="hero" id="top"><div class="hero-bg"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Alhambra_wall_11_(7005868951).jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Alicatado geométrico de la Alhambra" data-offline-message="Imagen no disponible sin conexión." decoding="sync" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra%20wall%2011%20%287005868951%29.jpg?width=1600"/></a></div><div aria-label="Información de la sesión" class="hero-tags"><span class="tag">Matemáticas en español</span><span class="tag">Tesela · regla · comprobación</span><span class="tag">Seconde · sesión 3</span></div><h1>Sesión 3 — Construir una tesela y probar una regla de teselación</h1><p>De una tesela sencilla a una teselación validada por una regla y una comprobación de encaje. Producto esperado: Tesela, regla de repetición, comprobación de encaje y frase de validación.</p></header><div aria-label="Impresión de la ficha de curso" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimir</button></div>
+<header class="hero" id="top"><div class="hero-bg"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Alhambra_wall_11_(7005868951).jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Alicatado geométrico de la Alhambra" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra%20wall%2011%20%287005868951%29.jpg?width=1600"/></a></div><div aria-label="Información de la sesión" class="hero-tags"><span class="tag">Matemáticas en español</span><span class="tag">Tesela · regla · comprobación</span><span class="tag">Seconde · sesión 3</span></div><h1>Sesión 3 — Construir una tesela y probar una regla de teselación</h1><p>De una tesela sencilla a una teselación validada por una regla y una comprobación de encaje. Producto esperado: Tesela, regla de repetición, comprobación de encaje y frase de validación.</p></header><div aria-label="Impresión de la ficha de curso" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimir</button></div>
 <nav aria-label="Navegación de la ficha" class="nav"><div class="nav-inner"><strong>📍 Navegación:</strong><a href="#formulario">Herramientas</a><a href="#banco-metodos">Procedimientos</a><a href="#metodo">Método</a><a href="#formas">Tesela y motivo</a><a href="#transformaciones">Repetir</a><a href="#teselaciones">Validar</a><a href="#plantillas">Explicar</a><a href="#entrenamiento-matematico">Sintetizar</a><a href="#extensiones">Ampliaciones</a></div></nav>
 <main id="contenido" tabindex="-1">
 <section class="card" id="formulario">
@@ -108,7 +178,7 @@ footer{display:flex;justify-content:center;padding:1.8rem 1rem;color:#fff;text-a
 <ol><li><strong>Observo:</strong> formas, colores, bordes y repeticiones.</li><li><strong>Distingo:</strong> tesela, motivo, unidad de repetición y teselación.</li><li><strong>Formulo:</strong> una regla de repetición explícita.</li><li><strong>Construyo:</strong> al menos cuatro copias con medidas coherentes.</li><li><strong>Compruebo:</strong> ausencia de huecos y solapamientos, bordes compatibles y unidades correctas.</li><li><strong>Interpreto:</strong> cuatro copias verifican localmente el encaje; la regla permite repetir el procedimiento.</li><li><strong>Redacto:</strong> una frase de validación en español.</li></ol>
 </section><section class="card" id="formas">
 <h2>4. Tesela, motivo y teselación</h2>
-<div aria-label="Tabla desplazable horizontalmente" class="table-wrap" tabindex="0"><table><thead><tr><th scope="col">Objeto</th><th scope="col">Definición de trabajo</th><th scope="col">Uso en la sesión</th></tr></thead><tbody>
+<div aria-label="Tabla desplazable horizontalmente" class="table-wrap" role="region" tabindex="0"><table><thead><tr><th scope="col">Objeto</th><th scope="col">Definición de trabajo</th><th scope="col">Uso en la sesión</th></tr></thead><tbody>
 <tr><td>Tesela</td><td>Pieza geométrica utilizada como unidad de un recubrimiento del plano.</td><td>Se construye y se copia.</td></tr>
 <tr><td>Motivo</td><td>Dibujo o composición interior de la pieza.</td><td>Puede tener simetrías sin garantizar el encaje.</td></tr>
 <tr><td>Unidad de repetición</td><td>Parte elegida para describir la organización.</td><td>Sirve para formular la regla.</td></tr>
@@ -127,7 +197,7 @@ footer{display:flex;justify-content:center;padding:1.8rem 1rem;color:#fff;text-a
 </section><section class="card" id="entrenamiento-matematico">
 <h2>8. Sintetizar</h2>
 <p class="lead">La síntesis reúne una tesela, una regla de repetición, una comprobación de encaje y una frase de validación.</p>
-<div aria-label="Tabla desplazable horizontalmente" class="table-wrap" tabindex="0"><table><thead><tr><th scope="col">Situación</th><th scope="col">Método</th><th scope="col">Control</th></tr></thead><tbody>
+<div aria-label="Tabla desplazable horizontalmente" class="table-wrap" role="region" tabindex="0"><table><thead><tr><th scope="col">Situación</th><th scope="col">Método</th><th scope="col">Control</th></tr></thead><tbody>
 <tr><td>Fila o panel de piezas</td><td>Longitud = n × lado; filas = alto ÷ lado; columnas = ancho ÷ lado</td><td>Unidades iguales y producto filas × columnas</td></tr>
 <tr><td>Ciclo de colores</td><td>División euclídea de la posición por la longitud del ciclo</td><td>Interpretar correctamente el resto 0</td></tr>
 <tr><td>Parte coloreada</td><td>Área parcial ÷ área total × 100</td><td>Porcentaje entre 0 % y 100 %</td></tr>
@@ -136,109 +206,27 @@ footer{display:flex;justify-content:center;padding:1.8rem 1rem;color:#fff;text-a
 </tbody></table></div><div class="grid"><div class="box"><h3>Rutina de resolución</h3><ol><li>Identifica la tesela.</li><li>Escribe la regla.</li><li>Construye varias copias.</li><li>Comprueba el encaje.</li><li>Redacta la validación.</li></ol></div><div class="box"><h3>Errores frecuentes</h3><ul><li>Confundir dibujo interior y tesela.</li><li>Declarar una teselación sin comprobar el encaje.</li><li>Usar unidades distintas.</li><li>Olvidar la regla de repetición.</li></ul></div></div>
 </section><section class="note" id="extensiones"><strong>9. Ampliaciones culturales y multimedia:</strong> contexto patrimonial complementario, después de la validación de la teselación.</section>
 <details class="extension" id="extension-1"><summary>9.1. Alhambra y azulejos geométricos</summary><section class="card"><h2>9.1. Alhambra y azulejos geométricos</h2><p>Los alicatados de la Alhambra muestran cómo una superficie puede organizarse mediante módulos, polígonos, simetrías y repeticiones.</p><div class="ext-explain">Los alicatados permiten observar módulos, bordes, colores y reglas de repetición. <br/>Actividad DNL: Mide un módulo, identifica una repetición y comprueba una simetría.</div><div class="gallery"><div class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Alhambra-p3-closeup.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Detalle de un alicatado geométrico de la Alhambra" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra-p3-closeup.jpg?width=1000"/></a><div class="caption">Alhambra: patrón geométrico y repetición modular.</div></div><div class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Alhambra_Tiled_Column_(3725016716).jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Columna revestida con alicatados de la Alhambra" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra%20Tiled%20Column%20%283725016716%29.jpg?width=1000"/></a><div class="caption">Azulejos de la Alhambra: colores, líneas y encaje.</div></div></div><div class="video-grid"><div><h3>Vídeo (español) — Geometría en los mosaicos de la Alhambra</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/3rH84fGEMII" title="Mosaicos y geometría de la Alhambra en español"></iframe></div></div></div></section></details>
-<details class="extension" id="extension-2"><summary>9.2. Teruel y tradición mudéjar aragonesa</summary><section class="card"><h2>9.2. Teruel y tradición mudéjar aragonesa</h2><p>En Teruel, el ladrillo y la cerámica vidriada forman ritmos geométricos en torres y fachadas mudéjares. Este soporte permite estudiar módulos, frisos, simetrías y repeticiones verticales.</p><div class="ext-explain">Compara los motivos sin confundir los contextos de la Alhambra, Sevilla y Teruel.<br/>Actividad DNL: identifica un módulo, una dirección de repetición y un eje posible en una torre de Teruel.</div><div class="gallery"><div class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:ES_Teruel_1104_(35)_(17061240419).jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Decoración mudéjar de Teruel" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/ES%20Teruel%201104%20%2835%29%20%2817061240419%29.jpg?width=1000"/></a><div class="caption">Teruel: ladrillo, cerámica y ritmo geométrico.</div></div><div class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Torre_de_San_Martín,_Teruel.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Torre mudéjar de San Martín en Teruel" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Torre%20de%20San%20Mart%C3%ADn%2C%20Teruel.jpg?width=1000"/></a><div class="caption">Torre de San Martín, Teruel: repetición vertical y módulos decorativos.</div></div></div><div class="video-grid"><div><h3>Vídeo (español) — Teruel: secreto mudéjar (UNESCO)</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/tQRewuXDQbc" title="Arte mudéjar explicado en español"></iframe></div></div></div></section></details>
+<details class="extension" id="extension-2"><summary>9.2. Teruel y tradición mudéjar aragonesa</summary><section class="card"><h2>9.2. Teruel y tradición mudéjar aragonesa</h2><p>En Aragón, el arte mudéjar se desarrolló desde el siglo XII y se caracteriza, entre otros rasgos, por el uso inventivo del ladrillo y la cerámica vidriada. En Teruel, sus torres ofrecen soportes para estudiar módulos, frisos, simetrías y repeticiones verticales.</p><div class="ext-explain">Compara los motivos sin confundir los contextos de la Alhambra, Sevilla y Teruel.<br/>Actividad DNL: identifica un módulo, una dirección de repetición y un eje posible en una torre de Teruel.</div><div class="gallery"><div class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:ES_Teruel_1104_(35)_(17061240419).jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Decoración mudéjar de Teruel" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/ES%20Teruel%201104%20%2835%29%20%2817061240419%29.jpg?width=1000"/></a><div class="caption">Teruel: ladrillo, cerámica y ritmo geométrico.</div></div><div class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Torre_de_San_Martín,_Teruel.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Torre mudéjar de San Martín en Teruel" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Torre%20de%20San%20Mart%C3%ADn%2C%20Teruel.jpg?width=1000"/></a><div class="caption">Torre de San Martín, Teruel: repetición vertical y módulos decorativos.</div></div></div><div class="video-grid"><div><h3>Vídeo (español) — Teruel: secreto mudéjar (UNESCO)</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/tQRewuXDQbc" title="Arte mudéjar explicado en español"></iframe></div></div></div></section></details>
 <details class="extension" id="extension-3"><summary>9.3. Arquitectura palatina andalusí y mudéjar</summary><section class="card"><h2>9.3. Arquitectura palatina andalusí y mudéjar</h2><p>La Alhambra de Granada y el Real Alcázar de Sevilla pertenecen a contextos históricos distintos. Su comparación permite observar módulos, simetrías y repeticiones sin presentar ambos conjuntos como equivalentes.</p><div class="ext-explain">La cerámica arquitectónica mudéjar permite estudiar ritmos y módulos en su propio contexto. <br/>Actividad DNL: Busca ritmos, frisos y proporciones verticales.</div><div class="gallery"><div class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Real_Alcázar,_Patio_de_las_Doncellas.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Patio de las Doncellas del Real Alcázar de Sevilla" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Real%20Alc%C3%A1zar%2C%20Patio%20de%20las%20Doncellas.jpg?width=1000"/></a><div class="caption">Real Alcázar de Sevilla: patio, arquitectura y lenguaje mudéjar.</div></div><div class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Mocárabes_de_la_Alhambra_2.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Mocárabes de la Alhambra" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Moc%C3%A1rabes%20de%20la%20Alhambra%202.jpg?width=1000"/></a><div class="caption">Alhambra: mocárabes, relieve y luz.</div></div></div><div class="video-grid"><div><h3>Vídeo (español) — Los azulejos del Real Alcázar de Sevilla (mirada geométrica)</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/RwsRg_4v9aY" title="El arte de los mudéjares en español"></iframe></div></div></div></section></details>
 <details class="extension" id="extension-4"><summary>9.4. Portugal y fachadas de azulejos</summary><section class="card"><h2>9.4. Portugal y fachadas de azulejos</h2><p>En Portugal, los azulejos cubren fachadas, estaciones, iglesias y espacios públicos. Además de decorar, protegen los muros y construyen memoria urbana.</p><div class="ext-explain">Las fachadas portuguesas muestran otros usos históricos y urbanos del azulejo. <br/>Actividad DNL: Modeliza la fachada como filas, columnas y superficie cubierta.</div><div class="gallery"><div class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Fachada_de_azulejos_-_Lisboa.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Fachada portuguesa revestida con azulejos" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Fachada%20de%20azulejos%20-%20Lisboa.jpg?width=1000"/></a><div class="caption">Lisboa: la fachada como panel cerámico urbano.</div></div><div class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Azulejos_in_São_Bento_train_station_01.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Panel de azulejos de la estación de São Bento" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Azulejos%20in%20S%C3%A3o%20Bento%20train%20station%2001.jpg?width=1000"/></a><div class="caption">São Bento: panel narrativo de azulejos.</div></div></div><div class="video-grid"><div><h3>Vídeo (español) — Estación de São Bento (20.000 azulejos)</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/TaC9SwqAjHM" title="Historia del azulejo portugués en español"></iframe></div></div></div></section></details>
 <details class="extension" id="extension-5"><summary>9.5. Taller y gesto artesanal</summary><section class="card"><h2>9.5. Taller y gesto artesanal</h2><p>El taller combina preparación de arcilla, corte regular, secado, esmaltado, decoración, cocción y selección final. La precisión de cada pieza condiciona el encaje del panel.</p><div class="ext-explain">El trabajo artesanal relaciona tolerancia de medida, encaje y control de calidad. <br/>Actividad DNL: Relaciona tolerancia de medida, encaje y porcentaje de piezas válidas.</div><div class="gallery"><div class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Alexandre_Mancini_em_seu_ateliê.png" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Azulejista trabajando en su taller" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Alexandre%20Mancini%20em%20seu%20ateli%C3%AA.png?width=1000"/></a><div class="caption">Taller artesanal: pintura, precisión y decoración.</div></div><div class="gallery-item"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Azulejo_-_Igreja_de_São_Bento_-_Ribeira_Brava.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Panel artesanal de azulejos portugueses" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Azulejo%20-%20Igreja%20de%20S%C3%A3o%20Bento%20-%20Ribeira%20Brava.jpg?width=1000"/></a><div class="caption">Azulejo portugués: imagen, cerámica y composición.</div></div></div><div class="video-grid"><div><h3>Vídeo (español) — Proceso artesanal de la Talavera (azulejos)</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/8N3BAq2lL9I" title="Proceso de elaboración de azulejos artesanales en español"></iframe></div></div></div></section></details>
 <details class="extension-block" id="fuentes-derechos"><summary>10. Fuentes y derechos</summary><section class="card"><h2>10. Fuentes y derechos</h2><ul><li><strong>Contexto de la Alhambra:</strong> UNESCO World Heritage Centre, <cite>Alhambra, Generalife and Albayzín, Granada</cite>, expediente 314bis, inscripción 1984 y ampliación 1994, consulta: 26 de octubre de 2026.</li><li><strong>Contexto mudéjar de Aragón:</strong> UNESCO World Heritage Centre, <cite>Mudéjar Architecture of Aragon</cite>, expediente 378bis, consulta: 26 de octubre de 2026.</li><li><strong>Fotografías:</strong> cada imagen enlaza con su página precisa de Wikimedia Commons. Autor, fecha y licencia deben comprobarse en esa página antes de redistribuir el archivo fuera de la ficha.</li><li><strong>Vídeos:</strong> recursos externos complementarios; disponibilidad, publicidad y condiciones de reproducción dependen de la plataforma. Ninguna evaluación exige su visionado.</li></ul></section></details></main>
-<footer><p>🌄 Ficha de curso DNL · Matemáticas en español · Taller de azulejos: construir y validar una teselación · Lycée-Pensionnat Sacré-Cœur, Reims · © 2026-2027 · CC BY-NC-SA 4.0.</p></footer>
 <script id="script-media-fallback-autonomo">(()=>{"use strict";document.querySelectorAll("img[data-offline-message]").forEach(image=>image.addEventListener("error",()=>{image.hidden=true;const host=image.closest("figure,.gallery-item,.card")||image.parentElement;if(!host||host.querySelector(".offline-message"))return;const message=document.createElement("p");message.className="offline-message";message.textContent=image.dataset.offlineMessage;const caption=host.querySelector("figcaption,.caption");if(caption)caption.prepend(message);else host.appendChild(message)},{once:true}));})();</script><script id="script-impression-autonome">(()=>{"use strict";document.querySelector('[data-action="print"]')?.addEventListener("click",()=>window.print());})();</script>
-<style id="navigation-defilante-par-script-v2-style">
-/* Candidats évidents, même si JavaScript est désactivé. */
-nav,
-[role="navigation"],
-.nav, .navbar, .navigation, .nav-bar, .menu-bar,
-.topnav, .top-nav, .main-nav, .site-nav, .sticky-nav,
-.toc, .sommaire, .table-of-contents,
-[data-scroll-navigation="true"] {
-  position: static !important;
-  top: auto !important;
-  bottom: auto !important;
-  inset-block-start: auto !important;
-  inset-block-end: auto !important;
-  transform: none !important;
-}
-</style>
-<script id="navigation-defilante-par-script-v2-script">
-(() => {
+<footer><p>🌄 Ficha de curso DNL · Matemáticas en español · Taller de azulejos: construir y validar una teselación · Lycée-Pensionnat Sacré-Cœur, Reims · © 2026-2027 · CC BY-NC-SA 4.0.</p></footer><script id="script-extensions-course">(() => {
   "use strict";
-
-  const TOKEN_RE = /(^|[-_\s])(nav|navbar|navigation|menu|menubar|topnav|topbar|headernav|mainnav|sitenav|stickynav|toc|sommaire|tableofcontents)([-_\s]|$)/i;
-  const LABEL_RE = /(navigation|navegaci[oó]n|menu|men[uú]|sommaire|table des mati[eè]res|table of contents|indice)/i;
-  const EXCLUDE_RE = /(footer|pied[-_\s]?de[-_\s]?page|breadcrumb|fil[-_\s]?d['’]?ariane|pagination|pager|social|share)/i;
-
-  function textSignature(el) {
-    return [
-      el.id || "",
-      typeof el.className === "string" ? el.className : "",
-      el.getAttribute("aria-label") || "",
-      el.getAttribute("name") || ""
-    ].join(" ").replace(/([a-z])([A-Z])/g, "$1 $2");
-  }
-
-  function score(el) {
-    const sig = textSignature(el);
-    const style = getComputedStyle(el);
-    const links = el.querySelectorAll("a[href], button").length;
-    const rect = el.getBoundingClientRect();
-    let points = 0;
-
-    if (el.tagName === "NAV") points += 6;
-    if ((el.getAttribute("role") || "").toLowerCase() === "navigation") points += 6;
-    if (TOKEN_RE.test(sig)) points += 4;
-    if (LABEL_RE.test(sig)) points += 3;
-    if (style.position === "fixed" || style.position === "sticky") points += 5;
-    if (links >= 2) points += 2;
-    if (links >= 4) points += 1;
-    if (rect.width >= innerWidth * 0.45) points += 1;
-    if (EXCLUDE_RE.test(sig)) points -= 7;
-    if (el.closest("footer")) points -= 5;
-    return points;
-  }
-
-  function makeScrollable(el) {
-    if (score(el) < 5) return false;
-    el.dataset.scrollNavigation = "true";
-    for (const property of ["position", "top", "bottom", "inset-block-start", "inset-block-end", "transform"]) {
-      el.style.setProperty(property, property === "position" ? "static" : property === "transform" ? "none" : "auto", "important");
-    }
-    return true;
-  }
-
-  function detect() {
-    const selectors = [
-      "nav", '[role="navigation"]',
-      '[class*="nav" i]', '[id*="nav" i]',
-      '[class*="menu" i]', '[id*="menu" i]',
-      '[class*="topbar" i]', '[id*="topbar" i]',
-      '[class*="toc" i]', '[id*="toc" i]',
-      '[class*="sommaire" i]', '[id*="sommaire" i]',
-      '[aria-label*="navigation" i]', '[aria-label*="navegación" i]',
-      '[aria-label*="menu" i]', '[aria-label*="sommaire" i]'
-    ];
-
-    const candidates = new Set(document.querySelectorAll(selectors.join(",")));
-
-    /* Complément : éléments réellement fixes/sticky contenant plusieurs liens. */
-    for (const el of document.querySelectorAll("header, aside, div, section, ul")) {
-      const pos = getComputedStyle(el).position;
-      if ((pos === "fixed" || pos === "sticky") && el.querySelectorAll("a[href], button").length >= 2) {
-        candidates.add(el);
-      }
-    }
-
-    let changed = 0;
-    for (const el of candidates) changed += makeScrollable(el) ? 1 : 0;
-    document.documentElement.dataset.scrollNavigationCount = String(changed);
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", detect, { once: true });
-  } else {
-    detect();
-  }
-  window.addEventListener("pageshow", detect);
-})();
-</script>
-<script id="script-extensions-course">(()=>{"use strict";const FILE="dnl-azulejos-course-extensions-v2",panels=[...document.querySelectorAll("details.extension,details.extension-block")],key=p=>`${FILE}:${p.id}`,close=()=>panels.forEach(p=>{p.open=false;try{localStorage.setItem(key(p),"closed")}catch(_){}});close();panels.forEach(p=>p.addEventListener("toggle",()=>{try{localStorage.setItem(key(p),p.open?"session-open":"closed")}catch(_){}}));addEventListener("pageshow",close);addEventListener("beforeunload",close);document.addEventListener("dnl:reset",close)})();</script></body>
+  const FILE_KEY = "dnl-azulejos-course-v3";
+  const panels = [...document.querySelectorAll("details.extension, details.extension-block")];
+  const key = panel => `${FILE_KEY}:${panel.id}`;
+  const closeAll = () => panels.forEach(panel => {
+    panel.open = false;
+    panel.removeAttribute("open");
+    try { localStorage.setItem(key(panel), "closed"); } catch (_) {}
+  });
+  closeAll();
+  panels.forEach(panel => panel.addEventListener("toggle", () => {
+    try { localStorage.setItem(key(panel), panel.open ? "open-in-session" : "closed"); } catch (_) {}
+  }));
+  addEventListener("pageshow", closeAll);
+  document.addEventListener("dnl:reset", closeAll);
+})();</script></body>
 </html>

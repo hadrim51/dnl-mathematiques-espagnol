@@ -297,7 +297,14 @@ footer a,
     text-align: center !important;
   }
 }
-</style></head>
+</style>
+<style id="visitor-counter-styles">
+.visitor-counter{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.55rem;margin-top:.75rem}
+.visitor-counter img{display:block;width:auto;max-width:100%;height:20px}
+.visitor-counter small{color:#fff;font-size:.78rem}
+@media print{.visitor-counter{display:none!important}}
+</style>
+</head>
 <body><a class="skip" href="#contenu-principal">Aller au contenu principal</a>
 <div class="container">
 <header aria-labelledby="titre-page"><div class="top-actions"><a aria-label="Ouvrir la version espagnole de la progression" class="lang-switch" href="index-ES.html" hreflang="es" lang="es"><span aria-hidden="true">🇪🇸</span> Version espagnole</a></div>
@@ -502,7 +509,10 @@ footer a,
 </div>
 </section>
 </main>
-<footer aria-label="Pied de page"><div class="footer-content"><p><strong>🌄 Parcours DNL de mathématiques en espagnol · Lycée Pensionnat Sacré-Cœur, Reims · © 2026 · CC BY-NC-SA 4.0</strong></p></div></footer>
+<footer aria-label="Pied de page"><div class="footer-content"><p><strong>🌄 Parcours DNL de mathématiques en espagnol · Lycée Pensionnat Sacré-Cœur, Reims · © 2026 · CC BY-NC-SA 4.0</strong></p><div class="visitor-counter" aria-label="Compteur de visites du site">
+<img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fhadrim51.github.io%2Fdnl-mathematiques-espagnol%2F&label=Visiteurs&labelColor=%23173f5f&countColor=%23a63c27&style=flat" alt="Nombre total de visites du site" width="auto" height="20" loading="lazy" referrerpolicy="no-referrer">
+<small>Comptage externe sans cookie ajouté par cette page.</small>
+</div></div></footer>
 </div>
 <script data-nav-active="true">
 (() => {

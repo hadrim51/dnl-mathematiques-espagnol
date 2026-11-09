@@ -128,42 +128,62 @@ a:active,.nav a:active,.lang-switch:active,.btn-ficha:active{transform:translate
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.skip-link,.nav,.top-actions{display:none!important}.header-content{min-height:0;padding:0}.media-card img,.media img{max-height:12cm;object-fit:contain}.footer{position:static}.session{break-inside:auto}.session-detail,.media-card,.summary{break-inside:avoid}}
 
-</style><meta content="strict-origin-when-cross-origin" name="referrer"/><link crossorigin="anonymous" href="https://www.youtube-nocookie.com" rel="preconnect"/><link crossorigin="anonymous" href="https://www.youtube.com" rel="preconnect"/><style id="audit-wcag-final">
-/* Responsive, accessibilite et impression */
-:root{--audit-focus:#ffbf47;--audit-tap:2.75rem;--audit-reading:75ch}
-html{overflow-x:clip;-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{min-width:0!important;max-width:100%;overflow-x:clip;overflow-wrap:break-word}
-*,*::before,*::after{box-sizing:border-box}
-:where(header,main,footer,nav,section,article,aside,div,figure){min-width:0}
-:where(img,picture,svg,video,iframe){max-width:100%}
-img{display:block;width:auto;max-width:100%;height:auto;object-fit:contain;object-position:center;filter:none!important;opacity:1!important}
-iframe,video{display:block;width:100%;border:0}
-:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:.2rem solid var(--audit-focus)!important;outline-offset:.2rem!important;box-shadow:0 0 0 .2rem #fff,0 0 0 .4rem var(--audit-focus)!important}
-:where(a,button,summary){touch-action:manipulation}
-:where(button,.btn,.btn-ficha,.btn-complete,.btn-worksheet,.btn-curso,.lang-switch,.module-link,.contact-button,.nav a,.nav-toggle){min-height:var(--audit-tap)}
-:where(a,button,.btn,.btn-ficha,.btn-complete,.btn-worksheet,.btn-curso,.lang-switch,.module-link,.contact-button){transition:color 160ms ease,background-color 160ms ease,border-color 160ms ease,box-shadow 160ms ease,transform 160ms ease}
-:where(a,button,.btn,.btn-ficha,.btn-complete,.btn-worksheet,.btn-curso,.lang-switch,.module-link,.contact-button):active{transform:translateY(1px)}
-:where(p,li,figcaption){max-width:var(--audit-reading)}
-.nav{position:static!important;max-width:100%}
-.nav-inner{overflow:visible!important;scroll-snap-type:none!important}
-footer,.footer{display:flex!important;width:100%!important;min-width:0!important;align-items:center!important;justify-content:center!important;text-align:center!important}
-footer>*,.footer>*,footer .footer-content,.footer .footer-content{max-width:100%!important;margin-inline:auto!important;text-align:center!important}
-footer p,.footer p{margin-inline:auto!important;text-align:center!important}
-@media(max-width:35.999rem){
- .nav-inner{display:grid!important;grid-template-columns:1fr!important;gap:.4rem!important;padding:.5rem!important}
- .nav-inner a{width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere}
- .top-actions{left:.75rem!important;right:.75rem!important;max-width:calc(100% - 1.5rem)}
- .top-actions>*{width:100%}
- .session-head{grid-template-columns:1fr!important}
- :where(.resources,.media-panel,.session-media,.media-grid,.mini-gallery,.worksheet-actions,.card-grid,.distribution-grid,.visual-summary-grid,.about-me-highlights){grid-template-columns:1fr!important}
- footer,.footer{padding-inline:.75rem!important;overflow-wrap:anywhere!important}
- footer>*,.footer>*{width:100%!important;padding-inline:0!important}
+</style><meta content="strict-origin-when-cross-origin" name="referrer"/><link crossorigin="anonymous" href="https://www.youtube-nocookie.com" rel="preconnect"/><link crossorigin="anonymous" href="https://www.youtube.com" rel="preconnect"/><style id="ui-wcag-final">
+/* Interface responsive et accessible */
+:root{
+  --ui-tap:2.75rem;
+  --ui-gutter:clamp(.75rem,3vw,1.5rem);
+  --ui-content:68rem;
+  --ui-speed:160ms ease;
+  --ui-button:#214c3b;
+  --ui-button-hover:#16372b;
+  --ui-button-text:#fff;
+  --ui-button-border:#173c2f;
+  --ui-button-shadow:0 .35rem .85rem rgba(22,55,43,.18);
 }
-@media(min-width:36rem) and (max-width:63.999rem){.nav-inner{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}}
-@media(min-width:64rem){.nav-inner{display:flex!important;flex-wrap:wrap!important;justify-content:center!important}}
+html{overflow-x:hidden;scroll-padding-top:1rem;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{min-width:0;max-width:100%;overflow-x:hidden;overflow-wrap:break-word}
+*,*::before,*::after{box-sizing:border-box}
+:where(header,nav,main,footer,section,article,aside,div,figure,details){min-width:0}
+:where(img,picture,svg,video,iframe){display:block;max-width:100%;height:auto}
+:where(p,li,figcaption,a,button,summary){overflow-wrap:anywhere}
+.header-content,.container{width:min(calc(100% - 1rem),var(--ui-content))}
+.header-content{min-height:0;padding-block:5.75rem 2.25rem}
+.top-actions{left:0;right:0;display:flex;justify-content:flex-end;max-width:100%}
+.nav{position:static!important;max-width:100%;backdrop-filter:none}
+.nav-inner{display:grid!important;grid-template-columns:1fr!important;gap:.45rem!important;width:min(calc(100% - 1rem),var(--ui-content));overflow:visible!important;padding:.55rem 0}
+.nav a{width:100%;min-width:0;min-height:var(--ui-tap);padding:.7rem .8rem;border:1px solid #b8cec2;border-radius:.75rem;background:#f2f7f4;color:var(--forest-dark);font-size:.9rem;font-weight:800;line-height:1.2;text-decoration:none;box-shadow:0 .15rem .4rem rgba(22,55,43,.08)}
+.nav a:hover{border-color:var(--forest);background:var(--forest);color:#fff;transform:translateY(-1px);box-shadow:var(--ui-button-shadow)}
+.nav a:active{transform:translateY(1px);box-shadow:none}
+.resources{display:grid;grid-template-columns:1fr;gap:.75rem}
+.btn-ficha,.lang-switch{
+  display:inline-flex;align-items:center;justify-content:center;gap:.45rem;
+  min-width:var(--ui-tap);min-height:var(--ui-tap);padding:.72rem 1rem;
+  border:1px solid var(--ui-button-border);border-radius:.8rem;
+  background:linear-gradient(180deg,#2a5c49,var(--ui-button));color:var(--ui-button-text);
+  font:800 .95rem/1.25 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  text-align:center;text-decoration:none;box-shadow:var(--ui-button-shadow);
+  transition:color var(--ui-speed),background-color var(--ui-speed),border-color var(--ui-speed),box-shadow var(--ui-speed),transform var(--ui-speed)
+}
+.btn-ficha:hover,.lang-switch:hover{border-color:#0f2b21;background:linear-gradient(180deg,#214c3b,var(--ui-button-hover));color:#fff;transform:translateY(-2px);box-shadow:0 .55rem 1.15rem rgba(22,55,43,.24)}
+.btn-ficha:active,.lang-switch:active{transform:translateY(1px);box-shadow:0 .15rem .35rem rgba(22,55,43,.2)}
+:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:3px solid var(--focus)!important;outline-offset:3px!important;box-shadow:0 0 0 3px #fff,0 0 0 6px var(--focus)!important}
+:where(a,button,summary){touch-action:manipulation}
+.session-head{grid-template-columns:1fr}
+.session-number{margin-bottom:.25rem}
+.media-panel{display:grid;grid-template-columns:1fr;gap:1rem}
+.media-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;object-position:center;background:#edf3ef;filter:none!important;opacity:1!important}
+.video-frame{aspect-ratio:16/9}.video-frame iframe{width:100%;height:100%}
+details>summary{min-height:var(--ui-tap);padding:1rem;cursor:pointer}
+footer,.footer{position:static;display:flex;width:100%;min-width:0;align-items:center;justify-content:center;padding-inline:var(--ui-gutter);text-align:center}
+footer>*,.footer>*{max-width:100%;margin-inline:auto;text-align:center}
+@media(min-width:23.4375rem){.nav-inner{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(min-width:36rem){.header-content,.container{width:min(calc(100% - 2rem),var(--ui-content))}.top-actions{left:auto}.nav-inner{grid-template-columns:repeat(3,minmax(0,1fr))!important;width:min(calc(100% - 1rem),var(--ui-content))}.resources,.media-panel{grid-template-columns:repeat(2,minmax(0,1fr))}.session-head{grid-template-columns:auto minmax(0,1fr)}}
+@media(min-width:64rem){.nav-inner{display:flex!important;flex-wrap:wrap;justify-content:center}.nav a{width:auto;flex:0 1 auto;padding-inline:1rem}.header-content{padding-block:5rem 2.6rem}}
+@media(hover:none){.btn-ficha:hover,.lang-switch:hover,.nav a:hover{transform:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(forced-colors:active){*{box-shadow:none!important}:where(a,button,input,select,textarea,summary){forced-color-adjust:auto}}
-@media print{@page{margin:1.4cm}body{overflow:visible!important;color:#111!important;background:#fff!important;font-size:10.5pt}.skip,.skip-link,.nav,.top-actions,.nav-toggle,.btn-complete,.status-message{display:none!important}header,.header,footer,.footer{color:#111!important;background:#fff!important;box-shadow:none!important}header *,.header *,footer *,.footer *{color:#111!important;text-shadow:none!important}:where(.overview,.session,.media-card,.mini-card,.video-card,.figure,.photo-card){box-shadow:none!important}:where(h1,h2,h3,h4,figure,.media-card,.mini-card,.session-detail,.expected-output){break-inside:avoid}img{max-height:11cm!important;object-fit:contain!important}a{color:#111!important;text-decoration:underline}}
+@media print{@page{margin:1.4cm}html,body{overflow:visible!important;color:#111!important;background:#fff!important}.skip-link,.nav,.top-actions{display:none!important}.header,.footer,footer{color:#111!important;background:#fff!important;box-shadow:none!important}.header *,.footer *,footer *{color:#111!important;text-shadow:none!important}.header-content,.container{width:100%;padding:0}.overview,.session,.session-detail,.media-card,.summary{box-shadow:none!important;break-inside:avoid}.resources{display:block}.btn-ficha{display:block;min-height:0;padding:.2rem 0;border:0;background:#fff;color:#111;box-shadow:none;text-align:left;text-decoration:underline}.media-card img{max-height:11cm;object-fit:contain}a{color:#111!important}}
 </style></head>
 <body><a class="skip-link" href="#contenu-principal">Ir al contenido principal</a><div class="header" id="top">
 <div class="header-content"><div class="top-actions"><a aria-label="Abrir la versión francesa del módulo" class="lang-switch" href="Seconde-Modulo2.html">🇫🇷 Versión francesa</a></div>
@@ -215,6 +235,6 @@ footer p,.footer p{margin-inline:auto!important;text-align:center!important}
 <div class="callout spaced-callout"><strong>Glosario:</strong> mudéjar · pavimento · teselación · azulejo · artesonado.</div>
 </div>
 </details><div class="summary"><p><strong>Criterio observable:</strong> Reconstruyo una unidad de repetición, realizo una duplicación exacta y distingo reconstrucción y variación.</p><p><strong>Evidencia para la producción final:</strong> Captura digital con leyenda, medidas, transformación y comparación.</p></div><section aria-label="Desarrollo detallado" class="session-detail"><h4>Desarrollo detallado</h4><ol><li>Importar o reproducir un soporte de referencia y fijar una unidad de repetición simplificada.</li><li>Construir los puntos, segmentos y polígonos necesarios con restricciones geométricas.</li><li>Aplicar en GeoGebra o Inkscape las transformaciones elegidas.</li><li>Comparar el modelo digital con el soporte, registrar las desviaciones y corregir la construcción.</li><li>Exportar una imagen rotulada e indicar las decisiones de modelización y sus límites.</li></ol><p class="expected-output"><strong>Producción esperada:</strong> Una reconstrucción digital simplificada con comparación, desviaciones y límites explícitos.</p></section><section aria-label="Recursos audiovisuales en español" class="media-panel"><figure class="media-card"><img alt="Puesto informático con una reconstrucción geométrica digital de un mosaico y sus transformaciones" decoding="async" fetchpriority="low" height="1024" loading="lazy" src="media-modelizacion-digital.png" width="1536"/><figcaption>Recurso visual en español: reconstruye una unidad de repetición y señala qué elementos proceden del modelo y cuáles del soporte histórico.</figcaption></figure><figure class="media-card"><div class="video-frame"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/5JK_3egy9o4" title="Vídeo en español: Mosaicos de la Alhambra en GeoGebra"></iframe></div><figcaption>Vídeo en español: Mosaicos de la Alhambra en GeoGebra</figcaption><p class="media-source"><a href="https://www.youtube.com/watch?v=5JK_3egy9o4" rel="noopener noreferrer" target="_blank">Ver el vídeo en YouTube</a></p></figure></section><div class="resources"><a class="btn-ficha" href="09-Fichas-Trabajo-Teruel-Mudejar.html" rel="noopener noreferrer" target="_blank">📄 Ficha Trabajo: Teruel</a><a class="btn-ficha" href="09-Fichas-Curso-Teruel%20Mudéjar.html" rel="noopener noreferrer" target="_blank">🧱 Ficha Curso: pavimentos mudéjares de Teruel</a></div></article><article class="session" data-session="5" id="sesion5"><div class="session-head"><div class="session-number">5</div><div><h3 id="titre-sesion5">Sesión 5 — Presentar una mediación matemática en español</h3><p class="session-duration">⏱ 60 minutos</p></div></div><p class="small-note"><strong>Objetivo lingüístico:</strong> Reformular, responder a una pregunta y adaptar el léxico al público.</p><p class="session-description"><strong>Síntesis final:</strong> producción colectiva de una mediación breve en español. El alumnado relaciona patrimonio, lengua y geometría, y distingue los hechos históricos documentados, las observaciones visibles y el análisis matemático actual.</p><p class="session-description"><strong>Estructura de la mediación:</strong> situar la obra o el monumento; delimitar una unidad de repetición; nombrar una transformación y sus elementos característicos; mostrar una comprobación; precisar un límite del análisis; terminar con una pregunta dirigida al público.</p><div class="summary"><p><strong>Criterio observable:</strong> Muestro, nombro y justifico una transformación, y respondo a una pregunta sencilla.</p><p><strong>Evidencia para la producción final:</strong> Guion oral y soporte visual con patrimonio, simetrías y comprobación.</p></div><section aria-label="Desarrollo detallado" class="session-detail"><h4>Desarrollo detallado</h4><ol><li>Seleccionar una producción validada y una imagen patrimonial identificada con precisión.</li><li>Preparar un discurso breve: contexto, motivo, transformación, elementos característicos y comprobación.</li><li>Añadir un límite para no confundir la lectura matemática actual con una intención histórica.</li><li>Ensayar la mediación con una reformulación accesible al público.</li><li>Presentar, responder a una pregunta y recoger un indicador de comprensión.</li></ol><p class="expected-output"><strong>Producción esperada:</strong> Una mediación oral breve en español apoyada en una prueba geométrica y una fuente patrimonial.</p></section><section aria-label="Recursos audiovisuales en español" class="media-panel"><figure class="media-card"><img alt="Exposición escolar sobre la geometría de la Alhambra con mosaicos, calcos y modelos digitales" decoding="async" fetchpriority="low" height="1024" loading="lazy" src="media-exposicion-alhambra.png" width="1536"/><figcaption>Recurso visual en español: organiza una mediación con contexto, transformación, comprobación y límite de interpretación.</figcaption></figure><figure class="media-card"><div class="video-frame"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/oWMCGO6dEow" title="Vídeo en español: Exposición oral en Matemáticas"></iframe></div><figcaption>Vídeo en español: Exposición oral en Matemáticas</figcaption><p class="media-source"><a href="https://www.youtube.com/watch?v=oWMCGO6dEow" rel="noopener noreferrer" target="_blank">Ver el vídeo en YouTube</a></p></figure></section><div class="resources"><a class="btn-ficha" href="10-Ficha-Trabajo-Teatro%20Matematico.html" rel="noopener noreferrer" target="_blank">📄 Ficha Trabajo: mediación matemática</a><a class="btn-ficha" href="10-Ficha-Curso-Teatro-Matematico.html" rel="noopener noreferrer" target="_blank">🎙️ Ficha Curso: mediación oral matemática</a></div></article></main><footer class="footer" role="contentinfo"><div class="footer-content"><p><strong>🌄 Módulo 2 — DNL Matemáticas en español — Lycée-Pensionnat Sacré-Cœur, Reims © 2027 — CC BY-NC-SA 4.0</strong></p></div></footer>
-<!-- navigation-defilante-par-script-v2 -->
+
 <script id="extensions-reset-final">(()=>{"use strict";const prefix="dnl:seconde-modulo2-es-avec-lien-fr-html:extension:";const items=[...document.querySelectorAll("details")];const closeAll=()=>items.forEach(item=>{item.open=false;try{localStorage.setItem(prefix+item.id,"closed");}catch(error){}});closeAll();window.addEventListener("pageshow",closeAll);items.forEach(item=>item.addEventListener("toggle",()=>{try{localStorage.setItem(prefix+item.id,item.open?"open":"closed");}catch(error){}}));document.querySelectorAll('[data-action="clear"],[data-action="reset"],[data-action="reset-extensions"]').forEach(button=>button.addEventListener("click",closeAll));})();</script></body>
 </html>

@@ -134,92 +134,7 @@
 .resources,.media-panel{display:grid;grid-template-columns:minmax(0,1fr);gap:.75rem}.resources{margin-top:1rem}.btn-ficha{width:100%;color:#fff;background:var(--forest);border:2px solid var(--forest);box-shadow:0 .25rem .65rem rgb(22 55 43/.18)}.btn-ficha:hover,.btn-ficha:focus-visible{color:#fff;background:var(--forest-dark);border-color:var(--forest-dark);box-shadow:0 .5rem 1.1rem rgb(22 55 43/.25)}.btn-complete{width:100%;margin-top:1rem;color:#fff;background:var(--terra);border:2px solid var(--terra);box-shadow:0 .25rem .65rem rgb(125 50 31/.18);cursor:pointer;font:inherit;font-weight:850}.btn-complete:hover,.btn-complete:focus-visible{background:var(--terra-dark);border-color:var(--terra-dark);box-shadow:0 .5rem 1.1rem rgb(125 50 31/.25)}.btn-complete[aria-pressed="true"]{background:var(--forest);border-color:var(--forest)}.media-panel{margin:1.2rem 0}.media-card{overflow:hidden;margin:0;background:#fff;border:1px solid var(--line);border-radius:.75rem;box-shadow:var(--shadow)}.media-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;object-position:center}.media-card figcaption{padding:.85rem 1rem;color:var(--muted);font-size:.94rem}.video-frame{position:relative;aspect-ratio:16/9;background:#e8efeb}.video-frame iframe{position:absolute;inset:0;width:100%;height:100%}.media-source{margin:0;padding:0 1rem 1rem}.media-source a{font-weight:800}.status-message:empty{display:none}.footer{display:flex;width:100%;min-height:5rem;align-items:center;justify-content:center;padding:1.5rem .75rem;color:#fff;background:var(--forest-dark);text-align:center;overflow-wrap:anywhere}.footer-content{width:min(100%,var(--content));margin:auto}.footer p{max-width:none;margin:.25rem auto;color:#fff;text-align:center}
 @media(min-width:23.4375rem){.nav-inner{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(min-width:36rem){.header-content,.container,.nav-inner{width:min(calc(100% - 2rem),var(--content))}.header-content{padding:5.5rem 0 2.7rem}.top-actions{inset:1rem 0 auto auto}.lang-switch{width:auto}.container{padding-block:1.25rem 3rem}.overview,.session{padding:clamp(1.25rem,4vw,2rem)}.session-head{grid-template-columns:auto minmax(0,1fr)}.nav-inner{grid-template-columns:repeat(3,minmax(0,1fr))}.resources,.media-panel{grid-template-columns:repeat(2,minmax(0,1fr))}.btn-complete{width:auto}}@media(min-width:62rem){.nav-inner{display:flex;flex-wrap:wrap;justify-content:center}.nav a{flex:0 1 auto;padding-inline:.85rem}.session{transition:border-color var(--ease),box-shadow var(--ease),transform var(--ease)}.session:hover{border-color:#a9c3b5;box-shadow:0 1rem 2.5rem rgb(22 55 43/.16);transform:translateY(-.18rem)}}
 @media(hover:none){.session:hover,.btn-ficha:hover,.btn-complete:hover,.lang-switch:hover,.nav a:hover{transform:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}@media(prefers-contrast:more){:root{--line:#687870}.nav a{border-color:currentColor}}@media(forced-colors:active){*{box-shadow:none!important}:where(a,button,input,select,textarea,summary){forced-color-adjust:auto}}@media print{@page{margin:1.4cm}.skip-link,.nav,.top-actions,.btn-complete,.status-message{display:none!important}body{overflow:visible;color:#111;background:#fff;font-size:10.5pt}.header,.footer{min-height:0;padding:.5cm 0;color:#111;background:#fff;border-color:#777;box-shadow:none}.header-content{padding:0}.header *,.footer *{color:#111!important;text-shadow:none}.overview,.session,.media-card{box-shadow:none}.overview,.session{break-inside:auto}.session-detail,.media-card,.summary,h1,h2,h3,h4,figure,.expected-output{break-inside:avoid}.media-card img{max-height:11cm;object-fit:contain}.video-frame{display:none}.btn-ficha{justify-content:flex-start;padding:0;color:#111;background:transparent;border:0;box-shadow:none}.footer{margin-top:1cm}}
-</style>
-<style>
-
-/* EDUPYTHON_CORRECTION_PREMIER_ENCADRE_V2 */
-.edupython-premier-encadre {
-    position: relative !important;
-    overflow: hidden !important;
-    isolation: isolate !important;
-    min-height: 220px;
-}
-.edupython-premier-encadre > img:first-of-type,
-.edupython-premier-encadre > a:first-of-type > img:first-of-type,
-.edupython-premier-encadre .bg img,
-.edupython-premier-encadre .background img,
-.edupython-premier-encadre .image-background img {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 0 !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 100% !important;
-    height: 100% !important;
-    max-width: none !important;
-    object-fit: cover !important;
-    object-position: center !important;
-    filter: none !important;
-}
-.edupython-premier-encadre::after {
-    content: "" !important;
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 1 !important;
-    background: rgba(0, 0, 0, .28) !important;
-    pointer-events: none !important;
-}
-.edupython-premier-encadre > *:not(img),
-.edupython-premier-encadre .content,
-.edupython-premier-encadre .hero-content {
-    position: relative !important;
-    z-index: 2 !important;
-}
-.edupython-premier-encadre h1,
-.edupython-premier-encadre h2,
-.edupython-premier-encadre h3,
-.edupython-premier-encadre h4,
-.edupython-premier-encadre .title,
-.edupython-premier-encadre .subtitle {
-    background: transparent !important;
-    background-color: transparent !important;
-    background-image: none !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    color: #fff !important;
-    text-shadow: 0 2px 7px rgba(0,0,0,.95) !important;
-}
-
-</style>
-
-<style>
-
-/* EDUPYTHON_PHOTO_VISIBLE_SANS_DIMENSIONS_V3 */
-.edupython-premier-encadre img:first-of-type {
-    display: initial !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-.edupython-premier-encadre h1,
-.edupython-premier-encadre h2,
-.edupython-premier-encadre h3,
-.edupython-premier-encadre h4,
-.edupython-premier-encadre .title,
-.edupython-premier-encadre .titre {
-    background: transparent !important;
-    background-color: transparent !important;
-    background-image: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-</style>
-</head>
+</style></head>
 <body><a class="skip-link" href="#contenu-principal">Ir al contenido principal</a>
 <header aria-labelledby="titre-page" class="header" id="top">
 <div class="header-content">
@@ -280,7 +195,7 @@
 <h2 class="sessions-heading">
     Las cinco sesiones
    </h2>
-<article class="edupython-premier-encadre edupython-premier-encadre session" data-session="1" id="sesion1">
+<article class="session" data-session="1" id="sesion1">
 <div class="session-head">
 <div aria-hidden="true" class="session-number">
       1

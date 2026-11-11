@@ -1,4 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -118,7 +119,64 @@ footer{position:static;max-width:100%}
 @media print{.hero-content{padding:0;color:#111;background:#fff;border:0}.hero-bg{display:none!important}.hero::after{display:none}.hero h1,.hero p{color:#111!important;text-shadow:none!important}table,.align-table,.table-wrap table{min-width:0}footer{position:static;color:#111;background:#fff;border-top:1px solid #333}footer p{color:#111}}
 
 </style>
-<meta content="curso-mayas-r3-2026-10-22" name="version"/><meta content="strict-origin-when-cross-origin" name="referrer"/><style id="suppression-encadre-titre-hero">
+<meta content="curso-mayas-r3-2026-10-22" name="version"/><meta content="strict-origin-when-cross-origin" name="referrer"/><style id="correctif-photo-hero-visible">
+/* Correctif final : photographie de couverture visible, sans voile ni filtre. */
+.hero, header.hero {
+  background-color: #18323f;
+}
+.hero::before, header.hero::before,
+.hero::after, header.hero::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  opacity: 0 !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.hero-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  display: block !important;
+  overflow: hidden !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: transparent !important;
+  filter: none !important;
+}
+.hero-bg a,
+.hero-bg img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.hero-bg img {
+  object-fit: cover !important;
+  object-position: center !important;
+  background: transparent !important;
+}
+.hero-content {
+  position: relative !important;
+  z-index: 2 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.hero h1, .hero p, .hero .tag, .hero .badge {
+  text-shadow: 0 2px 8px rgb(0 0 0 / 95%) !important;
+}
+</style><style id="suppression-encadre-titre-hero">
 /* Supprime uniquement le grand encadre colore devant la photo. */
 .hero .hero-content,
 header.hero .hero-content,

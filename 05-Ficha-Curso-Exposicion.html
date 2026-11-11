@@ -1,4 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -56,7 +57,49 @@ details>summary{min-height:2.75rem;align-content:center}footer{position:static;m
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.hero-content{padding:0;color:#111;background:#fff;border:0}.hero-bg{display:none!important}.hero::after,header#top::after{display:none}.hero h1,header h1,.hero p,header p{color:#111!important;text-shadow:none!important}.table-wrap,.table{overflow:visible}table,.align-table{min-width:0}footer{position:static;color:#111;background:#fff;border-top:1px solid #333}footer p{color:#111}}
 
-</style><meta content="strict-origin-when-cross-origin" name="referrer"/><style id="suppression-encadre-titre-hero">
+</style><meta content="strict-origin-when-cross-origin" name="referrer"/><style id="correctif-photo-hero-visible">
+/* Correctif final : photographie du haut pleinement visible, sans filtre ni voile. */
+header.hero, .hero { position: relative !important; isolation: isolate !important; overflow: hidden !important; }
+header.hero::before, .hero::before,
+header.hero::after, .hero::after,
+header#top::before, header#top::after {
+  display: none !important;
+  content: none !important;
+  opacity: 0 !important;
+  background: transparent !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.hero-bg {
+  position: absolute !important; inset: 0 !important; z-index: -1 !important;
+  display: block !important; width: 100% !important; height: 100% !important;
+  opacity: 1 !important; visibility: visible !important;
+  background: transparent !important; filter: none !important;
+}
+.hero-bg a, .hero-bg img {
+  display: block !important; width: 100% !important; height: 100% !important;
+  opacity: 1 !important; visibility: visible !important;
+  filter: none !important; mix-blend-mode: normal !important;
+  backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+}
+.hero-bg img {
+  object-fit: cover !important; object-position: center !important;
+  background: transparent !important;
+}
+.hero-content, header.hero > :not(.hero-bg) {
+  position: relative !important; z-index: 2 !important;
+}
+.hero-content {
+  background: transparent !important; border: 0 !important; box-shadow: none !important;
+  backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+}
+header.hero h1, .hero h1, header.hero p, .hero p,
+header.hero .tag, .hero .tag, header.hero .badge, .hero .badge {
+  text-shadow: 0 2px 8px rgb(0 0 0 / 95%) !important;
+}
+</style><style id="suppression-encadre-titre-hero">
 /* Supprime uniquement le grand encadre colore devant la photo. */
 .hero .hero-content,
 header.hero .hero-content,
@@ -176,7 +219,7 @@ header.hero > .badge {
 </style>
 </head>
 <body><a class="skip" href="#contenido">Ir al contenido principal</a>
-<header class="hero" id="top"><div class="hero-bg"><a aria-label="Sala del Museo de Arte Precolombino de Santiago (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Mueso_de_Arte_Precolombino.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Sala del Museo de Arte Precolombino de Santiago" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" height="1944" loading="eager" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mueso%20de%20Arte%20Precolombino.jpg?width=1600" width="2592"/></a></div><div class="hero-content"><span class="tag">Matemáticas en español</span><span class="tag">Exposición · mediación · datos</span><h1 id="titulo-pagina">Mediación oral: explicar, hacer actuar y verificar</h1><p>Reunir las evidencias del módulo, organizar un estand, preparar un guion oral, proponer una tarea corta al visitante y comprobar la comprensión en español.</p></div></header>
+<header class="hero" id="top"><div class="hero-bg"><a aria-label="Sala del Museo de Arte Precolombino de Santiago (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Mueso_de_Arte_Precolombino.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Sala del Museo de Arte Precolombino de Santiago" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" height="1944" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mueso%20de%20Arte%20Precolombino.jpg?width=1600" width="2592"/></a></div><div class="hero-content"><span class="tag">Matemáticas en español</span><span class="tag">Exposición · mediación · datos</span><h1 id="titulo-pagina">Mediación oral: explicar, hacer actuar y verificar</h1><p>Reunir las evidencias del módulo, organizar un estand, preparar un guion oral, proponer una tarea corta al visitante y comprobar la comprensión en español.</p></div></header>
 <div aria-label="Impresión de la ficha de curso sobre mediación" class="print-actions no-print" role="group"><button class="ghost" data-action="download-text" type="button">Descargar apuntes</button><button data-action="print" type="button">Imprimir</button><button class="ghost" data-action="reset-extensions" type="button">Replegar las extensiones</button></div>
 <nav aria-label="Navegación principal de la ficha" class="nav"><div class="nav-inner"><strong>Navegación:</strong><a href="#guion-mediacion">Guion común de mediación oral</a><a href="#herramientas-matematicas">Herramientas matemáticas esenciales</a><a href="#datos-controles">Datos, restricciones y controles</a><a href="#estand-matematico">Construir un estand matemático</a><a href="#representaciones-datos">Organizar datos y elegir representaciones</a><a href="#procedimientos-mediacion">Procedimientos de resolución y mediación</a><a href="#progresion">Progresión de los aprendizajes</a><a href="#modelos-expresion">Modelos para hablar y escribir en español</a><a href="#preparacion-mediacion">Preparación de la mediación</a><a href="#videos-apoyo">Vídeos de apoyo matemático en español</a><a href="#cierre">Cierre didáctico de la ficha de curso</a><a href="#contexto-asociado">Contexto asociado</a><a href="#top">Inicio</a></div></nav>
 <main aria-labelledby="titulo-pagina" class="container" id="contenido" tabindex="-1">

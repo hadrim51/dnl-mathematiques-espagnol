@@ -1,4 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -38,7 +39,64 @@ a:active,button:active,.btn:active{transform:translateY(1px)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.hero-bg{display:none!important}header,.hero{display:block}.table,.table-wrap{overflow:visible}table,.align-table{min-width:0}footer{position:static;color:#111;background:#fff;border-top:1px solid #333}footer p{color:#111}}
 
-</style><meta content="3.0-uiux-responsive-2026-10-22" name="version"/><meta content="strict-origin-when-cross-origin" name="referrer"/><style id="suppression-encadre-titre-hero">
+</style><meta content="3.0-uiux-responsive-2026-10-22" name="version"/><meta content="strict-origin-when-cross-origin" name="referrer"/><meta content="https://commons.wikimedia.org/wiki/Special:FilePath/Plimpton_322.jpg?width=1800" property="og:image"/><meta content="Tablilla matemática Plimpton 322" property="og:image:alt"/><meta content="https://commons.wikimedia.org/wiki/Special:FilePath/Plimpton_322.jpg?width=1800" name="twitter:image"/><meta content="Tablilla matemática Plimpton 322" name="twitter:image:alt"/><style id="correctif-photo-hero-visible">
+/* Correctif final : photographie de couverture visible, sans voile ni filtre. */
+.hero, header.hero {
+  background-color: #18323f;
+}
+.hero::before, header.hero::before,
+.hero::after, header.hero::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  opacity: 0 !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.hero-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  display: block !important;
+  overflow: hidden !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: transparent !important;
+  filter: none !important;
+}
+.hero-bg a,
+.hero-bg img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.hero-bg img {
+  object-fit: cover !important;
+  object-position: center !important;
+  background: transparent !important;
+}
+.hero-content {
+  position: relative !important;
+  z-index: 2 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.hero h1, .hero p, .hero .tag, .hero .badge {
+  text-shadow: 0 2px 8px rgb(0 0 0 / 95%) !important;
+}
+</style><style id="suppression-encadre-titre-hero">
 /* Supprime uniquement le grand encadre colore devant la photo. */
 .hero .hero-content,
 header.hero .hero-content,
@@ -158,11 +216,11 @@ header.hero > .badge {
 </style>
 </head>
 <body><a class="skip" href="#contenido">Ir al contenido principal</a>
-<header class="hero" id="top">
+<header class="hero" id="top"><div aria-hidden="true" class="hero-bg"><a aria-label="Tablilla matemática Plimpton 322 (se abre en una nueva pestaña)" href="https://commons.wikimedia.org/wiki/File:Plimpton_322.jpg" rel="noopener noreferrer" target="_blank"><img alt="Tablilla matemática Plimpton 322" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" height="1247" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Plimpton_322.jpg?width=1800" width="1800"/></a></div><div class="hero-content">
 <span class="tag">Matemáticas en español</span><span class="tag">Bases · cero · valor posicional · debate</span>
 <h1 id="titulo-pagina">Sistemas de numeración: criterios, ejemplos y debate</h1>
 <p>Comparar sistemas sin juicio absoluto: definir un criterio, comprobar un ejemplo, responder a una objeción y concluir según el contexto.</p>
-</header>
+</div></header>
 <div aria-label="Impresión de la ficha de curso" class="print-actions no-print" role="group"><button data-action="download-text" type="button">Descargar texto</button><button data-action="print" type="button">Imprimir</button><button class="ghost" data-action="reset-extensions" type="button">Replegar las ampliaciones</button></div>
 <nav aria-label="Navegación principal de la ficha" class="nav"><div class="nav-inner"><strong>Navegación:</strong><a href="#conceptos">Conceptos</a><a href="#herramientas-secundaria">Herramientas</a><a href="#modelos">Modelos</a><a href="#conversiones">Convertir</a><a href="#criterios">Criterios</a><a href="#debate-math">Debate</a><a href="#plantillas">Frases</a><a href="#kit-matematico">Tarjeta</a><a href="#extensiones">Contexto</a></div></nav>
 <main aria-labelledby="titulo-pagina" class="container" id="contenido" tabindex="-1">

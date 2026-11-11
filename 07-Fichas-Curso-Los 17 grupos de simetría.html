@@ -1,4 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -76,6 +77,17 @@ details>section.card,details>.grid,details>.video{margin:1rem .75rem}
 .extension-photo-gallery img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
 .imglink:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 .video iframe{height:100%}
+</style><style id="correctif-photo-hero-visible">
+/* Correctif final : photo de couverture visible sans filtre, voile ou opacité. */
+.hero, header.hero, header#top {position:relative!important;isolation:isolate!important;overflow:hidden!important;background-color:#173638!important;}
+.hero::before, header.hero::before, header#top::before,
+.hero::after, header.hero::after, header#top::after {display:none!important;content:none!important;opacity:0!important;background:transparent!important;filter:none!important;mix-blend-mode:normal!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;}
+.hero-bg {position:absolute!important;inset:0!important;z-index:0!important;display:block!important;width:100%!important;height:100%!important;opacity:1!important;visibility:visible!important;background:transparent!important;filter:none!important;}
+.hero-bg a,.hero-bg img {display:block!important;width:100%!important;height:100%!important;opacity:1!important;visibility:visible!important;filter:none!important;mix-blend-mode:normal!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;}
+.hero-bg img {object-fit:cover!important;object-position:center!important;background:transparent!important;}
+.hero > :not(.hero-bg), header.hero > :not(.hero-bg), header#top > :not(.hero-bg) {position:relative!important;z-index:2!important;}
+.hero-content {background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;}
+.hero h1,header.hero h1,header#top h1,.hero p,header.hero p,header#top p,.hero .tag,header.hero .tag,header#top .tag {text-shadow:0 2px 8px rgb(0 0 0 / 95%)!important;}
 </style><style id="suppression-encadre-titre-hero">
 /* Supprime uniquement le grand encadre colore devant la photo. */
 .hero .hero-content,
@@ -196,7 +208,7 @@ header.hero > .badge {
 </style>
 </head>
 <body><a class="skip" href="#transformaciones">Ir al contenido principal</a>
-<header class="hero" id="top"><div aria-hidden="true" class="hero-bg"><img alt="" data-offline-message="La fotografía de portada no está disponible sin conexión." decoding="async" fetchpriority="high" loading="eager" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/1/12/Alhambra-p3-closeup.jpg"/></div><span class="tag">Matemáticas en español</span><span class="tag">Transformaciones del plano</span><span class="tag">Seconde · sesión 2</span><h1>Sesión 2 — Comprobar una transformación en un motivo periódico</h1><p>De una transformación observada a una tarjeta de análisis verificable. Evidencia: Tarjeta de análisis: transformación, elemento característico y comprobación.</p></header><div aria-label="Impresión de la ficha de curso" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimir</button></div>
+<header class="hero" id="top"><div aria-hidden="true" class="hero-bg"><img alt="" data-offline-message="La fotografía de portada no está disponible sin conexión." decoding="async" fetchpriority="high" loading="eager" src="https://upload.wikimedia.org/wikipedia/commons/1/12/Alhambra-p3-closeup.jpg"/></div><span class="tag">Matemáticas en español</span><span class="tag">Transformaciones del plano</span><span class="tag">Seconde · sesión 2</span><h1>Sesión 2 — Comprobar una transformación en un motivo periódico</h1><p>De una transformación observada a una tarjeta de análisis verificable. Evidencia: Tarjeta de análisis: transformación, elemento característico y comprobación.</p></header><div aria-label="Impresión de la ficha de curso" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimir</button></div>
 <nav aria-label="Navegación de la ficha" class="nav"><div class="nav-inner"><strong>📍 Navegación:</strong><a href="#transformaciones">1. Transformaciones</a><a href="#redes">2. Motivo y repetición</a><a href="#rotaciones">3. Rotaciones (giros) y centros</a><a href="#herramientas-segundo">4. Comprobar una hipótesis</a><a href="#banco-metodos">5. Procedimientos</a><a href="#clasificacion">6. Árbol de decisión</a><a href="#plantillas">7. Explicar</a><a href="#entrenamiento-matematico">8. Sintetizar</a><a href="#videos-matematicos">9. Vídeos</a><a href="#extensiones">10. Ampliaciones</a><a href="#familias">11. Ampliación opcional: 17 grupos</a></div></nav>
 <main id="contenido" tabindex="-1"><section class="card" id="transformaciones">
 <h2>1. Transformaciones</h2>
@@ -293,8 +305,5 @@ header.hero > .badge {
     link.setAttribute("rel", [...rel].join(" "));
   });
 })();</script><script id="script-media-fallback-autonomo">(()=>{"use strict";document.querySelectorAll("img[data-offline-message]").forEach(image=>image.addEventListener("error",()=>{image.hidden=true;const host=image.closest("figure,.gallery-item,.card")||image.parentElement;if(!host||host.querySelector(".offline-message"))return;const p=document.createElement("p");p.className="offline-message";p.textContent=image.dataset.offlineMessage;(host.querySelector("figcaption,.caption")||host).prepend(p)},{once:true}));})();</script><script id="script-impression-autonome">(()=>{"use strict";document.querySelector('[data-action="print"]')?.addEventListener("click",()=>window.print());})();</script>
-
-
-
 <script id="script-extensions-medias">(()=>{"use strict";const FILE="dnl-symmetry17-course-media-v2",panels=[...document.querySelectorAll("details.extension,details.extension-block")],key=p=>`${FILE}:${p.id}`,close=()=>panels.forEach(p=>{p.open=false;try{localStorage.setItem(key(p),"closed")}catch(_){}});close();panels.forEach(p=>p.addEventListener("toggle",()=>{try{localStorage.setItem(key(p),p.open?"session-open":"closed")}catch(_){}}));addEventListener("pageshow",close);addEventListener("beforeunload",close);document.addEventListener("dnl:reset",close)})();</script></body>
 </html>

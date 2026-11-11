@@ -1,4 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -45,7 +46,49 @@ details>summary{min-height:2.75rem;align-content:center}footer{position:static;m
 </style>
 <link href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3EBandera%20de%20Espa%C3%B1a%3C%2Ftitle%3E%0A%3Cdesc%3EFavicon%20con%20tres%20franjas%20horizontales%20roja%2C%20amarilla%20y%20roja.%3C%2Fdesc%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%23AA151B%22%2F%3E%0A%3Crect%20y%3D%2216%22%20width%3D%2264%22%20height%3D%2232%22%20fill%3D%22%23F1BF00%22%2F%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2262.5%22%20height%3D%2262.5%22%20rx%3D%229.25%22%0A%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%237A1015%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E" id="favicon-drapeau-espagnol" rel="icon" type="image/svg+xml"/>
 <title>Nasca: regularidades, transformaciones y modelización geométrica | DNL</title>
-<meta content="Vista aérea del geoglifo del mono de Nazca" name="twitter:image:alt"/><meta content="Curso DNL sobre geometría nasca: simetría, rotación, traslación, frisos, escala, medidas y verificación de regularidades con prudencia cultural." name="twitter:description"/><meta content="Ficha de curso: geometría y transformaciones Nazca" name="twitter:title"/><meta content="summary_large_image" name="twitter:card"/><meta content="Vista aérea del geoglifo del mono de Nazca" property="og:image:alt"/><meta content="Curso DNL sobre geometría nasca: simetría, rotación, traslación, frisos, escala, medidas y verificación de regularidades con prudencia cultural." property="og:description"/><meta content="Ficha de curso: geometría y transformaciones Nazca" property="og:title"/><meta content="es_ES" property="og:locale"/><meta content="article" property="og:type"/><meta content="#26343b" name="theme-color"/><meta content="noindex, nofollow, noarchive, nosnippet" name="robots"/><meta content="geometría nasca, simetría, rotación, traslación, frisos, escala, transformaciones geométricas, DNL matemáticas" name="keywords"/><meta content="Curso DNL sobre geometría nasca: simetría, rotación, traslación, frisos, escala, medidas y verificación de regularidades con prudencia cultural." name="description"/><meta content="strict-origin-when-cross-origin" name="referrer"/><style id="suppression-encadre-titre-hero">
+<meta content="Vista aérea del geoglifo del mono de Nazca" name="twitter:image:alt"/><meta content="Curso DNL sobre geometría nasca: simetría, rotación, traslación, frisos, escala, medidas y verificación de regularidades con prudencia cultural." name="twitter:description"/><meta content="Ficha de curso: geometría y transformaciones Nazca" name="twitter:title"/><meta content="summary_large_image" name="twitter:card"/><meta content="Vista aérea del geoglifo del mono de Nazca" property="og:image:alt"/><meta content="Curso DNL sobre geometría nasca: simetría, rotación, traslación, frisos, escala, medidas y verificación de regularidades con prudencia cultural." property="og:description"/><meta content="Ficha de curso: geometría y transformaciones Nazca" property="og:title"/><meta content="es_ES" property="og:locale"/><meta content="article" property="og:type"/><meta content="#26343b" name="theme-color"/><meta content="noindex, nofollow, noarchive, nosnippet" name="robots"/><meta content="geometría nasca, simetría, rotación, traslación, frisos, escala, transformaciones geométricas, DNL matemáticas" name="keywords"/><meta content="Curso DNL sobre geometría nasca: simetría, rotación, traslación, frisos, escala, medidas y verificación de regularidades con prudencia cultural." name="description"/><meta content="strict-origin-when-cross-origin" name="referrer"/><style id="correctif-photo-hero-visible">
+/* Correctif final : photographie du haut pleinement visible, sans filtre ni voile. */
+header.hero, .hero { position: relative !important; isolation: isolate !important; overflow: hidden !important; }
+header.hero::before, .hero::before,
+header.hero::after, .hero::after,
+header#top::before, header#top::after {
+  display: none !important;
+  content: none !important;
+  opacity: 0 !important;
+  background: transparent !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.hero-bg {
+  position: absolute !important; inset: 0 !important; z-index: -1 !important;
+  display: block !important; width: 100% !important; height: 100% !important;
+  opacity: 1 !important; visibility: visible !important;
+  background: transparent !important; filter: none !important;
+}
+.hero-bg a, .hero-bg img {
+  display: block !important; width: 100% !important; height: 100% !important;
+  opacity: 1 !important; visibility: visible !important;
+  filter: none !important; mix-blend-mode: normal !important;
+  backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+}
+.hero-bg img {
+  object-fit: cover !important; object-position: center !important;
+  background: transparent !important;
+}
+.hero-content, header.hero > :not(.hero-bg) {
+  position: relative !important; z-index: 2 !important;
+}
+.hero-content {
+  background: transparent !important; border: 0 !important; box-shadow: none !important;
+  backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+}
+header.hero h1, .hero h1, header.hero p, .hero p,
+header.hero .tag, .hero .tag, header.hero .badge, .hero .badge {
+  text-shadow: 0 2px 8px rgb(0 0 0 / 95%) !important;
+}
+</style><style id="suppression-encadre-titre-hero">
 /* Supprime uniquement le grand encadre colore devant la photo. */
 .hero .hero-content,
 header.hero .hero-content,

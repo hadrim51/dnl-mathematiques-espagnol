@@ -73,9 +73,94 @@ footer{padding-inline:var(--gutter)}
 .nav{padding:.65rem var(--gutter)}
 .card,.exercise,.rubric,.competences,.intro{padding:clamp(.9rem,3vw,1.55rem)}
 .meta{display:flex;flex-wrap:wrap;gap:.35rem}
-</style></head>
+</style>
+<style>
+
+/* EDUPYTHON_CORRECTION_PREMIER_ENCADRE_V2 */
+.edupython-premier-encadre {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    min-height: 220px;
+}
+.edupython-premier-encadre > img:first-of-type,
+.edupython-premier-encadre > a:first-of-type > img:first-of-type,
+.edupython-premier-encadre .bg img,
+.edupython-premier-encadre .background img,
+.edupython-premier-encadre .image-background img {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    filter: none !important;
+}
+.edupython-premier-encadre::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background: rgba(0, 0, 0, .28) !important;
+    pointer-events: none !important;
+}
+.edupython-premier-encadre > *:not(img),
+.edupython-premier-encadre .content,
+.edupython-premier-encadre .hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+}
+.edupython-premier-encadre h1,
+.edupython-premier-encadre h2,
+.edupython-premier-encadre h3,
+.edupython-premier-encadre h4,
+.edupython-premier-encadre .title,
+.edupython-premier-encadre .subtitle {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    text-shadow: 0 2px 7px rgba(0,0,0,.95) !important;
+}
+
+</style>
+
+<style>
+
+/* EDUPYTHON_PHOTO_VISIBLE_SANS_DIMENSIONS_V3 */
+.edupython-premier-encadre img:first-of-type {
+    display: initial !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.edupython-premier-encadre h1,
+.edupython-premier-encadre h2,
+.edupython-premier-encadre h3,
+.edupython-premier-encadre h4,
+.edupython-premier-encadre .title,
+.edupython-premier-encadre .titre {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+</style>
+</head>
 <body><a class="skip" href="#contenido">Ir al contenido principal</a>
-<header class="hero" id="top"><div class="hero-bg"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Torre_mudéjar_de_San_Martín,_Teruel_(Spain).JPG" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Torre mudéjar de San Martín en Teruel" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Torre%20mud%C3%A9jar%20de%20San%20Mart%C3%ADn%2C%20Teruel%20%28Spain%29.JPG?width=1600"/></a></div><span class="tag">Matemáticas en español</span><span class="tag">Modelo · duplicación · comparación</span><span class="tag">Seconde · sesión 4</span><h1>Sesión 4 — Modelizar un motivo mudéjar y distinguir reproducción y variación</h1><p>Del motivo patrimonial a un modelo digital que distingue modelo, reconstrucción y variación. Evidencia: Captura digital con leyenda, medidas, transformación y comparación.</p></header><div aria-label="Impresión de la ficha de curso" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimir</button></div>
+<header class="edupython-premier-encadre edupython-premier-encadre hero" id="top"><div class="hero-bg"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Torre_mudéjar_de_San_Martín,_Teruel_(Spain).JPG" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Torre mudéjar de San Martín en Teruel" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Torre%20mud%C3%A9jar%20de%20San%20Mart%C3%ADn%2C%20Teruel%20%28Spain%29.JPG?width=1600"/></a></div><span class="tag">Matemáticas en español</span><span class="tag">Modelo · duplicación · comparación</span><span class="tag">Seconde · sesión 4</span><h1>Sesión 4 — Modelizar un motivo mudéjar y distinguir reproducción y variación</h1><p>Del motivo patrimonial a un modelo digital que distingue modelo, reconstrucción y variación. Evidencia: Captura digital con leyenda, medidas, transformación y comparación.</p></header><div aria-label="Impresión de la ficha de curso" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimir</button></div>
 <nav aria-label="Navegación de la ficha" class="nav"><div class="nav-inner"><strong>Navegación:</strong><a href="#formulario">Herramientas</a><a href="#metodo">Método</a><a href="#modelo">Unidad</a><a href="#angulos">Restricciones</a><a href="#transformaciones">Duplicar</a><a href="#plantillas">Comparar</a><a href="#entrenamiento-matematico">Sintetizar</a><a href="#extensiones">Patrimonio</a></div></nav>
 <main id="contenido" tabindex="-1">
 <section class="card" id="formulario">

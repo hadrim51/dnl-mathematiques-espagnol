@@ -12,9 +12,94 @@ main,.coh-panel{width:min(100%,var(--max));margin-inline:auto}main{padding:1rem}
 table,.coh-table{display:block;width:100%;max-width:100%;overflow-x:auto;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}caption{padding:.65rem;font-weight:800;text-align:left}th,td{min-width:9rem;padding:.75rem;border:1px solid var(--line);text-align:left;vertical-align:top;overflow-wrap:normal;word-break:normal}th{color:#fff;background:var(--primary-dark)}tbody tr:nth-child(even){background:#faf8fc}.media-source{margin:0;padding:1rem;color:var(--ink);background:#fff;border:1px dashed var(--primary);border-radius:.6rem}.gallery-item{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.gallery-item img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;object-position:center;background:#fff;filter:none;opacity:1}.caption{padding:.75rem 1rem;color:var(--muted);border-top:1px solid var(--line)}.img-link{display:block}.img-link:hover img,.img-link:focus-visible img{outline:.2rem solid var(--gold);outline-offset:-.2rem}details.extension{margin:1rem 0;overflow:clip}details>summary{min-height:var(--tap);padding:1rem;color:var(--primary-dark);background:var(--soft);font-weight:850;cursor:pointer}details>section.card,details>.grid{margin:1rem}
 button,.btn{display:inline-flex;min-width:var(--tap);min-height:var(--tap);align-items:center;justify-content:center;padding:.72rem 1.1rem;color:#fff;background:var(--primary);border:2px solid var(--primary);border-radius:.75rem;font-weight:800;line-height:1.2;cursor:pointer;box-shadow:0 .2rem .5rem rgb(91 63 140/.2);transition:background-color var(--speed),border-color var(--speed),box-shadow var(--speed),transform var(--speed)}button:hover,.btn:hover{background:var(--primary-dark);border-color:var(--primary-dark);box-shadow:0 .45rem 1rem rgb(45 36 64/.25)}button:focus-visible,.btn:focus-visible{background:var(--primary-dark);border-color:var(--focus)}button.ghost{color:var(--primary);background:#fff;border-color:var(--primary)}button.ghost:hover,button.ghost:focus-visible{color:#fff;background:var(--primary-dark)}button.secondary{background:#875112;border-color:#875112}button.secondary:hover,button.secondary:focus-visible{background:#633b0d;border-color:#633b0d}footer{position:static;display:flex;min-height:4.5rem;align-items:center;justify-content:center;margin-top:2rem;padding:1.5rem 1rem;color:#fff;background:var(--primary-dark);border-top:.35rem solid var(--gold);text-align:center;overflow-wrap:anywhere}footer p{max-width:72rem;margin:0 auto;color:#fff}
 @media(min-width:30rem){.nav-inner,body>nav{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(min-width:48rem){main{padding:1.5rem}.grid,.cols,.coh-grid,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.nav-inner,body>nav{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(min-width:64rem){main{padding:2rem}.grid,.coh-grid{grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}.nav-inner,body>nav{display:flex;flex-wrap:wrap}.nav-inner>a,body>nav>a{flex:0 1 auto}.nav-inner>strong,body>nav>strong{flex-basis:100%}}@media(max-width:23.4375rem){main{padding:.75rem}.card,.exercise,.intro,.competences,.coh-panel{padding:.9rem}.nav,body>nav{width:calc(100% - .75rem)}body>header h1,.hero h1{font-size:clamp(1.8rem,9vw,2.6rem)}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}@media print{@page{margin:1.3cm}body{color:#111;background:#fff;font-size:10pt}.nav,body>nav,.skip,.skip-link,.no-print,button,.actions{display:none!important}body>header,.hero{min-height:0;padding:.6cm;color:#111;background:#fff;border:1px solid #777}.hero-media{display:none!important}.hero-content{padding:0;color:#111;background:#fff;box-shadow:none}body>header h1,.hero h1,body>header p,.hero p{color:#111!important}.card,.exercise,.intro,.competences,.note,.coh-panel,.box,details.extension{box-shadow:none;break-inside:avoid}table,.coh-table{display:table;overflow:visible;font-size:8pt}thead{display:table-header-group}th,td{min-width:0}details>summary{display:none}details.extension:not([open])>:not(summary),details>section{display:block!important}a{color:#111;text-decoration:underline}footer{display:block!important;color:#111!important;background:#fff!important;border-top:1px solid #777}}
-</style><style id="route-image-display-fix">img[src*="Principales_Rutas_Comerciales_del_Imperio_Espa"]{display:block!important;width:100%!important;height:auto!important;aspect-ratio:2/1;object-fit:contain!important;opacity:1!important;visibility:visible!important;background:#fff}</style><style id="cerro-rico-image-fix">img[src*="Cerro_ricco.jpg"]{display:block!important;width:100%!important;height:auto!important;aspect-ratio:3/2;object-fit:contain!important;opacity:1!important;visibility:visible!important;background:#fff}</style></head>
+</style><style id="route-image-display-fix">img[src*="Principales_Rutas_Comerciales_del_Imperio_Espa"]{display:block!important;width:100%!important;height:auto!important;aspect-ratio:2/1;object-fit:contain!important;opacity:1!important;visibility:visible!important;background:#fff}</style><style id="cerro-rico-image-fix">img[src*="Cerro_ricco.jpg"]{display:block!important;width:100%!important;height:auto!important;aspect-ratio:3/2;object-fit:contain!important;opacity:1!important;visibility:visible!important;background:#fff}</style>
+<style>
+
+/* EDUPYTHON_CORRECTION_PREMIER_ENCADRE_V2 */
+.edupython-premier-encadre {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    min-height: 220px;
+}
+.edupython-premier-encadre > img:first-of-type,
+.edupython-premier-encadre > a:first-of-type > img:first-of-type,
+.edupython-premier-encadre .bg img,
+.edupython-premier-encadre .background img,
+.edupython-premier-encadre .image-background img {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    filter: none !important;
+}
+.edupython-premier-encadre::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background: rgba(0, 0, 0, .28) !important;
+    pointer-events: none !important;
+}
+.edupython-premier-encadre > *:not(img),
+.edupython-premier-encadre .content,
+.edupython-premier-encadre .hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+}
+.edupython-premier-encadre h1,
+.edupython-premier-encadre h2,
+.edupython-premier-encadre h3,
+.edupython-premier-encadre h4,
+.edupython-premier-encadre .title,
+.edupython-premier-encadre .subtitle {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    text-shadow: 0 2px 7px rgba(0,0,0,.95) !important;
+}
+
+</style>
+
+<style>
+
+/* EDUPYTHON_PHOTO_VISIBLE_SANS_DIMENSIONS_V3 */
+.edupython-premier-encadre img:first-of-type {
+    display: initial !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.edupython-premier-encadre h1,
+.edupython-premier-encadre h2,
+.edupython-premier-encadre h3,
+.edupython-premier-encadre h4,
+.edupython-premier-encadre .title,
+.edupython-premier-encadre .titre {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+</style>
+</head>
 <body><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
-<header aria-labelledby="titre-page" class="hero" id="top"><div class="hero-media"><a aria-label="Abrir la página de la fotografía del Archivo General de Indias en Wikimedia Commons (se abre en una pestaña nueva)" class="img-link" href="https://commons.wikimedia.org/wiki/File:Archivo_de_Indias_002.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la página de la imagen en Wikimedia Commons"><img alt="Fachada del Archivo General de Indias en Sevilla" decoding="async" fetchpriority="high" height="1071" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Archivo_de_Indias_002.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=index&amp;utm_content=original" width="1600"/></a></div><div class="hero-content"><div aria-label="Información de la sesión" class="hero-tags"><span class="tag">DNL Matemáticas en español</span><span class="tag">Sesión 5</span><span class="tag">Infografía final</span></div><h1 id="titre-page">Economía del Imperio español: datos, porcentajes, escalas e infografía</h1></div></header>
+<header aria-labelledby="titre-page" class="edupython-premier-encadre edupython-premier-encadre hero" id="top"><div class="hero-media"><a aria-label="Abrir la página de la fotografía del Archivo General de Indias en Wikimedia Commons (se abre en una pestaña nueva)" class="img-link" href="https://commons.wikimedia.org/wiki/File:Archivo_de_Indias_002.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la página de la imagen en Wikimedia Commons"><img alt="Fachada del Archivo General de Indias en Sevilla" decoding="async" fetchpriority="high" height="1071" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Archivo_de_Indias_002.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=index&amp;utm_content=original" width="1600"/></a></div><div class="hero-content"><div aria-label="Información de la sesión" class="hero-tags"><span class="tag">DNL Matemáticas en español</span><span class="tag">Sesión 5</span><span class="tag">Infografía final</span></div><h1 id="titre-page">Economía del Imperio español: datos, porcentajes, escalas e infografía</h1></div></header>
 <nav aria-label="Navegación por las secciones de la ficha" class="nav"><div class="nav-inner"><strong>Navegación:</strong><a href="#formulario">1. Formulario</a><a href="#porcentajes">2. Porcentajes</a><a href="#visualizacion">3. Visualización</a><a href="#evaluacion">4. Evaluación</a><a href="#plantillas">5. Plantillas</a><a href="#entrenamiento-matematico">6. Entrenamiento matemático</a><a href="#extensiones">7. Extensiones</a><a href="#top">↑ Arriba</a></div></nav>
 <main id="contenido-principal" tabindex="-1">
 <section class="card" id="formulario"><h2 id="1-formulario">1. Formulario</h2><div class="grid"><div class="box"><h3 id="reparto">Reparto</h3><div class="fórmula">parte = total × porcentaje ÷ 100</div></div><div class="box"><h3 id="variacion">Variación</h3><div class="fórmula">variación % = (final − inicial) ÷ inicial × 100</div></div><div class="box"><h3 id="escala-visual">Escala visual</h3><div class="fórmula">longitud dibujada = distancia real ÷ valor de 1 cm</div></div><div class="box"><h3 id="grafico-circular">Gráfico circular</h3><div class="fórmula">ángulo = porcentaje × 360 ÷ 100</div></div><div class="box"><h3 id="indice-y-area">Índice y área</h3><div class="fórmula">índice = valor final ÷ valor inicial × 100<br/>área reservada = área total × porcentaje ÷ 100</div></div><div class="box"><h3 id="jerarquia-y-error">Jerarquía y error</h3><div class="fórmula">razón = tamaño mayor ÷ tamaño menor<br/>diferencia relativa % = |medido − esperado| ÷ esperado × 100</div></div></div></section>

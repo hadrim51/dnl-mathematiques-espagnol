@@ -21,8 +21,93 @@ button,.btn{display:inline-flex;min-height:var(--tap);min-width:var(--tap);align
 @media(min-width:30rem){.nav-inner,body>nav{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(min-width:48rem){main{padding:1.5rem}.grid,.gallery,.video-grid,.coh-grid,.cols{grid-template-columns:repeat(2,minmax(0,1fr))}.nav-inner,body>nav{grid-template-columns:repeat(4,minmax(0,1fr))}.gallery-item img{aspect-ratio:3/2}}@media(min-width:64rem){main{padding:2rem}.grid,.gallery,.coh-grid{grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}.nav-inner,body>nav{display:flex;flex-wrap:wrap}.nav-inner>a,body>nav>a{flex:0 1 auto}.nav-title,.nav-inner>strong,body>nav>strong{flex-basis:100%}}@media(max-width:23.4375rem){main{padding:.75rem}.card,.exercise,.intro,.rubric,.progress-card,.coh-panel{padding:.9rem}.nav,body>nav{width:calc(100% - .75rem)}.hero h1,header#top h1,.simple-hero h1{font-size:clamp(1.8rem,9vw,2.6rem)}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media print{@page{margin:1.3cm}body{color:#111;background:#fff;font-size:10pt}.nav,body>nav,.skip,.skip-link,.no-print,button,.actions{display:none!important}.hero,header#top,body>header,.simple-hero{min-height:0;padding:.6cm;color:#111;background:#fff;border:1px solid #777}.hero-media{display:none!important}.hero-content{padding:0;color:#111;background:#fff;box-shadow:none}.hero h1,header#top h1,.simple-hero h1,.hero p,header#top p,.simple-hero p{color:#111!important}.card,.exercise,.intro,.rubric,.note,.progress-card,.box,.coh-panel,details.extension{box-shadow:none;break-inside:avoid}table,.coh-table{display:table;overflow:visible;font-size:8pt}thead{display:table-header-group}th,td{min-width:0}details>summary{display:none}details.extension:not([open])>:not(summary),details>section{display:block!important}a{color:#111;text-decoration:underline}footer{color:#111;background:#fff;border-top:1px solid #777}}
-</style><meta content="strict-origin-when-cross-origin" name="referrer"/></head>
-<body><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a><header aria-labelledby="titre-page" class="hero" id="top"><div class="hero-media"><a aria-label="Abrir la imagen: Fortaleza de San Juan de Ulúa frente a Veracruz (se abre en una pestaña nueva)" class="img-link" href="https://commons.wikimedia.org/wiki/File:San_Juan_de_Ulua,_Veracruz.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la imagen en una pestaña nueva"><img alt="Fortaleza de San Juan de Ulúa frente a Veracruz" decoding="async" fetchpriority="high" loading="eager" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/San%20Juan%20de%20Ulua%2C%20Veracruz.jpg?width=1600" style="max-width:100%;height:auto;object-fit:contain;object-position:center;filter:none;opacity:1"/></a></div><div class="hero-content"><div aria-label="Información de la sesión" class="hero-tags"><span class="tag">DNL Matemáticas en español</span><span class="tag">Sesión 4</span><span class="tag">16 ejercicios progresivos</span></div><h1 id="titre-page">Simulación comercial en Veracruz — Ficha de trabajo 14</h1><p>Ficha de trabajo alineada con la sesión 4: leer un escenario simulado, calcular costes, ingresos, beneficios, crédito y riesgo, y elegir una estrategia con un criterio anunciado y una limitación del modelo.</p></div></header>
+</style><meta content="strict-origin-when-cross-origin" name="referrer"/>
+<style>
+
+/* EDUPYTHON_CORRECTION_PREMIER_ENCADRE_V2 */
+.edupython-premier-encadre {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    min-height: 220px;
+}
+.edupython-premier-encadre > img:first-of-type,
+.edupython-premier-encadre > a:first-of-type > img:first-of-type,
+.edupython-premier-encadre .bg img,
+.edupython-premier-encadre .background img,
+.edupython-premier-encadre .image-background img {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    filter: none !important;
+}
+.edupython-premier-encadre::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background: rgba(0, 0, 0, .28) !important;
+    pointer-events: none !important;
+}
+.edupython-premier-encadre > *:not(img),
+.edupython-premier-encadre .content,
+.edupython-premier-encadre .hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+}
+.edupython-premier-encadre h1,
+.edupython-premier-encadre h2,
+.edupython-premier-encadre h3,
+.edupython-premier-encadre h4,
+.edupython-premier-encadre .title,
+.edupython-premier-encadre .subtitle {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    text-shadow: 0 2px 7px rgba(0,0,0,.95) !important;
+}
+
+</style>
+
+<style>
+
+/* EDUPYTHON_PHOTO_VISIBLE_SANS_DIMENSIONS_V3 */
+.edupython-premier-encadre img:first-of-type {
+    display: initial !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.edupython-premier-encadre h1,
+.edupython-premier-encadre h2,
+.edupython-premier-encadre h3,
+.edupython-premier-encadre h4,
+.edupython-premier-encadre .title,
+.edupython-premier-encadre .titre {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+</style>
+</head>
+<body><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a><header aria-labelledby="titre-page" class="edupython-premier-encadre edupython-premier-encadre hero" id="top"><div class="hero-media"><a aria-label="Abrir la imagen: Fortaleza de San Juan de Ulúa frente a Veracruz (se abre en una pestaña nueva)" class="img-link" href="https://commons.wikimedia.org/wiki/File:San_Juan_de_Ulua,_Veracruz.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la imagen en una pestaña nueva"><img alt="Fortaleza de San Juan de Ulúa frente a Veracruz" decoding="async" fetchpriority="high" loading="eager" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/San%20Juan%20de%20Ulua%2C%20Veracruz.jpg?width=1600" style="max-width:100%;height:auto;object-fit:contain;object-position:center;filter:none;opacity:1"/></a></div><div class="hero-content"><div aria-label="Información de la sesión" class="hero-tags"><span class="tag">DNL Matemáticas en español</span><span class="tag">Sesión 4</span><span class="tag">16 ejercicios progresivos</span></div><h1 id="titre-page">Simulación comercial en Veracruz — Ficha de trabajo 14</h1><p>Ficha de trabajo alineada con la sesión 4: leer un escenario simulado, calcular costes, ingresos, beneficios, crédito y riesgo, y elegir una estrategia con un criterio anunciado y una limitación del modelo.</p></div></header>
 <nav aria-label="Navegación por las secciones de la ficha" class="nav"><div class="nav-inner"><strong>Navegación de la ficha:</strong><a href="#datos">1. Datos</a><a href="#progreso">2. Progreso</a><a href="#basico">3. Nivel 1 — Iniciación</a><a href="#consolidacion">4. Nivel 2 — Consolidación</a><a href="#profundizacion">5. Nivel 3 — Razonamiento</a><a href="#experto">6. Nivel 4 — Desafío guiado</a><a href="#rubrica">7. Rúbrica de evaluación</a><a href="#extensiones">8. Extensión</a><a href="#autoevaluacion">9. Autoevaluación</a><a href="#top">↑ Arriba</a></div></nav>
 <main id="contenido-principal" tabindex="-1">
 <section id="datos"><div class="title"><h2 id="1-datos">1. Datos</h2></div><div class="note" id="aviso-simulacion" role="note">Todos los precios, tipos de cambio, tasas, impuestos, acontecimientos y probabilidades de esta ficha son datos didácticos simulados; no constituyen una reconstrucción histórica.</div><div class="grid"><div class="card"><h3 id="capital-inicial">Capital inicial</h3><p>10 000 pesos por casa comercial.</p></div><div class="card"><h3 id="mercancias">Mercancías</h3><p>Seda: 100 pesos/quintal. Especias: 80 pesos/quintal. Índigo: 60 pesos/quintal.</p></div><div class="card"><h3 id="transporte">Transporte</h3><p>Veracruz → México: 5 pesos/quintal. Veracruz → Oaxaca: 12 pesos/quintal.</p></div><div class="card"><h3 id="evento">Evento</h3><p>Un ataque reduce la oferta y aumenta el precio de la seda un 20 %.</p></div><div class="card"><h3 id="credito">Crédito</h3><p>Préstamo de 5 000 pesos: devolución de 5 375 pesos.</p></div><div class="card"><h3 id="escenario-final">Escenario final</h3><p>Ejemplo simulado: ingreso 13 800; compra 10 000; transporte financiado por separado 500; inversión total 10 500; beneficio bruto 3 300; gastos 3 % del bruto; impuesto 20 % del bruto; beneficio neto 2 541.</p></div></div></section>

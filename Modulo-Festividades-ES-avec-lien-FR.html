@@ -158,7 +158,92 @@ footer p,.footer p{margin-inline:auto!important;text-align:center!important}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(forced-colors:active){*{box-shadow:none!important}:where(a,button,input,select,textarea,summary){forced-color-adjust:auto}}
 @media print{@page{margin:1.4cm}body{overflow:visible!important;color:#111!important;background:#fff!important;font-size:10.5pt}.skip,.skip-link,.nav,.top-actions,.nav-toggle,.btn-complete,.status-message{display:none!important}header,.header,footer,.footer{color:#111!important;background:#fff!important;box-shadow:none!important}header *,.header *,footer *,.footer *{color:#111!important;text-shadow:none!important}:where(.overview,.session,.media-card,.mini-card,.video-card,.figure,.photo-card){box-shadow:none!important}:where(h1,h2,h3,h4,figure,.media-card,.mini-card,.session-detail,.expected-output){break-inside:avoid}img{max-height:11cm!important;object-fit:contain!important}a{color:#111!important;text-decoration:underline}}
-</style></head>
+</style>
+<style>
+
+/* EDUPYTHON_CORRECTION_PREMIER_ENCADRE_V2 */
+.edupython-premier-encadre {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    min-height: 220px;
+}
+.edupython-premier-encadre > img:first-of-type,
+.edupython-premier-encadre > a:first-of-type > img:first-of-type,
+.edupython-premier-encadre .bg img,
+.edupython-premier-encadre .background img,
+.edupython-premier-encadre .image-background img {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    filter: none !important;
+}
+.edupython-premier-encadre::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background: rgba(0, 0, 0, .28) !important;
+    pointer-events: none !important;
+}
+.edupython-premier-encadre > *:not(img),
+.edupython-premier-encadre .content,
+.edupython-premier-encadre .hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+}
+.edupython-premier-encadre h1,
+.edupython-premier-encadre h2,
+.edupython-premier-encadre h3,
+.edupython-premier-encadre h4,
+.edupython-premier-encadre .title,
+.edupython-premier-encadre .subtitle {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    text-shadow: 0 2px 7px rgba(0,0,0,.95) !important;
+}
+
+</style>
+
+<style>
+
+/* EDUPYTHON_PHOTO_VISIBLE_SANS_DIMENSIONS_V3 */
+.edupython-premier-encadre img:first-of-type {
+    display: initial !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.edupython-premier-encadre h1,
+.edupython-premier-encadre h2,
+.edupython-premier-encadre h3,
+.edupython-premier-encadre h4,
+.edupython-premier-encadre .title,
+.edupython-premier-encadre .titre {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+</style>
+</head>
 <body><a class="skip" href="#contenu-principal">Ir al contenido principal</a><header class="header" id="top">
 <div class="header-content"><div class="top-actions"><a aria-label="Abrir la versión francesa del módulo" class="lang-switch" href="Modulo-Festividades.html" rel="noopener"><span aria-hidden="true">🇫🇷 </span>Versión francesa</a></div>
 <h1 id="titre-page">Módulo Festividades — Matemáticas y cultura hispana</h1>
@@ -166,7 +251,7 @@ footer p,.footer p{margin-inline:auto!important;text-align:center!important}
 <p class="level">DNL de Matemáticas en español · 3 sesiones de 120 minutos · 6 horas · Nivel de Seconde del sistema educativo francés</p>
 <p class="intro-seo">Módulo DNL de Matemáticas en español organizado en torno a festividades hispánicas: geometría, proporcionalidad, probabilidad, funciones afines sencillas, vocabulario académico y comunicación cultural respetuosa.</p>
 </div>
-</header><nav aria-label="Navegación principal" class="nav"><div class="nav-inner"><a href="#vision-general">Visión general</a><a href="#dia-muertos">Festividad 1</a><a href="#navidad">Festividad 2</a><a href="#semana-santa">Festividad 3</a></div></nav><main class="container" id="contenu-principal" tabindex="-1"><section class="overview" id="vision-general"><h2>Visión general</h2><p>Este módulo de Seconde comprende tres sesiones de dos horas. Cada sesión articula una contextualización cultural documentada, una pregunta matemática precisa, datos y unidades explícitos, un procedimiento de cálculo, una comprobación, una producción en español y una limitación del modelo. Las prácticas varían según países, regiones, comunidades y familias: ninguna festividad se presenta como uniforme en todo el mundo hispanohablante.</p></section><h2 class="blocks-heading">Las tres festividades</h2><section class="session" data-item="1" id="dia-muertos"><div class="session-head"><div class="session-number">1</div><div><h2 id="titre-bloc-1">Sesión 1 — Día de Muertos: memoria, simetrías y proporciones</h2><p class="session-duration">📅 Finales de octubre y principios de noviembre; el 1 y el 2 de noviembre son fechas centrales en México</p></div></div><p class="session-description"><strong>Referencia cultural:</strong> en México, las fiestas indígenas dedicadas a los muertos relacionan herencias indígenas y festividades católicas. Celebran el retorno transitorio de los difuntos y adoptan formas diversas según las comunidades. El estudio utiliza ejemplos documentados de ofrendas, flores, altares y papel picado sin presentar una práctica local como norma nacional única.</p><p class="session-description math-question"><strong>Pregunta matemática:</strong> ¿cómo diseñar un panel de papel picado y un esquema de ofrenda respetando una simetría axial, una escala y unas proporciones declaradas?</p><p class="session-description"><strong>Conceptos matemáticos:</strong> Simetría axial, escala, proporcionalidad, perímetro, área y porcentajes.</p><section aria-label="Desarrollo pedagógico" class="learning-sequence"><h3>Desarrollo metodológico</h3><ol><li>Observar una fotografía documentada y anotar únicamente los elementos visibles antes de interpretarlos.</li><li>Localizar en un motivo de papel picado un posible eje, puntos correspondientes y distancias al eje.</li><li>Construir una mitad del motivo sobre una cuadrícula y obtener su imagen mediante simetría axial.</li><li>Elegir una escala 1:n para el esquema de una ofrenda, convertir las longitudes a una misma unidad y comprobar mediante el cálculo inverso.</li><li>Calcular perímetros, áreas o porcentajes, controlar la coherencia de los resultados y presentar el método y la limitación del modelo.</li></ol><p class="expected-output"><strong>Producción esperada:</strong> Motivo simétrico anotado, plano a escala, tabla de medidas, cálculos comprobados y comentario cultural prudente.</p></section><section aria-label="Recursos audiovisuales en español" class="audiovisual-panel"><h3>Recursos visuales y vídeo en español</h3><div class="mini-gallery">
+</header><nav aria-label="Navegación principal" class="nav"><div class="nav-inner"><a href="#vision-general">Visión general</a><a href="#dia-muertos">Festividad 1</a><a href="#navidad">Festividad 2</a><a href="#semana-santa">Festividad 3</a></div></nav><main class="container" id="contenu-principal" tabindex="-1"><section class="overview" id="vision-general"><h2>Visión general</h2><p>Este módulo de Seconde comprende tres sesiones de dos horas. Cada sesión articula una contextualización cultural documentada, una pregunta matemática precisa, datos y unidades explícitos, un procedimiento de cálculo, una comprobación, una producción en español y una limitación del modelo. Las prácticas varían según países, regiones, comunidades y familias: ninguna festividad se presenta como uniforme en todo el mundo hispanohablante.</p></section><h2 class="blocks-heading">Las tres festividades</h2><section class="session" data-item="1" id="dia-muertos"><div class="session-head"><div class="session-number">1</div><div><h2 id="titre-bloc-1">Sesión 1 — Día de Muertos: memoria, simetrías y proporciones</h2><p class="session-duration">📅 Finales de octubre y principios de noviembre; el 1 y el 2 de noviembre son fechas centrales en México</p></div></div><p class="session-description"><strong>Referencia cultural:</strong> en México, las fiestas indígenas dedicadas a los muertos relacionan herencias indígenas y festividades católicas. Celebran el retorno transitorio de los difuntos y adoptan formas diversas según las comunidades. El estudio utiliza ejemplos documentados de ofrendas, flores, altares y papel picado sin presentar una práctica local como norma nacional única.</p><p class="session-description math-question"><strong>Pregunta matemática:</strong> ¿cómo diseñar un panel de papel picado y un esquema de ofrenda respetando una simetría axial, una escala y unas proporciones declaradas?</p><p class="session-description"><strong>Conceptos matemáticos:</strong> Simetría axial, escala, proporcionalidad, perímetro, área y porcentajes.</p><section aria-label="Desarrollo pedagógico" class="learning-sequence"><h3>Desarrollo metodológico</h3><ol><li>Observar una fotografía documentada y anotar únicamente los elementos visibles antes de interpretarlos.</li><li>Localizar en un motivo de papel picado un posible eje, puntos correspondientes y distancias al eje.</li><li>Construir una mitad del motivo sobre una cuadrícula y obtener su imagen mediante simetría axial.</li><li>Elegir una escala 1:n para el esquema de una ofrenda, convertir las longitudes a una misma unidad y comprobar mediante el cálculo inverso.</li><li>Calcular perímetros, áreas o porcentajes, controlar la coherencia de los resultados y presentar el método y la limitación del modelo.</li></ol><p class="expected-output"><strong>Producción esperada:</strong> Motivo simétrico anotado, plano a escala, tabla de medidas, cálculos comprobados y comentario cultural prudente.</p></section><section aria-label="Recursos audiovisuales en español" class="edupython-premier-encadre edupython-premier-encadre audiovisual-panel"><h3>Recursos visuales y vídeo en español</h3><div class="mini-gallery">
 <div class="mini-card"><img alt="Altar tradicional del Día de Muertos en Milpa Alta con fotografías, velas, flores, guirnaldas de papel y alimentos" decoding="async" fetchpriority="low" height="900" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Altardediademuertos.jpg?width=1200" width="1200"/><div class="cap"><strong>Ofrenda documentada</strong><br/><em>Idea matemática:</em> conteo por niveles, proporciones y plano a escala.</div></div>
 <div class="mini-card"><img alt="Papel picado mexicano con motivos repetidos para estudiar ejes de simetría y transformaciones geométricas" decoding="async" fetchpriority="low" height="900" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Papel_picado_by_timlewisnm.jpg?width=1200" width="1200"/><div class="cap"><strong>Papel picado</strong><br/><em>Idea matemática:</em> simetría axial, repetición y comprobación de distancias al eje.</div></div>
 <div class="mini-card"><img alt="Calavera de azúcar decorada para observar patrones, ejes de simetría y repartos porcentuales" decoding="async" fetchpriority="low" height="900" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Calaverita_de_az%C3%BAcar.jpg?width=1200" width="1200"/><div class="cap"><strong>Calavera de azúcar</strong><br/><em>Idea matemática:</em> ejes de simetría, patrones y porcentajes sobre un modelo simplificado.</div></div>

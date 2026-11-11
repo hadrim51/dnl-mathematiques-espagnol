@@ -81,9 +81,94 @@ footer>*{max-width:100%;margin-inline:auto;text-align:center}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(forced-colors:active){*{box-shadow:none!important}:where(a,button,input,textarea,select,summary){forced-color-adjust:auto}}
 @media print{@page{margin:1.4cm}html,body{overflow:visible!important;color:#111!important;background:#fff!important}.nav,.no-print,.actions,.print-actions,button{display:none!important}.hero,header#top{min-height:0;padding:1cm;color:#111;background:#fff;border-bottom:2px solid #333;box-shadow:none}.hero-bg,.hero::after,header#top::after{display:none!important}.hero h1,.hero p,header#top h1,header#top p{color:#111!important;text-shadow:none!important}main,.container{display:block;width:100%;padding:0}.card,.exercise,.rubric,.competences,.intro,.note,details,.gallery-item{box-shadow:none!important;break-inside:auto}.table-wrap{overflow:visible!important;border:0}table,.rubric table,#bareme table{min-width:0!important;width:100%!important;font-size:8pt}img{max-height:11cm;object-fit:contain!important}footer{color:#111!important;background:#fff!important;border-top:1px solid #333}footer p{color:#111!important}}
-</style></head>
+</style>
+<style>
+
+/* EDUPYTHON_CORRECTION_PREMIER_ENCADRE_V2 */
+.edupython-premier-encadre {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    min-height: 220px;
+}
+.edupython-premier-encadre > img:first-of-type,
+.edupython-premier-encadre > a:first-of-type > img:first-of-type,
+.edupython-premier-encadre .bg img,
+.edupython-premier-encadre .background img,
+.edupython-premier-encadre .image-background img {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    filter: none !important;
+}
+.edupython-premier-encadre::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background: rgba(0, 0, 0, .28) !important;
+    pointer-events: none !important;
+}
+.edupython-premier-encadre > *:not(img),
+.edupython-premier-encadre .content,
+.edupython-premier-encadre .hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+}
+.edupython-premier-encadre h1,
+.edupython-premier-encadre h2,
+.edupython-premier-encadre h3,
+.edupython-premier-encadre h4,
+.edupython-premier-encadre .title,
+.edupython-premier-encadre .subtitle {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    text-shadow: 0 2px 7px rgba(0,0,0,.95) !important;
+}
+
+</style>
+
+<style>
+
+/* EDUPYTHON_PHOTO_VISIBLE_SANS_DIMENSIONS_V3 */
+.edupython-premier-encadre img:first-of-type {
+    display: initial !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.edupython-premier-encadre h1,
+.edupython-premier-encadre h2,
+.edupython-premier-encadre h3,
+.edupython-premier-encadre h4,
+.edupython-premier-encadre .title,
+.edupython-premier-encadre .titre {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+</style>
+</head>
 <body><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
-<header aria-labelledby="titre-page" class="hero hero-fixed" id="top" role="banner"><div class="hero-bg"><img alt="Cerro Rico y ciudad de Potosí" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cerro_Rico_Potosi_%28pixinn.net%29.jpg?width=1280"/></div><div aria-label="Informations de la séance" class="hero-tags hero-content"><span aria-hidden="true" class="tag">DNL Matemáticas en español</span><span aria-hidden="true" class="tag">Sesión 2</span><span aria-hidden="true" class="tag">Potosí, porcentajes y poder adquisitivo</span></div><h1 class="hero-content" id="titre-page">Comercio de la plata y Potosí: porcentajes, inflación y poder adquisitivo</h1><p class="hero-content">Ficha de curso alineada con la sesión 2: seguir una cantidad de plata, distinguir índice y dato histórico, calcular variaciones y repartos, comparar precios y salarios, formular una interpretación prudente y precisar un límite del modelo.</p></header><div aria-label="Impresión de la ficha de curso" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimir</button></div>
+<header aria-labelledby="titre-page" class="edupython-premier-encadre edupython-premier-encadre hero hero-fixed" id="top" role="banner"><div class="hero-bg"><img alt="Cerro Rico y ciudad de Potosí" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cerro_Rico_Potosi_%28pixinn.net%29.jpg?width=1280"/></div><div aria-label="Informations de la séance" class="hero-tags hero-content"><span aria-hidden="true" class="tag">DNL Matemáticas en español</span><span aria-hidden="true" class="tag">Sesión 2</span><span aria-hidden="true" class="tag">Potosí, porcentajes y poder adquisitivo</span></div><h1 class="hero-content" id="titre-page">Comercio de la plata y Potosí: porcentajes, inflación y poder adquisitivo</h1><p class="hero-content">Ficha de curso alineada con la sesión 2: seguir una cantidad de plata, distinguir índice y dato histórico, calcular variaciones y repartos, comparar precios y salarios, formular una interpretación prudente y precisar un límite del modelo.</p></header><div aria-label="Impresión de la ficha de curso" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimir</button></div>
 <nav aria-label="Navegación por las secciones de la ficha" class="nav"><div class="nav-inner"><strong>Navegación:</strong><a href="#formulario">1. Formulario matemático</a><a href="#metodo">2. Método de resolución</a><a href="#porcentajes">3. Porcentajes, repartos y comparación</a><a href="#inflación">4. Inflación y poder adquisitivo</a><a href="#modelos">5. Modelos simples: índice, evolución lineal y probabilidad</a><a href="#plantillas">6. Plantillas DNL para redactar</a><a href="#entrenamiento-matematico">7. Entrenamiento matemático</a><a href="#errores-frecuentes">8. Errores frecuentes</a><a href="#extensiones">9. Extensiones</a></div></nav>
 <main id="contenido-principal" tabindex="-1"><section class="card" id="objetivos-prerequisitos"><h2>Objetivos y prerrequisitos</h2><div class="grid"><div class="box"><h3>Objetivos</h3><ul><li>Calcular una diferencia absoluta, un porcentaje, un reparto y un índice base 100.</li><li>Comparar precio, salario y poder adquisitivo en trigo.</li><li>Distinguir dato documentado, dato simulado e hipótesis de modelo.</li><li>Explicar un resultado con una frase breve en español.</li></ul></div><div class="box"><h3>Prerrequisitos</h3><ul><li>Operaciones con números decimales y porcentajes.</li><li>Lectura de tablas y unidades.</li><li>Vocabulario A2: aumentar, disminuir, repartir, comparar y justificar.</li></ul></div></div></section>
 <section class="card" id="formulario"><h2 id="1-formulario-matematico">1. Formulario matemático</h2><div class="grid"><div class="box"><h3 id="aumento-absoluto">Aumento absoluto</h3><div class="formula">aumento absoluto = valor final − valor inicial</div></div><div class="box"><h3 id="variacion-porcentual">Variación porcentual</h3><div class="formula">variación % = (valor final − valor inicial) ÷ valor inicial × 100</div></div><div class="box"><h3 id="reparto-proporcional">Reparto proporcional</h3><div class="formula">parte = total × porcentaje ÷ 100</div></div><div class="box"><h3 id="razon-de-comparacion">Razón de comparación</h3><div class="formula">razón = cantidad mayor ÷ cantidad menor</div></div><div class="box"><h3 id="poder-adquisitivo">Poder adquisitivo</h3><div class="formula">cantidad comprada = salario ÷ precio unitario</div></div><div class="box"><h3 id="indice-y-resultado-medio">Índice y esperanza matemática</h3><div class="formula">índice base 100 = valor observado ÷ valor de referencia × 100<br/>E(X) = resultado favorable × P(éxito) + resultado desfavorable × P(fracaso)</div></div></div></section><section class="card" id="metodo"><h2 id="2-metodo-de-resolucion">2. Método de resolución</h2><ol><li><strong>Identifico:</strong> valor inicial, valor final, total, porcentaje, precio, salario, probabilidad y estatus del dato.</li><li><strong>Elijo:</strong> variación porcentual, coeficiente multiplicador, reparto, índice, poder adquisitivo o esperanza matemática.</li><li><strong>Calculo:</strong> con unidades, signo correcto y escritura decimal de los porcentajes cuando sea necesario.</li><li><strong>Compruebo:</strong> si el resultado es una cantidad, un porcentaje, un índice o una comparación.</li><li><strong>Interpreto:</strong> lo que significa para producción, reparto, inflación, trabajo o desigualdad.</li><li><strong>Formulo un límite:</strong> indicando que simplifica el dato o el modelo.</li><li><strong>Comunico:</strong> con una frase clara en español.</li></ol></section><section class="card" id="porcentajes"><h2 id="3-porcentajes-repartos-y-comparacion">3. Porcentajes, repartos y comparación</h2><div aria-label="Tabla desplazable horizontalmente" class="table-wrap" role="region" tabindex="0"><table><caption class="sr-only">Tabla de datos 5: Comercio de la plata: porcentajes, inflación y poder adquisitivo</caption><thead><tr><th scope="col">Situación</th><th scope="col">Herramienta</th><th scope="col">Control</th></tr></thead><tbody><tr><td>Aumento o disminución</td><td>Variación porcentual.</td><td>El signo positivo indica aumento; el negativo, disminución.</td></tr><tr><td>Reparto de un total</td><td>Porcentaje de un total.</td><td>Las partes deben ser coherentes con el total.</td></tr><tr><td>Complemento a 100 %</td><td>Resto = 100 % − suma conocida.</td><td>La suma final debe llegar a 100 %.</td></tr><tr><td>Comparar cantidades</td><td>Razón o cociente.</td><td>Decir “tantas veces la cantidad” no es lo mismo que “tantas unidades más”.</td></tr></tbody></table></div></section><section class="card" id="inflación"><h2 id="4-inflacion-y-poder-adquisitivo">4. Inflación y poder adquisitivo</h2><p>La inflación describe una subida general y sostenida del nivel de precios; el precio de un solo bien no basta para medirla. El poder adquisitivo indica cuántos bienes permite comprar un ingreso. Si los precios crecen más rápido que los salarios, el poder adquisitivo puede bajar.</p><div class="grid"><div class="box"><h3 id="precio">Precio</h3><p>Se estudia con variación porcentual o índice.</p></div><div class="box"><h3 id="salario-nominal">Salario nominal</h3><p>Es la cantidad de dinero recibida.</p></div><div class="box"><h3 id="poder-adquisitivo-2">Poder adquisitivo</h3><p>Relaciona salario y precio unitario.</p></div><div class="box"><h3 id="interpretacion-social">Interpretación social</h3><p>Más plata o más dinero no implican automáticamente mejor vida cotidiana.</p></div></div></section><section class="card" id="modelos"><h2 id="5-modelos-simples-indice-funcion-y-riesgo">5. Modelos simples: índice, evolución lineal y probabilidad</h2><div class="grid"><div class="box"><h3 id="indice">Índice</h3><p>Permite comparar un precio con una base común. La base suele valer 100.</p></div><div class="box"><h3 id="evolucion-lineal">Evolución lineal</h3><p>Permite modelizar una evolución media cuando se supone un cambio regular.</p></div><div class="box"><h3 id="resultado-medio-ponderado-opcional">Esperanza matemática, opcional</h3><p>Combina un escenario favorable y un escenario desfavorable con probabilidades.</p></div><div class="box"><h3 id="lectura-critica">Lectura crítica</h3><p>Un modelo simplifica la realidad: ayuda a razonar, pero no cuenta toda la historia.</p></div></div></section><section class="card" id="plantillas"><h2 id="6-plantillas-dnl-para-redactar">6. Plantillas DNL para redactar</h2><div class="grid"><div class="box"><h3 id="variacion">Variación</h3><p>“El valor inicial es … y el valor final es …. Uso la fórmula de variación porcentual.”</p></div><div class="box"><h3 id="reparto">Reparto</h3><p>“La parte se calcula multiplicando el total por el porcentaje correspondiente.”</p></div><div class="box"><h3 id="inflacion">Inflación</h3><p>“El precio aumenta más rápido que …; por eso el poder adquisitivo ….”</p></div><div class="box"><h3 id="conclusión-critica">Conclusión crítica</h3><p>“Este resultado muestra que la riqueza de la plata no se distribuye necesariamente de forma igualitaria.”</p></div></div></section><section class="card" id="entrenamiento-matematico"><h2 id="7-entrenamiento-matematico">7. Entrenamiento matemático</h2><p class="lead">Separa diferencia absoluta, cambio relativo, índice y poder adquisitivo. Cada método termina con un control y una interpretación; se emplean ejemplos distintos de las actividades.</p><div aria-label="Tabla desplazable horizontalmente" class="table-wrap" role="region" tabindex="0"><table><caption class="sr-only">Tabla de datos 6: Comercio de la plata: porcentajes, inflación y poder adquisitivo</caption><thead><tr><th scope="col">Situación</th><th scope="col">Método</th><th scope="col">Control</th></tr></thead><tbody><tr><td>Cambio en una cantidad</td><td>Δ=final−inicial</td><td>Misma unidad que los datos</td></tr><tr><td>Cambio relativo</td><td>(final−inicial)÷inicial×100</td><td>Dividir por el valor inicial</td></tr><tr><td>Parte de un total</td><td>total×p÷100</td><td>Las partes reconstruyen el total</td></tr><tr><td>Índice base 100</td><td>valor÷valor base×100</td><td>El valor base tiene índice 100</td></tr><tr><td>Poder adquisitivo</td><td>salario÷precio unitario</td><td>La unidad final es una cantidad de bienes</td></tr><tr><td>Evolución lineal</td><td>variación media=Δy÷Δx</td><td>Es una estimación bajo hipótesis lineal</td></tr></tbody></table></div><div class="grid"><div class="box"><h3 id="diferencia-o-razon">Diferencia o razón</h3><p>«Cuántas unidades más» pide una resta. «Cuántas veces» pide un cociente. No intercambies estas dos preguntas.</p></div><div class="box"><h3 id="inflacion-2">Inflación</h3><p>Compara por separado la variación del salario y la del precio; después calcula cuántos bienes permite comprar cada salario.</p></div><div class="box"><h3 id="dos-escenarios-con-riesgo">Dos escenarios probabilísticos</h3><p>Escribe las probabilidades en decimal, comprueba que suman 1 y aplica únicamente la fórmula proporcionada.</p></div><div class="box"><h3 id="lectura-critica-2">Lectura crítica</h3><p>Distingue conclusión matemática e interpretación histórica: un cálculo mide una diferencia, pero no explica por sí solo sus causas.</p></div></div></section><section class="card" id="errores-frecuentes"><h2 id="8-errores-frecuentes">8. Errores frecuentes</h2><ul><li>Confundir “puntos porcentuales” con “porcentaje”: +20 puntos no es +20%.</li><li>En variación %, olvidar dividir por el valor inicial.</li><li>En índices, olvidar que la base vale 100.</li><li>Mezclar “veces más” (razón) con “más unidades” (diferencia).</li><li>En poder adquisitivo, comparar salarios sin comparar precios (o al revés).</li><li>En probabilidad, usar p=15 en vez de p=0,15 en la fórmula.</li></ul></section><section class="note" id="extensiones" role="note"><strong>9. Extensiones:</strong> contexto histórico, social y documental situado después del bloque matemático.</section><button class="ghost no-print" data-action="close-extensions" type="button">Replegar las extensiones</button>

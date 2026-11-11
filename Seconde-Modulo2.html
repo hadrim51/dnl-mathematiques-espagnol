@@ -184,14 +184,99 @@ footer>*,.footer>*{max-width:100%;margin-inline:auto;text-align:center}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(forced-colors:active){*{box-shadow:none!important}:where(a,button,input,select,textarea,summary){forced-color-adjust:auto}}
 @media print{@page{margin:1.4cm}html,body{overflow:visible!important;color:#111!important;background:#fff!important}.skip-link,.nav,.top-actions{display:none!important}.header,.footer,footer{color:#111!important;background:#fff!important;box-shadow:none!important}.header *,.footer *,footer *{color:#111!important;text-shadow:none!important}.header-content,.container{width:100%;padding:0}.overview,.session,.session-detail,.media-card,.summary{box-shadow:none!important;break-inside:avoid}.resources{display:block}.btn-ficha{display:block;min-height:0;padding:.2rem 0;border:0;background:#fff;color:#111;box-shadow:none;text-align:left;text-decoration:underline}.media-card img{max-height:11cm;object-fit:contain}a{color:#111!important}}
-</style></head>
+</style>
+<style>
+
+/* EDUPYTHON_CORRECTION_PREMIER_ENCADRE_V2 */
+.edupython-premier-encadre {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    min-height: 220px;
+}
+.edupython-premier-encadre > img:first-of-type,
+.edupython-premier-encadre > a:first-of-type > img:first-of-type,
+.edupython-premier-encadre .bg img,
+.edupython-premier-encadre .background img,
+.edupython-premier-encadre .image-background img {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    filter: none !important;
+}
+.edupython-premier-encadre::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    background: rgba(0, 0, 0, .28) !important;
+    pointer-events: none !important;
+}
+.edupython-premier-encadre > *:not(img),
+.edupython-premier-encadre .content,
+.edupython-premier-encadre .hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+}
+.edupython-premier-encadre h1,
+.edupython-premier-encadre h2,
+.edupython-premier-encadre h3,
+.edupython-premier-encadre h4,
+.edupython-premier-encadre .title,
+.edupython-premier-encadre .subtitle {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    text-shadow: 0 2px 7px rgba(0,0,0,.95) !important;
+}
+
+</style>
+
+<style>
+
+/* EDUPYTHON_PHOTO_VISIBLE_SANS_DIMENSIONS_V3 */
+.edupython-premier-encadre img:first-of-type {
+    display: initial !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.edupython-premier-encadre h1,
+.edupython-premier-encadre h2,
+.edupython-premier-encadre h3,
+.edupython-premier-encadre h4,
+.edupython-premier-encadre .title,
+.edupython-premier-encadre .titre {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+</style>
+</head>
 <body><a class="skip-link" href="#contenu-principal">Aller au contenu principal</a><div class="header" id="top">
 <div class="header-content"><div class="top-actions"><a aria-label="Ouvrir la version espagnole du module" class="lang-switch" href="Seconde-Modulo2-ES-avec-lien-FR.html">🇪🇸 Version espagnole</a></div>
 <h1>Seconde — Module 2 — Géométrie, patrimoine et médiation mathématique</h1>
 <p class="subtitle">Alhambra · transformations du plan · tesselles · Teruel mudéjar · médiation orale</p>
 <p class="level">DNL · Mathématiques en espagnol · 5 séances · 5 heures</p>
 </div>
-</div><nav aria-label="Navigation de la fiche" class="nav" id="navigation-module2-style"><div class="nav-inner"><a href="#vision-general">Vue d’ensemble</a><a href="#seance1">Séance 1</a><a href="#seance2">Séance 2</a><a href="#seance3">Séance 3</a><a href="#seance4">Séance 4</a><a href="#seance5">Séance 5</a></div></nav><main class="container" id="contenu-principal" tabindex="-1"><section class="overview" id="vision-general"><h2>Vue d’ensemble</h2><p>Ce module organise cinq séances de DNL Mathématiques en espagnol. Les élèves observent des supports patrimoniaux précisément identifiés, distinguent description et interprétation, vérifient des isométries du plan, construisent une tuile de pavage, modélisent un motif et préparent une médiation orale. Les analyses géométriques proposées sont des lectures mathématiques actuelles : elles ne prétendent pas reconstituer les intentions ni les méthodes exactes des artisans historiques.</p><div class="key"><div class="synthesis"><strong>Problématique directrice :</strong><br/>Comment utiliser la géométrie des transformations pour observer, vérifier, construire et expliquer en espagnol un pavage ou un motif, en distinguant analyse mathématique actuelle et contexte historique ?</div></div></section><h2 class="sessions-heading">Les cinq séances</h2><article class="session" data-session="1" id="seance1"><div class="session-head"><div class="session-number">1</div><div><h3 id="titre-seance1">Séance 1 — Observer un motif patrimonial et formuler une hypothèse</h3><p class="session-duration">⏱ 60 minutes</p></div></div><p class="small-note"><strong>Objectif linguistique :</strong> Décrire, localiser et formuler une hypothèse prudente en espagnol.</p><p class="session-description"><strong>Exploration visuelle :</strong> analyse du Patio des Lions, organisé autour de sa fontaine centrale portée par douze lions, de ses galeries et de ses axes architecturaux, puis observation de la salle des Deux Sœurs et de sa coupole de muqarnas. Les élèves repèrent des alignements, des répétitions, des axes possibles et des centres possibles, sans affirmer une symétrie avant de l’avoir vérifiée sur un motif délimité.</p><p class="session-description"><strong>Questions de recherche :</strong> Sur quel motif précisément délimité travaille-t-on ? Quelle transformation semble envoyer une partie du motif sur une autre ? Quelles constructions ou mesures permettent de confirmer ou de réfuter l’hypothèse ?</p><div class="video-link">
+</div><nav aria-label="Navigation de la fiche" class="nav" id="navigation-module2-style"><div class="nav-inner"><a href="#vision-general">Vue d’ensemble</a><a href="#seance1">Séance 1</a><a href="#seance2">Séance 2</a><a href="#seance3">Séance 3</a><a href="#seance4">Séance 4</a><a href="#seance5">Séance 5</a></div></nav><main class="container" id="contenu-principal" tabindex="-1"><section class="overview" id="vision-general"><h2>Vue d’ensemble</h2><p>Ce module organise cinq séances de DNL Mathématiques en espagnol. Les élèves observent des supports patrimoniaux précisément identifiés, distinguent description et interprétation, vérifient des isométries du plan, construisent une tuile de pavage, modélisent un motif et préparent une médiation orale. Les analyses géométriques proposées sont des lectures mathématiques actuelles : elles ne prétendent pas reconstituer les intentions ni les méthodes exactes des artisans historiques.</p><div class="key"><div class="synthesis"><strong>Problématique directrice :</strong><br/>Comment utiliser la géométrie des transformations pour observer, vérifier, construire et expliquer en espagnol un pavage ou un motif, en distinguant analyse mathématique actuelle et contexte historique ?</div></div></section><h2 class="sessions-heading">Les cinq séances</h2><article class="edupython-premier-encadre edupython-premier-encadre session" data-session="1" id="seance1"><div class="session-head"><div class="session-number">1</div><div><h3 id="titre-seance1">Séance 1 — Observer un motif patrimonial et formuler une hypothèse</h3><p class="session-duration">⏱ 60 minutes</p></div></div><p class="small-note"><strong>Objectif linguistique :</strong> Décrire, localiser et formuler une hypothèse prudente en espagnol.</p><p class="session-description"><strong>Exploration visuelle :</strong> analyse du Patio des Lions, organisé autour de sa fontaine centrale portée par douze lions, de ses galeries et de ses axes architecturaux, puis observation de la salle des Deux Sœurs et de sa coupole de muqarnas. Les élèves repèrent des alignements, des répétitions, des axes possibles et des centres possibles, sans affirmer une symétrie avant de l’avoir vérifiée sur un motif délimité.</p><p class="session-description"><strong>Questions de recherche :</strong> Sur quel motif précisément délimité travaille-t-on ? Quelle transformation semble envoyer une partie du motif sur une autre ? Quelles constructions ou mesures permettent de confirmer ou de réfuter l’hypothèse ?</p><div class="video-link">
  🎬 <strong>Vidéo suggérée :</strong>
 <a href="https://www.youtube.com/watch?v=3rH84fGEMII" rel="noopener noreferrer" target="_blank">
  Mosaïques et géométrie de l’Alhambra de Grenade

@@ -35,7 +35,125 @@
 .sequence-60{margin:16px 0}.sequence-60 th,.sequence-60 td{padding:9px 10px}.differentiation-box{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}.differentiation-box>div{background:#F8FAFC;border-left:5px solid #64748B;border-radius:10px;padding:12px 14px}@media(max-width:760px){.differentiation-box{grid-template-columns:1fr}}
 .session-plan{background:#fff;border:1px solid #DDD6FE;border-left:6px solid #4B2E83;border-radius:14px;padding:22px;margin:22px 0;box-shadow:0 6px 18px rgba(68,33,84,.07)}.session-plan h2{margin-top:0}.session-plan table{width:100%;border-collapse:collapse;margin:12px 0}.session-plan th,.session-plan td{border:1px solid #DDD6FE;padding:9px 10px;vertical-align:top}.session-plan th{background:#4B2E83;color:#fff}.session-plan ul,.session-plan ol{margin-left:22px}.session-plan li{margin:5px 0}.task-box{background:#EFF6FF;border-left:5px solid #256EA8;border-radius:10px;padding:12px 14px;margin:12px 0}.evidence-box{background:#F0FDF4;border-left:5px solid #2E7D32;border-radius:10px;padding:12px 14px;margin:12px 0}.alert-box{background:#FFF7ED;border-left:5px solid #EA580C;border-radius:10px;padding:12px 14px;margin:12px 0}.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}.diff-grid>div{background:#F8FAFC;border-left:5px solid #64748B;border-radius:10px;padding:12px 14px}@media(max-width:760px){.diff-grid{grid-template-columns:1fr}}
 </style>
-<style id="coherence-module6-final">:root{--coh-main:#6A3574;--coh-accent:#D5A24A;--coh-soft:#F8EFFA;--coh-ink:#34213A;--coh-line:#6A357455}.coh-panel{max-width:1220px;margin:1.25rem auto 2rem;padding:1.3rem;border:1px solid var(--coh-line);border-left:8px solid var(--coh-main);border-radius:16px;background:var(--coh-soft);color:var(--coh-ink)}.coh-panel h2,.coh-panel h3{color:var(--coh-main)!important}.coh-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.9rem;margin:1rem 0}.coh-card{background:#fff;border:1px solid var(--coh-line);border-radius:12px;padding:1rem}.coh-card strong{display:block;color:var(--coh-main);margin-bottom:.35rem}.coh-table{width:100%;border-collapse:collapse;background:#fff;margin:1rem 0}.coh-table th,.coh-table td{border:1px solid var(--coh-line);padding:.72rem;text-align:left;vertical-align:top}.coh-table th{background:var(--coh-main)!important;color:#fff!important}.coh-ok{font-weight:800;color:var(--coh-main)}@media(max-width:720px){.coh-panel{border-radius:0;padding:1rem}.coh-table{display:block;overflow-x:auto}}@media print{.coh-panel{break-inside:avoid}}</style></head>
+<style id="coherence-module6-final">:root{--coh-main:#6A3574;--coh-accent:#D5A24A;--coh-soft:#F8EFFA;--coh-ink:#34213A;--coh-line:#6A357455}.coh-panel{max-width:1220px;margin:1.25rem auto 2rem;padding:1.3rem;border:1px solid var(--coh-line);border-left:8px solid var(--coh-main);border-radius:16px;background:var(--coh-soft);color:var(--coh-ink)}.coh-panel h2,.coh-panel h3{color:var(--coh-main)!important}.coh-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.9rem;margin:1rem 0}.coh-card{background:#fff;border:1px solid var(--coh-line);border-radius:12px;padding:1rem}.coh-card strong{display:block;color:var(--coh-main);margin-bottom:.35rem}.coh-table{width:100%;border-collapse:collapse;background:#fff;margin:1rem 0}.coh-table th,.coh-table td{border:1px solid var(--coh-line);padding:.72rem;text-align:left;vertical-align:top}.coh-table th{background:var(--coh-main)!important;color:#fff!important}.coh-ok{font-weight:800;color:var(--coh-main)}@media(max-width:720px){.coh-panel{border-radius:0;padding:1rem}.coh-table{display:block;overflow-x:auto}}@media print{.coh-panel{break-inside:avoid}}</style><style id="suppression-encadre-titre-hero">
+/* Supprime uniquement le grand encadre colore devant la photo. */
+.hero .hero-content,
+header.hero .hero-content,
+body > header.hero .hero-content {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Conserve le titre lisible directement sur la photographie. */
+.hero .hero-content h1,
+.hero .hero-content p,
+.hero .hero-content .tag,
+.hero .hero-content .badge {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Le bloc n'ajoute plus de marge coloree autour du titre. */
+.hero .hero-content {
+    padding: 0.35rem !important;
+}
+
+/* A l'impression, aucun fond colore n'est ajoute. */
+@media print {
+    .hero .hero-content,
+    header.hero .hero-content,
+    body > header.hero .hero-content {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+</style>
+<style id="items-hero-centres-et-compacts">
+/*
+   Petits items situes dans l'en-tete photographie :
+   DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
+*/
+.hero > .tag,
+.hero > .badge,
+.hero .hero-content > .tag,
+.hero .hero-content > .badge,
+header.hero > .tag,
+header.hero > .badge {
+    /* Empêche l'encadre de prendre toute la largeur disponible. */
+    display: inline-flex !important;
+    width: fit-content !important;
+    max-width: calc(100% - 1rem) !important;
+    min-width: 0 !important;
+
+    /* Centre l'item dans l'en-tête, y compris lorsque .hero est une grille. */
+    justify-self: center !important;
+    align-self: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    /* Réduit l'encadre au texte intérieur. */
+    min-height: 0 !important;
+    margin: 0.12rem auto !important;
+    padding: 0.20rem 0.48rem !important;
+    border-radius: 999px !important;
+
+    /* Maintient le texte proprement centré. */
+    line-height: 1.15 !important;
+    text-align: center !important;
+    white-space: normal !important;
+}
+
+/* Centre également le groupe si les items sont placés dans un conteneur. */
+.hero .tags,
+.hero .badges,
+.hero .meta,
+.hero .hero-tags,
+.hero .hero-badges {
+    display: flex !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.25rem !important;
+    margin-inline: auto !important;
+}
+
+/* Sur petit écran, les items restent compacts et visibles. */
+@media (max-width: 30rem) {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        max-width: calc(100% - 0.5rem) !important;
+        padding: 0.18rem 0.42rem !important;
+        font-size: 0.72rem !important;
+    }
+}
+
+/* Impression : conserve des items compacts sans fond inutile. */
+@media print {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        width: fit-content !important;
+        min-height: 0 !important;
+        margin: 0.08rem auto !important;
+        padding: 0.12rem 0.32rem !important;
+    }
+}
+</style>
+</head>
 <body>
 <header id="top">
 <h1>Ficha 28 — Curso — Sesión 3 · El Aleph y representaciones finitas</h1>

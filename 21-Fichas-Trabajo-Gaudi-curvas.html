@@ -19,7 +19,125 @@ table,.coh-table{display:block!important;width:100%!important;max-width:100%;ove
 @media(min-width:64rem){.nav-inner,.nav .bar{display:flex!important;flex-wrap:wrap!important;justify-content:center}.nav-inner>strong,.nav .bar>strong{flex-basis:100%;text-align:center}.nav a{flex:0 1 auto}.grid,.coh-grid{grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))!important}.card.wide,.item.wide{grid-column:span 2!important}.card.full,.item.full{grid-column:1/-1!important}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
 @media print{body{background:#fff}.nav,.video,.video-container,button{display:none!important}header{min-height:auto!important;padding:1rem!important;background:#fff!important;color:#000!important}header::after,.hero-bg-gaudi{display:none!important}header h1,header p{color:#000!important;text-shadow:none!important}section,details.card,details.extension,.coh-panel,.card,.item{box-shadow:none!important;break-inside:avoid}table,.coh-table{display:table!important;overflow:visible!important}th{position:static}}
-</style><link href="https://pensionnatsacrecoeur-my.sharepoint.com/personal/hadrim_psc-reims_fr/Documents/Documents/Copilot/Cr%C3%A9%C3%A9/21-Fichas-Trabajo-Gaudi-curvas%2048.html" rel="canonical"/><link href="https://pensionnatsacrecoeur-my.sharepoint.com/personal/hadrim_psc-reims_fr/Documents/Documents/Copilot/Cr%C3%A9%C3%A9/21-Fichas-Trabajo-Gaudi-curvas%2048.html" hreflang="es" rel="alternate"/><link href="https://pensionnatsacrecoeur-my.sharepoint.com/personal/hadrim_psc-reims_fr/Documents/Documents/Copilot/Cr%C3%A9%C3%A9/21-Fichas-Trabajo-Gaudi-curvas%2048.html" hreflang="x-default" rel="alternate"/><style id="wcag-rgaa-gaudi-2026">.skip-link{position:fixed;left:.75rem;top:.75rem;z-index:10000;padding:.75rem 1rem;border:3px solid currentColor;border-radius:.5rem;background:#fff;color:#111;font-weight:850;transform:translateY(-180%);transition:transform .15s}.skip-link:focus{transform:translateY(0)}.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}:is(a,button,input,textarea,select,summary):focus-visible{outline:3px solid #ffbf47!important;outline-offset:3px!important}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.skip-link{transition:none!important}}</style></head>
+</style><link href="https://pensionnatsacrecoeur-my.sharepoint.com/personal/hadrim_psc-reims_fr/Documents/Documents/Copilot/Cr%C3%A9%C3%A9/21-Fichas-Trabajo-Gaudi-curvas%2048.html" rel="canonical"/><link href="https://pensionnatsacrecoeur-my.sharepoint.com/personal/hadrim_psc-reims_fr/Documents/Documents/Copilot/Cr%C3%A9%C3%A9/21-Fichas-Trabajo-Gaudi-curvas%2048.html" hreflang="es" rel="alternate"/><link href="https://pensionnatsacrecoeur-my.sharepoint.com/personal/hadrim_psc-reims_fr/Documents/Documents/Copilot/Cr%C3%A9%C3%A9/21-Fichas-Trabajo-Gaudi-curvas%2048.html" hreflang="x-default" rel="alternate"/><style id="wcag-rgaa-gaudi-2026">.skip-link{position:fixed;left:.75rem;top:.75rem;z-index:10000;padding:.75rem 1rem;border:3px solid currentColor;border-radius:.5rem;background:#fff;color:#111;font-weight:850;transform:translateY(-180%);transition:transform .15s}.skip-link:focus{transform:translateY(0)}.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}:is(a,button,input,textarea,select,summary):focus-visible{outline:3px solid #ffbf47!important;outline-offset:3px!important}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.skip-link{transition:none!important}}</style><style id="suppression-encadre-titre-hero">
+/* Supprime uniquement le grand encadre colore devant la photo. */
+.hero .hero-content,
+header.hero .hero-content,
+body > header.hero .hero-content {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Conserve le titre lisible directement sur la photographie. */
+.hero .hero-content h1,
+.hero .hero-content p,
+.hero .hero-content .tag,
+.hero .hero-content .badge {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Le bloc n'ajoute plus de marge coloree autour du titre. */
+.hero .hero-content {
+    padding: 0.35rem !important;
+}
+
+/* A l'impression, aucun fond colore n'est ajoute. */
+@media print {
+    .hero .hero-content,
+    header.hero .hero-content,
+    body > header.hero .hero-content {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+</style>
+<style id="items-hero-centres-et-compacts">
+/*
+   Petits items situes dans l'en-tete photographie :
+   DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
+*/
+.hero > .tag,
+.hero > .badge,
+.hero .hero-content > .tag,
+.hero .hero-content > .badge,
+header.hero > .tag,
+header.hero > .badge {
+    /* Empêche l'encadre de prendre toute la largeur disponible. */
+    display: inline-flex !important;
+    width: fit-content !important;
+    max-width: calc(100% - 1rem) !important;
+    min-width: 0 !important;
+
+    /* Centre l'item dans l'en-tête, y compris lorsque .hero est une grille. */
+    justify-self: center !important;
+    align-self: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    /* Réduit l'encadre au texte intérieur. */
+    min-height: 0 !important;
+    margin: 0.12rem auto !important;
+    padding: 0.20rem 0.48rem !important;
+    border-radius: 999px !important;
+
+    /* Maintient le texte proprement centré. */
+    line-height: 1.15 !important;
+    text-align: center !important;
+    white-space: normal !important;
+}
+
+/* Centre également le groupe si les items sont placés dans un conteneur. */
+.hero .tags,
+.hero .badges,
+.hero .meta,
+.hero .hero-tags,
+.hero .hero-badges {
+    display: flex !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.25rem !important;
+    margin-inline: auto !important;
+}
+
+/* Sur petit écran, les items restent compacts et visibles. */
+@media (max-width: 30rem) {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        max-width: calc(100% - 0.5rem) !important;
+        padding: 0.18rem 0.42rem !important;
+        font-size: 0.72rem !important;
+    }
+}
+
+/* Impression : conserve des items compacts sans fond inutile. */
+@media print {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        width: fit-content !important;
+        min-height: 0 !important;
+        margin: 0.08rem auto !important;
+        padding: 0.12rem 0.32rem !important;
+    }
+}
+</style>
+</head>
 <body><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 <header aria-labelledby="titulo-principal" id="inicio" role="banner"><div aria-hidden="true" class="hero-bg-gaudi"><img alt="" aria-hidden="true" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Casa%20Batll%C3%B3%2001.jpg?width=1200"/></div>
 <h1 id="titulo-principal">Ficha 21 — Trabajo — Gaudí y las curvas matemáticas</h1>

@@ -50,7 +50,125 @@ details>summary{min-height:2.75rem;align-content:center}footer{position:static;m
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.hero-content{padding:0;color:#111;background:#fff;border:0}.hero-bg{display:none!important}.hero::after,header#top::after{display:none}.hero h1,header h1,.hero p,header p{color:#111!important;text-shadow:none!important}.table-wrap,.table{overflow:visible}table,.align-table{min-width:0}footer{position:static;color:#111;background:#fff;border-top:1px solid #333}footer p{color:#111}}
 
-</style><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="robots"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="googlebot"/><meta content="no-referrer" name="referrer"/></head><body><a class="skip" href="#contenu">Aller au contenu</a><header><div class="hero-content"><span class="tag">DNL · Mathématiques en espagnol</span><h1>Guide enseignant réservé</h1><p>Exposition mathématique · médiation orale · organisation · évaluation</p></div></header>
+</style><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="robots"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="googlebot"/><meta content="no-referrer" name="referrer"/><style id="suppression-encadre-titre-hero">
+/* Supprime uniquement le grand encadre colore devant la photo. */
+.hero .hero-content,
+header.hero .hero-content,
+body > header.hero .hero-content {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Conserve le titre lisible directement sur la photographie. */
+.hero .hero-content h1,
+.hero .hero-content p,
+.hero .hero-content .tag,
+.hero .hero-content .badge {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Le bloc n'ajoute plus de marge coloree autour du titre. */
+.hero .hero-content {
+    padding: 0.35rem !important;
+}
+
+/* A l'impression, aucun fond colore n'est ajoute. */
+@media print {
+    .hero .hero-content,
+    header.hero .hero-content,
+    body > header.hero .hero-content {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+</style>
+<style id="items-hero-centres-et-compacts">
+/*
+   Petits items situes dans l'en-tete photographie :
+   DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
+*/
+.hero > .tag,
+.hero > .badge,
+.hero .hero-content > .tag,
+.hero .hero-content > .badge,
+header.hero > .tag,
+header.hero > .badge {
+    /* Empêche l'encadre de prendre toute la largeur disponible. */
+    display: inline-flex !important;
+    width: fit-content !important;
+    max-width: calc(100% - 1rem) !important;
+    min-width: 0 !important;
+
+    /* Centre l'item dans l'en-tête, y compris lorsque .hero est une grille. */
+    justify-self: center !important;
+    align-self: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    /* Réduit l'encadre au texte intérieur. */
+    min-height: 0 !important;
+    margin: 0.12rem auto !important;
+    padding: 0.20rem 0.48rem !important;
+    border-radius: 999px !important;
+
+    /* Maintient le texte proprement centré. */
+    line-height: 1.15 !important;
+    text-align: center !important;
+    white-space: normal !important;
+}
+
+/* Centre également le groupe si les items sont placés dans un conteneur. */
+.hero .tags,
+.hero .badges,
+.hero .meta,
+.hero .hero-tags,
+.hero .hero-badges {
+    display: flex !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.25rem !important;
+    margin-inline: auto !important;
+}
+
+/* Sur petit écran, les items restent compacts et visibles. */
+@media (max-width: 30rem) {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        max-width: calc(100% - 0.5rem) !important;
+        padding: 0.18rem 0.42rem !important;
+        font-size: 0.72rem !important;
+    }
+}
+
+/* Impression : conserve des items compacts sans fond inutile. */
+@media print {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        width: fit-content !important;
+        min-height: 0 !important;
+        margin: 0.08rem auto !important;
+        padding: 0.12rem 0.32rem !important;
+    }
+}
+</style>
+</head><body><a class="skip" href="#contenu">Aller au contenu</a><header><div class="hero-content"><span class="tag">DNL · Mathématiques en espagnol</span><h1>Guide enseignant réservé</h1><p>Exposition mathématique · médiation orale · organisation · évaluation</p></div></header>
 <div aria-label="Impression du document / Impresión del documento" class="print-actions no-print" role="group"><button class="ghost" data-action="download-text" type="button">Descargar la corrección</button><button data-action="print" type="button">Imprimir</button></div><nav aria-label="Navigation des exercices / Navegación de los ejercicios"><strong>Exercices / Ejercicios :</strong><a aria-label="1 Observer un objet et formuler une question mathématique / Observar un objeto y formular una pregunta matemática" href="#ex1">1</a><a aria-label="2 Calculer et communiquer le nombre total de visiteurs / Calcular y comunicar el total de visitantes" href="#ex2">2</a><a aria-label="3 Classer des termes et associer des idées mathématiques / Clasificar términos y asociar ideas matemáticas" href="#ex3">3</a><a aria-label="4 Accueillir le public et annoncer une vérification mathématique / Dar la bienvenida y anunciar una comprobación matemática" href="#ex4">4</a><a aria-label="5 Répartir le temps entre les stands / Repartir el tiempo entre los estands" href="#ex5">5</a><a aria-label="6 Représenter et vérifier 23 en base 20 / Representar y verificar 23 en base 20" href="#ex6">6</a><a aria-label="7 Calculer et interpréter un pourcentage / Calcular e interpretar un porcentaje" href="#ex7">7</a><a aria-label="8 Expliquer un modèle scolaire de quipu décimal / Explicar un modelo escolar de quipu decimal" href="#ex8">8</a><a aria-label="9 Calculer et expliquer un angle de rotation / Calcular y explicar un ángulo de rotación" href="#ex9">9</a><a aria-label="10 Organiser un parcours de 45 minutes / Organizar un recorrido de 45 minutos" href="#ex10">10</a><a aria-label="11 Comparer deux représentations scolaires du même nombre / Comparar dos representaciones escolares del mismo número" href="#ex11">11</a><a aria-label="12 Calculer des pourcentages et choisir une représentation / Calcular porcentajes y elegir una representación" href="#ex12">12</a><a aria-label="13 Évaluer un stand selon trois critères / Evaluar un estand con tres criterios" href="#ex13">13</a><a aria-label="14 Répartir les visiteurs en respectant une capacité maximale / Repartir visitantes respetando una capacidad máxima" href="#ex14">14</a><a aria-label="15 Identifier des limites et proposer des améliorations / Identificar límites y proponer mejoras" href="#ex15">15</a><a aria-label="16 Rédiger une synthèse mathématique et culturelle / Redactar una síntesis matemática y cultural" href="#ex16">16</a></nav><main id="contenu" tabindex="-1"><section class="intro" id="guide-enseignant"><h2>Guide enseignant</h2>
 <p><strong>Niveau :</strong> Seconde DNL mathématiques-espagnol · <strong>Durée :</strong> 3 séances de 55 minutes pour le parcours complet, ou 55 minutes pour un parcours sélectif de 4 activités · <strong>Niveau CECRL visé :</strong> A2 vers B1, à adapter au groupe.</p>
 <p><strong>Prérequis :</strong> addition et division, pourcentage simple, angle plein, valeur positionnelle, vocabulaire de justification. <strong>Problématique :</strong> comment transformer une production mathématique en médiation compréhensible et vérifiable ?</p>

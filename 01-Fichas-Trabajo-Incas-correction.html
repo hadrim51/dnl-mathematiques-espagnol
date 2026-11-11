@@ -20,7 +20,125 @@ details>summary{min-height:2.75rem}footer{position:static;max-width:100%}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.hero-content{padding:0;background:#fff;border:0}.hero-bg{display:none!important}table{min-width:0}footer{position:static}}
 
-</style><meta content="prof-incas-2026-10-22-r5" name="version"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="robots"/><meta content="enseignants uniquement" name="confidentiality"/><meta content="no-referrer" name="referrer"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="googlebot"/></head>
+</style><meta content="prof-incas-2026-10-22-r5" name="version"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="robots"/><meta content="enseignants uniquement" name="confidentiality"/><meta content="no-referrer" name="referrer"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="googlebot"/><style id="suppression-encadre-titre-hero">
+/* Supprime uniquement le grand encadre colore devant la photo. */
+.hero .hero-content,
+header.hero .hero-content,
+body > header.hero .hero-content {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Conserve le titre lisible directement sur la photographie. */
+.hero .hero-content h1,
+.hero .hero-content p,
+.hero .hero-content .tag,
+.hero .hero-content .badge {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Le bloc n'ajoute plus de marge coloree autour du titre. */
+.hero .hero-content {
+    padding: 0.35rem !important;
+}
+
+/* A l'impression, aucun fond colore n'est ajoute. */
+@media print {
+    .hero .hero-content,
+    header.hero .hero-content,
+    body > header.hero .hero-content {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+</style>
+<style id="items-hero-centres-et-compacts">
+/*
+   Petits items situes dans l'en-tete photographie :
+   DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
+*/
+.hero > .tag,
+.hero > .badge,
+.hero .hero-content > .tag,
+.hero .hero-content > .badge,
+header.hero > .tag,
+header.hero > .badge {
+    /* Empêche l'encadre de prendre toute la largeur disponible. */
+    display: inline-flex !important;
+    width: fit-content !important;
+    max-width: calc(100% - 1rem) !important;
+    min-width: 0 !important;
+
+    /* Centre l'item dans l'en-tête, y compris lorsque .hero est une grille. */
+    justify-self: center !important;
+    align-self: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    /* Réduit l'encadre au texte intérieur. */
+    min-height: 0 !important;
+    margin: 0.12rem auto !important;
+    padding: 0.20rem 0.48rem !important;
+    border-radius: 999px !important;
+
+    /* Maintient le texte proprement centré. */
+    line-height: 1.15 !important;
+    text-align: center !important;
+    white-space: normal !important;
+}
+
+/* Centre également le groupe si les items sont placés dans un conteneur. */
+.hero .tags,
+.hero .badges,
+.hero .meta,
+.hero .hero-tags,
+.hero .hero-badges {
+    display: flex !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.25rem !important;
+    margin-inline: auto !important;
+}
+
+/* Sur petit écran, les items restent compacts et visibles. */
+@media (max-width: 30rem) {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        max-width: calc(100% - 0.5rem) !important;
+        padding: 0.18rem 0.42rem !important;
+        font-size: 0.72rem !important;
+    }
+}
+
+/* Impression : conserve des items compacts sans fond inutile. */
+@media print {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        width: fit-content !important;
+        min-height: 0 !important;
+        margin: 0.08rem auto !important;
+        padding: 0.12rem 0.32rem !important;
+    }
+}
+</style>
+</head>
 <body><a class="skip" href="#contenu">Aller au contenu principal</a><header><span class="tag">DNL · Mathématiques en espagnol</span><h1>Guide enseignant réservé</h1><p>Quipus incas y valor posicional · corrigé, aides et critères</p></header>
 <div aria-label="Actions du document / Acciones del documento" class="document-actions no-print" role="group">
 <button class="secondary" data-action="print-document" type="button">Imprimer / Imprimir</button>

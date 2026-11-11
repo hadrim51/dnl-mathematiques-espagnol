@@ -16,7 +16,125 @@ main{width:min(100%,var(--max));margin:auto;padding:.75rem}.card,.tarjeta,.ejerc
 .table-wrap{width:100%;max-width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:.8rem;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}.table-wrap:focus-visible{outline:.2rem solid var(--focus);outline-offset:.2rem}table{width:100%;min-width:100%;margin:0;border-collapse:collapse;background:#fff}caption{padding:.6rem;font-weight:800;text-align:left}th,td{min-width:9rem;padding:.75rem;border:1px solid var(--line);text-align:left;vertical-align:top;overflow-wrap:normal;word-break:normal}th{color:#fff;background:var(--primary-dark)}tbody tr:nth-child(even){background:#f4f8fb}.gallery-item{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:.85rem;box-shadow:var(--shadow)}.gallery-item img,.box .img-link img,.card .img-link img{width:100%;height:auto;aspect-ratio:16/10;object-fit:contain;object-position:center;background:#fff;filter:none!important;opacity:1!important}.caption,figcaption{padding:.8rem 1rem;color:var(--muted)}.img-link{display:block}.img-link:hover img,.img-link:focus-visible img{outline:.2rem solid var(--gold);outline-offset:-.2rem;filter:none!important;transform:none!important}.video{position:relative;overflow:hidden;aspect-ratio:16/9;background:#111;border:1px solid var(--line);border-radius:.85rem}.video iframe{position:absolute;inset:0;width:100%;height:100%}details{overflow:hidden;margin:1rem 0}summary{min-height:var(--tap);padding:1rem;color:var(--primary-dark);background:var(--soft);font-weight:850;cursor:pointer}details>:not(summary){margin-inline:1rem}
 button,.btn{display:inline-flex;min-width:var(--tap);min-height:var(--tap);align-items:center;justify-content:center;padding:.72rem 1.1rem;color:#fff;background:var(--primary);border:2px solid var(--primary);border-radius:.75rem;font:inherit;font-weight:850;line-height:1.2;cursor:pointer;box-shadow:0 .25rem .65rem rgb(40 95 143/.2)}button:hover,button:focus-visible,.btn:hover,.btn:focus-visible{background:var(--primary-dark);border-color:var(--primary-dark);box-shadow:0 .5rem 1.1rem rgb(27 61 89/.25)}button.secondary,button.secundario{background:var(--accent);border-color:var(--accent)}button.ghost,button.fantasma{color:var(--primary-dark);background:#fff;border-color:var(--primary)}footer{display:flex;width:100%;min-height:5rem;align-items:center;justify-content:center;margin-top:2rem;padding:1.5rem 1rem;color:#fff;background:var(--primary-dark);border-top:.35rem solid var(--gold);text-align:center;overflow-wrap:anywhere}footer p{width:100%;max-width:var(--max);margin:auto;color:#fff;text-align:center}
 @media(min-width:23.4375rem){.nav-inner,body>nav{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(min-width:48rem){main{padding:1.5rem}.grid,.cuadricula,.gallery,.video-grid,.cols{grid-template-columns:repeat(2,minmax(0,1fr))}.nav-inner,body>nav{grid-template-columns:repeat(3,minmax(0,1fr))}th,td{min-width:0}}@media(min-width:64rem){main{padding:2rem}.nav-inner,body>nav{display:flex;flex-wrap:wrap;justify-content:center}.nav strong,.nav-title,body>nav>strong{flex-basis:100%;text-align:center}.nav a,body>nav>a{flex:0 1 auto}.grid,.cuadricula{grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}.gallery,.video-grid{grid-template-columns:repeat(auto-fit,minmax(17rem,1fr))}}@media(max-width:35.99rem){.actions,.acciones{display:grid}.actions>*,.acciones>*{width:100%}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}@media(prefers-contrast:more){:root{--line:#637785}.nav a{border-color:currentColor}}@media print{@page{margin:1.3cm}.nav,body>nav,.skip,.skip-link,.no-print,.sin-imprimir,button,.actions,.acciones{display:none!important}body{color:#111;background:#fff;font-size:10pt}.hero,.simple-header{min-height:0;padding:.5cm;color:#111;background:#fff;border:1px solid #777}.hero .bg,.hero::after{display:none}.hero h1,.hero p,.simple-header h1,.simple-header p{color:#111!important;text-shadow:none}.card,.tarjeta,.ejercicio,.exercise,.intro,.note-block,.box,.summary,details{box-shadow:none;break-inside:avoid}.table-wrap{overflow:visible;border:0}table{display:table;font-size:8pt}thead{display:table-header-group}th,td{min-width:0}details>summary{display:none}details.extension>:not(summary){display:block!important}.video-grid,.video{display:none!important}footer{display:block;color:#111;background:#fff;border-top:1px solid #777}}
-</style><meta content="noindex, nofollow" name="robots"/><style>footer,footer p{text-align:center!important}footer{position:static!important;overflow-wrap:anywhere}</style></head>
+</style><meta content="noindex, nofollow" name="robots"/><style>footer,footer p{text-align:center!important}footer{position:static!important;overflow-wrap:anywhere}</style><style id="suppression-encadre-titre-hero">
+/* Supprime uniquement le grand encadre colore devant la photo. */
+.hero .hero-content,
+header.hero .hero-content,
+body > header.hero .hero-content {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Conserve le titre lisible directement sur la photographie. */
+.hero .hero-content h1,
+.hero .hero-content p,
+.hero .hero-content .tag,
+.hero .hero-content .badge {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Le bloc n'ajoute plus de marge coloree autour du titre. */
+.hero .hero-content {
+    padding: 0.35rem !important;
+}
+
+/* A l'impression, aucun fond colore n'est ajoute. */
+@media print {
+    .hero .hero-content,
+    header.hero .hero-content,
+    body > header.hero .hero-content {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+</style>
+<style id="items-hero-centres-et-compacts">
+/*
+   Petits items situes dans l'en-tete photographie :
+   DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
+*/
+.hero > .tag,
+.hero > .badge,
+.hero .hero-content > .tag,
+.hero .hero-content > .badge,
+header.hero > .tag,
+header.hero > .badge {
+    /* Empêche l'encadre de prendre toute la largeur disponible. */
+    display: inline-flex !important;
+    width: fit-content !important;
+    max-width: calc(100% - 1rem) !important;
+    min-width: 0 !important;
+
+    /* Centre l'item dans l'en-tête, y compris lorsque .hero est une grille. */
+    justify-self: center !important;
+    align-self: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    /* Réduit l'encadre au texte intérieur. */
+    min-height: 0 !important;
+    margin: 0.12rem auto !important;
+    padding: 0.20rem 0.48rem !important;
+    border-radius: 999px !important;
+
+    /* Maintient le texte proprement centré. */
+    line-height: 1.15 !important;
+    text-align: center !important;
+    white-space: normal !important;
+}
+
+/* Centre également le groupe si les items sont placés dans un conteneur. */
+.hero .tags,
+.hero .badges,
+.hero .meta,
+.hero .hero-tags,
+.hero .hero-badges {
+    display: flex !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.25rem !important;
+    margin-inline: auto !important;
+}
+
+/* Sur petit écran, les items restent compacts et visibles. */
+@media (max-width: 30rem) {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        max-width: calc(100% - 0.5rem) !important;
+        padding: 0.18rem 0.42rem !important;
+        font-size: 0.72rem !important;
+    }
+}
+
+/* Impression : conserve des items compacts sans fond inutile. */
+@media print {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        width: fit-content !important;
+        min-height: 0 !important;
+        margin: 0.08rem auto !important;
+        padding: 0.12rem 0.32rem !important;
+    }
+}
+</style>
+</head>
 <body><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 <header aria-labelledby="titulo-principal" class="hero" id="top"><div class="bg"><a aria-label="Abrir la imagen: Mapa de flujo estadístico de Charles Joseph Minard (se abre en una pestaña nueva)" class="img-link" href="https://commons.wikimedia.org/wiki/File:Minard.png" rel="noopener noreferrer" target="_blank" title="Abrir la imagen en una pestaña nueva"><img alt="Mapa de flujo estadístico de Charles Joseph Minard" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Minard.png?width=1600"/></a></div><span class="tag">DNL Matemáticas · Español</span><span class="tag">Sesión 3</span><span class="tag">Gráficos estadísticos</span><h1 id="titulo-principal">Gráficos estadísticos: leer, construir, elegir y auditar</h1></header>
 <nav aria-label="Navegación por las secciones de la ficha" class="nav"><div class="nav-inner"><strong>Navegación</strong><a href="#formulario">Formulario</a><a href="#tipos">Elegir</a><a href="#critica">Auditar</a><a href="#plantillas">Plantillas</a><a href="#errores">Errores frecuentes</a><a href="#entrenamiento-matematico">Entrenamiento matemático</a><a href="#extensiones">7. Extensiones</a><a href="#top">Arriba</a></div></nav>

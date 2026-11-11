@@ -94,6 +94,124 @@ main,.coh-panel{width:min(100%,var(--max));margin:auto;padding:var(--gutter)}.ca
 }
 
 </style>
+<style id="suppression-encadre-titre-hero">
+/* Supprime uniquement le grand encadre colore devant la photo. */
+.hero .hero-content,
+header.hero .hero-content,
+body > header.hero .hero-content {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Conserve le titre lisible directement sur la photographie. */
+.hero .hero-content h1,
+.hero .hero-content p,
+.hero .hero-content .tag,
+.hero .hero-content .badge {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Le bloc n'ajoute plus de marge coloree autour du titre. */
+.hero .hero-content {
+    padding: 0.35rem !important;
+}
+
+/* A l'impression, aucun fond colore n'est ajoute. */
+@media print {
+    .hero .hero-content,
+    header.hero .hero-content,
+    body > header.hero .hero-content {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+</style>
+<style id="items-hero-centres-et-compacts">
+/*
+   Petits items situes dans l'en-tete photographie :
+   DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
+*/
+.hero > .tag,
+.hero > .badge,
+.hero .hero-content > .tag,
+.hero .hero-content > .badge,
+header.hero > .tag,
+header.hero > .badge {
+    /* Empêche l'encadre de prendre toute la largeur disponible. */
+    display: inline-flex !important;
+    width: fit-content !important;
+    max-width: calc(100% - 1rem) !important;
+    min-width: 0 !important;
+
+    /* Centre l'item dans l'en-tête, y compris lorsque .hero est une grille. */
+    justify-self: center !important;
+    align-self: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    /* Réduit l'encadre au texte intérieur. */
+    min-height: 0 !important;
+    margin: 0.12rem auto !important;
+    padding: 0.20rem 0.48rem !important;
+    border-radius: 999px !important;
+
+    /* Maintient le texte proprement centré. */
+    line-height: 1.15 !important;
+    text-align: center !important;
+    white-space: normal !important;
+}
+
+/* Centre également le groupe si les items sont placés dans un conteneur. */
+.hero .tags,
+.hero .badges,
+.hero .meta,
+.hero .hero-tags,
+.hero .hero-badges {
+    display: flex !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.25rem !important;
+    margin-inline: auto !important;
+}
+
+/* Sur petit écran, les items restent compacts et visibles. */
+@media (max-width: 30rem) {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        max-width: calc(100% - 0.5rem) !important;
+        padding: 0.18rem 0.42rem !important;
+        font-size: 0.72rem !important;
+    }
+}
+
+/* Impression : conserve des items compacts sans fond inutile. */
+@media print {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        width: fit-content !important;
+        min-height: 0 !important;
+        margin: 0.08rem auto !important;
+        padding: 0.12rem 0.32rem !important;
+    }
+}
+</style>
 </head><body><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 <header aria-labelledby="titulo-principal" class="edupython-premier-encadre edupython-premier-encadre hero" id="top" role="banner"><div class="bg"><a aria-label="Abrir la imagen: Presentación ante una asamblea" class="img-link" href="https://commons.wikimedia.org/wiki/File:General_Assembly_of_the_United_Nations.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la imagen en una pestaña nueva"><img alt="Presentación ante una asamblea" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/General%20Assembly%20of%20the%20United%20Nations.jpg?width=1600"/></a></div><span class="etiqueta">16 ejercicios</span><span class="etiqueta">Sesión 5</span><span class="etiqueta">DNL Matemáticas en español</span><h1 id="titulo-principal">Ficha 20A — Trabajo — Presentación de un informe</h1><p>Comunicar datos, gráficos, métodos, interpretaciones y límites con claridad, rigor y prudencia.</p></header>
 <nav aria-label="Navegación por las secciones de la ficha" class="nav"><div class="nav-inner"><strong>Navegación</strong><a href="#competencias">Competencias</a><a href="#vocabulario">Vocabulario</a><a href="#metodo">Método</a><a href="#seguimiento">Seguimiento</a><a href="#basico">Iniciación</a><a href="#intermedio">Consolidación</a><a href="#avanzado">Razonamiento</a><a href="#experto">Desafío</a><a href="#rubrica">Rúbrica</a><a href="#extensiones">Extensión</a><a href="#top">Arriba</a></div></nav><section class="coh-panel" id="alineacion-final-modulo4"><h2 id="objetivos-representaciones-y-criterios-de-exito">Objetivos, representaciones y criterios de éxito</h2><p>Esta ficha de trabajo aplica el método con iniciación, consolidación y ampliaciones opcionales. Tema: Presentación pública. Nivel: Seconde.</p><div class="coh-grid"><div class="coh-card"><strong>Contextualizar</strong>Identificar pregunta, población, variable, unidad, año, fuente y límite antes de calcular.</div><div class="coh-card"><strong>Calcular</strong>Movilizar selección de evidencias, reparto del tiempo, escala visual y argumentación, con procedimiento visible y un control adecuado.</div><div class="coh-card"><strong>Representar</strong>Construir guion, diapositiva o mural, tabla de fuentes y rúbrica; toda representación incluye las etiquetas necesarias.</div><div class="coh-card"><strong>Interpretar y comunicar</strong> Presentar un dato completo, explicar un cálculo y responder a una pregunta del público, sin confundir asociación, causalidad y opinión.</div></div><div aria-label="Tabla 1 de Ficha 20A — Trabajo — Presentación de un informe" class="table-wrap" role="region" tabindex="0"><table class="coh-table"><caption class="sr-only">Tabla 1 de Ficha 20A — Trabajo — Presentación de un informe</caption><thead><tr><th scope="col">Etapa</th><th scope="col">Acción</th><th scope="col">Control</th></tr></thead><tbody><tr><td>1. Pregunta</td><td>Formular una pregunta medible.</td><td>Población, variable y contexto están definidos.</td></tr><tr><td>2. Datos</td><td>Seleccionar datos comparables.</td><td>Fuente, año, unidad y definición son visibles.</td></tr><tr><td>3. Cálculo</td><td>Escribir la fórmula, sustituir y conservar la unidad.</td><td>Orden, total, segundo método o estimación.</td></tr><tr><td>4. Representación</td><td>Elegir y construir el soporte adecuado.</td><td>Título, escala, leyenda y fuente permiten verificar.</td></tr><tr><td>5. Conclusión</td><td>Explicar qué muestra el resultado y qué no demuestra.</td><td>Frase prudente en español con un límite.</td></tr></tbody></table></div><p class="coh-ok">Recorrido esencial: estructurar el informe, presentar un dato completo, explicar un cálculo, elegir un gráfico, auditar una diapositiva, interpretar con prudencia y responder a una pregunta del público.</p></section>

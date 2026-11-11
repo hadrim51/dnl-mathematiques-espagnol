@@ -38,7 +38,125 @@ footer{position:static;max-width:100%}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.hero-content{padding:0;color:#111;background:#fff;border:0}.hero-bg{display:none!important}.hero::after{display:none}.hero h1,.hero p{color:#111!important;text-shadow:none!important}table,.align-table,.table-wrap table{min-width:0}footer{position:static;color:#111;background:#fff;border-top:1px solid #333}footer p{color:#111}}
 
-</style><meta content="enseignant-mayas-r3-2026-10-22" name="version"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="robots"/><meta content="enseignants uniquement" name="confidentiality"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="googlebot"/><meta content="no-referrer" name="referrer"/></head><body><a class="skip" href="#contenu">Aller au contenu</a><header><span class="tag">DNL · Mathématiques en espagnol</span><h1>Guide enseignant réservé</h1><p>Numeración maya: base 20 regular y cero posicional · corrigé, aides et critères</p></header><div aria-label="Impression du document / Impresión del documento" class="print-actions no-print" role="group"><button data-action="download-text" type="button">Télécharger le texte / Descargar texto</button><button data-action="print" type="button">Imprimer / Imprimir</button></div><nav aria-label="Navigation des exercices / Navegación de los ejercicios"><strong>Exercices / Ejercicios :</strong><a href="#ex1">1</a><a href="#ex2">2</a><a href="#ex3">3</a><a href="#ex4">4</a><a href="#ex5">5</a><a href="#ex6">6</a><a href="#ex7">7</a><a href="#ex8">8</a><a href="#ex9">9</a><a href="#ex10">10</a><a href="#ex11">11</a><a href="#ex12">12</a><a href="#ex13">13</a><a href="#ex14">14</a><a href="#ex15">15</a><a href="#ex16">16</a></nav><main id="contenu" tabindex="-1"><section class="intro" id="bareme-exact"><h2>Barème exact sur 20 points</h2>
+</style><meta content="enseignant-mayas-r3-2026-10-22" name="version"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="robots"/><meta content="enseignants uniquement" name="confidentiality"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="googlebot"/><meta content="no-referrer" name="referrer"/><style id="suppression-encadre-titre-hero">
+/* Supprime uniquement le grand encadre colore devant la photo. */
+.hero .hero-content,
+header.hero .hero-content,
+body > header.hero .hero-content {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Conserve le titre lisible directement sur la photographie. */
+.hero .hero-content h1,
+.hero .hero-content p,
+.hero .hero-content .tag,
+.hero .hero-content .badge {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Le bloc n'ajoute plus de marge coloree autour du titre. */
+.hero .hero-content {
+    padding: 0.35rem !important;
+}
+
+/* A l'impression, aucun fond colore n'est ajoute. */
+@media print {
+    .hero .hero-content,
+    header.hero .hero-content,
+    body > header.hero .hero-content {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+</style>
+<style id="items-hero-centres-et-compacts">
+/*
+   Petits items situes dans l'en-tete photographie :
+   DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
+*/
+.hero > .tag,
+.hero > .badge,
+.hero .hero-content > .tag,
+.hero .hero-content > .badge,
+header.hero > .tag,
+header.hero > .badge {
+    /* Empêche l'encadre de prendre toute la largeur disponible. */
+    display: inline-flex !important;
+    width: fit-content !important;
+    max-width: calc(100% - 1rem) !important;
+    min-width: 0 !important;
+
+    /* Centre l'item dans l'en-tête, y compris lorsque .hero est une grille. */
+    justify-self: center !important;
+    align-self: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    /* Réduit l'encadre au texte intérieur. */
+    min-height: 0 !important;
+    margin: 0.12rem auto !important;
+    padding: 0.20rem 0.48rem !important;
+    border-radius: 999px !important;
+
+    /* Maintient le texte proprement centré. */
+    line-height: 1.15 !important;
+    text-align: center !important;
+    white-space: normal !important;
+}
+
+/* Centre également le groupe si les items sont placés dans un conteneur. */
+.hero .tags,
+.hero .badges,
+.hero .meta,
+.hero .hero-tags,
+.hero .hero-badges {
+    display: flex !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.25rem !important;
+    margin-inline: auto !important;
+}
+
+/* Sur petit écran, les items restent compacts et visibles. */
+@media (max-width: 30rem) {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        max-width: calc(100% - 0.5rem) !important;
+        padding: 0.18rem 0.42rem !important;
+        font-size: 0.72rem !important;
+    }
+}
+
+/* Impression : conserve des items compacts sans fond inutile. */
+@media print {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        width: fit-content !important;
+        min-height: 0 !important;
+        margin: 0.08rem auto !important;
+        padding: 0.12rem 0.32rem !important;
+    }
+}
+</style>
+</head><body><a class="skip" href="#contenu">Aller au contenu</a><header><span class="tag">DNL · Mathématiques en espagnol</span><h1>Guide enseignant réservé</h1><p>Numeración maya: base 20 regular y cero posicional · corrigé, aides et critères</p></header><div aria-label="Impression du document / Impresión del documento" class="print-actions no-print" role="group"><button data-action="download-text" type="button">Télécharger le texte / Descargar texto</button><button data-action="print" type="button">Imprimer / Imprimir</button></div><nav aria-label="Navigation des exercices / Navegación de los ejercicios"><strong>Exercices / Ejercicios :</strong><a href="#ex1">1</a><a href="#ex2">2</a><a href="#ex3">3</a><a href="#ex4">4</a><a href="#ex5">5</a><a href="#ex6">6</a><a href="#ex7">7</a><a href="#ex8">8</a><a href="#ex9">9</a><a href="#ex10">10</a><a href="#ex11">11</a><a href="#ex12">12</a><a href="#ex13">13</a><a href="#ex14">14</a><a href="#ex15">15</a><a href="#ex16">16</a></nav><main id="contenu" tabindex="-1"><section class="intro" id="bareme-exact"><h2>Barème exact sur 20 points</h2>
 <div aria-label="Tableau 1 défilable horizontalement" class="table-wrap" role="region" tabindex="0"><table><caption>Barème analytique sur 20 points</caption><thead><tr><th scope="col">Domaine</th><th scope="col">Points</th><th scope="col">Indicateurs</th></tr></thead><tbody>
 <tr><td>Compréhension mathématique</td><td>6</td><td>Signes, niveaux, résultats et représentations exacts.</td></tr>
 <tr><td>Démarche et vérification</td><td>4</td><td>Quotient/reste ou décomposition visible ; recomposition correcte ; contrôle des chiffres entre 0 et 19.</td></tr>

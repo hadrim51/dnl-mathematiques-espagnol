@@ -1198,7 +1198,125 @@ footer>*{max-width:100%;margin-inline:auto;text-align:center}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(forced-colors:active){*{box-shadow:none!important}:where(a,button,input,textarea,select,summary){forced-color-adjust:auto}}
 @media print{@page{margin:1.4cm}html,body{overflow:visible!important;color:#111!important;background:#fff!important}.nav,.no-print,.actions,.print-actions,button{display:none!important}.hero,header#top{min-height:0;padding:1cm;color:#111;background:#fff;border-bottom:2px solid #333;box-shadow:none}.hero-bg,.hero::after,header#top::after{display:none!important}.hero h1,.hero p,header#top h1,header#top p{color:#111!important;text-shadow:none!important}main,.container{display:block;width:100%;padding:0}.card,.exercise,.rubric,.intro,.note,details,.gallery-item,.mapbox{box-shadow:none!important;break-inside:auto}.table-wrap{overflow:visible!important;border:0}table,.rubric table,#bareme table{min-width:0!important;width:100%!important;font-size:8pt}img{max-height:11cm;object-fit:contain!important}footer{color:#111!important;background:#fff!important;border-top:1px solid #333}footer p{color:#111!important}}
-</style></head><body class="ui-teacher"><a class="skip" href="#contenu">Aller au contenu</a><header class="hero" id="top"><span class="tag">DNL · Mathématiques en espagnol</span><h1>Guide enseignant — Rutas comerciales del Imperio español: escalas, riesgos y decisiones</h1><p>Routes commerciales · échelles · durées · coûts · risques · décision</p></header><div aria-label="Impression du corrigé / Impresión de la corrección" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimer / Imprimir</button></div><nav aria-label="Navigation bilingue des exercices" class="nav"><div class="nav-inner"><a href="#bareme">Barème</a><strong>Exercices / Ejercicios :</strong><a href="#ex1">1</a><a href="#ex2">2</a><a href="#ex3">3</a><a href="#ex4">4</a><a href="#ex5">5</a><a href="#ex6">6</a><a href="#ex7">7</a><a href="#ex8">8</a><a href="#ex9">9</a><a href="#ex10">10</a><a href="#ex11">11</a><a href="#ex12">12</a><a href="#ex13">13</a><a href="#ex14">14</a><a href="#ex15">15</a><a href="#ex16">16</a></div></nav><main id="contenu" tabindex="-1"><section class="intro" id="cadre"><h2>Cadre réservé à l’enseignant</h2><p><strong>Niveau :</strong> Seconde DNL mathématiques-espagnol. <strong>Durée :</strong> 60 minutes pour les exercices 1 à 8 ; exercices 9 à 16 en différenciation. <strong>Prérequis :</strong> proportionnalité, conversions, pourcentages, fonction affine et substitution dans une formule.</p><p><strong>Problématique :</strong> comment comparer des routes commerciales à partir de grandeurs et de modèles simplifiés sans transformer ces modèles en affirmations historiques ?</p><p><strong>Objectifs :</strong> vérifier unités et ordres de grandeur ; distinguer fréquence, probabilité et valeur espérée ; produire en espagnol une conclusion comportant résultat, unité, statut des données et limite.</p><h3>Aides graduées</h3><ol><li>Faire relever données, unités et statut.</li><li>Faire nommer la relation utile.</li><li>Donner l’amorce « La relación utilizada es… ».</li><li>Faire vérifier par unité, ordre de grandeur ou calcul inverse.</li></ol><h3>Évaluation sur 20</h3><ul><li>Compréhension mathématique : 5 points.</li><li>Démarche, calculs, unités et vérification : 6 points.</li><li>Interprétation culturelle et statut des données : 3 points.</li><li>Communication en espagnol et vocabulaire : 4 points.</li><li>Autonomie, conclusion et limite : 2 points.</li></ul><p><strong>Réponses acceptables :</strong> toute formulation espagnole intelligible donnant le résultat, l’unité et une interprétation prudente. Ne pas confondre erreur linguistique sans effet sur le sens et erreur mathématique.</p></section><section aria-labelledby="titre-bareme" class="rubric" id="bareme">
+</style><style id="suppression-encadre-titre-hero">
+/* Supprime uniquement le grand encadre colore devant la photo. */
+.hero .hero-content,
+header.hero .hero-content,
+body > header.hero .hero-content {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Conserve le titre lisible directement sur la photographie. */
+.hero .hero-content h1,
+.hero .hero-content p,
+.hero .hero-content .tag,
+.hero .hero-content .badge {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Le bloc n'ajoute plus de marge coloree autour du titre. */
+.hero .hero-content {
+    padding: 0.35rem !important;
+}
+
+/* A l'impression, aucun fond colore n'est ajoute. */
+@media print {
+    .hero .hero-content,
+    header.hero .hero-content,
+    body > header.hero .hero-content {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+</style>
+<style id="items-hero-centres-et-compacts">
+/*
+   Petits items situes dans l'en-tete photographie :
+   DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
+*/
+.hero > .tag,
+.hero > .badge,
+.hero .hero-content > .tag,
+.hero .hero-content > .badge,
+header.hero > .tag,
+header.hero > .badge {
+    /* Empêche l'encadre de prendre toute la largeur disponible. */
+    display: inline-flex !important;
+    width: fit-content !important;
+    max-width: calc(100% - 1rem) !important;
+    min-width: 0 !important;
+
+    /* Centre l'item dans l'en-tête, y compris lorsque .hero est une grille. */
+    justify-self: center !important;
+    align-self: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    /* Réduit l'encadre au texte intérieur. */
+    min-height: 0 !important;
+    margin: 0.12rem auto !important;
+    padding: 0.20rem 0.48rem !important;
+    border-radius: 999px !important;
+
+    /* Maintient le texte proprement centré. */
+    line-height: 1.15 !important;
+    text-align: center !important;
+    white-space: normal !important;
+}
+
+/* Centre également le groupe si les items sont placés dans un conteneur. */
+.hero .tags,
+.hero .badges,
+.hero .meta,
+.hero .hero-tags,
+.hero .hero-badges {
+    display: flex !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.25rem !important;
+    margin-inline: auto !important;
+}
+
+/* Sur petit écran, les items restent compacts et visibles. */
+@media (max-width: 30rem) {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        max-width: calc(100% - 0.5rem) !important;
+        padding: 0.18rem 0.42rem !important;
+        font-size: 0.72rem !important;
+    }
+}
+
+/* Impression : conserve des items compacts sans fond inutile. */
+@media print {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        width: fit-content !important;
+        min-height: 0 !important;
+        margin: 0.08rem auto !important;
+        padding: 0.12rem 0.32rem !important;
+    }
+}
+</style>
+</head><body class="ui-teacher"><a class="skip" href="#contenu">Aller au contenu</a><header class="hero" id="top"><span class="tag">DNL · Mathématiques en espagnol</span><h1>Guide enseignant — Rutas comerciales del Imperio español: escalas, riesgos y decisiones</h1><p>Routes commerciales · échelles · durées · coûts · risques · décision</p></header><div aria-label="Impression du corrigé / Impresión de la corrección" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimer / Imprimir</button></div><nav aria-label="Navigation bilingue des exercices" class="nav"><div class="nav-inner"><a href="#bareme">Barème</a><strong>Exercices / Ejercicios :</strong><a href="#ex1">1</a><a href="#ex2">2</a><a href="#ex3">3</a><a href="#ex4">4</a><a href="#ex5">5</a><a href="#ex6">6</a><a href="#ex7">7</a><a href="#ex8">8</a><a href="#ex9">9</a><a href="#ex10">10</a><a href="#ex11">11</a><a href="#ex12">12</a><a href="#ex13">13</a><a href="#ex14">14</a><a href="#ex15">15</a><a href="#ex16">16</a></div></nav><main id="contenu" tabindex="-1"><section class="intro" id="cadre"><h2>Cadre réservé à l’enseignant</h2><p><strong>Niveau :</strong> Seconde DNL mathématiques-espagnol. <strong>Durée :</strong> 60 minutes pour les exercices 1 à 8 ; exercices 9 à 16 en différenciation. <strong>Prérequis :</strong> proportionnalité, conversions, pourcentages, fonction affine et substitution dans une formule.</p><p><strong>Problématique :</strong> comment comparer des routes commerciales à partir de grandeurs et de modèles simplifiés sans transformer ces modèles en affirmations historiques ?</p><p><strong>Objectifs :</strong> vérifier unités et ordres de grandeur ; distinguer fréquence, probabilité et valeur espérée ; produire en espagnol une conclusion comportant résultat, unité, statut des données et limite.</p><h3>Aides graduées</h3><ol><li>Faire relever données, unités et statut.</li><li>Faire nommer la relation utile.</li><li>Donner l’amorce « La relación utilizada es… ».</li><li>Faire vérifier par unité, ordre de grandeur ou calcul inverse.</li></ol><h3>Évaluation sur 20</h3><ul><li>Compréhension mathématique : 5 points.</li><li>Démarche, calculs, unités et vérification : 6 points.</li><li>Interprétation culturelle et statut des données : 3 points.</li><li>Communication en espagnol et vocabulaire : 4 points.</li><li>Autonomie, conclusion et limite : 2 points.</li></ul><p><strong>Réponses acceptables :</strong> toute formulation espagnole intelligible donnant le résultat, l’unité et une interprétation prudente. Ne pas confondre erreur linguistique sans effet sur le sens et erreur mathématique.</p></section><section aria-labelledby="titre-bareme" class="rubric" id="bareme">
 <h2 id="titre-bareme">Barème proposé · 20 points</h2>
 <p>Chaque exercice est évalué à partir d’éléments observables. Les points de méthode, de calcul, d’unité, d’interprétation et de recul critique restent indépendants afin de valoriser une démarche cohérente, même lorsqu’une erreur numérique isolée apparaît.</p>
 <div aria-label="Tabla desplazable horizontalmente" class="table-wrap" role="region" tabindex="0"><table><thead><tr><th scope="col">Exercice</th><th scope="col">Points</th><th scope="col">Critères d’attribution</th></tr></thead><tbody><tr><th scope="row">1</th><td>1</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>identifie correctement la relation d’échelle.</li><li><strong>0,25 pt : </strong>effectue le calcul de distance sans erreur.</li><li><strong>0,25 pt : </strong>indique les kilomètres.</li><li><strong>0,25 pt : </strong>précise qu’il s’agit d’une distance simplifiée du modèle.</li></ul></td></tr><tr><th scope="row">2</th><td>1</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>sélectionne les trois étapes utiles.</li><li><strong>0,25 pt : </strong>pose et effectue correctement la somme.</li><li><strong>0,25 pt : </strong>indique l’unité kilomètre.</li><li><strong>0,25 pt : </strong>rédige une phrase d’interprétation liée au modèle.</li></ul></td></tr><tr><th scope="row">3</th><td>1</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>choisit la relation durée = distance ÷ rythme.</li><li><strong>0,25 pt : </strong>obtient 5 jours.</li><li><strong>0,25 pt : </strong>vérifie par 5 × 120 = 600 km.</li><li><strong>0,25 pt : </strong>interprète dans le cadre d’un rythme constant.</li></ul></td></tr><tr><th scope="row">4</th><td>1</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>écrit la fraction 1/5 sous forme simplifiée.</li><li><strong>0,25 pt : </strong>donne l’écriture décimale 0,2.</li><li><strong>0,25 pt : </strong>donne 20 %.</li><li><strong>0,25 pt : </strong>distingue fréquence simulée et probabilité historique.</li></ul></td></tr><tr><th scope="row">5</th><td>1</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>interprète correctement l’échelle 1:10 000 000.</li><li><strong>0,25 pt : </strong>établit que 1 cm représente 100 km.</li><li><strong>0,25 pt : </strong>obtient 620 km avec l’unité.</li><li><strong>0,25 pt : </strong>mentionne la dépendance au tracé simplifié.</li></ul></td></tr><tr><th scope="row">6</th><td>1</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>utilise t = d ÷ v.</li><li><strong>0,25 pt : </strong>obtient 1 700 h.</li><li><strong>0,25 pt : </strong>convertit et arrondit à environ 71 jours.</li><li><strong>0,25 pt : </strong>cite au moins deux limites pertinentes du modèle.</li></ul></td></tr><tr><th scope="row">7</th><td>1</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>convertit 70 jours en 1 680 h.</li><li><strong>0,25 pt : </strong>calcule le quotient 1 680 ÷ 12 = 140.</li><li><strong>0,25 pt : </strong>interprète « 140 fois plus long ».</li><li><strong>0,25 pt : </strong>indique que 12 h représente 1/140 de 1 680 h sans généraliser.</li></ul></td></tr><tr><th scope="row">8</th><td>1</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>identifie l’ingreso total : 3 000 pesos.</li><li><strong>0,25 pt : </strong>calcule le beneficio : 2 000 pesos.</li><li><strong>0,25 pt : </strong>calcule la rentabilidad : 200 %.</li><li><strong>0,25 pt : </strong>distingue clairement ingreso, beneficio et rentabilidad.</li></ul></td></tr><tr><th scope="row">9</th><td>1,5</td><td><ul class="rubric-detail"><li><strong>0,50 pt : </strong>pose correctement 8 500 ÷ 1,852.</li><li><strong>0,25 pt : </strong>obtient environ 4 590.</li><li><strong>0,25 pt : </strong>arrondit à l’unité et écrit millas náuticas.</li><li><strong>0,50 pt : </strong>interprète le résultat comme conversion d’une distance approximative.</li></ul></td></tr><tr><th scope="row">10</th><td>1,5</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>identifie la structure tarif × masse × distance.</li><li><strong>0,50 pt : </strong>calcule 0,08 × 40 × 1 900 = 6 080.</li><li><strong>0,25 pt : </strong>simplifie correctement les unités jusqu’au peso.</li><li><strong>0,25 pt : </strong>interprète le coût total.</li><li><strong>0,25 pt : </strong>précise que le tarif est simulé.</li></ul></td></tr><tr><th scope="row">11</th><td>1,5</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>vérifie 0,80 + 0,20 = 1.</li><li><strong>0,25 pt : </strong>substitue correctement dans la formule.</li><li><strong>0,50 pt : </strong>obtient 1 400 pesos.</li><li><strong>0,25 pt : </strong>interprète une moyenne théorique sur de nombreux voyages.</li><li><strong>0,25 pt : </strong>précise que ce n’est pas le résultat certain d’un voyage.</li></ul></td></tr><tr><th scope="row">12</th><td>1,5</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>substitue q = 40 dans P(q).</li><li><strong>0,25 pt : </strong>obtient 100 pesos par tonne.</li><li><strong>0,25 pt : </strong>interprète le coefficient −2.</li><li><strong>0,25 pt : </strong>donne son unité en pesos/t².</li><li><strong>0,25 pt : </strong>vérifie que 40 appartient à [0 ; 90].</li><li><strong>0,25 pt : </strong>énonce une limite pertinente du modèle affine.</li></ul></td></tr><tr><th scope="row">13</th><td>1,5</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>vérifie 30 + 70 = 100 t pour A.</li><li><strong>0,25 pt : </strong>vérifie 20 + 80 = 100 t pour B.</li><li><strong>0,25 pt : </strong>contrôle la contrainte de 30 t de cochinilla.</li><li><strong>0,25 pt : </strong>calcule A = 9 800 pesos.</li><li><strong>0,25 pt : </strong>calcule B = 9 200 pesos.</li><li><strong>0,25 pt : </strong>choisit A avec une justification et rappelle le statut modélisé des données.</li></ul></td></tr><tr><th scope="row">14</th><td>1,5</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>calcule E(0,20) = 1 400 pesos.</li><li><strong>0,25 pt : </strong>calcule E(0,12) = 1 640 pesos.</li><li><strong>0,25 pt : </strong>obtient un écart de 240 pesos.</li><li><strong>0,25 pt : </strong>identifie une baisse de 8 points de pourcentage.</li><li><strong>0,25 pt : </strong>relie la baisse du risque à la hausse de la valeur espérée.</li><li><strong>0,25 pt : </strong>rappelle que les probabilités sont simulées.</li></ul></td></tr><tr><th scope="row">15</th><td>1,5</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>calcule A = 8 500 km.</li><li><strong>0,25 pt : </strong>calcule B = 9 500 km et relève C = 8 900 km.</li><li><strong>0,25 pt : </strong>classe les distances : A, C, B.</li><li><strong>0,25 pt : </strong>classe les risques : B, A, C.</li><li><strong>0,25 pt : </strong>explique l’absence de meilleure route sans critère choisi.</li><li><strong>0,25 pt : </strong>précise que distances et risques sont simulés.</li></ul></td></tr><tr><th scope="row">16</th><td>1,5</td><td><ul class="rubric-detail"><li><strong>0,25 pt : </strong>calcule les coûts A = 6 425 et B = 5 675 pesos.</li><li><strong>0,25 pt : </strong>calcule les bénéfices d’arrivée A = 5 575 et B = 6 325 pesos.</li><li><strong>0,25 pt : </strong>vérifie les deux distributions de probabilités.</li><li><strong>0,25 pt : </strong>calcule les valeurs espérées A = 3 175 et B = 4 885 pesos.</li><li><strong>0,25 pt : </strong>choisit B et quantifie l’avantage de 1 710 pesos.</li><li><strong>0,25 pt : </strong>formule une limite pertinente du modèle de décision.</li></ul></td></tr></tbody><tfoot><tr><th scope="row">Total</th><th scope="col">20 points</th><td>Le demi-point peut être attribué lorsque la démarche est pertinente mais incomplète.</td></tr></tfoot></table></div>

@@ -59,7 +59,125 @@
 .container{padding:.75rem .75rem 3rem}.overview,.session{scroll-margin-top:1rem;margin:1rem 0;padding:1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}.overview{border-top:.35rem solid var(--gold)}.overview h2,.sessions-heading,.session h3,.session-detail h4{color:var(--forest-dark)}.overview h2,.sessions-heading{font-size:clamp(1.5rem,6vw,2.15rem)}.sessions-heading{margin:2rem 0 .85rem}.session-head{display:grid;grid-template-columns:1fr;gap:.85rem;align-items:start}.session-number{display:grid;width:2.75rem;height:2.75rem;place-items:center;color:#fff;background:linear-gradient(135deg,var(--terra),var(--terra-dark));border-radius:50%;box-shadow:0 .3rem .75rem rgb(115 53 34/.24);font-weight:900}.session h3{margin:.1rem 0;font-size:clamp(1.2rem,5vw,1.6rem)}.session-duration{margin:.3rem 0;color:var(--muted);font-weight:800}.key,.small-note,.video-link{margin:1rem 0;padding:1rem;border-left:.35rem solid var(--terra);border-radius:0 .7rem .7rem 0;background:#fff5ed}.small-note{background:var(--soft);border-left-color:var(--forest)}.video-link{background:#eef6fa;border-left-color:var(--blue)}.summary{margin:1rem 0;padding:1rem;background:#fff;border:1px solid var(--line);border-radius:.75rem}.summary p:last-child{margin-bottom:0}.session-detail{margin:1rem 0;padding:1rem;background:var(--soft);border:1px solid var(--line);border-radius:.75rem}.session-detail h4{margin:0 0 .65rem;font-size:1.15rem}.session-detail ol{margin:.4rem 0 1rem;padding-left:1.35rem}.session-detail li+li{margin-top:.45rem}.expected-output{margin:0;padding:.8rem;background:#fff5ed;border-radius:.65rem}
 .resources,.media-panel{display:grid;grid-template-columns:minmax(0,1fr);gap:.75rem}.btn-ficha{width:100%;color:#fff;background:var(--forest);border:2px solid var(--forest);box-shadow:0 .25rem .65rem rgb(30 56 46/.18)}.btn-ficha:hover,.btn-ficha:focus-visible{color:#fff;background:var(--forest-dark);border-color:var(--forest-dark);box-shadow:0 .5rem 1.1rem rgb(30 56 46/.25)}.btn-complete{width:100%;margin-top:1rem;color:#fff;background:var(--terra);border:2px solid var(--terra);box-shadow:0 .25rem .65rem rgb(115 53 34/.18);cursor:pointer;font:inherit;font-weight:850}.btn-complete:hover,.btn-complete:focus-visible{background:var(--terra-dark);border-color:var(--terra-dark);box-shadow:0 .5rem 1.1rem rgb(115 53 34/.25)}.btn-complete[aria-pressed="true"]{background:var(--forest);border-color:var(--forest)}.media-panel{margin:1rem 0}.media-card{overflow:hidden;margin:0;background:#fff;border:1px solid var(--line);border-radius:.75rem;box-shadow:var(--shadow)}.media-card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;object-position:center}.media-card figcaption{padding:.85rem 1rem;color:var(--muted);font-size:.94rem}.video-frame{position:relative;aspect-ratio:16/9;background:#e9efec}.video-frame iframe{position:absolute;inset:0;width:100%;height:100%}.media-source{margin:0;padding:0 1rem 1rem}.media-source a{font-weight:800}.status-message:empty{display:none}.footer{display:flex;width:100%;min-height:5rem;align-items:center;justify-content:center;padding:1.5rem .75rem;color:#fff;background:var(--forest-dark);text-align:center;overflow-wrap:anywhere}.footer-content{width:min(100%,var(--content));margin:auto}.footer p{max-width:none;margin:.25rem auto;color:#fff;text-align:center}
 @media(min-width:23.4375rem){.nav-inner{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(min-width:36rem){.header-content,.container,.nav-inner{width:min(calc(100% - 2rem),var(--content))}.header-content{padding:5.5rem 0 2.7rem}.top-actions{inset:1rem 0 auto auto}.lang-switch{width:auto}.container{padding-block:1.25rem 3rem}.overview,.session{padding:clamp(1.25rem,4vw,2rem)}.session-head{grid-template-columns:auto minmax(0,1fr)}.nav-inner{grid-template-columns:repeat(3,minmax(0,1fr))}.resources,.media-panel{grid-template-columns:repeat(2,minmax(0,1fr))}.btn-complete{width:auto}}@media(min-width:62rem){.nav-inner{display:flex;flex-wrap:wrap;justify-content:center}.nav a{flex:0 1 auto;padding-inline:.85rem}.session{transition:border-color var(--ease),box-shadow var(--ease),transform var(--ease)}.session:hover{border-color:#a9c3b5;box-shadow:0 1rem 2.5rem rgb(30 56 46/.16);transform:translateY(-.18rem)}}@media(hover:none){.session:hover,.btn-ficha:hover,.btn-complete:hover,.lang-switch:hover,.nav a:hover{transform:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}@media(prefers-contrast:more){:root{--line:#687870}.nav a{border-color:currentColor}}@media(forced-colors:active){*{box-shadow:none!important}:where(a,button,input,select,textarea,summary){forced-color-adjust:auto}}@media print{@page{margin:1.4cm}.skip,.nav,.top-actions,.btn-complete,.status-message{display:none!important}body{overflow:visible;color:#111;background:#fff;font-size:10.5pt}.header,.footer{min-height:0;padding:.5cm 0;color:#111;background:#fff;border-color:#777;box-shadow:none}.header-content{padding:0}.header *,.footer *{color:#111!important;text-shadow:none}.overview,.session,.media-card{box-shadow:none}.overview,.session{break-inside:auto}.session-detail,.media-card,.summary,h1,h2,h3,h4,figure,.expected-output{break-inside:avoid}.media-card img{max-height:11cm;object-fit:contain}.video-frame{display:none}.btn-ficha{justify-content:flex-start;padding:0;color:#111;background:transparent;border:0;box-shadow:none}.footer{margin-top:1cm}}
-</style></head>
+</style><style id="suppression-encadre-titre-hero">
+/* Supprime uniquement le grand encadre colore devant la photo. */
+.hero .hero-content,
+header.hero .hero-content,
+body > header.hero .hero-content {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Conserve le titre lisible directement sur la photographie. */
+.hero .hero-content h1,
+.hero .hero-content p,
+.hero .hero-content .tag,
+.hero .hero-content .badge {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Le bloc n'ajoute plus de marge coloree autour du titre. */
+.hero .hero-content {
+    padding: 0.35rem !important;
+}
+
+/* A l'impression, aucun fond colore n'est ajoute. */
+@media print {
+    .hero .hero-content,
+    header.hero .hero-content,
+    body > header.hero .hero-content {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+</style>
+<style id="items-hero-centres-et-compacts">
+/*
+   Petits items situes dans l'en-tete photographie :
+   DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
+*/
+.hero > .tag,
+.hero > .badge,
+.hero .hero-content > .tag,
+.hero .hero-content > .badge,
+header.hero > .tag,
+header.hero > .badge {
+    /* Empêche l'encadre de prendre toute la largeur disponible. */
+    display: inline-flex !important;
+    width: fit-content !important;
+    max-width: calc(100% - 1rem) !important;
+    min-width: 0 !important;
+
+    /* Centre l'item dans l'en-tête, y compris lorsque .hero est une grille. */
+    justify-self: center !important;
+    align-self: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    /* Réduit l'encadre au texte intérieur. */
+    min-height: 0 !important;
+    margin: 0.12rem auto !important;
+    padding: 0.20rem 0.48rem !important;
+    border-radius: 999px !important;
+
+    /* Maintient le texte proprement centré. */
+    line-height: 1.15 !important;
+    text-align: center !important;
+    white-space: normal !important;
+}
+
+/* Centre également le groupe si les items sont placés dans un conteneur. */
+.hero .tags,
+.hero .badges,
+.hero .meta,
+.hero .hero-tags,
+.hero .hero-badges {
+    display: flex !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.25rem !important;
+    margin-inline: auto !important;
+}
+
+/* Sur petit écran, les items restent compacts et visibles. */
+@media (max-width: 30rem) {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        max-width: calc(100% - 0.5rem) !important;
+        padding: 0.18rem 0.42rem !important;
+        font-size: 0.72rem !important;
+    }
+}
+
+/* Impression : conserve des items compacts sans fond inutile. */
+@media print {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        width: fit-content !important;
+        min-height: 0 !important;
+        margin: 0.08rem auto !important;
+        padding: 0.12rem 0.32rem !important;
+    }
+}
+</style>
+</head>
 <body><a class="skip" href="#contenu-principal">Ir al contenido principal</a><header class="header" id="top">
 <div class="header-content"><div class="top-actions"><a aria-label="Abrir la versión francesa del módulo" class="lang-switch" href="Seconde-Modulo3.html">Versión francesa</a></div>
 <h1 id="titre-page">Seconde — Módulo 3 — Imperio español, comercio global y matemáticas aplicadas</h1>

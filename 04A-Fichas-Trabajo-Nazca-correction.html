@@ -40,7 +40,125 @@ details>summary{min-height:2.75rem;align-content:center}footer{position:static;m
 @media print{.hero-content{padding:0;color:#111;background:#fff;border:0}.hero-bg{display:none!important}header::after,.hero::after{display:none}.hero h1,header h1,.hero p,header p{color:#111!important;text-shadow:none!important}.table,.table-wrap{overflow:visible}table,.align-table{min-width:0}footer{position:static;color:#111;background:#fff;border-top:1px solid #333}footer p{color:#111}}
 
 </style>
-<link href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3EBandera%20de%20Espa%C3%B1a%3C%2Ftitle%3E%0A%3Cdesc%3EFavicon%20con%20tres%20franjas%20horizontales%20roja%2C%20amarilla%20y%20roja.%3C%2Fdesc%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%23AA151B%22%2F%3E%0A%3Crect%20y%3D%2216%22%20width%3D%2264%22%20height%3D%2232%22%20fill%3D%22%23F1BF00%22%2F%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2262.5%22%20height%3D%2262.5%22%20rx%3D%229.25%22%0A%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%237A1015%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E" id="favicon-drapeau-espagnol" rel="icon" type="image/svg+xml"/><title>Nasca: regularidades, transformaciones y modelización geométrica | Guide enseignant réservé</title><meta content="Correction détaillée en français et en espagnol de la fiche DNL sur la géométrie et les motifs Nazca." name="description"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="robots"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="googlebot"/><meta content="no-referrer" name="referrer"/></head><body data-extension-policy="collapsed-on-load"><a class="skip" href="#contenu">Aller au contenu</a><header><div class="hero-content"><span class="tag">DNL · Mathématiques en espagnol</span><h1>Guide enseignant réservé</h1><p>Géométrie Nasca / Geometría Nasca · transformations · mesures · modélisation prudente</p></div></header>
+<link href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3EBandera%20de%20Espa%C3%B1a%3C%2Ftitle%3E%0A%3Cdesc%3EFavicon%20con%20tres%20franjas%20horizontales%20roja%2C%20amarilla%20y%20roja.%3C%2Fdesc%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%23AA151B%22%2F%3E%0A%3Crect%20y%3D%2216%22%20width%3D%2264%22%20height%3D%2232%22%20fill%3D%22%23F1BF00%22%2F%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2262.5%22%20height%3D%2262.5%22%20rx%3D%229.25%22%0A%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%237A1015%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E" id="favicon-drapeau-espagnol" rel="icon" type="image/svg+xml"/><title>Nasca: regularidades, transformaciones y modelización geométrica | Guide enseignant réservé</title><meta content="Correction détaillée en français et en espagnol de la fiche DNL sur la géométrie et les motifs Nazca." name="description"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="robots"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="googlebot"/><meta content="no-referrer" name="referrer"/><style id="suppression-encadre-titre-hero">
+/* Supprime uniquement le grand encadre colore devant la photo. */
+.hero .hero-content,
+header.hero .hero-content,
+body > header.hero .hero-content {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Conserve le titre lisible directement sur la photographie. */
+.hero .hero-content h1,
+.hero .hero-content p,
+.hero .hero-content .tag,
+.hero .hero-content .badge {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Le bloc n'ajoute plus de marge coloree autour du titre. */
+.hero .hero-content {
+    padding: 0.35rem !important;
+}
+
+/* A l'impression, aucun fond colore n'est ajoute. */
+@media print {
+    .hero .hero-content,
+    header.hero .hero-content,
+    body > header.hero .hero-content {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+</style>
+<style id="items-hero-centres-et-compacts">
+/*
+   Petits items situes dans l'en-tete photographie :
+   DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
+*/
+.hero > .tag,
+.hero > .badge,
+.hero .hero-content > .tag,
+.hero .hero-content > .badge,
+header.hero > .tag,
+header.hero > .badge {
+    /* Empêche l'encadre de prendre toute la largeur disponible. */
+    display: inline-flex !important;
+    width: fit-content !important;
+    max-width: calc(100% - 1rem) !important;
+    min-width: 0 !important;
+
+    /* Centre l'item dans l'en-tête, y compris lorsque .hero est une grille. */
+    justify-self: center !important;
+    align-self: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    /* Réduit l'encadre au texte intérieur. */
+    min-height: 0 !important;
+    margin: 0.12rem auto !important;
+    padding: 0.20rem 0.48rem !important;
+    border-radius: 999px !important;
+
+    /* Maintient le texte proprement centré. */
+    line-height: 1.15 !important;
+    text-align: center !important;
+    white-space: normal !important;
+}
+
+/* Centre également le groupe si les items sont placés dans un conteneur. */
+.hero .tags,
+.hero .badges,
+.hero .meta,
+.hero .hero-tags,
+.hero .hero-badges {
+    display: flex !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.25rem !important;
+    margin-inline: auto !important;
+}
+
+/* Sur petit écran, les items restent compacts et visibles. */
+@media (max-width: 30rem) {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        max-width: calc(100% - 0.5rem) !important;
+        padding: 0.18rem 0.42rem !important;
+        font-size: 0.72rem !important;
+    }
+}
+
+/* Impression : conserve des items compacts sans fond inutile. */
+@media print {
+    .hero > .tag,
+    .hero > .badge,
+    .hero .hero-content > .tag,
+    .hero .hero-content > .badge,
+    header.hero > .tag,
+    header.hero > .badge {
+        width: fit-content !important;
+        min-height: 0 !important;
+        margin: 0.08rem auto !important;
+        padding: 0.12rem 0.32rem !important;
+    }
+}
+</style>
+</head><body data-extension-policy="collapsed-on-load"><a class="skip" href="#contenu">Aller au contenu</a><header><div class="hero-content"><span class="tag">DNL · Mathématiques en espagnol</span><h1>Guide enseignant réservé</h1><p>Géométrie Nasca / Geometría Nasca · transformations · mesures · modélisation prudente</p></div></header>
 <div aria-label="Impression du document / Impresión del documento" class="print-actions no-print" role="group"><button data-action="download-text" type="button">Télécharger le texte / Descargar texto</button><button data-action="print" type="button">Imprimer / Imprimir</button></div><nav aria-label="Navigation des exercices / Navegación de los ejercicios"><strong>Exercices / Ejercicios :</strong><a href="#ex1">1</a><a href="#ex2">2</a><a href="#ex3">3</a><a href="#ex4">4</a><a href="#ex5">5</a><a href="#ex6">6</a><a href="#ex7">7</a><a href="#ex8">8</a><a href="#ex9">9</a><a href="#ex10">10</a><a href="#ex11">11</a><a href="#ex12">12</a><a href="#ex13">13</a><a href="#ex14">14</a><a href="#ex15">15</a><a href="#ex16">16</a></nav><main id="contenu" tabindex="-1"><section class="intro" id="cadrage-pedagogique"><h2>Cadrage pédagogique et scénario</h2>
 <ul><li><strong>Niveau:</strong> Seconde DNL mathématiques-espagnol.</li><li><strong>Prérequis:</strong> fractions, pourcentages, proportionnalité, théorème de Pythagore et transformations du plan.</li><li><strong>Problématique:</strong> comment un modèle géométrique aide-t-il à décrire un objet ou une image patrimoniale sans prétendre en expliquer seul la signification?</li><li><strong>Objectifs mathématiques:</strong> calculer et interpréter une raison, un pourcentage, une échelle, un angle de rotation et une diagonale; distinguer valeur exacte et approximation.</li><li><strong>Objectifs langagiers:</strong> décrire, ordonner une procédure, justifier, reformuler et signaler une limite.</li><li><strong>CECRL:</strong> A2 vers B1 selon le parcours. A2: décrire avec phrases simples et lexique fourni. A2+/B1: expliquer avec <i>primero, después, porque</i>. B1: justifier, nuancer avec <i>sin embargo</i> et distinguer observation et interprétation.</li><li><strong>Vigilance:</strong> distinguer erreur linguistique et erreur mathématique; ne pas pénaliser deux fois une même difficulté.</li></ul>
 <h3>Déroulement conseillé, trois séances de 55 min</h3><ol><li><strong>Séance 1:</strong> exercices 1, 3, 5 et 7; description, vérification et pourcentage.</li><li><strong>Séance 2:</strong> exercices 8, 9 et 10; échelle, modèle rectangulaire et translation.</li><li><strong>Séance 3:</strong> exercices 12, 14 et 16; contraintes, évaluation critériée et synthèse.</li></ol><p>Les exercices 2, 4 et 6 servent d’appui; 11, 13 et 15 de différenciation ou de prolongement.</p></section><section class="intro" id="bareme-exact"><h2>Barème exact sur 20 points</h2><p>Ce barème s’applique à la production finale: motif annoté, calcul vérifié et synthèse orale ou écrite en espagnol. Les exercices intermédiaires relèvent de l’évaluation formative non chiffrée.</p><div aria-label="Barème exact" class="table" role="region" tabindex="0"><table><caption>Barème analytique sur 20 points</caption><thead><tr><th scope="col">Domaine</th><th scope="col">Points</th><th scope="col">Indicateurs</th></tr></thead><tbody><tr><td>Compréhension mathématique</td><td>6</td><td>Transformation, mesure, calcul, unité et interprétation exacts.</td></tr><tr><td>Démarche et vérification</td><td>4</td><td>Stratégie explicitée et contrôle par tracé, calcul, superposition ou conversion inverse.</td></tr><tr><td>Interprétation culturelle</td><td>3</td><td>Distingue objet, photographie, modèle, fait et hypothèse.</td></tr><tr><td>Communication en espagnol</td><td>3</td><td>Description et justification compréhensibles, connecteurs adaptés.</td></tr><tr><td>Vocabulaire mathématique</td><td>2</td><td>Eje, centro, ángulo, traslación, escala, razón et porcentaje employés précisément.</td></tr><tr><td>Autonomie et médiation</td><td>2</td><td>Reformulation, écoute, coopération et révision.</td></tr><tr><th scope="row">Total</th><th scope="row">20</th><th scope="row">Ne pas pénaliser deux fois une même difficulté linguistique.</th></tr></tbody></table></div></section><section class="intro" id="bareme-detaille-exercices"><h2>Barème détaillé de la production finale sur 20 points</h2>

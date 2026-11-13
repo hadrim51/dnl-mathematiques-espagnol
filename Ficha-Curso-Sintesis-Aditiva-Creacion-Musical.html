@@ -213,6 +213,116 @@ header.hero > .badge {
     }
 }
 </style>
+<style id="correctif-photo-mobile">
+.hero,
+header.hero {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+}
+
+.hero::before,
+.hero::after,
+header.hero::before,
+header.hero::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+    opacity: 0 !important;
+    filter: none !important;
+}
+
+.hero-bg,
+.hero .bg,
+header.hero .hero-bg,
+header.hero .bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    filter: none !important;
+}
+
+.hero-bg a,
+.hero-bg img,
+.hero .bg a,
+.hero .bg img,
+header.hero .hero-bg a,
+header.hero .hero-bg img,
+header.hero .bg a,
+header.hero .bg img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+.hero-bg img,
+.hero .bg img,
+header.hero .hero-bg img,
+header.hero .bg img {
+    object-fit: cover !important;
+    object-position: center !important;
+    background: transparent !important;
+}
+
+.hero-content,
+.hero > :not(.hero-bg):not(.bg),
+header.hero .hero-content,
+header.hero > :not(.hero-bg):not(.bg) {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.hero-content,
+header.hero .hero-content,
+.hero h1,
+.hero > p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.hero h1,
+.hero > p:not(.credit),
+.hero-content h1,
+.hero-content p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .95),
+                 0 0 12px rgba(0, 0, 0, .85) !important;
+}
+
+@media print {
+    .hero h1,
+    .hero > p:not(.credit),
+    .hero-content h1,
+    .hero-content p:not(.credit),
+    header.hero h1,
+    header.hero > p:not(.credit) {
+        color: #111 !important;
+        text-shadow: none !important;
+    }
+}
+</style>
 </head><body><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 <header aria-labelledby="titulo-principal" class="hero" id="inicio" role="banner"><div aria-hidden="true" class="hero-bg-theme"><img alt="" aria-hidden="true" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Teleharmonium1897.jpg?width=1200"/></div><div class="emoji">🎧〰️🎼📐</div><h1 id="titulo-principal">Ficha 04 — Curso — Síntesis aditiva, creación musical y matemáticas</h1><p>Ficha de curso DNL de matemáticas en español para preparar la ficha de trabajo,</p><div class="badges"><span class="badge">Frecuencia y período</span><span class="badge">Múltiplos y armónicos</span><span class="badge">Porcentajes de amplitud</span><span class="badge">Espectro y timbre</span><span class="badge">Media ponderada</span><a aria-label="🖼️ Abrir imagen de portada (se abre en una pestaña nueva)" class="badge" href="https://commons.wikimedia.org/wiki/File:Hammond_B3_at_RCA_Studio_B.jpg" rel="noopener noreferrer" target="_blank">🖼️ Abrir imagen de portada</a></div></header>
 <nav aria-label="Navegación por las secciones de la ficha" class="nav"><div class="nav-inner"><strong>📍 Navegación de la ficha:</strong><a href="#inicio">Inicio</a><a href="#competencias">1. Competencias trabajadas</a><a href="#enlace-trabajo">2. Enlace con la ficha de trabajo</a><a href="#prerrequisitos">3. Magnitudes, unidades y controles</a><a href="#resumen-matematico">4. Herramientas matemáticas</a><a href="#modelo-aditivo">5. Modelo aditivo simplificado</a><a href="#procedimientos">6. Procedimientos paso a paso</a><a href="#puente">7. Progresión hacia los ejercicios</a><a href="#plantillas">8. Plantillas DNL para redactar</a><a href="#vocabulario-math">9. Léxico matemático y musical</a><a href="#extensiones">10. Extensiones</a></div></nav><section class="coh-panel" id="alineacion-seconde"><h2 id="objetivos-representaciones-y-criterios-de-exito">Objetivos, representaciones y criterios de éxito</h2><p>Esta ficha de curso prepara los métodos y ejemplos del recorrido esencial. Tema: Síntesis aditiva y creación musical. Nivel: Seconde.</p><div class="coh-grid"><div class="coh-card"><strong>Comprender</strong>Identificar el contexto, los datos, la magnitud buscada y las unidades.</div><div class="coh-card"><strong>Modelizar y calcular</strong>Utilizar múltiplos, frecuencia, período, porcentajes de amplitud y media ponderada guiada con relaciones directas y controles sencillos.</div><div class="coh-card"><strong>Representar</strong>Construir tabla de armónicos, gráfico tiempo-amplitud y espectro de barras, con título, ejes, graduaciones, leyenda y unidades cuando proceda.</div><div class="coh-card"><strong>Comunicar</strong>describir un timbre sencillo y justificar una elección creativa en dos o tres frases en español.</div></div><table class="coh-table"><caption class="sr-only">Tabla 1: Ficha 04 — Curso — Síntesis aditiva, creación musical y matemáticas</caption><thead><tr><th scope="col">Etapa</th><th scope="col">Acción del alumno</th><th scope="col">Control</th></tr></thead><tbody><tr><td>1. Datos</td><td>Rodear los valores útiles y escribir la pregunta matemática.</td><td>Las unidades son compatibles.</td></tr><tr><td>2. Modelo</td><td>Escribir la operación o fórmula antes de sustituir.</td><td>El modelo corresponde a la situación.</td></tr><tr><td>3. Representación</td><td>Completar la tabla, el ciclo, la figura o el plano cartesiano.</td><td>La representación es legible y coherente con los datos.</td></tr><tr><td>4. Cálculo</td><td>Realizar el cálculo y redondear solo si se solicita.</td><td>El orden de magnitud y la unidad son correctos.</td></tr><tr><td>5. Interpretación</td><td>Relacionar el resultado con el fenómeno musical.</td><td>La conclusión responde a la pregunta sin generalizar en exceso.</td></tr></tbody></table><p class="coh-ok">Recorrido esencial: actividades directas y guiadas. Consolidación y creación quedan opcionales cuando requieren varios pasos.</p></section>

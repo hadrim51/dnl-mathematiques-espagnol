@@ -129,6 +129,116 @@ header.hero > .badge {
     }
 }
 </style>
+<style id="correctif-photo-mobile">
+.hero,
+header.hero {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+}
+
+.hero::before,
+.hero::after,
+header.hero::before,
+header.hero::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+    opacity: 0 !important;
+    filter: none !important;
+}
+
+.hero-bg,
+.hero .bg,
+header.hero .hero-bg,
+header.hero .bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    filter: none !important;
+}
+
+.hero-bg a,
+.hero-bg img,
+.hero .bg a,
+.hero .bg img,
+header.hero .hero-bg a,
+header.hero .hero-bg img,
+header.hero .bg a,
+header.hero .bg img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+.hero-bg img,
+.hero .bg img,
+header.hero .hero-bg img,
+header.hero .bg img {
+    object-fit: cover !important;
+    object-position: center !important;
+    background: transparent !important;
+}
+
+.hero-content,
+.hero > :not(.hero-bg):not(.bg),
+header.hero .hero-content,
+header.hero > :not(.hero-bg):not(.bg) {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.hero-content,
+header.hero .hero-content,
+.hero h1,
+.hero > p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.hero h1,
+.hero > p:not(.credit),
+.hero-content h1,
+.hero-content p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .95),
+                 0 0 12px rgba(0, 0, 0, .85) !important;
+}
+
+@media print {
+    .hero h1,
+    .hero > p:not(.credit),
+    .hero-content h1,
+    .hero-content p:not(.credit),
+    header.hero h1,
+    header.hero > p:not(.credit) {
+        color: #111 !important;
+        text-shadow: none !important;
+    }
+}
+</style>
 </head>
 <body data-key="ficha_musica_latina_dnl_segundo"><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a><header aria-labelledby="titulo-principal" class="hero" id="inicio" role="banner"><div aria-hidden="true" class="hero-bg-theme"><img alt="" aria-hidden="true" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Carnival%20in%20Rio%20de%20Janeiro.jpg?width=1200"/></div><div class="emoji">🌎🎶🥁🎛️</div><h1 id="titulo-principal">Ficha 03 — Trabajo — Música latina</h1><p>Ficha de trabajo DNL de matemáticas en español · 16 ejercicios progresivos · 1 a 8 esenciales; 9 a 16 opcionales y guiados · Nivel de Seconde</p><div class="badges"><span class="badge">Nivel 1 — Apoyo</span><span class="badge">Nivel 2 — Consolidación</span><span class="badge">Nivel 3 — Profundización opcional</span><span class="badge">Proyecto final guiado</span><a aria-label="🖼️ Abrir imagen de portada (se abre en una pestaña nueva)" class="badge" href="https://commons.wikimedia.org/wiki/Special:FilePath/Samba%20Parade%20-%20Rio%27s%20Carnival%202008.jpg?width=2400" rel="noopener noreferrer" target="_blank">🖼️ Abrir imagen de portada</a></div></header>
 <nav aria-label="Navegación por las secciones de la ficha" class="nav"><div class="nav-inner"><strong>📍 Navegación:</strong><a href="#competencias">1. Competencias</a><a href="#tabla-metodo-ejercicios">2. Método</a><a href="#vocabulario-latino">3. Vocabulario</a><a href="#apoyo">4. Nivel 1 — Iniciación</a><a href="#consolidacion">5. Nivel 2 — Consolidación</a><a href="#profundizacion">6. Nivel 3 — Profundización opcional</a><a href="#desafio">7. Nivel 4 — Desafío opcional guiado</a><a href="#control-nivel">8. Control de nivel</a><a href="#extensiones">9. Extensiones</a><a href="#inicio">↑ Arriba</a></div></nav><section class="coh-panel" id="alineacion-seconde"><h2 id="objetivos-representaciones-y-criterios-de-exito">Objetivos, representaciones y criterios de éxito</h2><p>Esta ficha de trabajo aplica los métodos con una dificultad progresiva y una ayuda visible. Tema: Música latina. Nivel: Seconde.</p><div class="coh-grid"><div class="coh-card"><strong>Comprender</strong>Identificar el contexto, los datos, la magnitud buscada y las unidades.</div><div class="coh-card"><strong>Modelizar y calcular</strong>Utilizar escala, porcentajes, ciclos, tempo, estadística y frecuencias sencillas con relaciones directas y controles sencillos.</div><div class="coh-card"><strong>Representar</strong>Construir tabla tiempo-amplitud, diagrama rítmico y plano cartesiano, con título, ejes, graduaciones, leyenda y unidades cuando proceda.</div><div class="coh-card"><strong>Comunicar</strong>comparar patrones e interpretar datos musicales en dos o tres frases en español.</div></div><table class="coh-table"><caption class="sr-only">Tabla 1: Ficha 03 — Trabajo — Música latina</caption><thead><tr><th scope="col">Etapa</th><th scope="col">Acción del alumno</th><th scope="col">Control</th></tr></thead><tbody><tr><td>1. Datos</td><td>Rodear los valores útiles y escribir la pregunta matemática.</td><td>Las unidades son compatibles.</td></tr><tr><td>2. Modelo</td><td>Escribir la operación o fórmula antes de sustituir.</td><td>El modelo corresponde a la situación.</td></tr><tr><td>3. Representación</td><td>Completar la tabla, el ciclo, la figura o el plano cartesiano.</td><td>La representación es legible y coherente con los datos.</td></tr><tr><td>4. Cálculo</td><td>Realizar el cálculo y redondear solo si se solicita.</td><td>El orden de magnitud y la unidad son correctos.</td></tr><tr><td>5. Interpretación</td><td>Relacionar el resultado con el fenómeno musical.</td><td>La conclusión responde a la pregunta sin generalizar en exceso.</td></tr></tbody></table><p class="coh-ok">Recorrido esencial: actividades directas y guiadas. Consolidación y creación quedan opcionales cuando requieren varios pasos.</p></section>

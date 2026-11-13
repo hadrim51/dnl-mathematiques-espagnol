@@ -132,6 +132,116 @@ header.hero > .badge {
     }
 }
 </style>
+<style id="correctif-photo-mobile">
+.hero,
+header.hero {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+}
+
+.hero::before,
+.hero::after,
+header.hero::before,
+header.hero::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+    opacity: 0 !important;
+    filter: none !important;
+}
+
+.hero-bg,
+.hero .bg,
+header.hero .hero-bg,
+header.hero .bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    filter: none !important;
+}
+
+.hero-bg a,
+.hero-bg img,
+.hero .bg a,
+.hero .bg img,
+header.hero .hero-bg a,
+header.hero .hero-bg img,
+header.hero .bg a,
+header.hero .bg img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+.hero-bg img,
+.hero .bg img,
+header.hero .hero-bg img,
+header.hero .bg img {
+    object-fit: cover !important;
+    object-position: center !important;
+    background: transparent !important;
+}
+
+.hero-content,
+.hero > :not(.hero-bg):not(.bg),
+header.hero .hero-content,
+header.hero > :not(.hero-bg):not(.bg) {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.hero-content,
+header.hero .hero-content,
+.hero h1,
+.hero > p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.hero h1,
+.hero > p:not(.credit),
+.hero-content h1,
+.hero-content p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .95),
+                 0 0 12px rgba(0, 0, 0, .85) !important;
+}
+
+@media print {
+    .hero h1,
+    .hero > p:not(.credit),
+    .hero-content h1,
+    .hero-content p:not(.credit),
+    header.hero h1,
+    header.hero > p:not(.credit) {
+        color: #111 !important;
+        text-shadow: none !important;
+    }
+}
+</style>
 </head>
 <body data-key="ficha_musica_precolombina_dnl_segundo" data-total="12"><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 <header aria-labelledby="titulo-principal" class="hero" id="inicio" role="banner"><div aria-hidden="true" class="hero-bg-theme"><img alt="" aria-hidden="true" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Zampo%C3%B1a%20tubos.jpg?width=1200"/></div><div class="emoji">🪈🥁🌽📐</div><h1 id="titulo-principal">Ficha 01 — Trabajo — Música precolombina</h1><p>Ficha de trabajo DNL de matemáticas en español · 12 ejercicios progresivos · 1 a 8 esenciales; 9 a 12 opcionales · Nivel de Seconde</p><p>Longitudes, fracciones, porcentajes, proporcionalidad, estadística, geometría y modelos sencillos para estudiar instrumentos y ritmos precolombinos</p><div class="badges"><span class="badge">Nivel 1 — Apoyo</span><span class="badge">Nivel 2 — Consolidación</span><span class="badge">Nivel 3 — Profundización opcional</span><span class="badge">Proyecto final guiado</span><a aria-label="🖼️ Abrir imagen de portada (se abre en una pestaña nueva)" class="badge" href="https://commons.wikimedia.org/wiki/Special:FilePath/Andes.png?width=2400" rel="noopener noreferrer" target="_blank">🖼️ Abrir imagen de portada</a></div><div class="progress-wrap"><div class="progress"><div aria-label="Progreso de la ficha" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-fill" id="progressBar" role="progressbar">0%</div></div></div><button class="btn" data-action="print" type="button">🖨️ Imprimir o guardar como PDF</button><button class="btn secondary" data-action="download" type="button">📥 Descargar progreso</button><button class="btn green" data-action="reset" type="button">🔄 Reiniciar progreso</button></header>

@@ -143,6 +143,116 @@ header.hero > .badge {
     }
 }
 </style>
+<style id="correctif-photo-mobile">
+.hero,
+header.hero {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+}
+
+.hero::before,
+.hero::after,
+header.hero::before,
+header.hero::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+    opacity: 0 !important;
+    filter: none !important;
+}
+
+.hero-bg,
+.hero .bg,
+header.hero .hero-bg,
+header.hero .bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    filter: none !important;
+}
+
+.hero-bg a,
+.hero-bg img,
+.hero .bg a,
+.hero .bg img,
+header.hero .hero-bg a,
+header.hero .hero-bg img,
+header.hero .bg a,
+header.hero .bg img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+.hero-bg img,
+.hero .bg img,
+header.hero .hero-bg img,
+header.hero .bg img {
+    object-fit: cover !important;
+    object-position: center !important;
+    background: transparent !important;
+}
+
+.hero-content,
+.hero > :not(.hero-bg):not(.bg),
+header.hero .hero-content,
+header.hero > :not(.hero-bg):not(.bg) {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.hero-content,
+header.hero .hero-content,
+.hero h1,
+.hero > p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.hero h1,
+.hero > p:not(.credit),
+.hero-content h1,
+.hero-content p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .95),
+                 0 0 12px rgba(0, 0, 0, .85) !important;
+}
+
+@media print {
+    .hero h1,
+    .hero > p:not(.credit),
+    .hero-content h1,
+    .hero-content p:not(.credit),
+    header.hero h1,
+    header.hero > p:not(.credit) {
+        color: #111 !important;
+        text-shadow: none !important;
+    }
+}
+</style>
 </head>
 <body><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 <header aria-labelledby="titulo-principal" class="hero" id="top"><div class="bg"><a aria-label="Abrir la imagen: Biblioteca Central de la UNAM con mosaicos murales (se abre en una pestaña nueva)" class="img-link" href="https://commons.wikimedia.org/wiki/File:Biblioteca_Central_UNAM_México.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la imagen en una pestaña nueva"><img alt="Biblioteca Central de la UNAM con mosaicos murales" decoding="async" draggable="false" fetchpriority="high" loading="eager" sizes="100vw" src="https://commons.wikimedia.org/wiki/Special:FilePath/Biblioteca%20Central%20UNAM%20M%C3%A9xico.jpg?width=1280" srcset="https://commons.wikimedia.org/wiki/Special:FilePath/Biblioteca%20Central%20UNAM%20M%C3%A9xico.jpg?width=480 480w, https://commons.wikimedia.org/wiki/Special:FilePath/Biblioteca%20Central%20UNAM%20M%C3%A9xico.jpg?width=768 768w, https://commons.wikimedia.org/wiki/Special:FilePath/Biblioteca%20Central%20UNAM%20M%C3%A9xico.jpg?width=1024 1024w, https://commons.wikimedia.org/wiki/Special:FilePath/Biblioteca%20Central%20UNAM%20M%C3%A9xico.jpg?width=1280 1280w, https://commons.wikimedia.org/wiki/Special:FilePath/Biblioteca%20Central%20UNAM%20M%C3%A9xico.jpg?width=1600 1600w"/></a></div><span class="tag">DNL Matemáticas · Español</span><span class="tag">Sesión 4</span><span class="tag">Mural estadístico</span><h1 id="titulo-principal">Muralismo mexicano y mural estadístico: proporciones, escala, áreas y lectura visual</h1><p>Herramientas de curso para transformar un gráfico validado en un boceto de mural estadístico con regla visual explícita, leyenda, fuente y límite de interpretación.</p></header>

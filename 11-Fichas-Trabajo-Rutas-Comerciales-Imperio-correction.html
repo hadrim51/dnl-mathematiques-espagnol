@@ -1316,6 +1316,116 @@ header.hero > .badge {
     }
 }
 </style>
+<style id="correctif-photo-mobile">
+.hero,
+header.hero {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+}
+
+.hero::before,
+.hero::after,
+header.hero::before,
+header.hero::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+    opacity: 0 !important;
+    filter: none !important;
+}
+
+.hero-bg,
+.hero .bg,
+header.hero .hero-bg,
+header.hero .bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    filter: none !important;
+}
+
+.hero-bg a,
+.hero-bg img,
+.hero .bg a,
+.hero .bg img,
+header.hero .hero-bg a,
+header.hero .hero-bg img,
+header.hero .bg a,
+header.hero .bg img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+.hero-bg img,
+.hero .bg img,
+header.hero .hero-bg img,
+header.hero .bg img {
+    object-fit: cover !important;
+    object-position: center !important;
+    background: transparent !important;
+}
+
+.hero-content,
+.hero > :not(.hero-bg):not(.bg),
+header.hero .hero-content,
+header.hero > :not(.hero-bg):not(.bg) {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.hero-content,
+header.hero .hero-content,
+.hero h1,
+.hero > p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.hero h1,
+.hero > p:not(.credit),
+.hero-content h1,
+.hero-content p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .95),
+                 0 0 12px rgba(0, 0, 0, .85) !important;
+}
+
+@media print {
+    .hero h1,
+    .hero > p:not(.credit),
+    .hero-content h1,
+    .hero-content p:not(.credit),
+    header.hero h1,
+    header.hero > p:not(.credit) {
+        color: #111 !important;
+        text-shadow: none !important;
+    }
+}
+</style>
 </head><body class="ui-teacher"><a class="skip" href="#contenu">Aller au contenu</a><header class="hero" id="top"><span class="tag">DNL · Mathématiques en espagnol</span><h1>Guide enseignant — Rutas comerciales del Imperio español: escalas, riesgos y decisiones</h1><p>Routes commerciales · échelles · durées · coûts · risques · décision</p></header><div aria-label="Impression du corrigé / Impresión de la corrección" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimer / Imprimir</button></div><nav aria-label="Navigation bilingue des exercices" class="nav"><div class="nav-inner"><a href="#bareme">Barème</a><strong>Exercices / Ejercicios :</strong><a href="#ex1">1</a><a href="#ex2">2</a><a href="#ex3">3</a><a href="#ex4">4</a><a href="#ex5">5</a><a href="#ex6">6</a><a href="#ex7">7</a><a href="#ex8">8</a><a href="#ex9">9</a><a href="#ex10">10</a><a href="#ex11">11</a><a href="#ex12">12</a><a href="#ex13">13</a><a href="#ex14">14</a><a href="#ex15">15</a><a href="#ex16">16</a></div></nav><main id="contenu" tabindex="-1"><section class="intro" id="cadre"><h2>Cadre réservé à l’enseignant</h2><p><strong>Niveau :</strong> Seconde DNL mathématiques-espagnol. <strong>Durée :</strong> 60 minutes pour les exercices 1 à 8 ; exercices 9 à 16 en différenciation. <strong>Prérequis :</strong> proportionnalité, conversions, pourcentages, fonction affine et substitution dans une formule.</p><p><strong>Problématique :</strong> comment comparer des routes commerciales à partir de grandeurs et de modèles simplifiés sans transformer ces modèles en affirmations historiques ?</p><p><strong>Objectifs :</strong> vérifier unités et ordres de grandeur ; distinguer fréquence, probabilité et valeur espérée ; produire en espagnol une conclusion comportant résultat, unité, statut des données et limite.</p><h3>Aides graduées</h3><ol><li>Faire relever données, unités et statut.</li><li>Faire nommer la relation utile.</li><li>Donner l’amorce « La relación utilizada es… ».</li><li>Faire vérifier par unité, ordre de grandeur ou calcul inverse.</li></ol><h3>Évaluation sur 20</h3><ul><li>Compréhension mathématique : 5 points.</li><li>Démarche, calculs, unités et vérification : 6 points.</li><li>Interprétation culturelle et statut des données : 3 points.</li><li>Communication en espagnol et vocabulaire : 4 points.</li><li>Autonomie, conclusion et limite : 2 points.</li></ul><p><strong>Réponses acceptables :</strong> toute formulation espagnole intelligible donnant le résultat, l’unité et une interprétation prudente. Ne pas confondre erreur linguistique sans effet sur le sens et erreur mathématique.</p></section><section aria-labelledby="titre-bareme" class="rubric" id="bareme">
 <h2 id="titre-bareme">Barème proposé · 20 points</h2>
 <p>Chaque exercice est évalué à partir d’éléments observables. Les points de méthode, de calcul, d’unité, d’interprétation et de recul critique restent indépendants afin de valoriser une démarche cohérente, même lorsqu’une erreur numérique isolée apparaît.</p>

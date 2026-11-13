@@ -203,6 +203,116 @@ header.hero > .badge {
     }
 }
 </style>
+<style id="correctif-photo-mobile">
+.hero,
+header.hero {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+}
+
+.hero::before,
+.hero::after,
+header.hero::before,
+header.hero::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+    opacity: 0 !important;
+    filter: none !important;
+}
+
+.hero-bg,
+.hero .bg,
+header.hero .hero-bg,
+header.hero .bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    filter: none !important;
+}
+
+.hero-bg a,
+.hero-bg img,
+.hero .bg a,
+.hero .bg img,
+header.hero .hero-bg a,
+header.hero .hero-bg img,
+header.hero .bg a,
+header.hero .bg img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+.hero-bg img,
+.hero .bg img,
+header.hero .hero-bg img,
+header.hero .bg img {
+    object-fit: cover !important;
+    object-position: center !important;
+    background: transparent !important;
+}
+
+.hero-content,
+.hero > :not(.hero-bg):not(.bg),
+header.hero .hero-content,
+header.hero > :not(.hero-bg):not(.bg) {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.hero-content,
+header.hero .hero-content,
+.hero h1,
+.hero > p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.hero h1,
+.hero > p:not(.credit),
+.hero-content h1,
+.hero-content p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .95),
+                 0 0 12px rgba(0, 0, 0, .85) !important;
+}
+
+@media print {
+    .hero h1,
+    .hero > p:not(.credit),
+    .hero-content h1,
+    .hero-content p:not(.credit),
+    header.hero h1,
+    header.hero > p:not(.credit) {
+        color: #111 !important;
+        text-shadow: none !important;
+    }
+}
+</style>
 </head>
 <body><a class="skip" href="#contenido">Ir al contenido principal</a>
 <header class="hero" id="top"><div class="hero-bg"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Torre_mudéjar_de_San_Martín,_Teruel_(Spain).JPG" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Torre mudéjar de San Martín en Teruel" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Torre%20mud%C3%A9jar%20de%20San%20Mart%C3%ADn%2C%20Teruel%20%28Spain%29.JPG?width=1600"/></a></div><span class="tag">Matemáticas en español</span><span class="tag">Modelo · duplicación · comparación</span><span class="tag">Seconde · sesión 4</span><h1>Sesión 4 — Modelizar un motivo mudéjar y distinguir reproducción y variación</h1><p>Del motivo patrimonial a un modelo digital que distingue modelo, reconstrucción y variación. Evidencia: Captura digital con leyenda, medidas, transformación y comparación.</p></header><div aria-label="Impresión de la ficha de curso" class="print-actions no-print" role="group"><button data-action="print" type="button">Imprimir</button></div>

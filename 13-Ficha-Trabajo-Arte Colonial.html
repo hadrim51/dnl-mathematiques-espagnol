@@ -266,6 +266,116 @@ header.hero > .badge {
     }
 }
 </style>
+<style id="correctif-photo-mobile">
+.hero,
+header.hero {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+}
+
+.hero::before,
+.hero::after,
+header.hero::before,
+header.hero::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+    opacity: 0 !important;
+    filter: none !important;
+}
+
+.hero-bg,
+.hero .bg,
+header.hero .hero-bg,
+header.hero .bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    filter: none !important;
+}
+
+.hero-bg a,
+.hero-bg img,
+.hero .bg a,
+.hero .bg img,
+header.hero .hero-bg a,
+header.hero .hero-bg img,
+header.hero .bg a,
+header.hero .bg img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+.hero-bg img,
+.hero .bg img,
+header.hero .hero-bg img,
+header.hero .bg img {
+    object-fit: cover !important;
+    object-position: center !important;
+    background: transparent !important;
+}
+
+.hero-content,
+.hero > :not(.hero-bg):not(.bg),
+header.hero .hero-content,
+header.hero > :not(.hero-bg):not(.bg) {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.hero-content,
+header.hero .hero-content,
+.hero h1,
+.hero > p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.hero h1,
+.hero > p:not(.credit),
+.hero-content h1,
+.hero-content p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .95),
+                 0 0 12px rgba(0, 0, 0, .85) !important;
+}
+
+@media print {
+    .hero h1,
+    .hero > p:not(.credit),
+    .hero-content h1,
+    .hero-content p:not(.credit),
+    header.hero h1,
+    header.hero > p:not(.credit) {
+        color: #111 !important;
+        text-shadow: none !important;
+    }
+}
+</style>
 </head>
 <body><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 <header aria-labelledby="titre-page" class="hero" id="top" role="banner"><div class="hero-bg"><a aria-label="Abrir la imagen: Ángel arcabucero de la Escuela de Cuzco" class="img-link" href="https://commons.wikimedia.org/wiki/File:%C3%81ngel_Arcabucero._Escuela_cuzque%C3%B1a.png" rel="noopener noreferrer" target="_blank" title="Abrir la imagen en una pestaña nueva"><img alt="Ángel arcabucero de la Escuela de Cuzco" class="art-image" decoding="async" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/%C3%81ngel%20Arcabucero.%20Escuela%20cuzque%C3%B1a.png?width=1600"/></a></div><div class="hero-content"><span aria-hidden="true" class="tag">DNL Matemáticas en español</span><span aria-hidden="true" class="tag">Sesión 3</span><span aria-hidden="true" class="tag">16 ejercicios progresivos</span><h1 id="titre-page">Ficha 13 — Trabajo — Arte colonial hispanoamericano: proporciones, tercios, escala y perspectiva</h1><p>Ficha de trabajo alineada con la sesión 3: medir una obra, calcular proporciones, tercios, áreas o reducciones, y distinguir observación matemática, hipótesis visual e interpretación histórica.</p></div></header>

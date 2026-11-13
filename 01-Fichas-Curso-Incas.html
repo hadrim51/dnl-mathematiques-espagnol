@@ -216,6 +216,116 @@ header.hero > .badge {
     }
 }
 </style>
+<style id="correctif-photo-mobile">
+.hero,
+header.hero {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+}
+
+.hero::before,
+.hero::after,
+header.hero::before,
+header.hero::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+    opacity: 0 !important;
+    filter: none !important;
+}
+
+.hero-bg,
+.hero .bg,
+header.hero .hero-bg,
+header.hero .bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    filter: none !important;
+}
+
+.hero-bg a,
+.hero-bg img,
+.hero .bg a,
+.hero .bg img,
+header.hero .hero-bg a,
+header.hero .hero-bg img,
+header.hero .bg a,
+header.hero .bg img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+.hero-bg img,
+.hero .bg img,
+header.hero .hero-bg img,
+header.hero .bg img {
+    object-fit: cover !important;
+    object-position: center !important;
+    background: transparent !important;
+}
+
+.hero-content,
+.hero > :not(.hero-bg):not(.bg),
+header.hero .hero-content,
+header.hero > :not(.hero-bg):not(.bg) {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.hero-content,
+header.hero .hero-content,
+.hero h1,
+.hero > p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.hero h1,
+.hero > p:not(.credit),
+.hero-content h1,
+.hero-content p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .95),
+                 0 0 12px rgba(0, 0, 0, .85) !important;
+}
+
+@media print {
+    .hero h1,
+    .hero > p:not(.credit),
+    .hero-content h1,
+    .hero-content p:not(.credit),
+    header.hero h1,
+    header.hero > p:not(.credit) {
+        color: #111 !important;
+        text-shadow: none !important;
+    }
+}
+</style>
 </head>
 <body><a class="skip" href="#contenido">Ir al contenido principal</a>
 <header class="hero" id="top"><div class="hero-bg"><a aria-label="Vista de Machu Picchu (se abre en una nueva pestaña)" class="img-link" href="https://commons.wikimedia.org/wiki/File:Machu_Picchu,_Per%C3%BA,_2015-07-30,_DD_58.JPG" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Vista de Machu Picchu" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" height="4934" loading="eager" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Machu_Picchu%2C_Per%C3%BA%2C_2015-07-30%2C_DD_58.JPG/1280px-Machu_Picchu%2C_Per%C3%BA%2C_2015-07-30%2C_DD_58.JPG" width="8142"/></a></div><div class="hero-content">

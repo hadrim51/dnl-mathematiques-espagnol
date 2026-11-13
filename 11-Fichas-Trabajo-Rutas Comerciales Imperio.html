@@ -1254,6 +1254,116 @@ header.hero > .badge {
     }
 }
 </style>
+<style id="correctif-photo-mobile">
+.hero,
+header.hero {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+}
+
+.hero::before,
+.hero::after,
+header.hero::before,
+header.hero::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+    opacity: 0 !important;
+    filter: none !important;
+}
+
+.hero-bg,
+.hero .bg,
+header.hero .hero-bg,
+header.hero .bg {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    filter: none !important;
+}
+
+.hero-bg a,
+.hero-bg img,
+.hero .bg a,
+.hero .bg img,
+header.hero .hero-bg a,
+header.hero .hero-bg img,
+header.hero .bg a,
+header.hero .bg img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+.hero-bg img,
+.hero .bg img,
+header.hero .hero-bg img,
+header.hero .bg img {
+    object-fit: cover !important;
+    object-position: center !important;
+    background: transparent !important;
+}
+
+.hero-content,
+.hero > :not(.hero-bg):not(.bg),
+header.hero .hero-content,
+header.hero > :not(.hero-bg):not(.bg) {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.hero-content,
+header.hero .hero-content,
+.hero h1,
+.hero > p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.hero h1,
+.hero > p:not(.credit),
+.hero-content h1,
+.hero-content p:not(.credit),
+header.hero h1,
+header.hero > p:not(.credit) {
+    color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .95),
+                 0 0 12px rgba(0, 0, 0, .85) !important;
+}
+
+@media print {
+    .hero h1,
+    .hero > p:not(.credit),
+    .hero-content h1,
+    .hero-content p:not(.credit),
+    header.hero h1,
+    header.hero > p:not(.credit) {
+        color: #111 !important;
+        text-shadow: none !important;
+    }
+}
+</style>
 </head>
 <body class="ui-work"><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 <header aria-labelledby="titre-page" class="hero" id="top" role="banner"><div class="hero-bg"><a aria-label="Abrir la imagen: Representación histórica de un galeón" class="imglink" href="https://commons.wikimedia.org/wiki/Category:Manila_galleon" rel="noopener noreferrer" target="_blank" title="Abrir la imagen en una pestaña nueva"><img alt="Representación histórica de un galeón" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Galeone%2C%20nach%20Gonz%C3%A1lez%20Cabrera%20Bueno%201734.jpg?width=1600"/></a></div><div class="hero-content"><span aria-hidden="true" class="tag">DNL Matemáticas · Español</span><span aria-hidden="true" class="tag">Sesión 1</span><span aria-hidden="true" class="tag">16 ejercicios progresivos</span><h1 id="titre-page">Ficha 11 — Trabajo — Rutas comerciales del Imperio español</h1><p>Ficha de trabajo alineada con la sesión 1: representar rutas comerciales, calcular distancias y duraciones, comparar escenarios y justificar una decisión con el estatus de los datos y una limitación del modelo.</p></div></header>

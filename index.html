@@ -47,7 +47,7 @@
 :root{--ease:cubic-bezier(.2,.8,.2,1);--shadow-hover:0 .9rem 2.2rem rgb(15 47 70/.18)}
 html{overflow-x:clip;scroll-padding-top:5rem}body{min-width:0;max-width:100%;overflow-x:clip}.container,header,main,section,article,figure,.card-grid,.distribution-grid,.visual-summary-grid{min-width:0;max-width:100%}
 a,button,.module-link,.lang-switch,.correction-switch,.contact-button,.nav-toggle,.topic-card,.visual-level-card,.distribution-card,.image-block{transition:color .22s var(--ease),background-color .22s var(--ease),border-color .22s var(--ease),box-shadow .22s var(--ease),transform .22s var(--ease),filter .22s var(--ease)}
-header{min-height:clamp(24rem,72svh,35rem);padding:7rem clamp(1rem,6vw,5rem) 4rem;background:linear-gradient(125deg,#0b2c45,#173f5f 55%,#1d7287);border-bottom:.35rem solid var(--accent)}
+header{min-height:clamp(24rem,72svh,35rem);padding:7rem clamp(1rem,6vw,5rem) 4rem;background-image:linear-gradient(90deg,rgba(7,31,48,.58) 0%,rgba(13,47,74,.42) 42%,rgba(13,47,74,.12) 70%,rgba(13,47,74,.03) 100%),url("media-sacre-coeur-reims.jpeg");background-size:cover;background-position:center 58%;background-repeat:no-repeat;border-bottom:.35rem solid var(--accent)}
 header h1{text-shadow:0 2px 12px rgb(0 0 0/.35)}header>p{text-shadow:0 2px 8px rgb(0 0 0/.3)}
 .nav{position:sticky;z-index:50;top:0;background:rgb(255 255 255/.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 .3rem 1rem rgb(15 47 70/.12)}
 .nav-toggle{display:flex;align-items:center;justify-content:center;gap:.55rem;width:calc(100% - 1rem);min-height:3rem;margin:.5rem auto;padding:.7rem 1rem;color:#fff;background:var(--primary);border:1px solid var(--primary);border-radius:.75rem;font-weight:750;cursor:pointer}.nav-toggle:hover{background:var(--primary-strong);transform:translateY(-2px)}
@@ -189,7 +189,7 @@ header.hero > .badge {
 </head>
 <body><a class="skip" href="#contenu-principal">Aller au contenu principal</a>
 <div class="container">
-<header aria-labelledby="titre-page"><div class="top-actions"><a aria-label="Ouvrir la version espagnole de la progression" class="lang-switch" href="index-ES.html" hreflang="es" lang="es"><span aria-hidden="true">🇪🇸</span> Version espagnole</a></div>
+<header aria-labelledby="titre-page" class="hero"><div class="top-actions"><a aria-label="Ouvrir la version espagnole de la progression" class="lang-switch" href="index-ES.html" hreflang="es" lang="es"><span aria-hidden="true">🇪🇸</span> Version espagnole</a></div>
 <h1 id="titre-page">Progression DNL mathématiques en espagnol — lycée</h1>
 <p>Un parcours spiralaire de la Seconde à la Terminale : observer, modéliser, vérifier, argumenter et communiquer en espagnol.</p>
 </header>

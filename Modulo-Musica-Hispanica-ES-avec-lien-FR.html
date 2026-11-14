@@ -1,4 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -69,6 +70,16 @@ body{min-width:0;overflow-x:clip;overflow-wrap:break-word}.header,.header-conten
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.skip,.top-actions,.nav,.video-card{display:none!important}.header-content{min-height:0;padding:0}.overview,.session{break-inside:auto}.method,.figure,.mini,.photo-card,.expected{break-inside:avoid}.figure img,.mini img,.photo-card img{max-height:11cm;object-fit:contain}.footer{position:static}.header .mini{color:#000;text-shadow:none}}
 
+
+
+.top-actions{display:flex;max-width:min(100%,34rem);flex-wrap:wrap;gap:.55rem;align-items:center;justify-content:flex-end}
+.home-link{display:inline-flex;min-height:3rem;align-items:center;justify-content:center;gap:.45rem;padding:.76rem 1rem;border:2px solid rgba(255,255,255,.78);border-radius:var(--radius-sm);color:var(--white);background:rgba(17,24,45,.28);font-weight:850;line-height:1.2;text-align:center;text-decoration:none;transition:color var(--ease),background-color var(--ease),border-color var(--ease),box-shadow var(--ease),transform var(--ease)}
+.home-link:hover{border-color:var(--white);color:var(--navy);background:var(--white);transform:translateY(-2px)}
+.home-link:active{transform:translateY(0);box-shadow:none}
+.home-link:focus-visible{outline:.2rem solid var(--amber);outline-offset:.2rem}
+@media(max-width:35.99rem){.top-actions{left:.75rem;right:.75rem;display:grid;grid-template-columns:1fr;max-width:none}.top-actions>.lang-switch,.top-actions>.home-link{width:100%;min-width:0}}
+@media(min-width:36rem){.top-actions{right:0}.top-actions>.home-link,.top-actions>.lang-switch{width:auto}}
+@media print{.home-link{display:none!important}}
 </style><link crossorigin="anonymous" href="https://commons.wikimedia.org" rel="preconnect"/><link crossorigin="anonymous" href="https://i.ytimg.com" rel="preconnect"/><link crossorigin="anonymous" href="https://www.youtube-nocookie.com" rel="preconnect"/><meta content="strict-origin-when-cross-origin" name="referrer"/><style id="audit-wcag-final">
 /* Responsive, accessibilite et impression */
 :root{--audit-focus:#ffbf47;--audit-tap:2.75rem;--audit-reading:75ch}
@@ -224,7 +235,7 @@ header.hero > .badge {
 }
 </style>
 </head>
-<body><a class="skip" href="#contenu-principal">Ir al contenido principal</a><header class="header" id="inicio"><div class="top-actions"><a aria-label="Abrir la versión francesa del módulo" class="lang-switch" href="Modulo-Musica-Hispanica.html" rel="noopener"><span aria-hidden="true">🇫🇷 </span>Versión francesa</a></div>
+<body><a class="skip" href="#contenu-principal">Ir al contenido principal</a><header class="header" id="inicio"><div class="top-actions"><a aria-label="Abrir la versión francesa del módulo" class="lang-switch" href="Modulo-Musica-Hispanica.html" rel="noopener"><span aria-hidden="true">🇫🇷 </span>Versión francesa</a><a aria-label="Volver a la página de inicio" class="home-link" href="index1.html"><span aria-hidden="true">⌂</span> Volver al inicio</a></div>
 <h1 id="titre-page">Módulo — Música hispánica y creación sonora</h1>
 <p class="mini">Módulo DNL de Matemáticas en español · Música hispánica, proporciones, ciclos, patrones, señales visuales y creación sonora guiada.</p>
 <div class="badges"><span class="badge">DNL de Matemáticas en español</span><span class="badge">Música hispánica</span><span class="badge">4 sesiones guiadas</span></div>

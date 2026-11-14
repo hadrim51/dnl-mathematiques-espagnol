@@ -39,297 +39,47 @@ img{color:transparent}
 
 body{overflow-x:clip}.nav,nav{position:static;top:auto}main,.container,.grid>*,.cols>*,section,article{min-width:0}.nav a,nav a,button,.btn,summary{min-height:2.75rem}footer{position:static}
 
-
-/* Consolidation mobile-first, accessibilite et impression */
-body{min-width:0;overflow-x:clip;overflow-wrap:anywhere}
-main,.container,section,article,.card,.exercise,.quiz,.rubric,.intro,.note,.box,.comp,.task,.q,.gallery-item,.cols>section{min-width:0;max-width:100%}
-.grid>*,.align-grid>*,.video-grid>*,.cols>*{min-width:0}
-.nav,nav{position:static;top:auto}.nav-inner{max-width:100%}
-.nav a,nav>a,.nav-inner>a,button,.btn,summary{min-height:2.75rem}.nav a,nav>a,.nav-inner>a{min-width:2.75rem}
-.hero-content{width:min(100%,68rem);margin-inline:auto;padding:clamp(.9rem,2vw,1.3rem);background:rgb(24 37 43/.76);border:1px solid rgb(255 255 255/.42);border-radius:var(--r3)}
-.hero-bg img{object-fit:cover;object-position:center;filter:none!important;opacity:1!important}
-.hero::after,header#top::after{background:rgb(19 29 34/.28)}
-.gallery-item img,.card img,.museum-image{width:100%;height:auto;object-fit:contain;object-position:center;background:#f6f2e8;filter:none!important;opacity:1!important}
-.gallery-item:hover img,.card>a.imglink:hover img{filter:none!important;transform:scale(1.006)}
-.table-wrap,.table{max-width:100%;overscroll-behavior-inline:contain}.table-wrap:focus-visible,.table:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
-details>summary{min-height:2.75rem;align-content:center}footer{position:static;max-width:100%}
-@media(max-width:35.99rem){header,.hero{padding:3rem .75rem 2rem}main,.container{padding:.75rem}.card,.exercise,.intro,.rubric{padding:1rem}.hero-content{padding:1rem}.hero h1,header h1{font-size:clamp(1.9rem,10vw,2.8rem)}.tag,.badge,.pill{white-space:normal;text-align:center}.actions,.print-actions{padding-inline:.75rem}button,.btn,.actions button,.print-actions button{width:100%}table,.align-table{min-width:32rem}}
+/* Audit final de production */
+:root{--tap:2.75rem;--gutter:clamp(.75rem,2.2vw,2rem)}
+html{overflow-x:visible;scroll-padding-top:1rem}
+body{min-width:0;max-width:100%;overflow-x:visible;overflow-wrap:anywhere}
+header,main,footer,nav,section,article,aside,div,figure{min-width:0}
+h1,h2,h3,h4{overflow-wrap:normal;word-break:normal;hyphens:none}
+img{max-width:100%;height:auto;filter:none;opacity:1}
+:where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{outline:.2rem solid var(--focus);outline-offset:.2rem;box-shadow:0 0 0 .2rem #fff,0 0 0 .4rem var(--focus)}
+:where(a,button,summary):active{transform:translateY(.06rem)}
+.nav{position:static;overflow:visible;padding:.55rem;background:var(--surface);backdrop-filter:none}
+.nav-inner,body>nav{display:grid;grid-template-columns:minmax(0,1fr);gap:.45rem;overflow:visible;width:min(100%,var(--content));margin-inline:auto}
+.nav-title,.nav-inner>strong,body>nav>strong{position:static;grid-column:1/-1;padding:.35rem;color:var(--indigo);background:transparent;white-space:normal}
+.nav-inner>a,body>nav>a{display:flex;min-width:0;min-height:var(--tap);align-items:center;justify-content:center;padding:.55rem .65rem;text-align:center;white-space:normal}
+main,.container{width:min(100%,calc(var(--content) + 2rem));padding:var(--gutter)}
+.grid,.align-grid,.gallery,.video-grid,.cols{grid-template-columns:minmax(0,1fr)}
+.grid>*,.align-grid>*,.gallery>*,.video-grid>*,.cols>*{min-width:0}
+.table,.table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+table,.align-table{min-width:34rem}
+button,.btn,.actions button,.print-actions button,details>summary{min-width:var(--tap);min-height:var(--tap)}
+textarea,input,select{max-width:100%}
+.hero-photo-layout{display:flex;min-height:0;padding:0;flex-direction:column;background:var(--indigo);border-bottom:.35rem solid var(--ochre)}
+.hero-photo-layout::before,.hero-photo-layout::after{display:none;content:none}
+.hero-photo-layout .hero-bg{position:relative;z-index:0;order:-1;width:100%;height:clamp(15rem,58vw,34rem);overflow:hidden;background:#e6dfd2}
+.hero-photo-layout .hero-bg a,.hero-photo-layout .hero-bg img{display:block;width:100%;height:100%}
+.hero-photo-layout .hero-bg img{object-fit:cover;object-position:center;background:transparent;filter:none;opacity:1}
+.hero-photo-layout .hero-content{position:relative;z-index:1;width:min(calc(100% - 2 * var(--gutter)),68rem);margin-inline:auto;padding:clamp(1.25rem,4vw,2.25rem) 0 1.5rem;background:transparent;border:0;box-shadow:none;backdrop-filter:none}
+.hero-photo-layout .hero-content h1,.hero-photo-layout .hero-content p{color:#fff;background:transparent;border:0;box-shadow:none;text-shadow:none}
+.hero-photo-layout .tag,.hero-photo-layout .badge{display:inline-flex;width:fit-content;max-width:100%;min-height:2.25rem;margin:.2rem;padding:.35rem .7rem;color:#fff;background:var(--indigo);border:1px solid #fff;border-radius:999px;line-height:1.2;white-space:normal}
+@media(min-width:23.4375rem){.nav-inner,body>nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:48rem){.grid,.gallery,.video-grid,.cols{grid-template-columns:repeat(2,minmax(0,1fr))}table,.align-table{min-width:100%}}
+@media(min-width:64rem){.nav-inner,body>nav{display:flex;flex-wrap:wrap;justify-content:center}.nav-title,.nav-inner>strong,body>nav>strong{flex-basis:100%;text-align:center}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.nav,body>nav{width:min(calc(100% - 2rem),calc(var(--content) + 2rem));margin:1rem auto;border:1px solid var(--line);border-radius:var(--r3)}}
+@media(max-width:23.4375rem){main,.container{padding:.75rem}.card,.exercise,.rubric,.intro{padding:1rem}.actions>button,.print-actions>button{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-@media print{.hero-content{padding:0;color:#111;background:#fff;border:0}.hero-bg{display:none!important}.hero::after,header#top::after{display:none}.hero h1,header h1,.hero p,header p{color:#111!important;text-shadow:none!important}.table-wrap,.table{overflow:visible}table,.align-table{min-width:0}footer{position:static;color:#111;background:#fff;border-top:1px solid #333}footer p{color:#111}}
+@media(forced-colors:active){button,.btn,.nav-inner>a,body>nav>a{border:1px solid ButtonText}.tag,.badge{border:1px solid CanvasText}}
+@media print{.nav,body>nav,.skip,.no-print,button,.btn,.actions,.print-actions,.video,.video-grid{display:none!important}html,body{overflow:visible}body{color:#111;background:#fff;font-size:10pt}.hero-photo-layout,header{display:block;min-height:0;padding:.5cm;color:#111;background:#fff;border:1px solid #777}.hero-photo-layout .hero-bg{display:none}.hero-photo-layout .hero-content{width:auto;padding:0}.hero-photo-layout .hero-content h1,.hero-photo-layout .hero-content p,header h1,header p{color:#111;text-shadow:none}.tag,.badge{color:#111!important;background:#fff!important;border:1px solid #777!important}.card,.exercise,.intro,.rubric,.note,details,figure{box-shadow:none;break-inside:avoid}h1,h2,h3,h4{break-after:avoid}.table,.table-wrap{overflow:visible;border:0;box-shadow:none}table,.align-table{min-width:0;font-size:8pt}thead{display:table-header-group}details>summary{display:none}details>:not(summary){display:block!important}footer{display:block;color:#111;background:#fff;border-top:1px solid #777}footer p{color:#111}}
+</style><meta content="strict-origin-when-cross-origin" name="referrer"/>
 
-</style><meta content="strict-origin-when-cross-origin" name="referrer"/><style id="correctif-photo-hero-visible">
-/* Correctif final : photographie du haut pleinement visible, sans filtre ni voile. */
-header.hero, .hero { position: relative !important; isolation: isolate !important; overflow: hidden !important; }
-header.hero::before, .hero::before,
-header.hero::after, .hero::after,
-header#top::before, header#top::after {
-  display: none !important;
-  content: none !important;
-  opacity: 0 !important;
-  background: transparent !important;
-  filter: none !important;
-  mix-blend-mode: normal !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-.hero-bg {
-  position: absolute !important; inset: 0 !important; z-index: -1 !important;
-  display: block !important; width: 100% !important; height: 100% !important;
-  opacity: 1 !important; visibility: visible !important;
-  background: transparent !important; filter: none !important;
-}
-.hero-bg a, .hero-bg img {
-  display: block !important; width: 100% !important; height: 100% !important;
-  opacity: 1 !important; visibility: visible !important;
-  filter: none !important; mix-blend-mode: normal !important;
-  backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
-}
-.hero-bg img {
-  object-fit: cover !important; object-position: center !important;
-  background: transparent !important;
-}
-.hero-content, header.hero > :not(.hero-bg) {
-  position: relative !important; z-index: 2 !important;
-}
-.hero-content {
-  background: transparent !important; border: 0 !important; box-shadow: none !important;
-  backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
-}
-header.hero h1, .hero h1, header.hero p, .hero p,
-header.hero .tag, .hero .tag, header.hero .badge, .hero .badge {
-  text-shadow: 0 2px 8px rgb(0 0 0 / 95%) !important;
-}
-</style><style id="suppression-encadre-titre-hero">
-/* Supprime uniquement le grand encadre colore devant la photo. */
-.hero .hero-content,
-header.hero .hero-content,
-body > header.hero .hero-content {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-}
 
-/* Conserve le titre lisible directement sur la photographie. */
-.hero .hero-content h1,
-.hero .hero-content p,
-.hero .hero-content .tag,
-.hero .hero-content .badge {
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
-}
-
-/* Le bloc n'ajoute plus de marge coloree autour du titre. */
-.hero .hero-content {
-    padding: 0.35rem !important;
-}
-
-/* A l'impression, aucun fond colore n'est ajoute. */
-@media print {
-    .hero .hero-content,
-    header.hero .hero-content,
-    body > header.hero .hero-content {
-        background: transparent !important;
-        border: 0 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-}
-</style>
-<style id="items-hero-centres-et-compacts">
-/*
-   Petits items situes dans l'en-tete photographie :
-   DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
-*/
-.hero > .tag,
-.hero > .badge,
-.hero .hero-content > .tag,
-.hero .hero-content > .badge,
-header.hero > .tag,
-header.hero > .badge {
-    /* Empêche l'encadre de prendre toute la largeur disponible. */
-    display: inline-flex !important;
-    width: fit-content !important;
-    max-width: calc(100% - 1rem) !important;
-    min-width: 0 !important;
-
-    /* Centre l'item dans l'en-tête, y compris lorsque .hero est une grille. */
-    justify-self: center !important;
-    align-self: center !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    /* Réduit l'encadre au texte intérieur. */
-    min-height: 0 !important;
-    margin: 0.12rem auto !important;
-    padding: 0.20rem 0.48rem !important;
-    border-radius: 999px !important;
-
-    /* Maintient le texte proprement centré. */
-    line-height: 1.15 !important;
-    text-align: center !important;
-    white-space: normal !important;
-}
-
-/* Centre également le groupe si les items sont placés dans un conteneur. */
-.hero .tags,
-.hero .badges,
-.hero .meta,
-.hero .hero-tags,
-.hero .hero-badges {
-    display: flex !important;
-    width: 100% !important;
-    flex-wrap: wrap !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 0.25rem !important;
-    margin-inline: auto !important;
-}
-
-/* Sur petit écran, les items restent compacts et visibles. */
-@media (max-width: 30rem) {
-    .hero > .tag,
-    .hero > .badge,
-    .hero .hero-content > .tag,
-    .hero .hero-content > .badge,
-    header.hero > .tag,
-    header.hero > .badge {
-        max-width: calc(100% - 0.5rem) !important;
-        padding: 0.18rem 0.42rem !important;
-        font-size: 0.72rem !important;
-    }
-}
-
-/* Impression : conserve des items compacts sans fond inutile. */
-@media print {
-    .hero > .tag,
-    .hero > .badge,
-    .hero .hero-content > .tag,
-    .hero .hero-content > .badge,
-    header.hero > .tag,
-    header.hero > .badge {
-        width: fit-content !important;
-        min-height: 0 !important;
-        margin: 0.08rem auto !important;
-        padding: 0.12rem 0.32rem !important;
-    }
-}
-</style>
-<style id="correctif-photo-mobile">
-.hero,
-header.hero {
-    position: relative !important;
-    isolation: isolate !important;
-    overflow: hidden !important;
-}
-
-.hero::before,
-.hero::after,
-header.hero::before,
-header.hero::after {
-    display: none !important;
-    content: none !important;
-    background: transparent !important;
-    opacity: 0 !important;
-    filter: none !important;
-}
-
-.hero-bg,
-.hero .bg,
-header.hero .hero-bg,
-header.hero .bg {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 0 !important;
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    overflow: hidden !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    background: transparent !important;
-    filter: none !important;
-}
-
-.hero-bg a,
-.hero-bg img,
-.hero .bg a,
-.hero .bg img,
-header.hero .hero-bg a,
-header.hero .hero-bg img,
-header.hero .bg a,
-header.hero .bg img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    filter: none !important;
-    mix-blend-mode: normal !important;
-}
-
-.hero-bg img,
-.hero .bg img,
-header.hero .hero-bg img,
-header.hero .bg img {
-    object-fit: cover !important;
-    object-position: center !important;
-    background: transparent !important;
-}
-
-.hero-content,
-.hero > :not(.hero-bg):not(.bg),
-header.hero .hero-content,
-header.hero > :not(.hero-bg):not(.bg) {
-    position: relative !important;
-    z-index: 1 !important;
-}
-
-.hero-content,
-header.hero .hero-content,
-.hero h1,
-.hero > p:not(.credit),
-header.hero h1,
-header.hero > p:not(.credit) {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-}
-
-.hero h1,
-.hero > p:not(.credit),
-.hero-content h1,
-.hero-content p:not(.credit),
-header.hero h1,
-header.hero > p:not(.credit) {
-    color: #fff !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, .95),
-                 0 0 12px rgba(0, 0, 0, .85) !important;
-}
-
-@media print {
-    .hero h1,
-    .hero > p:not(.credit),
-    .hero-content h1,
-    .hero-content p:not(.credit),
-    header.hero h1,
-    header.hero > p:not(.credit) {
-        color: #111 !important;
-        text-shadow: none !important;
-    }
-}
-</style>
 </head>
 <body><a class="skip" href="#contenido">Ir al contenido principal</a>
-<header class="hero" id="top"><div class="hero-bg"><a aria-label="Sala del Museo de Arte Precolombino de Santiago (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Mueso_de_Arte_Precolombino.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Sala del Museo de Arte Precolombino de Santiago" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" height="1944" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mueso%20de%20Arte%20Precolombino.jpg?width=1600" width="2592"/></a></div><div class="hero-content"><span class="tag">Matemáticas en español</span><span class="tag">Exposición · mediación · datos</span><h1 id="titulo-pagina">Mediación oral: explicar, hacer actuar y verificar</h1><p>Reunir las evidencias del módulo, organizar un estand, preparar un guion oral, proponer una tarea corta al visitante y comprobar la comprensión en español.</p></div></header>
+<header class="hero hero-photo-layout" id="top"><div class="hero-bg"><a aria-label="Sala del Museo de Arte Precolombino de Santiago (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Mueso_de_Arte_Precolombino.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Sala del Museo de Arte Precolombino de Santiago" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" height="1944" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mueso%20de%20Arte%20Precolombino.jpg?width=1600" width="2592"/></a></div><div class="hero-content"><span class="tag">Matemáticas en español</span><span class="tag">Exposición · mediación · datos</span><h1 id="titulo-pagina">Mediación oral: explicar, hacer actuar y verificar</h1><p>Reunir las evidencias del módulo, organizar un estand, preparar un guion oral, proponer una tarea corta al visitante y comprobar la comprensión en español.</p></div></header>
 <div aria-label="Impresión de la ficha de curso sobre mediación" class="print-actions no-print" role="group"><button class="ghost" data-action="download-text" type="button">Descargar apuntes</button><button data-action="print" type="button">Imprimir</button><button class="ghost" data-action="reset-extensions" type="button">Replegar las extensiones</button></div>
 <nav aria-label="Navegación principal de la ficha" class="nav"><div class="nav-inner"><strong>Navegación:</strong><a href="#guion-mediacion">Guion común de mediación oral</a><a href="#herramientas-matematicas">Herramientas matemáticas esenciales</a><a href="#datos-controles">Datos, restricciones y controles</a><a href="#estand-matematico">Construir un estand matemático</a><a href="#representaciones-datos">Organizar datos y elegir representaciones</a><a href="#procedimientos-mediacion">Procedimientos de resolución y mediación</a><a href="#progresion">Progresión de los aprendizajes</a><a href="#modelos-expresion">Modelos para hablar y escribir en español</a><a href="#preparacion-mediacion">Preparación de la mediación</a><a href="#videos-apoyo">Vídeos de apoyo matemático en español</a><a href="#cierre">Cierre didáctico de la ficha de curso</a><a href="#contexto-asociado">Contexto asociado</a><a href="#top">Inicio</a></div></nav>
 <main aria-labelledby="titulo-pagina" class="container" id="contenido" tabindex="-1">
@@ -341,11 +91,11 @@ header.hero > p:not(.credit) {
 <section aria-labelledby="titre-section-7" class="card" id="progresion"><h2 id="titre-section-7">7. Progresión de los aprendizajes</h2><p class="lead">La progresión se utiliza de forma selectiva: diagnóstico breve, una tarea matemática central, mediación entre pares, verificación y síntesis. No es necesario realizar todos los bloques en una sola sesión.</p><div class="grid"><div class="box"><h3>Apoyo</h3><p>Preparar observación, vocabulario, clasificación y frase completa.</p></div><div class="box"><h3>Consolidación</h3><p>Utilizar división de tiempo, base 20, porcentaje y explicación de quipu.</p></div><div class="box"><h3>Profundización</h3><p>Relacionar rotación, recorrido, comparación de sistemas y visualización de datos.</p></div><div class="box"><h3>Desafío</h3><p>Construir criterios, repartir con restricciones, analizar límites y producir síntesis.</p></div></div></section>
 <section aria-labelledby="titre-section-8" class="card" id="modelos-expresion"><h2 id="titre-section-8">8. Modelos para hablar y escribir en español</h2><div class="grid"><div class="box"><h3>Guion breve</h3><p><strong>Observo</strong> …. <strong>La idea matemática es</strong> …. <strong>Lo verifico con</strong> …. <strong>En el modelo estudiado, esto permite</strong> ….</p></div><div class="box"><h3>Responder al público</h3><p>“Buena pregunta. Primero…, después…, por eso podemos decir que…”</p></div><div class="box"><h3>Comparar</h3><p>“Estos dos sistemas se parecen porque…, pero se diferencian en…”</p></div><div class="box"><h3>Concluir</h3><p>“La exposición muestra que las matemáticas sirven para registrar, organizar, medir y explicar.”</p></div></div></section>
 <section aria-labelledby="titre-section-9" class="card" id="preparacion-mediacion"><h2 id="titre-section-9">9. Preparación de la mediación</h2><p class="lead">Bloque operativo para repartir tiempo y visitantes, convertir números, calcular porcentajes, elegir gráficos y verificar una explicación oral. </p><div class="grid"><div class="box"><h3>Fórmulas clave</h3><ul><li>Reparto: (tiempo total − síntesis) ÷ nº de estands.</li><li>Porcentaje: parte ÷ total × 100.</li><li>Rotación: α = 360° ÷ n.</li><li>Maya: N=a×20+b (y N=a×400+b×20+c).</li><li>Quipu: N=m×1000+c×100+d×10+u.</li></ul></div><div class="box"><h3>Lista de control de verificación</h3><ul><li>¿He reconstruido el total (suma)?</li><li>¿Mis unidades son coherentes?</li><li>¿Mi resultado es razonable (orden de magnitud)?</li><li>¿Puedo explicarlo en 2 frases?</li></ul></div><div class="box"><h3>Lista de control de mediación</h3><ul><li>1 objeto + 1 idea + 1 cálculo + 1 interpretación.</li><li>Distingo la prueba matemática de la interpretación cultural: digo «sugiere» o «ayuda a entender» cuando corresponde.</li><li>Uso conectores: porque / por lo tanto / sin embargo.</li></ul></div><div class="box"><h3>Frases en español listas</h3><ul><li>“Observo…, por eso deduzco…”</li><li>“Lo verifico porque…”</li><li>“En el modelo estudiado, esto permite…”</li><li>“Un límite es…”</li></ul></div></div><h3>Aplicaciones del método</h3><div class="grid"><div class="box"><h3>A · Repartir</h3><p>Resta primero el tiempo común; divide después el tiempo útil entre los estands. Comprueba que la suma reconstruya el total útil.</p></div><div class="box"><h3>B · Convertir</h3><p>En base 20, identifica veintenas y unidades. En un quipu escolar, conserva millares, centenas, decenas y unidades, incluidos los ceros.</p></div><div class="box"><h3>C · Representar datos</h3><p>Usa barras para comparar categorías, porcentajes o un diagrama circular para partes de un total, y una tabla para organizar roles.</p></div><div class="box"><h3>D · Verificar</h3><p>Controla suma, unidades, restricciones y orden de magnitud; termina con una frase que explique qué representa el resultado.</p></div></div><h3>Tabla de decisión matemática</h3><div aria-label="Tabla desplazable: Tabla de decisión matemática" class="table-wrap" role="region" tabindex="0"><table><caption>Tabla: Tabla de decisión matemática</caption><thead><tr><th scope="col">Situación</th><th scope="col">Método</th><th scope="col">Control</th></tr></thead><tbody><tr><td>Tiempo disponible</td><td>(total−síntesis)÷estands</td><td>La suma devuelve el tiempo útil.</td></tr><tr><td>Preferencias</td><td>parte÷total×100</td><td>Los porcentajes totalizan 100 %.</td></tr><tr><td>Grupos de visitantes</td><td>División y resto</td><td>Total repartido y capacidad máxima.</td></tr><tr><td>Evaluación de un estand</td><td>Suma de notas</td><td>Total dentro del máximo previsto.</td></tr></tbody></table></div></section>
-<section aria-labelledby="titre-section-10" class="card" id="videos-apoyo"><h2 id="titre-section-10">10. Vídeos de apoyo matemático en español</h2><p>Estos recursos permiten repasar porcentajes, base 20 y rotación antes de explicarlos al público.</p><div class="video-grid"><div><h3>Porcentajes y gráficos circulares</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/j9as_GcGDoA" title="Porcentajes y gráficos estadísticos"></iframe></div></div><div><h3>Sistema maya de base 20</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/d0ln9KIQdEE" title="Sistema de numeración maya en español"></iframe></div></div><div><h3>Rotación geométrica</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/T_kldq6_nes" title="Rotación en el plano cartesiano"></iframe></div></div></div></section><section aria-labelledby="titre-section-11" class="card" id="cierre"><h2 id="titre-section-11">11. Cierre didáctico de la ficha de curso</h2><div class="grid"><div class="box"><h3>Saber de mediación</h3><p>Una exposición DNL combina objeto, idea matemática, prueba verificable, tarea breve y reformulación.</p></div><div class="box"><h3>Control</h3><p>La comprensión se comprueba mediante una respuesta del visitante, no solo mediante la escucha.</p></div><div class="box"><h3>Frase DNL</h3><p>«Ahora te toca comprobarlo: primero…, luego…, por lo tanto…».</p></div><div class="box"><h3>Prudencia cultural</h3><p>El mediador distingue fuente histórica, modelo escolar y análisis matemático actual.</p></div></div></section><section aria-labelledby="titre-section-12" class="note" id="contexto-asociado"><strong id="titre-section-12">12. Contexto asociado:</strong> contexto museístico y cultural útil para diseñar una exposición clara, rigurosa y accesible.</section>
-<details class="extension" id="contexto-1"><summary id="titre-section-13">12.1. Mediación cultural en un museo</summary><section aria-labelledby="titre-section-13" class="card"><div class="ext-explain">Síntesis — La mediación ayuda al público a observar un objeto, formular preguntas y relacionar una explicación con su contexto. Un discurso de mediación es breve, claro y adaptado a los visitantes.<br/>Uso DNL-matemáticas — Transforma un cálculo en cuatro pasos: dato, operación, verificación e interpretación; controla también el tiempo de palabra.</div><div class="grid"><div class="gallery-item"><a aria-label="Sala de museo de arte precolombino (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Mexica_Hall_-_Museum_of_Anthropology_-_Mexico_City_-_Mexico_(15509721545).jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Sala de museo de arte precolombino" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mexica%20Hall%20-%20Museum%20of%20Anthropology%20-%20Mexico%20City%20-%20Mexico%20%2815509721545%29.jpg?width=1200"/></a><div class="caption">Sala de museo: objetos, recorrido y mediación.</div></div><div><h3>Vídeo en español — Mediación cultural</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/39yf34P4WZk" title="Cómo preparar una exposición oral"></iframe></div></div></div></section></details>
-<details class="extension" id="contexto-2"><summary id="titre-section-14">12.2. Objetos y registros precolombinos</summary><section aria-labelledby="titre-section-14" class="card"><div class="ext-explain">Síntesis — Quipus, códices y cerámicas pueden conservar información según contextos y funciones distintas, y muestran maneras diversas de registrar, contar o representar.<br/>Uso DNL-matemáticas — Para cada objeto, identifica soporte, símbolos, organización, dato cuantitativo y método de verificación.</div><div class="grid"><div class="gallery-item"><a aria-label="Quipu inca (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Inca_Quipu.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Quipu inca" data-offline-message="Imagen no disponible sin conexión." decoding="async" height="380" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Inca%20Quipu.jpg?width=1200" width="625"/></a><div class="caption">Quipu: cuerdas, nudos y organización de datos.</div></div><div><h3>Vídeo en español — Quipus y registros</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/0nDu4cJ7dHM" title="Los quipus y las matemáticas"></iframe></div></div></div></section></details>
-<details class="extension" id="contexto-3"><summary id="titre-section-15">12.3. Carteles y recursos visuales</summary><section aria-labelledby="titre-section-15" class="card"><div class="ext-explain">Síntesis — Un cartel claro presenta una idea principal, una imagen legible, pocas cifras y una fuente. La imagen debe apoyar la explicación, no funcionar como decoración.<br/>Uso DNL-matemáticas — Elige el visual según la función: comparar con barras, mostrar partes con porcentajes, explicar un proceso con un esquema y organizar responsabilidades con una tabla.</div><div class="grid"><div class="gallery-item"><a aria-label="Página del Códice de Dresde (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Dresden_Codex_p09.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Página del Códice de Dresde" data-offline-message="Imagen no disponible sin conexión." decoding="async" height="3332" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Dresden%20Codex%20p09.jpg?width=1200" width="1552"/></a><div class="caption">Códice: una fuente visual que exige contextualización.</div></div><div><h3>Vídeo en español — Cartel científico</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/ggaJp_LawxI" title="Cómo crear un cartel gráfico"></iframe></div></div></div></section></details>
-<details class="extension" id="contexto-4"><summary id="titre-section-16">12.4. Recorrido y participación</summary><section aria-labelledby="titre-section-16" class="card"><div class="ext-explain">Síntesis — La circulación, la capacidad de los estands, los turnos y los roles influyen en la experiencia del público. Un recorrido claro evita esperas y permite que todos participen.<br/>Uso DNL-matemáticas — Reparte visitantes y minutos bajo restricciones; comprueba el total, la capacidad máxima y la duración completa.</div><div class="grid"><div class="gallery-item"><a aria-label="Espacio de circulación en un museo (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:British_Museum_Great_Court,_London,_UK_-_Diliff.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Espacio de circulación en un museo" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/British%20Museum%20Great%20Court%2C%20London%2C%20UK%20-%20Diliff.jpg?width=1200"/></a><div class="caption">Circulación de visitantes y organización del espacio.</div></div><div><h3>Vídeo en español — Exposición oral</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/YH0-a1mXMUI" title="Accesibilidad comunicativa en museos"></iframe></div></div></div></section></details></main>
+<section aria-labelledby="titre-section-10" class="card" id="videos-apoyo"><h2 id="titre-section-10">10. Vídeos de apoyo matemático en español</h2><p>Estos recursos permiten repasar porcentajes, base 20 y rotación antes de explicarlos al público.</p><div class="video-grid"><div><h3>Porcentajes y gráficos circulares</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/j9as_GcGDoA" title="Porcentajes y gráficos estadísticos">El navegador no puede mostrar este vídeo integrado.</iframe></div></div><div><h3>Sistema maya de base 20</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/d0ln9KIQdEE" title="Sistema de numeración maya en español">El navegador no puede mostrar este vídeo integrado.</iframe></div></div><div><h3>Rotación geométrica</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/T_kldq6_nes" title="Rotación en el plano cartesiano">El navegador no puede mostrar este vídeo integrado.</iframe></div></div></div></section><section aria-labelledby="titre-section-11" class="card" id="cierre"><h2 id="titre-section-11">11. Cierre didáctico de la ficha de curso</h2><div class="grid"><div class="box"><h3>Saber de mediación</h3><p>Una exposición DNL combina objeto, idea matemática, prueba verificable, tarea breve y reformulación.</p></div><div class="box"><h3>Control</h3><p>La comprensión se comprueba mediante una respuesta del visitante, no solo mediante la escucha.</p></div><div class="box"><h3>Frase DNL</h3><p>«Ahora te toca comprobarlo: primero…, luego…, por lo tanto…».</p></div><div class="box"><h3>Prudencia cultural</h3><p>El mediador distingue fuente histórica, modelo escolar y análisis matemático actual.</p></div></div></section><section aria-labelledby="titre-section-12" class="note" id="contexto-asociado"><strong id="titre-section-12">12. Contexto asociado:</strong> contexto museístico y cultural útil para diseñar una exposición clara, rigurosa y accesible.</section>
+<details class="extension" id="contexto-1"><summary id="titre-section-13">12.1. Mediación cultural en un museo</summary><section aria-labelledby="titre-section-13" class="card"><div class="ext-explain">Síntesis — La mediación ayuda al público a observar un objeto, formular preguntas y relacionar una explicación con su contexto. Un discurso de mediación es breve, claro y adaptado a los visitantes.<br/>Uso DNL-matemáticas — Transforma un cálculo en cuatro pasos: dato, operación, verificación e interpretación; controla también el tiempo de palabra.</div><div class="grid"><div class="gallery-item"><a aria-label="Sala de museo de arte precolombino (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Mexica_Hall_-_Museum_of_Anthropology_-_Mexico_City_-_Mexico_(15509721545).jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Sala de museo de arte precolombino" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mexica%20Hall%20-%20Museum%20of%20Anthropology%20-%20Mexico%20City%20-%20Mexico%20%2815509721545%29.jpg?width=1200"/></a><div class="caption">Sala de museo: objetos, recorrido y mediación.</div></div><div><h3>Vídeo en español — Mediación cultural</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/39yf34P4WZk" title="Cómo preparar una exposición oral">El navegador no puede mostrar este vídeo integrado.</iframe></div></div></div></section></details>
+<details class="extension" id="contexto-2"><summary id="titre-section-14">12.2. Objetos y registros precolombinos</summary><section aria-labelledby="titre-section-14" class="card"><div class="ext-explain">Síntesis — Quipus, códices y cerámicas pueden conservar información según contextos y funciones distintas, y muestran maneras diversas de registrar, contar o representar.<br/>Uso DNL-matemáticas — Para cada objeto, identifica soporte, símbolos, organización, dato cuantitativo y método de verificación.</div><div class="grid"><div class="gallery-item"><a aria-label="Quipu inca (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Inca_Quipu.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Quipu inca" data-offline-message="Imagen no disponible sin conexión." decoding="async" height="380" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Inca%20Quipu.jpg?width=1200" width="625"/></a><div class="caption">Quipu: cuerdas, nudos y organización de datos.</div></div><div><h3>Vídeo en español — Quipus y registros</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/0nDu4cJ7dHM" title="Los quipus y las matemáticas">El navegador no puede mostrar este vídeo integrado.</iframe></div></div></div></section></details>
+<details class="extension" id="contexto-3"><summary id="titre-section-15">12.3. Carteles y recursos visuales</summary><section aria-labelledby="titre-section-15" class="card"><div class="ext-explain">Síntesis — Un cartel claro presenta una idea principal, una imagen legible, pocas cifras y una fuente. La imagen debe apoyar la explicación, no funcionar como decoración.<br/>Uso DNL-matemáticas — Elige el visual según la función: comparar con barras, mostrar partes con porcentajes, explicar un proceso con un esquema y organizar responsabilidades con una tabla.</div><div class="grid"><div class="gallery-item"><a aria-label="Página del Códice de Dresde (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Dresden_Codex_p09.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Página del Códice de Dresde" data-offline-message="Imagen no disponible sin conexión." decoding="async" height="3332" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Dresden%20Codex%20p09.jpg?width=1200" width="1552"/></a><div class="caption">Códice: una fuente visual que exige contextualización.</div></div><div><h3>Vídeo en español — Cartel científico</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/ggaJp_LawxI" title="Cómo crear un cartel gráfico">El navegador no puede mostrar este vídeo integrado.</iframe></div></div></div></section></details>
+<details class="extension" id="contexto-4"><summary id="titre-section-16">12.4. Recorrido y participación</summary><section aria-labelledby="titre-section-16" class="card"><div class="ext-explain">Síntesis — La circulación, la capacidad de los estands, los turnos y los roles influyen en la experiencia del público. Un recorrido claro evita esperas y permite que todos participen.<br/>Uso DNL-matemáticas — Reparte visitantes y minutos bajo restricciones; comprueba el total, la capacidad máxima y la duración completa.</div><div class="grid"><div class="gallery-item"><a aria-label="Espacio de circulación en un museo (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:British_Museum_Great_Court,_London,_UK_-_Diliff.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Espacio de circulación en un museo" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="lazy" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/British%20Museum%20Great%20Court%2C%20London%2C%20UK%20-%20Diliff.jpg?width=1200"/></a><div class="caption">Circulación de visitantes y organización del espacio.</div></div><div><h3>Vídeo en español — Exposición oral</h3><div class="video"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/YH0-a1mXMUI" title="Accesibilidad comunicativa en museos">El navegador no puede mostrar este vídeo integrado.</iframe></div></div></div></section></details></main>
 <footer role="contentinfo"><p>🌄 Ficha de curso DNL · Matemáticas en español · Exposición y mediación matemática · Lycée-Pensionnat Sacré-Cœur, Reims · © 2026-2027 · CC BY-NC-SA 4.0.</p></footer>
 <script id="script-imprimer-autonomo">
 (() => {

@@ -1,4 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><style id="styles-uiux-nazca-2026">
 
 :root{color-scheme:light;--ink:#27343a;--muted:#59686d;--charcoal:#203137;--paper:#fffdf8;--canvas:#f4f1e8;--surface:#fff;--terracotta:#9d3f2f;--terracotta-dark:#783024;--ochre:#c78b24;--ochre-soft:#f7e9bd;--turquoise:#2e6f73;--green:#3f7258;--blue:#356a82;--purple:#6a5185;--danger:#91382f;--line:#d8d8ce;--focus:#ffbf47;--radius:.85rem;--radius-lg:1.25rem;--shadow:0 .35rem 1.2rem rgb(32 49 55/.09);--shadow-hover:0 .9rem 2.2rem rgb(32 49 55/.16);--content:76rem;--ease:cubic-bezier(.2,.8,.2,1)}
@@ -18,256 +19,64 @@ main,.container{width:min(100%,calc(var(--content) + 2rem));margin:auto;padding:
 @media(forced-colors:active){button,.btn,.tag,.badge{border:1px solid ButtonText}}
 @media print{thead{display:table-header-group}tfoot{display:table-footer-group}body{color:#111;background:#fff;font-size:10pt}.nav,nav,.skip,.no-print,button,.btn,.actions,.print-actions,.video-grid,.video{display:none!important}header,.hero{min-height:0;padding:1cm;color:#111;background:#fff;border-bottom:2px solid #333}header::after,.hero::after,.hero-bg{display:none}.hero h1,header h1,.hero p,header p{color:#111;text-shadow:none}.card,.exercise,.intro,.rubric,.note,details.extension,details.extension-block{margin:.45cm 0;padding:.35cm;background:#fff;box-shadow:none;break-inside:auto}.table,.table-wrap{overflow:visible;border:0}table,.align-table{min-width:0;font-size:8pt}.gallery-item img,.card img{filter:none!important}h2,h3,h4,.formula,aside,table,figure,summary{break-inside:avoid}}
 
-
-/* Consolidation mobile-first, accessibilite et impression */
-body{min-width:0;overflow-x:clip;overflow-wrap:anywhere}
-main,.container,section,article,.card,.exercise,.intro,.rubric,.note,.box,.comp,.task,.q,.gallery-item,.cols>section{min-width:0;max-width:100%}
-.grid>*,.align-grid>*,.video-grid>*,.gallery>*,.cols>*{min-width:0}
-.nav,nav{position:static;top:auto}.nav-inner{max-width:100%}
-.nav a,nav>a,.nav-inner>a,button,.btn,summary{min-height:2.75rem}.nav a,nav>a,.nav-inner>a{min-width:2.75rem}
-.hero-content{width:min(100%,68rem);margin-inline:auto;padding:clamp(.9rem,2vw,1.3rem);background:rgb(26 42 45/.76);border:1px solid rgb(255 255 255/.48);border-radius:var(--radius-lg)}
-.hero-bg img{object-fit:cover;object-position:center 48%;filter:none!important;opacity:1!important}
-header::after,.hero::after{background:rgb(22 31 34/.22)}
-.gallery-item img,.card img,.exercise-image,.extension-image,.museum-image,.nazca-image{width:100%;height:auto;object-fit:contain;object-position:center;background:#fbf6ec;filter:none!important;opacity:1!important}
-.gallery-item a:hover img,.card a:hover img{filter:none!important;transform:scale(1.006)}
-.table,.table-wrap{max-width:100%;overscroll-behavior-inline:contain}.table:focus-visible,.table-wrap:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
-details>summary{min-height:2.75rem;align-content:center}footer{position:static;max-width:100%}
-@media(max-width:35.99rem){header,.hero{padding:3rem .75rem 2rem}main,.container{padding:.75rem}.card,.exercise,.intro,.rubric{padding:1rem}.hero-content{padding:1rem}.hero h1,header h1{font-size:clamp(1.85rem,10vw,2.8rem)}.tag,.badge,.pill{white-space:normal;text-align:center}.actions,.print-actions{padding-inline:.75rem}button,.btn,.actions button,.print-actions button{width:100%}table,.align-table{min-width:32rem}}
+/* Audit final de production */
+:root{--tap:2.75rem;--gutter:clamp(.75rem,2.2vw,2rem)}
+html{overflow-x:visible;scroll-padding-top:1rem}
+body{min-width:0;max-width:100%;overflow-x:visible;overflow-wrap:anywhere}
+header,main,footer,nav,section,article,aside,div,figure{min-width:0}
+h1,h2,h3,h4{overflow-wrap:normal;word-break:normal;hyphens:none}
+img{max-width:100%;height:auto;filter:none;opacity:1}
+:where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{outline:.2rem solid var(--focus);outline-offset:.2rem;box-shadow:0 0 0 .2rem #fff,0 0 0 .4rem var(--focus)}
+:where(a,button,summary):active{transform:translateY(.06rem)}
+.nav{position:static;overflow:visible;padding:.55rem;background:var(--paper);backdrop-filter:none}
+.nav-inner,body>nav{display:grid;grid-template-columns:minmax(0,1fr);gap:.45rem;overflow:visible;width:min(100%,var(--content));margin-inline:auto}
+.nav-title,.nav-inner>strong,body>nav>strong{position:static;grid-column:1/-1;padding:.35rem;color:var(--terracotta-dark);background:transparent;white-space:normal}
+.nav-inner>a,body>nav>a{display:flex;min-width:0;min-height:var(--tap);align-items:center;justify-content:center;padding:.55rem .65rem;text-align:center;white-space:normal}
+main,.container{width:min(100%,calc(var(--content) + 2rem));padding:var(--gutter)}
+.grid,.align-grid,.gallery,.video-grid,.cols{grid-template-columns:minmax(0,1fr)}
+.grid>*,.align-grid>*,.gallery>*,.video-grid>*,.cols>*{min-width:0}
+.table,.table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+table,.align-table{min-width:34rem}
+button,.btn,.actions button,.print-actions button,details>summary{min-width:var(--tap);min-height:var(--tap)}
+textarea,input,select{max-width:100%}
+.hero-photo-layout{display:flex;min-height:0;padding:0;flex-direction:column;background:var(--charcoal);border-bottom:.35rem solid var(--ochre)}
+.hero-photo-layout::before,.hero-photo-layout::after{display:none;content:none}
+.hero-photo-layout .hero-bg{position:relative;z-index:0;order:-1;width:100%;height:clamp(15rem,58vw,34rem);overflow:hidden;background:#e6dfd2}
+.hero-photo-layout .hero-bg a,.hero-photo-layout .hero-bg img{display:block;width:100%;height:100%}
+.hero-photo-layout .hero-bg img{object-fit:cover;object-position:center 48%;background:transparent;filter:none;opacity:1}
+.hero-photo-layout .hero-content{position:relative;z-index:1;width:min(calc(100% - 2 * var(--gutter)),68rem);margin-inline:auto;padding:clamp(1.25rem,4vw,2.25rem) 0 1.5rem;background:transparent;border:0;box-shadow:none;backdrop-filter:none}
+.hero-photo-layout .hero-content h1,.hero-photo-layout .hero-content p{color:#fff;background:transparent;border:0;box-shadow:none;text-shadow:none}
+.hero-photo-layout .tag,.hero-photo-layout .badge{display:inline-flex;width:fit-content;max-width:100%;min-height:2.25rem;margin:.2rem;padding:.35rem .7rem;color:#fff;background:var(--terracotta-dark);border:1px solid #fff;border-radius:999px;line-height:1.2;white-space:normal;backdrop-filter:none}
+@media(min-width:23.4375rem){.nav-inner,body>nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:48rem){.grid,.gallery,.video-grid,.cols{grid-template-columns:repeat(2,minmax(0,1fr))}table,.align-table{min-width:100%}}
+@media(min-width:64rem){.nav-inner,body>nav{display:flex;flex-wrap:wrap;justify-content:center}.nav-title,.nav-inner>strong,body>nav>strong{flex-basis:100%;text-align:center}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.nav,body>nav{width:min(calc(100% - 2rem),calc(var(--content) + 2rem));margin:1rem auto;border:1px solid var(--line);border-radius:var(--radius-lg)}}
+@media(max-width:23.4375rem){main,.container{padding:.75rem}.card,.exercise,.rubric,.intro{padding:1rem}.actions>button,.print-actions>button{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-@media print{.hero-content{padding:0;color:#111;background:#fff;border:0}.hero-bg{display:none!important}header::after,.hero::after{display:none}.hero h1,header h1,.hero p,header p{color:#111!important;text-shadow:none!important}.table,.table-wrap{overflow:visible}table,.align-table{min-width:0}footer{position:static;color:#111;background:#fff;border-top:1px solid #333}footer p{color:#111}}
+@media(forced-colors:active){button,.btn,.nav-inner>a,body>nav>a{border:1px solid ButtonText}.tag,.badge{border:1px solid CanvasText}}
+@media print{.nav,body>nav,.skip,.no-print,button,.btn,.actions,.print-actions,.video,.video-grid{display:none!important}html,body{overflow:visible}body{color:#111;background:#fff;font-size:10pt}.hero-photo-layout,header{display:block;min-height:0;padding:.5cm;color:#111;background:#fff;border:1px solid #777}.hero-photo-layout .hero-bg{display:none}.hero-photo-layout .hero-content{width:auto;padding:0}.hero-photo-layout .hero-content h1,.hero-photo-layout .hero-content p,header h1,header p{color:#111;text-shadow:none}.tag,.badge{color:#111!important;background:#fff!important;border:1px solid #777!important}.card,.exercise,.intro,.rubric,.note,details,figure{box-shadow:none;break-inside:avoid}h1,h2,h3,h4{break-after:avoid}.table,.table-wrap{overflow:visible;border:0;box-shadow:none}table,.align-table{min-width:0;font-size:8pt}thead{display:table-header-group}details>summary{display:none}details>:not(summary){display:block!important}footer{display:block;color:#111;background:#fff;border-top:1px solid #777}footer p{color:#111}}
 
+
+/* Audit final complémentaire */
+html{overflow-x:visible;scroll-padding-top:1rem}
+body{min-width:0;max-width:100%;overflow-x:visible;overflow-wrap:anywhere}
+header,main,footer,nav,section,article,aside,div,figure{min-width:0}
+h1,h2,h3,h4{overflow-wrap:normal;word-break:normal;hyphens:none}
+img{max-width:100%;height:auto;filter:none;opacity:1}
+:where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{outline:.2rem solid var(--focus);outline-offset:.2rem;box-shadow:0 0 0 .2rem #fff,0 0 0 .4rem var(--focus)}
+.table,.table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+.grid>*,.align-grid>*,.gallery>*,.video-grid>*,.cols>*{min-width:0}
+.hero-photo-layout::before,.hero-photo-layout::after{display:none;content:none}
+.hero-photo-layout .hero-bg img{filter:none;opacity:1}
+.hero-photo-layout .hero-content{background:transparent;border:0;box-shadow:none;backdrop-filter:none}
+.hero-photo-layout .hero-content h1,.hero-photo-layout .hero-content p{background:transparent;border:0;box-shadow:none;text-shadow:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(forced-colors:active){button,.btn,.nav a,nav a,.tag,.badge{border:1px solid ButtonText}}
+@media print{html,body{overflow:visible}.nav,nav,.skip,.no-print,button,.btn,.actions,.print-actions,.video,.video-grid{display:none!important}.hero-photo-layout .hero-bg{display:none}.hero-photo-layout .hero-content{padding:0;background:#fff}.hero-photo-layout .hero-content h1,.hero-photo-layout .hero-content p{color:#111;text-shadow:none}.table,.table-wrap{overflow:visible}table,.align-table{min-width:0}thead{display:table-header-group}}
 </style>
 <link href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3EBandera%20de%20Espa%C3%B1a%3C%2Ftitle%3E%0A%3Cdesc%3EFavicon%20con%20tres%20franjas%20horizontales%20roja%2C%20amarilla%20y%20roja.%3C%2Fdesc%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%23AA151B%22%2F%3E%0A%3Crect%20y%3D%2216%22%20width%3D%2264%22%20height%3D%2232%22%20fill%3D%22%23F1BF00%22%2F%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2262.5%22%20height%3D%2262.5%22%20rx%3D%229.25%22%0A%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%237A1015%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E" id="favicon-drapeau-espagnol" rel="icon" type="image/svg+xml"/><title>Nasca: regularidades, transformaciones y modelización geométrica | DNL</title>
-<meta content="Vista aérea del geoglifo del mono de Nazca" name="twitter:image:alt"/><meta content="Ejercicios DNL sobre motivos Nazca: reconocer simetrías, rotaciones y traslaciones, medir, trabajar a escala y justificar una transformación geométrica." name="twitter:description"/><meta content="Ficha de trabajo: geometría y motivos Nazca" name="twitter:title"/><meta content="summary_large_image" name="twitter:card"/><meta content="Vista aérea del geoglifo del mono de Nazca" property="og:image:alt"/><meta content="Ejercicios DNL sobre motivos Nazca: reconocer simetrías, rotaciones y traslaciones, medir, trabajar a escala y justificar una transformación geométrica." property="og:description"/><meta content="Ficha de trabajo: geometría y motivos Nazca" property="og:title"/><meta content="es_ES" property="og:locale"/><meta content="article" property="og:type"/><meta content="#26343b" name="theme-color"/><meta content="noindex, nofollow, noarchive, nosnippet" name="robots"/><meta content="ejercicios geometría Nazca, simetría, rotación, traslación, escala, medidas, transformaciones geométricas, DNL" name="keywords"/><meta content="Ejercicios DNL sobre motivos Nazca: reconocer simetrías, rotaciones y traslaciones, medir, trabajar a escala y justificar una transformación geométrica." name="description"/><meta content="strict-origin-when-cross-origin" name="referrer"/><style id="suppression-encadre-titre-hero">
-/* Supprime uniquement le grand encadre colore devant la photo. */
-.hero .hero-content,
-header.hero .hero-content,
-body > header.hero .hero-content {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-}
-
-/* Conserve le titre lisible directement sur la photographie. */
-.hero .hero-content h1,
-.hero .hero-content p,
-.hero .hero-content .tag,
-.hero .hero-content .badge {
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
-}
-
-/* Le bloc n'ajoute plus de marge coloree autour du titre. */
-.hero .hero-content {
-    padding: 0.35rem !important;
-}
-
-/* A l'impression, aucun fond colore n'est ajoute. */
-@media print {
-    .hero .hero-content,
-    header.hero .hero-content,
-    body > header.hero .hero-content {
-        background: transparent !important;
-        border: 0 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-}
-</style>
-<style id="items-hero-centres-et-compacts">
-/*
-   Petits items situes dans l'en-tete photographie :
-   DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
-*/
-.hero > .tag,
-.hero > .badge,
-.hero .hero-content > .tag,
-.hero .hero-content > .badge,
-header.hero > .tag,
-header.hero > .badge {
-    /* Empêche l'encadre de prendre toute la largeur disponible. */
-    display: inline-flex !important;
-    width: fit-content !important;
-    max-width: calc(100% - 1rem) !important;
-    min-width: 0 !important;
-
-    /* Centre l'item dans l'en-tête, y compris lorsque .hero est une grille. */
-    justify-self: center !important;
-    align-self: center !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    /* Réduit l'encadre au texte intérieur. */
-    min-height: 0 !important;
-    margin: 0.12rem auto !important;
-    padding: 0.20rem 0.48rem !important;
-    border-radius: 999px !important;
-
-    /* Maintient le texte proprement centré. */
-    line-height: 1.15 !important;
-    text-align: center !important;
-    white-space: normal !important;
-}
-
-/* Centre également le groupe si les items sont placés dans un conteneur. */
-.hero .tags,
-.hero .badges,
-.hero .meta,
-.hero .hero-tags,
-.hero .hero-badges {
-    display: flex !important;
-    width: 100% !important;
-    flex-wrap: wrap !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 0.25rem !important;
-    margin-inline: auto !important;
-}
-
-/* Sur petit écran, les items restent compacts et visibles. */
-@media (max-width: 30rem) {
-    .hero > .tag,
-    .hero > .badge,
-    .hero .hero-content > .tag,
-    .hero .hero-content > .badge,
-    header.hero > .tag,
-    header.hero > .badge {
-        max-width: calc(100% - 0.5rem) !important;
-        padding: 0.18rem 0.42rem !important;
-        font-size: 0.72rem !important;
-    }
-}
-
-/* Impression : conserve des items compacts sans fond inutile. */
-@media print {
-    .hero > .tag,
-    .hero > .badge,
-    .hero .hero-content > .tag,
-    .hero .hero-content > .badge,
-    header.hero > .tag,
-    header.hero > .badge {
-        width: fit-content !important;
-        min-height: 0 !important;
-        margin: 0.08rem auto !important;
-        padding: 0.12rem 0.32rem !important;
-    }
-}
-</style>
-<style id="correctif-photo-mobile">
-.hero,
-header.hero {
-    position: relative !important;
-    isolation: isolate !important;
-    overflow: hidden !important;
-}
-
-.hero::before,
-.hero::after,
-header.hero::before,
-header.hero::after {
-    display: none !important;
-    content: none !important;
-    background: transparent !important;
-    opacity: 0 !important;
-    filter: none !important;
-}
-
-.hero-bg,
-.hero .bg,
-header.hero .hero-bg,
-header.hero .bg {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 0 !important;
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    overflow: hidden !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    background: transparent !important;
-    filter: none !important;
-}
-
-.hero-bg a,
-.hero-bg img,
-.hero .bg a,
-.hero .bg img,
-header.hero .hero-bg a,
-header.hero .hero-bg img,
-header.hero .bg a,
-header.hero .bg img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    filter: none !important;
-    mix-blend-mode: normal !important;
-}
-
-.hero-bg img,
-.hero .bg img,
-header.hero .hero-bg img,
-header.hero .bg img {
-    object-fit: cover !important;
-    object-position: center !important;
-    background: transparent !important;
-}
-
-.hero-content,
-.hero > :not(.hero-bg):not(.bg),
-header.hero .hero-content,
-header.hero > :not(.hero-bg):not(.bg) {
-    position: relative !important;
-    z-index: 1 !important;
-}
-
-.hero-content,
-header.hero .hero-content,
-.hero h1,
-.hero > p:not(.credit),
-header.hero h1,
-header.hero > p:not(.credit) {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-}
-
-.hero h1,
-.hero > p:not(.credit),
-.hero-content h1,
-.hero-content p:not(.credit),
-header.hero h1,
-header.hero > p:not(.credit) {
-    color: #fff !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, .95),
-                 0 0 12px rgba(0, 0, 0, .85) !important;
-}
-
-@media print {
-    .hero h1,
-    .hero > p:not(.credit),
-    .hero-content h1,
-    .hero-content p:not(.credit),
-    header.hero h1,
-    header.hero > p:not(.credit) {
-        color: #111 !important;
-        text-shadow: none !important;
-    }
-}
-</style>
+<meta content="Vista aérea del geoglifo del mono de Nazca" name="twitter:image:alt"/><meta content="Ejercicios DNL sobre motivos Nazca: reconocer simetrías, rotaciones y traslaciones, medir, trabajar a escala y justificar una transformación geométrica." name="twitter:description"/><meta content="Ficha de trabajo: geometría y motivos Nazca" name="twitter:title"/><meta content="summary_large_image" name="twitter:card"/><meta content="Vista aérea del geoglifo del mono de Nazca" property="og:image:alt"/><meta content="Ejercicios DNL sobre motivos Nazca: reconocer simetrías, rotaciones y traslaciones, medir, trabajar a escala y justificar una transformación geométrica." property="og:description"/><meta content="Ficha de trabajo: geometría y motivos Nazca" property="og:title"/><meta content="es_ES" property="og:locale"/><meta content="article" property="og:type"/><meta content="#26343b" name="theme-color"/><meta content="noindex, nofollow, noarchive, nosnippet" name="robots"/><meta content="ejercicios geometría Nazca, simetría, rotación, traslación, escala, medidas, transformaciones geométricas, DNL" name="keywords"/><meta content="Ejercicios DNL sobre motivos Nazca: reconocer simetrías, rotaciones y traslaciones, medir, trabajar a escala y justificar una transformación geométrica." name="description"/><meta content="strict-origin-when-cross-origin" name="referrer"/>
 </head><body data-extension-policy="collapsed-on-load"><a class="skip" href="#contenido-principal">Ir al contenido principal</a>
-<header class="hero" id="top"><div class="hero-bg"><a aria-label="Vista aérea del geoglifo del mono de Nazca (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Líneas_de_Nazca,_Nazca,_Perú,_2015-07-29,_DD_49.JPG" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Vista aérea del geoglifo conocido como el Mono, en Nasca, Perú" class="nazca-image" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" height="4587" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Líneas%20de%20Nazca%2C%20Nazca%2C%20Perú%2C%202015-07-29%2C%20DD%2049.JPG?width=1600" width="6894"/></a></div><div class="hero-content"><span class="tag">Matemáticas en español</span><span class="tag">Seconde</span><span class="tag">Nazca</span><span class="tag">Geometría · transformaciones · mediación</span><h1 id="titulo-pagina">Nasca: regularidades, transformaciones y modelización geométrica</h1><p>Observar, calcular, verificar y explicar regularidades geométricas en motivos asociados a la cultura Nazca, distinguiendo el objeto, la fotografía, el modelo y la interpretación cultural.</p></div></header><nav aria-label="Navegación principal de la ficha" class="nav" id="navegacion-trabajo-nazca"><div class="nav-inner"><div class="nav-title">Navegación:</div><a href="#basico">Apoyo</a><a href="#consolidacion">Consolidación</a><a href="#profundizacion">Profundización</a><a href="#experto">Desafío guiado</a><a href="#rubrica">Criterios</a><a href="#extensiones">Contexto</a><a href="#top">Inicio</a></div></nav>
+<header class="hero hero-photo-layout" id="top"><div class="hero-bg"><a aria-label="Vista aérea del geoglifo del mono de Nazca (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Líneas_de_Nazca,_Nazca,_Perú,_2015-07-29,_DD_49.JPG" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Vista aérea del geoglifo conocido como el Mono, en Nasca, Perú" class="nazca-image" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" height="4587" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Líneas%20de%20Nazca%2C%20Nazca%2C%20Perú%2C%202015-07-29%2C%20DD%2049.JPG?width=1600" width="6894"/></a></div><div class="hero-content"><span class="tag">Matemáticas en español</span><span class="tag">Seconde</span><span class="tag">Nazca</span><span class="tag">Geometría · transformaciones · mediación</span><h1 id="titulo-pagina">Nasca: regularidades, transformaciones y modelización geométrica</h1><p>Observar, calcular, verificar y explicar regularidades geométricas en motivos asociados a la cultura Nazca, distinguiendo el objeto, la fotografía, el modelo y la interpretación cultural.</p></div></header><nav aria-label="Navegación principal de la ficha" class="nav" id="navegacion-trabajo-nazca"><div class="nav-inner"><div class="nav-title">Navegación:</div><a href="#basico">Apoyo</a><a href="#consolidacion">Consolidación</a><a href="#profundizacion">Profundización</a><a href="#experto">Desafío guiado</a><a href="#rubrica">Criterios</a><a href="#extensiones">Contexto</a><a href="#top">Inicio</a></div></nav>
 <main aria-labelledby="titulo-pagina" id="contenido-principal" tabindex="-1"><section aria-label="Convención de trabajo" class="note" id="convencion-trabajo"><strong>Convención de trabajo: </strong>los datos numéricos de los ejercicios son datos didácticos, salvo que se indique una fuente. Una fotografía sin escala permite observar formas, pero no obtener medidas reales. Distingue siempre objeto, imagen, modelo geométrico, cálculo e interpretación cultural. Se usa «nasca» para la cultura y «Nazca» cuando forma parte de un nombre propio o de la grafía de una fuente.</section>
 <section class="note" id="recorrido-diferenciado"><strong>Recorrido diferenciado:</strong> realiza los ejercicios indicados por el profesor. Los ejercicios no seleccionados sirven para diferenciación, profundización o prolongación. No es necesario completar los dieciséis ejercicios en una sola sesión.</section><section aria-labelledby="titulo-seccion-15" id="basico"><div class="title"><h2 id="titulo-seccion-15">1. Apoyo</h2><p>Reconocer formas, simetrías simples, ritmos visuales y repeticiones.</p></div><article class="exercise basic" data-level="b"><h3>Ejercicio 1 — Clasificar formas y motivos decorativos</h3><div class="meta"><span class="badge">6 min</span></div><p class="small method-hint">Apoyo: describe solo lo visible antes de interpretar.</p><div class="task">A partir de la descripción siguiente, clasifica cada elemento: círculos, triángulos, líneas en zigzag y una banda decorativa. Indica si es una forma geométrica, una organización decorativa o ambas cosas. Justifica sin afirmar que la descripción reproduce una pieza histórica concreta.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 1 — Clasificar formas y motivos decorativos" data-answer="" id="ans1"></textarea></div></article><article class="exercise basic" data-level="b"><h3>Ejercicio 2 — Identificar un patrón y completar una repetición</h3><div class="meta"><span class="badge">7 min</span></div><p class="small method-hint">Apoyo: identifica el bloque mínimo y comprueba la repetición.</p><div class="task">Una banda didáctica repite rojo, negro, ocre, rojo, negro, ocre… Identifica el bloque mínimo, indica su longitud y determina el 8.º color. Verifica la respuesta mediante la división euclidiana de 8 entre 3.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 2 — Identificar un patrón y completar una repetición" data-answer="" id="ans2"></textarea></div></article><article class="exercise basic" data-level="b"><h3>Ejercicio 3 — Describir una comprobación de simetría axial</h3><div class="meta"><span class="badge">8 min</span></div><p class="small method-hint">Apoyo: localiza un eje y verifica la correspondencia de ambas partes.</p><div class="task">Describe un protocolo para comprobar si un dibujo estilizado de colibrí posee un eje de simetría. Usa «eje», «mitad», «punto correspondiente» y «espejo». Distingue el protocolo de una afirmación sobre un geoglifo real.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 3 — Describir una comprobación de simetría axial" data-answer="" id="ans3"></textarea></div></article><article class="exercise basic" data-level="b"><h3>Ejercicio 4 — Calcular la fracción ocupada por un motivo</h3><div class="meta"><span class="badge">9 min</span></div><p class="small method-hint">Apoyo: expresa una parte del total y comprueba la suma.</p><div class="task">Un borde idealizado está dividido en 12 sectores iguales, sin espacios ni superposiciones. Calcula la fracción del borde correspondiente a un sector, simplifícala y verifica que la suma de los 12 sectores reconstruye la unidad.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 4 — Calcular la fracción ocupada por un motivo" data-answer="" id="ans4"></textarea></div></article></section>
 <section aria-labelledby="titulo-seccion-16" id="consolidacion"><div class="title"><h2 id="titulo-seccion-16">2. Consolidación</h2><p>Calcular proporciones, porcentajes, escalas y ángulos con apoyo.</p></div><article class="exercise inter" data-level="i"><h3>Ejercicio 5 — Calcular el ángulo de una rotación regular</h3><div class="meta"><span class="badge">10 min</span></div><p class="small method-hint">Consolidación: calcula el ángulo y verifica la vuelta completa.</p><div class="task">Diez posiciones están distribuidas regularmente alrededor de un mismo centro. Calcula el ángulo orientado positivo de la rotación que transforma una posición en la siguiente y verifica que diez rotaciones completan una vuelta.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 5 — Calcular el ángulo de una rotación regular" data-answer="" id="ans5"></textarea></div></article><article class="exercise inter" data-level="i"><h3>Ejercicio 6 — Calcular e interpretar la razón altura/anchura</h3><div class="meta"><span class="badge">11 min</span></div><p class="small method-hint">Consolidación: usa las mismas unidades y compara la razón con 1.</p><div class="task">Un modelo de vasija mide 18 cm de alto y 12 cm de ancho máximo. Calcula la razón sin unidad H/A, da su valor exacto e interpreta únicamente el modelo: más alto que ancho, aproximadamente equilibrado o más ancho que alto.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 6 — Calcular e interpretar la razón altura/anchura" data-answer="" id="ans6"></textarea></div></article><article class="exercise inter" data-level="i"><h3>Ejercicio 7 — Calcular el porcentaje ocupado por una banda</h3><div class="meta"><span class="badge">12 min</span></div><p class="small method-hint">Consolidación: identifica parte y total antes de interpretar.</p><div class="task">En un modelo, una banda mide 4 cm en una altura total de 20 cm. Calcula B/H, exprésalo como fracción simplificada, número decimal y porcentaje. Interpreta el resultado sin extrapolarlo a todas las vasijas Nazca.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 7 — Calcular el porcentaje ocupado por una banda" data-answer="" id="ans7"></textarea></div></article><article class="exercise inter" data-level="i"><h3>Ejercicio 8 — Aplicar una escala y comprobar las unidades</h3><div class="meta"><span class="badge">13 min</span></div><p class="small method-hint">Consolidación: convierte las unidades antes de aplicar la escala.</p><div class="task">En un modelo de trabajo, 1 cm en el dibujo representa 10 m en la realidad. Convierte 10 m en centímetros y expresa la escala numérica. Con los datos didácticos 96 m de longitud y 66 m de anchura, calcula las medidas del dibujo y comprueba cada resultado mediante una conversión inversa.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 8 — Aplicar una escala y comprobar las unidades" data-answer="" id="ans8"></textarea></div></article></section>

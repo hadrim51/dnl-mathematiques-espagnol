@@ -1,4 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -88,266 +89,57 @@ details.extension>section.card{margin:1rem;padding:clamp(1rem,3vw,1.5rem)}detail
 .offline-message{margin:.7rem;padding:.75rem;color:var(--red);background:#fff2ef;border-left:.3rem solid currentColor;border-radius:.55rem;font-weight:800}
 footer{display:flex;min-height:6rem;align-items:center;justify-content:center;margin-top:3rem;padding:2rem 1rem;color:#fff;background:linear-gradient(100deg,var(--deep),#20574e,var(--jade));border-top:.35rem solid var(--gold);text-align:center}footer p{max-width:var(--content);margin:0;color:#fff}
 @media(min-width:36rem){main,.container{padding:1.35rem}.grid,.gallery,.ext-media,.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.actions button,.print-actions button{width:auto}}
-@media(min-width:64rem){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.align-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card,.exercise,.box,.gallery-item,.media-card{transition:border-color .2s ease,box-shadow .25s var(--motion),transform .25s var(--motion)}.card:hover,.exercise:hover,.box:hover,.gallery-item:hover,.media-card:hover{box-shadow:var(--shadow-high)}.gallery-item img,.media-card img,.card img{}}
+@media(min-width:64rem){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.align-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card,.exercise,.box,.gallery-item,.media-card{transition:border-color .2s ease,box-shadow .25s var(--motion),transform .25s var(--motion)}.card:hover,.exercise:hover,.box:hover,.gallery-item:hover,.media-card:hover{box-shadow:var(--shadow-high)}}
 @media(min-width:80rem){.align-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.gallery,.ext-media{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:35.99rem){button,.btn,.actions button,.print-actions button{width:100%}.hero{min-height:18rem;padding:4rem .85rem 2.5rem}.hero-bg img{}table,.align-table{min-width:34rem}}
+@media(max-width:35.99rem){button,.btn,.actions button,.print-actions button{width:100%}.hero{min-height:18rem;padding:4rem .85rem 2.5rem}table,.align-table{min-width:34rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 @media(forced-colors:active){button,.btn{border:1px solid ButtonText}}
 @media print{thead{display:table-header-group}tfoot{display:table-footer-group}body{color:#111;background:#fff;font-size:10pt}.nav,.no-print,button,.btn,.actions,.print-actions{display:none!important}.hero{min-height:0;padding:1cm;color:#111;background:#fff;border-bottom:2px solid #333}.hero-bg{display:none}.hero h1,.hero p{color:#111;text-shadow:none}.card,.exercise,.rubric,.note,details.extension{margin:.5cm 0;padding:.4cm;background:#fff;box-shadow:none}.table-wrap{overflow:visible;border:0}table,.align-table{min-width:0;font-size:8pt}.gallery-item img,.media-card img,.card img,.extension-image{filter:none!important}h2,h3,h4,.title,.formula,aside,table,figure,.table-wrap,summary{break-inside:avoid;page-break-inside:avoid}}
 
 .symbol-strip{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-around;padding:1rem}.symbol-item{display:grid;gap:.35rem;place-items:center;min-width:10rem}.symbol-item>span:first-child{font-size:3rem;line-height:1}
 
-
-/* Consolidation mobile-first, accessibilité et impression */
-body{min-width:0;overflow-x:hidden;overflow-wrap:break-word}
-main,.container,section,article,.card,.exercise,.rubric,.intro,.box,.task,.q,.align-card,.task-card,.media-card,.gallery-item,.cols>section{min-width:0;max-width:100%}
+/* Audit final de production */
+:root{--tap:2.75rem;--gutter:clamp(.75rem,2.2vw,2rem)}
+html{overflow-x:visible;scroll-padding-top:1rem}
+body{min-width:0;max-width:100%;overflow-x:visible;overflow-wrap:anywhere}
+header,main,footer,nav,section,article,aside,div,figure{min-width:0}
+h1,h2,h3,h4{overflow-wrap:normal;word-break:normal;hyphens:none}
+img{max-width:100%;height:auto;filter:none;opacity:1}
+:where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{outline:.2rem solid var(--focus);outline-offset:.2rem;box-shadow:0 0 0 .2rem #fff,0 0 0 .4rem var(--focus)}
+:where(a,button,summary):active{transform:translateY(.06rem)}
+.nav{position:static;overflow:visible;padding:.55rem;background:var(--paper);backdrop-filter:none}
+.nav-inner,body>nav{display:grid;grid-template-columns:minmax(0,1fr);gap:.45rem;overflow:visible;width:min(100%,var(--content));margin-inline:auto}
+.nav-title,.nav-inner>strong,body>nav>strong{position:static;grid-column:1/-1;padding:.35rem;color:var(--jade);background:transparent;white-space:normal}
+.nav-inner>a,body>nav>a{display:flex;min-width:0;min-height:var(--tap);align-items:center;justify-content:center;padding:.55rem .65rem;text-align:center;white-space:normal}
+main,.container{width:min(100%,calc(var(--content) + 2rem));padding:var(--gutter)}
+.grid,.align-grid,.gallery,.ext-media,.video-grid,.cols{grid-template-columns:minmax(0,1fr)}
 .grid>*,.align-grid>*,.gallery>*,.ext-media>*,.video-grid>*,.cols>*{min-width:0}
-.nav-inner>a,nav a,button,.btn,summary{min-height:2.75rem}
-.nav-inner>a,nav a{min-width:2.75rem}
-.hero-bg img,.gallery-item img,.media-card img,.card img,.exercise-image,.extension-image,.museum-image,.nazca-image,.roman-image,.maya-image{filter:none!important;opacity:1!important}
-.hero-bg img{object-fit:cover;object-position:center 42%}
-.gallery-item img,.media-card img,.card img,.exercise-image,.extension-image,.museum-image,.nazca-image,.roman-image,.maya-image{width:100%;height:auto;object-fit:contain;object-position:center;background:#f8fbf9}
-.hero::after{background:rgb(9 31 29/.34)}
-.hero-content{width:min(100%,68rem);margin-inline:auto;padding:clamp(.9rem,2vw,1.3rem);background:rgb(12 43 39/.76);border:1px solid rgb(255 255 255/.42);border-radius:var(--radius-lg)}
-.table-wrap{max-width:100%;overscroll-behavior-inline:contain}.table-wrap:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
-details>summary{min-height:2.75rem;align-content:center}
-footer{position:static;max-width:100%}
-@media(max-width:35.99rem){main,.container{padding:.75rem}.card,.exercise,.rubric,.intro{padding:1rem}.hero-content{padding:1rem}.hero h1,header h1{font-size:clamp(2rem,10vw,3rem)}table,.align-table,.table-wrap table{min-width:32rem}.actions,.print-actions{padding-inline:.75rem}}
+.table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+table,.align-table,.table-wrap table{min-width:34rem}
+button,.btn,.actions button,.print-actions button,details>summary{min-width:var(--tap);min-height:var(--tap)}
+textarea,input,select{max-width:100%}
+.hero-photo-layout{display:flex;min-height:0;padding:0;flex-direction:column;background:var(--deep);border-bottom:.38rem solid var(--gold-2)}
+.hero-photo-layout::before,.hero-photo-layout::after{display:none;content:none}
+.hero-photo-layout .hero-bg{position:relative;z-index:0;order:-1;width:100%;height:clamp(15rem,58vw,34rem);overflow:hidden;background:#dfe8e4}
+.hero-photo-layout .hero-bg a,.hero-photo-layout .hero-bg img{display:block;width:100%;height:100%}
+.hero-photo-layout .hero-bg img{object-fit:cover;object-position:center 44%;background:transparent;filter:none;opacity:1}
+.hero-photo-layout .hero-content{position:relative;z-index:1;width:min(calc(100% - 2 * var(--gutter)),68rem);margin-inline:auto;padding:clamp(1.25rem,4vw,2.25rem) 0 1.5rem;background:transparent;border:0;box-shadow:none;backdrop-filter:none}
+.hero-photo-layout .hero-content h1,.hero-photo-layout .hero-content p{color:#fff;background:transparent;border:0;box-shadow:none;text-shadow:none}
+.hero-photo-layout .tag,.hero-photo-layout .badge{display:inline-flex;width:fit-content;max-width:100%;min-height:2.25rem;margin:.2rem;padding:.35rem .7rem;color:#fff;background:var(--jade);border:1px solid #fff;border-radius:999px;line-height:1.2;white-space:normal;backdrop-filter:none}
+@media(min-width:23.4375rem){.nav-inner,body>nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:48rem){.grid,.gallery,.ext-media,.video-grid,.cols{grid-template-columns:repeat(2,minmax(0,1fr))}table,.align-table,.table-wrap table{min-width:100%}}
+@media(min-width:64rem){.nav-inner,body>nav{display:flex;flex-wrap:wrap;justify-content:center}.nav-title,.nav-inner>strong,body>nav>strong{flex-basis:100%;text-align:center}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.nav,body>nav{width:min(calc(100% - 2rem),calc(var(--content) + 2rem));margin:1rem auto;border:1px solid var(--line);border-radius:var(--radius-lg)}}
+@media(max-width:23.4375rem){main,.container{padding:.75rem}.card,.exercise,.rubric,.intro{padding:1rem}.actions>button,.print-actions>button{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-@media print{.hero-content{padding:0;color:#111;background:#fff;border:0}.hero-bg{display:none!important}.hero::after{display:none}.hero h1,.hero p{color:#111!important;text-shadow:none!important}table,.align-table,.table-wrap table{min-width:0}footer{position:static;color:#111;background:#fff;border-top:1px solid #333}footer p{color:#111}}
-
+@media(forced-colors:active){button,.btn,.nav-inner>a,body>nav>a{border:1px solid ButtonText}.tag,.badge{border:1px solid CanvasText}}
+@media print{.nav,body>nav,.skip,.no-print,button,.btn,.actions,.print-actions{display:none!important}html,body{overflow:visible}body{color:#111;background:#fff;font-size:10pt}.hero-photo-layout,header{display:block;min-height:0;padding:.5cm;color:#111;background:#fff;border:1px solid #777}.hero-photo-layout .hero-bg{display:none}.hero-photo-layout .hero-content{width:auto;padding:0}.hero-photo-layout .hero-content h1,.hero-photo-layout .hero-content p,header h1,header p{color:#111;text-shadow:none}.tag,.badge{color:#111!important;background:#fff!important;border:1px solid #777!important}.card,.exercise,.intro,.rubric,.note,details,figure{box-shadow:none;break-inside:avoid}h1,h2,h3,h4{break-after:avoid}.table-wrap{overflow:visible;border:0;box-shadow:none}table,.align-table,.table-wrap table{min-width:0;font-size:8pt}thead{display:table-header-group}details>summary{display:none}details>:not(summary){display:block!important}footer{display:block;min-height:0;color:#111;background:#fff;border-top:1px solid #777}footer p{color:#111}}
 </style>
-<meta content="eleve-mayas-r3-2026-10-22" name="version"/><meta content="strict-origin-when-cross-origin" name="referrer"/><style id="suppression-encadre-titre-hero">
-/* Supprime uniquement le grand encadre colore devant la photo. */
-.hero .hero-content,
-header.hero .hero-content,
-body > header.hero .hero-content {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-}
+<meta content="eleve-mayas-r3-2026-10-22" name="version"/><meta content="strict-origin-when-cross-origin" name="referrer"/>
 
-/* Conserve le titre lisible directement sur la photographie. */
-.hero .hero-content h1,
-.hero .hero-content p,
-.hero .hero-content .tag,
-.hero .hero-content .badge {
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
-}
 
-/* Le bloc n'ajoute plus de marge coloree autour du titre. */
-.hero .hero-content {
-    padding: 0.35rem !important;
-}
-
-/* A l'impression, aucun fond colore n'est ajoute. */
-@media print {
-    .hero .hero-content,
-    header.hero .hero-content,
-    body > header.hero .hero-content {
-        background: transparent !important;
-        border: 0 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-}
-</style>
-<style id="items-hero-centres-et-compacts">
-/*
-   Petits items situes dans l'en-tete photographie :
-   DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
-*/
-.hero > .tag,
-.hero > .badge,
-.hero .hero-content > .tag,
-.hero .hero-content > .badge,
-header.hero > .tag,
-header.hero > .badge {
-    /* Empêche l'encadre de prendre toute la largeur disponible. */
-    display: inline-flex !important;
-    width: fit-content !important;
-    max-width: calc(100% - 1rem) !important;
-    min-width: 0 !important;
-
-    /* Centre l'item dans l'en-tête, y compris lorsque .hero est une grille. */
-    justify-self: center !important;
-    align-self: center !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    /* Réduit l'encadre au texte intérieur. */
-    min-height: 0 !important;
-    margin: 0.12rem auto !important;
-    padding: 0.20rem 0.48rem !important;
-    border-radius: 999px !important;
-
-    /* Maintient le texte proprement centré. */
-    line-height: 1.15 !important;
-    text-align: center !important;
-    white-space: normal !important;
-}
-
-/* Centre également le groupe si les items sont placés dans un conteneur. */
-.hero .tags,
-.hero .badges,
-.hero .meta,
-.hero .hero-tags,
-.hero .hero-badges {
-    display: flex !important;
-    width: 100% !important;
-    flex-wrap: wrap !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 0.25rem !important;
-    margin-inline: auto !important;
-}
-
-/* Sur petit écran, les items restent compacts et visibles. */
-@media (max-width: 30rem) {
-    .hero > .tag,
-    .hero > .badge,
-    .hero .hero-content > .tag,
-    .hero .hero-content > .badge,
-    header.hero > .tag,
-    header.hero > .badge {
-        max-width: calc(100% - 0.5rem) !important;
-        padding: 0.18rem 0.42rem !important;
-        font-size: 0.72rem !important;
-    }
-}
-
-/* Impression : conserve des items compacts sans fond inutile. */
-@media print {
-    .hero > .tag,
-    .hero > .badge,
-    .hero .hero-content > .tag,
-    .hero .hero-content > .badge,
-    header.hero > .tag,
-    header.hero > .badge {
-        width: fit-content !important;
-        min-height: 0 !important;
-        margin: 0.08rem auto !important;
-        padding: 0.12rem 0.32rem !important;
-    }
-}
-</style>
-<style id="correctif-photo-mobile">
-.hero,
-header.hero {
-    position: relative !important;
-    isolation: isolate !important;
-    overflow: hidden !important;
-}
-
-.hero::before,
-.hero::after,
-header.hero::before,
-header.hero::after {
-    display: none !important;
-    content: none !important;
-    background: transparent !important;
-    opacity: 0 !important;
-    filter: none !important;
-}
-
-.hero-bg,
-.hero .bg,
-header.hero .hero-bg,
-header.hero .bg {
-    position: absolute !important;
-    inset: 0 !important;
-    z-index: 0 !important;
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    overflow: hidden !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    background: transparent !important;
-    filter: none !important;
-}
-
-.hero-bg a,
-.hero-bg img,
-.hero .bg a,
-.hero .bg img,
-header.hero .hero-bg a,
-header.hero .hero-bg img,
-header.hero .bg a,
-header.hero .bg img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    filter: none !important;
-    mix-blend-mode: normal !important;
-}
-
-.hero-bg img,
-.hero .bg img,
-header.hero .hero-bg img,
-header.hero .bg img {
-    object-fit: cover !important;
-    object-position: center !important;
-    background: transparent !important;
-}
-
-.hero-content,
-.hero > :not(.hero-bg):not(.bg),
-header.hero .hero-content,
-header.hero > :not(.hero-bg):not(.bg) {
-    position: relative !important;
-    z-index: 1 !important;
-}
-
-.hero-content,
-header.hero .hero-content,
-.hero h1,
-.hero > p:not(.credit),
-header.hero h1,
-header.hero > p:not(.credit) {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-}
-
-.hero h1,
-.hero > p:not(.credit),
-.hero-content h1,
-.hero-content p:not(.credit),
-header.hero h1,
-header.hero > p:not(.credit) {
-    color: #fff !important;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, .95),
-                 0 0 12px rgba(0, 0, 0, .85) !important;
-}
-
-@media print {
-    .hero h1,
-    .hero > p:not(.credit),
-    .hero-content h1,
-    .hero-content p:not(.credit),
-    header.hero h1,
-    header.hero > p:not(.credit) {
-        color: #111 !important;
-        text-shadow: none !important;
-    }
-}
-</style>
 </head>
 <body><a class="skip" href="#contenido-principal">Ir al contenido principal</a>
-<header class="hero" id="top"><div class="hero-bg"><a aria-label="Templo de Tikal (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Tikal_Temple1_2006_08_11.JPG" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Templo I de Tikal, Guatemala" class="extension-image" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" height="2592" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tikal_Temple1_2006_08_11.JPG?width=1600" width="1944"/></a></div><div class="hero-content"><span class="tag">Matemáticas en español</span><span class="tag">Seconde · base 20 · cero posicional</span><h1 id="titulo-pagina">Numeración maya: base 20 regular y cero posicional</h1><p>Leer signos, convertir entre numeración decimal y un modelo vigesimal regular, verificar por recomposición y explicar los resultados en español.</p></div></header><nav aria-label="Navegación principal de la ficha" class="nav" id="navegacion-trabajo-mayas"><div class="nav-inner"><div class="nav-title">Navegación:</div><a href="#basico">Iniciación</a><a href="#intermedio">Consolidación</a><a href="#avanzado">Razonamiento</a><a href="#experto">Desafío guiado</a><a href="#evidencia-exposicion">Evidencia</a><a href="#rubrica">Criterios</a><a href="#extensiones">Contexto</a><a href="#top">Inicio</a></div></nav>
+<header class="hero hero-photo-layout" id="top"><div class="hero-bg"><a aria-label="Templo de Tikal (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Tikal_Temple1_2006_08_11.JPG" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Templo I de Tikal, Guatemala" class="extension-image" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" height="2592" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tikal_Temple1_2006_08_11.JPG?width=1600" width="1944"/></a></div><div class="hero-content"><span class="tag">Matemáticas en español</span><span class="tag">Seconde · base 20 · cero posicional</span><h1 id="titulo-pagina">Numeración maya: base 20 regular y cero posicional</h1><p>Leer signos, convertir entre numeración decimal y un modelo vigesimal regular, verificar por recomposición y explicar los resultados en español.</p></div></header><nav aria-label="Navegación principal de la ficha" class="nav" id="navegacion-trabajo-mayas"><div class="nav-inner"><div class="nav-title">Navegación:</div><a href="#basico">Iniciación</a><a href="#intermedio">Consolidación</a><a href="#avanzado">Razonamiento</a><a href="#experto">Desafío guiado</a><a href="#evidencia-exposicion">Evidencia</a><a href="#rubrica">Criterios</a><a href="#extensiones">Contexto</a><a href="#top">Inicio</a></div></nav>
 <main aria-labelledby="titulo-pagina" id="contenido-principal" tabindex="-1"><section aria-label="Convención de trabajo" class="note" id="convencion-trabajo"><strong>Convención de trabajo: </strong>en el modelo vigesimal regular de esta ficha, el punto vale 1, la barra vale 5 y el signo con forma de concha representa el cero. En una escritura vertical, el nivel inferior vale unidades, el siguiente veintenas y el tercero grupos de 400. Los niveles se leen de abajo arriba. Este modelo escolar permite estudiar el valor posicional; no resume todas las variantes históricas ni las reglas calendáricas mayas.</section>
 <section aria-labelledby="section-1-iniciacion" id="basico"><div class="title"><h2 id="section-1-iniciacion">1. Iniciación</h2><p>Reconocer símbolos, contar y construir números de 0 a 19.</p></div><article class="exercise basic" data-level="b"><h3>Ejercicio 1 — Identificar y nombrar los símbolos mayas</h3><div class="meta"><span class="badge">5 min</span></div><p class="small method-hint">Identifica cada signo antes de escribir una igualdad.</p><div class="task">Observa los tres signos del modelo escolar. Escribe el valor convencional de cada uno: punto, barra y signo con forma de concha. Después redacta una frase matemática que relacione los tres valores.</div><figure aria-labelledby="leyenda-signos" class="card"><figcaption id="leyenda-signos"><strong>Signos del modelo escolar</strong></figcaption><div aria-label="Tres signos del modelo escolar: punto, barra y signo con forma de concha." class="symbol-strip" role="img"><span class="symbol-item dot"><span aria-hidden="true">●</span><span>punto</span></span><span class="symbol-item bar"><span aria-hidden="true">▬</span><span>barra</span></span><span class="symbol-item shell"><span aria-hidden="true">◯</span><span>signo con forma de concha</span></span></div></figure><div class="answer"><textarea aria-label="Respuesta del Ejercicio 1 — Identificar y nombrar los símbolos mayas" data-answer="" id="ans1" placeholder="Punto =..."></textarea></div></article><article class="exercise basic" data-level="b"><h3>Ejercicio 2 — Calcular el valor de cifras de 1 a 19</h3><div class="meta"><span class="badge">6 min</span></div><p class="small method-hint">Cada cifra de un nivel debe estar comprendida entre 0 y 19.</p><div class="task">Calcula el valor de estas cifras de un solo nivel: a) una barra y tres puntos; b) dos barras y cuatro puntos; c) tres barras y dos puntos. Escribe una suma de verificación para cada caso.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 2 — Leer cifras mayas de 1 a 19" data-answer="" id="ans2"></textarea></div></article><article class="exercise basic" data-level="b"><h3>Ejercicio 3 — Representar y verificar 6, 13 y 17</h3><div class="meta"><span class="badge">7 min</span></div><p class="small method-hint">Descompón cada cifra en grupos de cinco y unidades.</p><div class="task">Describe cómo representarías 6, 13 y 17 con puntos y barras. Verifica cada cifra mediante una suma y comprueba que no haya más de tres barras ni más de cuatro puntos.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 3 — Representar y verificar 6, 13 y 17" data-answer="" id="ans3"></textarea></div></article><article class="exercise basic" data-level="b"><h3>Ejercicio 4 — Explicar el papel del cero posicional</h3><div class="meta"><span class="badge">7 min</span></div><p class="small method-hint">Distingue el valor 0 de la ausencia de un nivel.</p><div class="task">Explica por qué el signo con forma de concha es necesario para conservar una posición nula. Usa esta estructura: «El signo indica…; por ejemplo, 20 se representa con… porque…». Verifica con 20 = 1 × 20 + 0.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 4 — Explicar el papel del cero posicional" data-answer="" id="ans4"></textarea></div></article></section>
 <section aria-labelledby="section-2-consolidacion" id="intermedio"><div class="title"><h2 id="section-2-consolidacion">2. Consolidación</h2><p>Convertir entre base 10 y base 20 con dos niveles.</p></div><article class="exercise inter" data-level="i"><h3>Ejercicio 5 — Representar y verificar 20 y 25</h3><div class="meta"><span class="badge">8 min</span></div><p class="small method-hint">Separa veintenas y unidades; conserva el nivel inferior de 20.</p><div class="task">Explica cómo representar 20 y 25 en dos niveles: veintenas arriba y unidades abajo. Describe los signos de cada nivel y escribe una igualdad de verificación para cada número.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 5 — Representar y verificar 20 y 25" data-answer="" id="ans5"></textarea></div></article><article class="exercise inter" data-level="i"><h3>Ejercicio 6 — Convertir y verificar 47 en base 20</h3><div class="meta"><span class="badge">8 min</span></div><p class="small method-hint">El cociente da las veintenas y el resto da las unidades.</p><div class="task">Convierte 47 en el modelo vigesimal regular. Calcula el cociente y el resto de la división entre 20, describe los signos de ambos niveles y verifica con una igualdad. Después pide a un compañero que lea tu representación y anota si obtiene el mismo resultado.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 6 — Convertir y verificar 47 en base 20" data-answer="" id="ans6"></textarea></div></article><article class="exercise inter" data-level="i"><h3>Ejercicio 7 — Convertir y verificar 68 en el modelo vigesimal</h3><div class="meta"><span class="badge">9 min</span></div><p class="small method-hint">Comprueba que el resto esté comprendido entre 0 y 19.</p><div class="task">Convierte 68 en el modelo vigesimal regular. Indica la cifra de las veintenas y la de las unidades, describe sus signos y verifica con una igualdad de la forma a × 20 + b = 68.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 7 — Convertir y verificar 68 en base 20" data-answer="" id="ans7"></textarea></div></article><article class="exercise inter" data-level="i"><h3>Ejercicio 8 — Comprobar y justificar una representación de 34</h3><div class="meta"><span class="badge">10 min</span></div><p class="small method-hint">Recompón antes de aceptar o corregir la afirmación.</p><div class="task">Un alumno afirma que 34 se representa con 1 en el nivel de las veintenas y 14 en el nivel de las unidades. Recompón el valor, decide si la afirmación es correcta y describe los signos de cada nivel. Justifica tu respuesta.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 8 — Comprobar y justificar una representación de 34" data-answer="" id="ans8"></textarea></div></article></section>

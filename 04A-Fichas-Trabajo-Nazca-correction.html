@@ -1,4 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><style id="styles-uiux-nazca-2026">
 
 :root{color-scheme:light;--ink:#27343a;--muted:#59686d;--charcoal:#203137;--paper:#fffdf8;--canvas:#f4f1e8;--surface:#fff;--terracotta:#9d3f2f;--terracotta-dark:#783024;--ochre:#c78b24;--ochre-soft:#f7e9bd;--turquoise:#2e6f73;--green:#3f7258;--blue:#356a82;--purple:#6a5185;--danger:#91382f;--line:#d8d8ce;--focus:#ffbf47;--radius:.85rem;--radius-lg:1.25rem;--shadow:0 .35rem 1.2rem rgb(32 49 55/.09);--shadow-hover:0 .9rem 2.2rem rgb(32 49 55/.16);--content:76rem;--ease:cubic-bezier(.2,.8,.2,1)}
@@ -39,125 +40,27 @@ details>summary{min-height:2.75rem;align-content:center}footer{position:static;m
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.hero-content{padding:0;color:#111;background:#fff;border:0}.hero-bg{display:none!important}header::after,.hero::after{display:none}.hero h1,header h1,.hero p,header p{color:#111!important;text-shadow:none!important}.table,.table-wrap{overflow:visible}table,.align-table{min-width:0}footer{position:static;color:#111;background:#fff;border-top:1px solid #333}footer p{color:#111}}
 
+
+
+/* Audit final complémentaire */
+html{overflow-x:visible;scroll-padding-top:1rem}
+body{min-width:0;max-width:100%;overflow-x:visible;overflow-wrap:anywhere}
+header,main,footer,nav,section,article,aside,div,figure{min-width:0}
+h1,h2,h3,h4{overflow-wrap:normal;word-break:normal;hyphens:none}
+img{max-width:100%;height:auto;filter:none;opacity:1}
+:where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{outline:.2rem solid var(--focus);outline-offset:.2rem;box-shadow:0 0 0 .2rem #fff,0 0 0 .4rem var(--focus)}
+.table,.table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+.grid>*,.align-grid>*,.gallery>*,.video-grid>*,.cols>*{min-width:0}
+.hero-photo-layout::before,.hero-photo-layout::after{display:none;content:none}
+.hero-photo-layout .hero-bg img{filter:none;opacity:1}
+.hero-photo-layout .hero-content{background:transparent;border:0;box-shadow:none;backdrop-filter:none}
+.hero-photo-layout .hero-content h1,.hero-photo-layout .hero-content p{background:transparent;border:0;box-shadow:none;text-shadow:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(forced-colors:active){button,.btn,.nav a,nav a,.tag,.badge{border:1px solid ButtonText}}
+@media print{html,body{overflow:visible}.nav,nav,.skip,.no-print,button,.btn,.actions,.print-actions,.video,.video-grid{display:none!important}.hero-photo-layout .hero-bg{display:none}.hero-photo-layout .hero-content{padding:0;background:#fff}.hero-photo-layout .hero-content h1,.hero-photo-layout .hero-content p{color:#111;text-shadow:none}.table,.table-wrap{overflow:visible}table,.align-table{min-width:0}thead{display:table-header-group}}
 </style>
-<link href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3EBandera%20de%20Espa%C3%B1a%3C%2Ftitle%3E%0A%3Cdesc%3EFavicon%20con%20tres%20franjas%20horizontales%20roja%2C%20amarilla%20y%20roja.%3C%2Fdesc%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%23AA151B%22%2F%3E%0A%3Crect%20y%3D%2216%22%20width%3D%2264%22%20height%3D%2232%22%20fill%3D%22%23F1BF00%22%2F%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2262.5%22%20height%3D%2262.5%22%20rx%3D%229.25%22%0A%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%237A1015%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E" id="favicon-drapeau-espagnol" rel="icon" type="image/svg+xml"/><title>Nasca: regularidades, transformaciones y modelización geométrica | Guide enseignant réservé</title><meta content="Correction détaillée en français et en espagnol de la fiche DNL sur la géométrie et les motifs Nazca." name="description"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="robots"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="googlebot"/><meta content="no-referrer" name="referrer"/><style id="suppression-encadre-titre-hero">
-/* Supprime uniquement le grand encadre colore devant la photo. */
-.hero .hero-content,
-header.hero .hero-content,
-body > header.hero .hero-content {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-}
+<link href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3EBandera%20de%20Espa%C3%B1a%3C%2Ftitle%3E%0A%3Cdesc%3EFavicon%20con%20tres%20franjas%20horizontales%20roja%2C%20amarilla%20y%20roja.%3C%2Fdesc%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%23AA151B%22%2F%3E%0A%3Crect%20y%3D%2216%22%20width%3D%2264%22%20height%3D%2232%22%20fill%3D%22%23F1BF00%22%2F%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2262.5%22%20height%3D%2262.5%22%20rx%3D%229.25%22%0A%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%237A1015%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E" id="favicon-drapeau-espagnol" rel="icon" type="image/svg+xml"/><title>Nasca: regularidades, transformaciones y modelización geométrica | Guide enseignant réservé</title><meta content="Correction détaillée en français et en espagnol de la fiche DNL sur la géométrie et les motifs Nazca." name="description"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="robots"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="googlebot"/><meta content="no-referrer" name="referrer"/>
 
-/* Conserve le titre lisible directement sur la photographie. */
-.hero .hero-content h1,
-.hero .hero-content p,
-.hero .hero-content .tag,
-.hero .hero-content .badge {
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
-}
-
-/* Le bloc n'ajoute plus de marge coloree autour du titre. */
-.hero .hero-content {
-    padding: 0.35rem !important;
-}
-
-/* A l'impression, aucun fond colore n'est ajoute. */
-@media print {
-    .hero .hero-content,
-    header.hero .hero-content,
-    body > header.hero .hero-content {
-        background: transparent !important;
-        border: 0 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-}
-</style>
-<style id="items-hero-centres-et-compacts">
-/*
-   Petits items situes dans l'en-tete photographie :
-   DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
-*/
-.hero > .tag,
-.hero > .badge,
-.hero .hero-content > .tag,
-.hero .hero-content > .badge,
-header.hero > .tag,
-header.hero > .badge {
-    /* Empêche l'encadre de prendre toute la largeur disponible. */
-    display: inline-flex !important;
-    width: fit-content !important;
-    max-width: calc(100% - 1rem) !important;
-    min-width: 0 !important;
-
-    /* Centre l'item dans l'en-tête, y compris lorsque .hero est une grille. */
-    justify-self: center !important;
-    align-self: center !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    /* Réduit l'encadre au texte intérieur. */
-    min-height: 0 !important;
-    margin: 0.12rem auto !important;
-    padding: 0.20rem 0.48rem !important;
-    border-radius: 999px !important;
-
-    /* Maintient le texte proprement centré. */
-    line-height: 1.15 !important;
-    text-align: center !important;
-    white-space: normal !important;
-}
-
-/* Centre également le groupe si les items sont placés dans un conteneur. */
-.hero .tags,
-.hero .badges,
-.hero .meta,
-.hero .hero-tags,
-.hero .hero-badges {
-    display: flex !important;
-    width: 100% !important;
-    flex-wrap: wrap !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 0.25rem !important;
-    margin-inline: auto !important;
-}
-
-/* Sur petit écran, les items restent compacts et visibles. */
-@media (max-width: 30rem) {
-    .hero > .tag,
-    .hero > .badge,
-    .hero .hero-content > .tag,
-    .hero .hero-content > .badge,
-    header.hero > .tag,
-    header.hero > .badge {
-        max-width: calc(100% - 0.5rem) !important;
-        padding: 0.18rem 0.42rem !important;
-        font-size: 0.72rem !important;
-    }
-}
-
-/* Impression : conserve des items compacts sans fond inutile. */
-@media print {
-    .hero > .tag,
-    .hero > .badge,
-    .hero .hero-content > .tag,
-    .hero .hero-content > .badge,
-    header.hero > .tag,
-    header.hero > .badge {
-        width: fit-content !important;
-        min-height: 0 !important;
-        margin: 0.08rem auto !important;
-        padding: 0.12rem 0.32rem !important;
-    }
-}
-</style>
 </head><body data-extension-policy="collapsed-on-load"><a class="skip" href="#contenu">Aller au contenu</a><header><div class="hero-content"><span class="tag">DNL · Mathématiques en espagnol</span><h1>Guide enseignant réservé</h1><p>Géométrie Nasca / Geometría Nasca · transformations · mesures · modélisation prudente</p></div></header>
 <div aria-label="Impression du document / Impresión del documento" class="print-actions no-print" role="group"><button data-action="download-text" type="button">Télécharger le texte / Descargar texto</button><button data-action="print" type="button">Imprimer / Imprimir</button></div><nav aria-label="Navigation des exercices / Navegación de los ejercicios"><strong>Exercices / Ejercicios :</strong><a href="#ex1">1</a><a href="#ex2">2</a><a href="#ex3">3</a><a href="#ex4">4</a><a href="#ex5">5</a><a href="#ex6">6</a><a href="#ex7">7</a><a href="#ex8">8</a><a href="#ex9">9</a><a href="#ex10">10</a><a href="#ex11">11</a><a href="#ex12">12</a><a href="#ex13">13</a><a href="#ex14">14</a><a href="#ex15">15</a><a href="#ex16">16</a></nav><main id="contenu" tabindex="-1"><section class="intro" id="cadrage-pedagogique"><h2>Cadrage pédagogique et scénario</h2>
 <ul><li><strong>Niveau:</strong> Seconde DNL mathématiques-espagnol.</li><li><strong>Prérequis:</strong> fractions, pourcentages, proportionnalité, théorème de Pythagore et transformations du plan.</li><li><strong>Problématique:</strong> comment un modèle géométrique aide-t-il à décrire un objet ou une image patrimoniale sans prétendre en expliquer seul la signification?</li><li><strong>Objectifs mathématiques:</strong> calculer et interpréter une raison, un pourcentage, une échelle, un angle de rotation et une diagonale; distinguer valeur exacte et approximation.</li><li><strong>Objectifs langagiers:</strong> décrire, ordonner une procédure, justifier, reformuler et signaler une limite.</li><li><strong>CECRL:</strong> A2 vers B1 selon le parcours. A2: décrire avec phrases simples et lexique fourni. A2+/B1: expliquer avec <i>primero, después, porque</i>. B1: justifier, nuancer avec <i>sin embargo</i> et distinguer observation et interprétation.</li><li><strong>Vigilance:</strong> distinguer erreur linguistique et erreur mathématique; ne pas pénaliser deux fois une même difficulté.</li></ul>
